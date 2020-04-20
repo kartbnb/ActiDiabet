@@ -15,6 +15,21 @@
 		327355502444B8EE008FC810 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3273554E2444B8EE008FC810 /* LaunchScreen.storyboard */; };
 		3273555B2444B8EE008FC810 /* ActiDiabetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3273555A2444B8EE008FC810 /* ActiDiabetTests.swift */; };
 		327355662444B8EE008FC810 /* ActiDiabetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327355652444B8EE008FC810 /* ActiDiabetUITests.swift */; };
+		327355742444B946008FC810 /* WeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327355732444B946008FC810 /* WeatherAPI.swift */; };
+		327355782444BDE5008FC810 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327355772444BDE5008FC810 /* WeatherView.swift */; };
+		3273557C24459D17008FC810 /* CalendarButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3273557B24459D17008FC810 /* CalendarButtonView.swift */; };
+		3273557F24459D71008FC810 /* ColorConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3273557E24459D71008FC810 /* ColorConstant.swift */; };
+		327355842445AE41008FC810 /* EnterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327355832445AE41008FC810 /* EnterDetailView.swift */; };
+		327355862445C21D008FC810 /* ZipCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327355852445C21D008FC810 /* ZipCodeTests.swift */; };
+		327355AA2447386F008FC810 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327355A92447386F008FC810 /* ActivityView.swift */; };
+		327355AD24473B56008FC810 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327355AC24473B56008FC810 /* Activity.swift */; };
+		327355AF24481F1E008FC810 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327355AE24481F1E008FC810 /* SettingViewController.swift */; };
+		32FD4B8924494816002D63B1 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FD4B8824494816002D63B1 /* Notifications.swift */; };
+		32FD4B8B244AC1CE002D63B1 /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FD4B8A244AC1CE002D63B1 /* ActivityDetailViewController.swift */; };
+		32FD4B8D244B0345002D63B1 /* Intensity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FD4B8C244B0345002D63B1 /* Intensity.swift */; };
+		83665686EC76EF19782CFC2F /* Pods_ActiDiabet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1618107CC401C2102B574E6A /* Pods_ActiDiabet.framework */; };
+		CC8568EFE0E7D5DF780F1978 /* Pods_ActiDiabet_ActiDiabetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD7DA07C276C92346BD46FE /* Pods_ActiDiabet_ActiDiabetUITests.framework */; };
+		F5F01D2D3EEBB3D1DF5AC72B /* Pods_ActiDiabetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC1783BF4BAED28555FE5DC /* Pods_ActiDiabetTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14D3BD04D4B7F8E5A178925B /* Pods-ActiDiabet-ActiDiabetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActiDiabet-ActiDiabetUITests.debug.xcconfig"; path = "Target Support Files/Pods-ActiDiabet-ActiDiabetUITests/Pods-ActiDiabet-ActiDiabetUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1618107CC401C2102B574E6A /* Pods_ActiDiabet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ActiDiabet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		327355402444B8EC008FC810 /* ActiDiabet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActiDiabet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		327355432444B8EC008FC810 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		327355452444B8EC008FC810 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +66,25 @@
 		327355612444B8EE008FC810 /* ActiDiabetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActiDiabetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		327355652444B8EE008FC810 /* ActiDiabetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiDiabetUITests.swift; sourceTree = "<group>"; };
 		327355672444B8EE008FC810 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		327355732444B946008FC810 /* WeatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPI.swift; sourceTree = "<group>"; };
+		327355772444BDE5008FC810 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		3273557B24459D17008FC810 /* CalendarButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarButtonView.swift; sourceTree = "<group>"; };
+		3273557E24459D71008FC810 /* ColorConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstant.swift; sourceTree = "<group>"; };
+		327355832445AE41008FC810 /* EnterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterDetailView.swift; sourceTree = "<group>"; };
+		327355852445C21D008FC810 /* ZipCodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipCodeTests.swift; sourceTree = "<group>"; };
+		327355A92447386F008FC810 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		327355AC24473B56008FC810 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		327355AE24481F1E008FC810 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		32FD4B8824494816002D63B1 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		32FD4B8A244AC1CE002D63B1 /* ActivityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailViewController.swift; sourceTree = "<group>"; };
+		32FD4B8C244B0345002D63B1 /* Intensity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intensity.swift; sourceTree = "<group>"; };
+		387E884D342BDDB5B354984A /* Pods-ActiDiabet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActiDiabet.release.xcconfig"; path = "Target Support Files/Pods-ActiDiabet/Pods-ActiDiabet.release.xcconfig"; sourceTree = "<group>"; };
+		6DD7DA07C276C92346BD46FE /* Pods_ActiDiabet_ActiDiabetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ActiDiabet_ActiDiabetUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8ACE39B77AAF04EFEBD5BFC /* Pods-ActiDiabetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActiDiabetTests.release.xcconfig"; path = "Target Support Files/Pods-ActiDiabetTests/Pods-ActiDiabetTests.release.xcconfig"; sourceTree = "<group>"; };
+		AB9D3BFDFF982BAD1431C1AB /* Pods-ActiDiabetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActiDiabetTests.debug.xcconfig"; path = "Target Support Files/Pods-ActiDiabetTests/Pods-ActiDiabetTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B3898C4A27F56DC1541C3EEB /* Pods-ActiDiabet-ActiDiabetUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActiDiabet-ActiDiabetUITests.release.xcconfig"; path = "Target Support Files/Pods-ActiDiabet-ActiDiabetUITests/Pods-ActiDiabet-ActiDiabetUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CE99E9C50C0B22192D4E59FE /* Pods-ActiDiabet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActiDiabet.debug.xcconfig"; path = "Target Support Files/Pods-ActiDiabet/Pods-ActiDiabet.debug.xcconfig"; sourceTree = "<group>"; };
+		EFC1783BF4BAED28555FE5DC /* Pods_ActiDiabetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ActiDiabetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83665686EC76EF19782CFC2F /* Pods_ActiDiabet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5F01D2D3EEBB3D1DF5AC72B /* Pods_ActiDiabetTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC8568EFE0E7D5DF780F1978 /* Pods_ActiDiabet_ActiDiabetUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +122,8 @@
 				327355592444B8EE008FC810 /* ActiDiabetTests */,
 				327355642444B8EE008FC810 /* ActiDiabetUITests */,
 				327355412444B8EC008FC810 /* Products */,
+				6821498CD8E547167B2EA097 /* Pods */,
+				F601E1AE59F5DEA4E1415798 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,9 +140,14 @@
 		327355422444B8EC008FC810 /* ActiDiabet */ = {
 			isa = PBXGroup;
 			children = (
+				32FD4B87244947FE002D63B1 /* Notification */,
+				327355AB24473B3A008FC810 /* Modal */,
+				327355802445A9E2008FC810 /* ViewController */,
+				3273557D24459D66008FC810 /* Constant */,
+				327355762444BDD5008FC810 /* CustomView */,
+				327355752444B97B008FC810 /* Network */,
 				327355432444B8EC008FC810 /* AppDelegate.swift */,
 				327355452444B8EC008FC810 /* SceneDelegate.swift */,
-				327355472444B8EC008FC810 /* ViewController.swift */,
 				327355492444B8EC008FC810 /* Main.storyboard */,
 				3273554C2444B8EE008FC810 /* Assets.xcassets */,
 				3273554E2444B8EE008FC810 /* LaunchScreen.storyboard */,
@@ -114,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				3273555A2444B8EE008FC810 /* ActiDiabetTests.swift */,
+				327355852445C21D008FC810 /* ZipCodeTests.swift */,
 				3273555C2444B8EE008FC810 /* Info.plist */,
 			);
 			path = ActiDiabetTests;
@@ -128,6 +175,100 @@
 			path = ActiDiabetUITests;
 			sourceTree = "<group>";
 		};
+		327355752444B97B008FC810 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				327355732444B946008FC810 /* WeatherAPI.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		327355762444BDD5008FC810 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				327355882445C7F4008FC810 /* Setting */,
+				327355872445C7E5008FC810 /* Home */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		3273557D24459D66008FC810 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				3273557E24459D71008FC810 /* ColorConstant.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		327355802445A9E2008FC810 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				327355472444B8EC008FC810 /* ViewController.swift */,
+				327355AE24481F1E008FC810 /* SettingViewController.swift */,
+				32FD4B8A244AC1CE002D63B1 /* ActivityDetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		327355872445C7E5008FC810 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				327355772444BDE5008FC810 /* WeatherView.swift */,
+				3273557B24459D17008FC810 /* CalendarButtonView.swift */,
+				327355832445AE41008FC810 /* EnterDetailView.swift */,
+				327355A92447386F008FC810 /* ActivityView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		327355882445C7F4008FC810 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		327355AB24473B3A008FC810 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				327355AC24473B56008FC810 /* Activity.swift */,
+				32FD4B8C244B0345002D63B1 /* Intensity.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		32FD4B87244947FE002D63B1 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				32FD4B8824494816002D63B1 /* Notifications.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		6821498CD8E547167B2EA097 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE99E9C50C0B22192D4E59FE /* Pods-ActiDiabet.debug.xcconfig */,
+				387E884D342BDDB5B354984A /* Pods-ActiDiabet.release.xcconfig */,
+				14D3BD04D4B7F8E5A178925B /* Pods-ActiDiabet-ActiDiabetUITests.debug.xcconfig */,
+				B3898C4A27F56DC1541C3EEB /* Pods-ActiDiabet-ActiDiabetUITests.release.xcconfig */,
+				AB9D3BFDFF982BAD1431C1AB /* Pods-ActiDiabetTests.debug.xcconfig */,
+				A8ACE39B77AAF04EFEBD5BFC /* Pods-ActiDiabetTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F601E1AE59F5DEA4E1415798 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1618107CC401C2102B574E6A /* Pods_ActiDiabet.framework */,
+				6DD7DA07C276C92346BD46FE /* Pods_ActiDiabet_ActiDiabetUITests.framework */,
+				EFC1783BF4BAED28555FE5DC /* Pods_ActiDiabetTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +276,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3273556A2444B8EE008FC810 /* Build configuration list for PBXNativeTarget "ActiDiabet" */;
 			buildPhases = (
+				DDD38BBA9F565B836BCC0647 /* [CP] Check Pods Manifest.lock */,
 				3273553C2444B8EC008FC810 /* Sources */,
 				3273553D2444B8EC008FC810 /* Frameworks */,
 				3273553E2444B8EC008FC810 /* Resources */,
+				A4845F5AC216AC39D1C87536 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +295,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3273556D2444B8EE008FC810 /* Build configuration list for PBXNativeTarget "ActiDiabetTests" */;
 			buildPhases = (
+				6C011CE2EB18B9C90B57A121 /* [CP] Check Pods Manifest.lock */,
 				327355522444B8EE008FC810 /* Sources */,
 				327355532444B8EE008FC810 /* Frameworks */,
 				327355542444B8EE008FC810 /* Resources */,
@@ -170,9 +314,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 327355702444B8EE008FC810 /* Build configuration list for PBXNativeTarget "ActiDiabetUITests" */;
 			buildPhases = (
+				F23A6D3E50FD47520EE1B34E /* [CP] Check Pods Manifest.lock */,
 				3273555D2444B8EE008FC810 /* Sources */,
 				3273555E2444B8EE008FC810 /* Frameworks */,
 				3273555F2444B8EE008FC810 /* Resources */,
+				DB92DF8DD333B3F351A6EFCC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -254,14 +400,128 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6C011CE2EB18B9C90B57A121 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ActiDiabetTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4845F5AC216AC39D1C87536 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ActiDiabet/Pods-ActiDiabet-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ActiDiabet/Pods-ActiDiabet-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ActiDiabet/Pods-ActiDiabet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB92DF8DD333B3F351A6EFCC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ActiDiabet-ActiDiabetUITests/Pods-ActiDiabet-ActiDiabetUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ActiDiabet-ActiDiabetUITests/Pods-ActiDiabet-ActiDiabetUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ActiDiabet-ActiDiabetUITests/Pods-ActiDiabet-ActiDiabetUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDD38BBA9F565B836BCC0647 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ActiDiabet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F23A6D3E50FD47520EE1B34E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ActiDiabet-ActiDiabetUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3273553C2444B8EC008FC810 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32FD4B8924494816002D63B1 /* Notifications.swift in Sources */,
+				327355AD24473B56008FC810 /* Activity.swift in Sources */,
+				327355AF24481F1E008FC810 /* SettingViewController.swift in Sources */,
+				327355782444BDE5008FC810 /* WeatherView.swift in Sources */,
 				327355482444B8EC008FC810 /* ViewController.swift in Sources */,
+				32FD4B8D244B0345002D63B1 /* Intensity.swift in Sources */,
+				327355742444B946008FC810 /* WeatherAPI.swift in Sources */,
+				3273557F24459D71008FC810 /* ColorConstant.swift in Sources */,
+				327355842445AE41008FC810 /* EnterDetailView.swift in Sources */,
+				327355AA2447386F008FC810 /* ActivityView.swift in Sources */,
 				327355442444B8EC008FC810 /* AppDelegate.swift in Sources */,
+				32FD4B8B244AC1CE002D63B1 /* ActivityDetailViewController.swift in Sources */,
 				327355462444B8EC008FC810 /* SceneDelegate.swift in Sources */,
+				3273557C24459D17008FC810 /* CalendarButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +529,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				327355862445C21D008FC810 /* ZipCodeTests.swift in Sources */,
 				3273555B2444B8EE008FC810 /* ActiDiabetTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +693,7 @@
 		};
 		3273556B2444B8EE008FC810 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE99E9C50C0B22192D4E59FE /* Pods-ActiDiabet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -444,12 +706,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.shibodev.ActiDiabet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		3273556C2444B8EE008FC810 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 387E884D342BDDB5B354984A /* Pods-ActiDiabet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -462,12 +725,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.shibodev.ActiDiabet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		3273556E2444B8EE008FC810 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB9D3BFDFF982BAD1431C1AB /* Pods-ActiDiabetTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +754,7 @@
 		};
 		3273556F2444B8EE008FC810 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8ACE39B77AAF04EFEBD5BFC /* Pods-ActiDiabetTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +777,7 @@
 		};
 		327355712444B8EE008FC810 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14D3BD04D4B7F8E5A178925B /* Pods-ActiDiabet-ActiDiabetUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +798,7 @@
 		};
 		327355722444B8EE008FC810 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3898C4A27F56DC1541C3EEB /* Pods-ActiDiabet-ActiDiabetUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

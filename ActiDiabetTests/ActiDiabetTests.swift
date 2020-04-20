@@ -12,16 +12,20 @@ import XCTest
 class ActiDiabetTests: XCTestCase {
 
     override func setUpWithError() throws {
+        UserDefaults.standard.set("3163", forKey: "zipcode")
+        
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
     override func tearDownWithError() throws {
+        UserDefaults.standard.removeObject(forKey: "zipcode")
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
     }
 
     func testPerformanceExample() throws {
@@ -30,5 +34,6 @@ class ActiDiabetTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+
 
 }
