@@ -59,3 +59,5 @@ let sampleActivity = [
                         Activity(name: "Yoga", type: "Resistance exercise", indoor: true, duration: 7, video: "NDLad2vOHkU")
                     ]
 
+
+

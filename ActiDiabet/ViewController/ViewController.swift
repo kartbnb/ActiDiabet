@@ -40,13 +40,15 @@ class ViewController: UIViewController, CustomViewProtocol {
         searchController.searchBar.searchTextField.layer.cornerRadius = 20
         searchController.searchBar.searchTextField.layer.masksToBounds = true
         searchController.searchBar.placeholder = "Search Activity"
+        searchController.searchBar.delegate = self
         self.navigationItem.searchController = searchController
+        
     }
     
     func setupUI() {
         weatherView.getCurrentWeather()
         self.navigationController?.navigationBar.isHidden = false
-        
+        self.tabBarController?.tabBar.isHidden = false
         //UserDefaults.standard.removeObject(forKey: "zipcode")
     }
     
@@ -64,6 +66,7 @@ class ViewController: UIViewController, CustomViewProtocol {
         //UserDefaults.standard.set("3162", forKey: "zipcode")
         if UserDefaults.standard.value(forKey: "zipcode") == nil {
             self.navigationController?.navigationBar.isHidden = true
+            self.tabBarController?.tabBar.isHidden = true
             enterDetailView.homeVC = self
         } else {
             enterDetailView.isHidden = true
@@ -90,6 +93,13 @@ class ViewController: UIViewController, CustomViewProtocol {
             let vc = segue.destination as! ActivityDetailViewController
             let activity = sender as? Activity
             vc.activity = activity
+        } else if segue.identifier == "showAllActivity" {
+            let sender = sender as? Bool
+            guard let showSearchBar = sender else {
+                return
+            }
+            let vc = segue.destination as? AllActivitiesCollectionViewController
+            vc?.showSearchBar = showSearchBar
         }
     }
     
@@ -101,5 +111,11 @@ protocol CustomViewProtocol {
     func setupUI()
     func showAlert(message: String, title: String)
     func showActivity(activity: Activity)
+}
+
+extension ViewController: UISearchBarDelegate {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        performSegue(withIdentifier: "showAllActivity", sender: true)
+    }
 }
 

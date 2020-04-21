@@ -78,7 +78,7 @@ class ActivityView: UIView {
         self.layoutIfNeeded()
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let activity = activity else { return }
         homeVC?.showActivity(activity: activity)
     }

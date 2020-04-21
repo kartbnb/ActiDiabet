@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,9 @@
 		327355AA2447386F008FC810 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327355A92447386F008FC810 /* ActivityView.swift */; };
 		327355AD24473B56008FC810 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327355AC24473B56008FC810 /* Activity.swift */; };
 		327355AF24481F1E008FC810 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327355AE24481F1E008FC810 /* SettingViewController.swift */; };
+		3284A794244EB68C0003B025 /* AllActivitiesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284A793244EB68C0003B025 /* AllActivitiesCollectionViewController.swift */; };
+		3284A796244EBA7D0003B025 /* ActivityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284A795244EBA7D0003B025 /* ActivityCollectionViewCell.swift */; };
+		3284A798244ED49E0003B025 /* AllActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284A797244ED49E0003B025 /* AllActivityViewController.swift */; };
 		32FD4B8924494816002D63B1 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FD4B8824494816002D63B1 /* Notifications.swift */; };
 		32FD4B8B244AC1CE002D63B1 /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FD4B8A244AC1CE002D63B1 /* ActivityDetailViewController.swift */; };
 		32FD4B8D244B0345002D63B1 /* Intensity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FD4B8C244B0345002D63B1 /* Intensity.swift */; };
@@ -75,6 +78,9 @@
 		327355A92447386F008FC810 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		327355AC24473B56008FC810 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		327355AE24481F1E008FC810 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		3284A793244EB68C0003B025 /* AllActivitiesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllActivitiesCollectionViewController.swift; sourceTree = "<group>"; };
+		3284A795244EBA7D0003B025 /* ActivityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCollectionViewCell.swift; sourceTree = "<group>"; };
+		3284A797244ED49E0003B025 /* AllActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllActivityViewController.swift; sourceTree = "<group>"; };
 		32FD4B8824494816002D63B1 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		32FD4B8A244AC1CE002D63B1 /* ActivityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailViewController.swift; sourceTree = "<group>"; };
 		32FD4B8C244B0345002D63B1 /* Intensity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intensity.swift; sourceTree = "<group>"; };
@@ -186,7 +192,7 @@
 		327355762444BDD5008FC810 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
-				327355882445C7F4008FC810 /* Setting */,
+				327355882445C7F4008FC810 /* All Activity */,
 				327355872445C7E5008FC810 /* Home */,
 			);
 			path = CustomView;
@@ -206,6 +212,8 @@
 				327355472444B8EC008FC810 /* ViewController.swift */,
 				327355AE24481F1E008FC810 /* SettingViewController.swift */,
 				32FD4B8A244AC1CE002D63B1 /* ActivityDetailViewController.swift */,
+				3284A793244EB68C0003B025 /* AllActivitiesCollectionViewController.swift */,
+				3284A797244ED49E0003B025 /* AllActivityViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -221,11 +229,12 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		327355882445C7F4008FC810 /* Setting */ = {
+		327355882445C7F4008FC810 /* All Activity */ = {
 			isa = PBXGroup;
 			children = (
+				3284A795244EBA7D0003B025 /* ActivityCollectionViewCell.swift */,
 			);
-			path = Setting;
+			path = "All Activity";
 			sourceTree = "<group>";
 		};
 		327355AB24473B3A008FC810 /* Modal */ = {
@@ -255,7 +264,6 @@
 				AB9D3BFDFF982BAD1431C1AB /* Pods-ActiDiabetTests.debug.xcconfig */,
 				A8ACE39B77AAF04EFEBD5BFC /* Pods-ActiDiabetTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -513,6 +521,8 @@
 				327355AF24481F1E008FC810 /* SettingViewController.swift in Sources */,
 				327355782444BDE5008FC810 /* WeatherView.swift in Sources */,
 				327355482444B8EC008FC810 /* ViewController.swift in Sources */,
+				3284A798244ED49E0003B025 /* AllActivityViewController.swift in Sources */,
+				3284A794244EB68C0003B025 /* AllActivitiesCollectionViewController.swift in Sources */,
 				32FD4B8D244B0345002D63B1 /* Intensity.swift in Sources */,
 				327355742444B946008FC810 /* WeatherAPI.swift in Sources */,
 				3273557F24459D71008FC810 /* ColorConstant.swift in Sources */,
@@ -521,6 +531,7 @@
 				327355442444B8EC008FC810 /* AppDelegate.swift in Sources */,
 				32FD4B8B244AC1CE002D63B1 /* ActivityDetailViewController.swift in Sources */,
 				327355462444B8EC008FC810 /* SceneDelegate.swift in Sources */,
+				3284A796244EBA7D0003B025 /* ActivityCollectionViewCell.swift in Sources */,
 				3273557C24459D17008FC810 /* CalendarButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

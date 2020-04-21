@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -107,6 +108,9 @@
                                         </constraints>
                                         <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                         <state key="normal" title="more &gt;"/>
+                                        <connections>
+                                            <segue destination="1jr-Gj-fvy" kind="show" id="kmK-VA-cJo"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -227,10 +231,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SMK-7S-JM9" userLabel="Choose Intensity View" customClass="EnterIntensityView" customModule="ActiDiabet" customModuleProvider="target">
-                                        <rect key="frame" x="37" y="83" width="300" height="500"/>
+                                        <rect key="frame" x="37" y="83" width="300" height="451"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qks-bU-oAB" customClass="StartButtonView" customModule="ActiDiabet" customModuleProvider="target">
-                                                <rect key="frame" x="67.5" y="415" width="165" height="65"/>
+                                                <rect key="frame" x="67.5" y="366" width="165" height="65"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sE-eY-Vkf">
                                                         <rect key="frame" x="0.0" y="0.0" width="165" height="65"/>
@@ -252,7 +256,7 @@
                                                 </constraints>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please Choose your intensity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zmh-58-cgW">
-                                                <rect key="frame" x="42.5" y="233" width="215" height="34"/>
+                                                <rect key="frame" x="42.5" y="208.5" width="215" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -262,9 +266,7 @@
                                             <constraint firstItem="Zmh-58-cgW" firstAttribute="centerY" secondItem="SMK-7S-JM9" secondAttribute="centerY" id="267-qh-e8W"/>
                                             <constraint firstAttribute="bottom" secondItem="Qks-bU-oAB" secondAttribute="bottom" constant="20" id="59h-aT-dOq"/>
                                             <constraint firstItem="Qks-bU-oAB" firstAttribute="centerX" secondItem="SMK-7S-JM9" secondAttribute="centerX" id="B87-R0-oTz"/>
-                                            <constraint firstAttribute="width" constant="300" id="EmE-h5-lZN"/>
                                             <constraint firstItem="Zmh-58-cgW" firstAttribute="centerX" secondItem="SMK-7S-JM9" secondAttribute="centerX" id="b2N-Zh-aVC"/>
-                                            <constraint firstAttribute="height" constant="500" id="dNt-bF-qeH"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="finishButton" destination="8sE-eY-Vkf" id="Fdx-9B-Dee"/>
@@ -422,6 +424,7 @@
                         <outlet property="thirdActivityView" destination="Dp1-hF-T0u" id="TnG-1i-bUY"/>
                         <outlet property="weatherView" destination="vms-ng-tJ3" id="pJ6-ZL-haF"/>
                         <segue destination="sma-6R-om6" kind="show" identifier="activityDetail" id="e54-t6-tsI"/>
+                        <segue destination="1jr-Gj-fvy" kind="show" identifier="showAllActivity" id="Qql-wO-BE6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -584,7 +587,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zQx-zY-UPP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3647.1999999999998" y="407.0464767616192"/>
+            <point key="canvasLocation" x="3124" y="1215"/>
         </scene>
         <!--Setting-->
         <scene sceneID="lLs-1p-M8d">
@@ -716,22 +719,103 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zyP-pW-4B7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1960.8" y="-614.84257871064472"/>
+            <point key="canvasLocation" x="3273" y="-620"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="iGp-f4-8GP">
+        <!--All Activity View Controller-->
+        <scene sceneID="cBu-rI-LqS">
             <objects>
-                <viewController id="JTU-EU-Oko" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aD8-Gq-eZQ">
+                <viewController id="1jr-Gj-fvy" customClass="AllActivityViewController" customModule="ActiDiabet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qB1-qm-r7c">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RkV-dW-D56">
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8Py-Re-uq5">
+                                    <size key="itemSize" width="173" height="185"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="activities" id="XTE-6K-ZjM" customClass="ActivityCollectionViewCell" customModule="ActiDiabet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="173" height="185"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Bgn-dW-UTW">
+                                            <rect key="frame" x="0.0" y="0.0" width="173" height="185"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="khw-Kf-RYY">
+                                                    <rect key="frame" x="0.0" y="0.0" width="173" height="185"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GoO-qq-Zpu">
+                                                            <rect key="frame" x="16" y="0.0" width="141" height="141"/>
+                                                            <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="GoO-qq-Zpu" secondAttribute="height" multiplier="1:1" id="Jmf-ve-YcO"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Kcj-Ds-Cdi">
+                                                            <rect key="frame" x="65.5" y="156.5" width="42" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Kcj-Ds-Cdi" firstAttribute="centerX" secondItem="khw-Kf-RYY" secondAttribute="centerX" id="4kb-75-VLy"/>
+                                                        <constraint firstItem="GoO-qq-Zpu" firstAttribute="leading" secondItem="khw-Kf-RYY" secondAttribute="leading" constant="16" id="8pQ-u9-GnQ"/>
+                                                        <constraint firstAttribute="width" secondItem="khw-Kf-RYY" secondAttribute="height" multiplier="7:8" id="U2x-3b-Kys"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Kcj-Ds-Cdi" secondAttribute="bottom" constant="8" id="ZYG-rp-wad"/>
+                                                        <constraint firstItem="GoO-qq-Zpu" firstAttribute="centerX" secondItem="khw-Kf-RYY" secondAttribute="centerX" id="iBT-LK-q4b"/>
+                                                        <constraint firstItem="GoO-qq-Zpu" firstAttribute="top" secondItem="khw-Kf-RYY" secondAttribute="top" id="wuf-RL-JIb"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="khw-Kf-RYY" firstAttribute="top" secondItem="Bgn-dW-UTW" secondAttribute="top" id="VCt-E0-nOh"/>
+                                                <constraint firstAttribute="trailing" secondItem="khw-Kf-RYY" secondAttribute="trailing" id="n1B-3G-6BC"/>
+                                                <constraint firstAttribute="bottom" secondItem="khw-Kf-RYY" secondAttribute="bottom" id="pMc-hG-unk"/>
+                                                <constraint firstItem="khw-Kf-RYY" firstAttribute="leading" secondItem="Bgn-dW-UTW" secondAttribute="leading" id="pSC-rh-Bqx"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="173" height="185"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="GoO-qq-Zpu" id="tLp-Gt-Mqe"/>
+                                            <outlet property="nameLabel" destination="Kcj-Ds-Cdi" id="jBM-R9-fvL"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <searchBar contentMode="redraw" placeholder="Search Activiy" translatesAutoresizingMaskIntoConstraints="NO" id="iCq-lm-Eur">
+                                <rect key="frame" x="0.0" y="44" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="aq9-PR-WyK"/>
+                        <constraints>
+                            <constraint firstItem="RkV-dW-D56" firstAttribute="leading" secondItem="cgW-Bc-ApS" secondAttribute="leading" id="3EQ-1Y-qF5"/>
+                            <constraint firstItem="cgW-Bc-ApS" firstAttribute="trailing" secondItem="RkV-dW-D56" secondAttribute="trailing" id="5Fu-Mz-3Bm"/>
+                            <constraint firstItem="RkV-dW-D56" firstAttribute="top" secondItem="iCq-lm-Eur" secondAttribute="bottom" id="Dih-cI-e5Z"/>
+                            <constraint firstItem="iCq-lm-Eur" firstAttribute="trailing" secondItem="cgW-Bc-ApS" secondAttribute="trailing" id="GTm-Lh-aOu"/>
+                            <constraint firstItem="iCq-lm-Eur" firstAttribute="leading" secondItem="cgW-Bc-ApS" secondAttribute="leading" id="Lbo-dU-l2u"/>
+                            <constraint firstItem="cgW-Bc-ApS" firstAttribute="bottom" secondItem="RkV-dW-D56" secondAttribute="bottom" id="ZlY-xS-58E"/>
+                            <constraint firstItem="iCq-lm-Eur" firstAttribute="top" secondItem="cgW-Bc-ApS" secondAttribute="top" id="yje-jo-bKZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cgW-Bc-ApS"/>
                     </view>
+                    <navigationItem key="navigationItem" id="oqb-KO-UjN"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="RkV-dW-D56" id="hNp-0I-ILY"/>
+                        <outlet property="searchBar" destination="iCq-lm-Eur" id="PAp-z9-2pI"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zP8-AY-iQs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yho-5E-0Uh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2940" y="-570"/>
+            <point key="canvasLocation" x="4226" y="131"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ezW-BT-wgr">
@@ -773,7 +857,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kF2-zo-mYB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1848.8" y="832.53373313343332"/>
+            <point key="canvasLocation" x="137" y="1155"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="m8B-Y5-ZSP">
@@ -781,6 +865,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="kQc-Z0-mxb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5LQ-rl-se9">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
@@ -794,6 +879,9 @@
             <point key="canvasLocation" x="136.80000000000001" y="138.0809595202399"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Qql-wO-BE6"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="appimage" width="429" height="523"/>
         <image name="indoor-light" width="62" height="62"/>
