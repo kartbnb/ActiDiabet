@@ -29,11 +29,11 @@ class Intensity {
     func setAeroTime() {
         switch self.intensity {
         case .beginner:
-            UserDefaults.standard.set(15, forKey: "Aerobic")
+            UserDefaults.standard.set(120, forKey: "Aerobic")
         case .moderate:
-            UserDefaults.standard.set(30, forKey: "Aerobic")
+            UserDefaults.standard.set(180, forKey: "Aerobic")
         case .vigorous:
-            UserDefaults.standard.set(45, forKey: "Aerobic")
+            UserDefaults.standard.set(210, forKey: "Aerobic")
         case .none:
             print("no intensity error")
         }
@@ -42,11 +42,11 @@ class Intensity {
     func setResistanceTime() {
         switch self.intensity {
         case .beginner:
-            UserDefaults.standard.set(5, forKey: "Resistance")
+            UserDefaults.standard.set(20, forKey: "Resistance")
         case .moderate:
-            UserDefaults.standard.set(10, forKey: "Resistance")
+            UserDefaults.standard.set(40, forKey: "Resistance")
         case .vigorous:
-            UserDefaults.standard.set(15, forKey: "Resistance")
+            UserDefaults.standard.set(60, forKey: "Resistance")
         case .none:
             print("no intensity error")
         }

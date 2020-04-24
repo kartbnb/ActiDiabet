@@ -15,6 +15,9 @@ class ActivityView: UIView {
     var homeVC: CustomViewProtocol?
     
     @IBOutlet weak var activityName: UILabel!
+    @IBOutlet weak var timeDuration: UILabel!
+    @IBOutlet weak var likeButton: UIButton!
+    
 
     /*
     // Only override draw() if you perform custom drawing.
@@ -41,32 +44,12 @@ class ActivityView: UIView {
     }
     
     func setActivity(activity: Activity) {
-        self.activityName.textColor = UIColor.white
+        //self.activityName.textColor = UIColor.white
         self.activity = activity
         self.activityName.text = activity.activityName
-        
+        self.timeDuration.text = "\(activity.duration)"
         // build time label
-        let width = self.bounds.width * 0.5
-        let timeDuration = UILabel(frame: CGRect(x: 20.0, y: 50.0, width: width, height: 80))
-        timeDuration.textColor = UIColor.white
-        timeDuration.font = UIFont.boldSystemFont(ofSize:90.0)
-        timeDuration.textAlignment = .center
-        timeDuration.text = "\(activity.duration)"
-        timeDuration.adjustsFontSizeToFitWidth = true
-        timeDuration.minimumScaleFactor = 0.5
-        self.addSubview(timeDuration)
         
-        //build mins label
-        let minsLabel = UILabel(frame: .zero)
-        self.addSubview(minsLabel)
-        minsLabel.text = "mins"
-        minsLabel.textColor = UIColor.white
-        minsLabel.textAlignment = .left
-        minsLabel.translatesAutoresizingMaskIntoConstraints = false
-        let leadConstraint = NSLayoutConstraint(item: minsLabel, attribute: .leading, relatedBy: .equal, toItem: timeDuration, attribute: .trailing, multiplier: 1.0, constant: 0.0)
-        let trailConstraint = NSLayoutConstraint(item: minsLabel, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1.0, constant: 0.0)
-        let btmConstraint = NSLayoutConstraint(item: minsLabel, attribute: .bottom, relatedBy: .equal, toItem: timeDuration, attribute: .bottom, multiplier: 1.0, constant: 0.0)
-        NSLayoutConstraint.activate([leadConstraint, trailConstraint, btmConstraint])
         
 
         switch activity.activityType {

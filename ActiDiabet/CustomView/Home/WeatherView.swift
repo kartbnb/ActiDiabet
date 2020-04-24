@@ -27,7 +27,7 @@ class WeatherView: UIView {
     }
     
     private func setupView() {
-        self.backgroundColor = ColorConstant.mainColor
+        self.backgroundColor = ColorConstant.weatherColor
         self.layer.cornerRadius = 20.0
     }
     

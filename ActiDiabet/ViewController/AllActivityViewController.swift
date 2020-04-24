@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AllActivityViewController: UIViewController {
+class AllActivityViewController: UIViewController, DatabaseListener {
     
     var activities: [Activity] = []
     private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
@@ -16,25 +16,31 @@ class AllActivityViewController: UIViewController {
     private let reuseIdentifier = "activities"
     
     @IBOutlet weak var searchBar: UISearchBar!
-    var showSearchBar: Bool?
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    weak var databaseProtocol: DatabaseProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let delegate = UIApplication.shared.delegate as?  AppDelegate
+        self.databaseProtocol = delegate?.databaseController
         collectionView.delegate = self
         collectionView.dataSource = self
         setupSearch()
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setupUI()
-        
         self.activities = sampleActivity
+        setupUI()
+        //databaseProtocol?.addListener(listener: self)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        databaseProtocol?.removeListener(listener: self)
+    }
     func setupSearch() {
         searchBar.searchTextField.layer.cornerRadius = 20
         searchBar.searchTextField.layer.masksToBounds = true
@@ -44,20 +50,28 @@ class AllActivityViewController: UIViewController {
     
     func setupUI() {
         self.navigationController?.navigationBar.isHidden = false
-        self.tabBarController?.tabBar.isHidden = true
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "listToActivity" {
+            let activity = sender as? Activity
+            print("show activity detail \(activity?.activityName)")
+            let destination = segue.destination as? ActivityDetailViewController
+            destination?.activity = activity
+        }
     }
-    */
-
+    
+    //MARK: Database Listener
+    var listenerType: ListenerType = .all
+    
+    func getAllActivities(activities: [Activity]) {
+        self.activities = activities
+        self.collectionView.reloadData()
+    }
+    
+    func getRecommendActivity(activities: [Activity]) {
+        
+    }
 }
 
 extension AllActivityViewController: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -110,6 +124,7 @@ extension AllActivityViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         // search activities
     }
-    
-    
 }
+
+
+

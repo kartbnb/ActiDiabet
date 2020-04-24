@@ -10,42 +10,62 @@ import UIKit
 
 class ViewController: UIViewController, CustomViewProtocol {
     
-    @IBOutlet weak var activityScroll: UIScrollView!
     @IBOutlet weak var firstActivityView: ActivityView!
     
-    @IBOutlet weak var thirdActivityView: ActivityView!
     @IBOutlet weak var enterDetailView: EnterDetailView!
     @IBOutlet weak var secondActivityView: ActivityView!
     
     @IBOutlet weak var weatherView: WeatherView!
     @IBOutlet weak var calendarButton: CalendarButtonView!
     
+    var coredataController: CoredataProtocol?
+    
+    @IBOutlet weak var resistanceProgress: UIProgressView!
+    @IBOutlet weak var aerobicProgress: UIProgressView!
+    
+    @IBOutlet weak var aerobicLabel: UILabel!
+    @IBOutlet weak var resistanceLabel: UILabel!
+    
+    @IBOutlet weak var favouriteView: UIView!
+    @IBOutlet weak var achieveView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupSearch()
         calendarButton.delegate = self
         setupScroll()
+        
+        let delegate = UIApplication.shared.delegate as? AppDelegate
+        coredataController = delegate?.coredataController
+        aerobicProgress.transform = aerobicProgress.transform.scaledBy(x: 1, y: 8)
+        resistanceProgress.transform = resistanceProgress.transform.scaledBy(x: 1, y: 8)
+        
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        guard let records = coredataController?.fetchActivityThisWeek() else { return }
+        let benchMark = self.getProgressOfWeek(records: records)
+        aerobicLabel.text = "\(Int(benchMark[0] * 100))%"
+        resistanceLabel.text = "\(Int(benchMark[1] * 100))%"
+        if benchMark[0] > 1{
+            aerobicProgress.setProgress(1, animated: true)
+        } else {
+            aerobicProgress.setProgress(benchMark[0], animated: true)
+        }
+        if benchMark[1] > 1 {
+            resistanceProgress.setProgress(1, animated: true)
+        } else {
+            resistanceProgress.setProgress(benchMark[1], animated: true)
+        }
         calendarButton.getDate()
         firstEnter()
     }
     
-    func setupSearch() {
-        let searchController = UISearchController()
-        searchController.searchBar.searchTextField.layer.cornerRadius = 20
-        searchController.searchBar.searchTextField.layer.masksToBounds = true
-        searchController.searchBar.placeholder = "Search Activity"
-        searchController.searchBar.delegate = self
-        self.navigationItem.searchController = searchController
-        
-    }
-    
     func setupUI() {
+        favouriteView.makeRound()
+        achieveView.makeRound()
+        
         weatherView.getCurrentWeather()
         self.navigationController?.navigationBar.isHidden = false
         self.tabBarController?.tabBar.isHidden = false
@@ -55,11 +75,9 @@ class ViewController: UIViewController, CustomViewProtocol {
     func setupScroll() {
         
         firstActivityView.setActivity(activity: sampleActivity[0])
-        secondActivityView.setActivity(activity: sampleActivity[1])
-        thirdActivityView.setActivity(activity: sampleActivity[3])
+        secondActivityView.setActivity(activity: sampleActivity[3])
         firstActivityView.homeVC = self
         secondActivityView.homeVC = self
-        thirdActivityView.homeVC = self
     }
     
     func firstEnter() {
@@ -88,18 +106,33 @@ class ViewController: UIViewController, CustomViewProtocol {
         self.present(alert, animated: true, completion: nil)
     }
     
+    func getProgressOfWeek(records: [Record]) -> [Float] {
+        var aerobicTime = 0
+        var resistanceTime = 0
+        for record in records {
+            if record.type == "Aerobic" {
+                aerobicTime += Int(record.duration)
+            } else {
+                resistanceTime += Int(record.duration)
+            }
+        }
+        
+        let aerobicGoal = UserDefaults.standard.integer(forKey: "Aerobic")
+        let resistanceGoal = UserDefaults.standard.integer(forKey: "Resistance")
+        if aerobicGoal == 0 {
+            return [0.0, 0.0]
+        } else {
+            let aerobicPercent: Float = Float(aerobicTime) / Float(aerobicGoal)
+            let resistancePercent: Float = Float(resistanceTime) / Float(resistanceGoal)
+            return [aerobicPercent, resistancePercent]
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "activityDetail" {
             let vc = segue.destination as! ActivityDetailViewController
             let activity = sender as? Activity
             vc.activity = activity
-        } else if segue.identifier == "showAllActivity" {
-            let sender = sender as? Bool
-            guard let showSearchBar = sender else {
-                return
-            }
-            let vc = segue.destination as? AllActivitiesCollectionViewController
-            vc?.showSearchBar = showSearchBar
         }
     }
     
@@ -113,9 +146,4 @@ protocol CustomViewProtocol {
     func showActivity(activity: Activity)
 }
 
-extension ViewController: UISearchBarDelegate {
-    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        performSegue(withIdentifier: "showAllActivity", sender: true)
-    }
-}
 

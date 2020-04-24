@@ -33,6 +33,7 @@ enum ActivityType {
 }
 
 class Activity {
+    let activityID: Int?
     let activityName: String
     let activityType: ActivityType
     let indoor: Bool
@@ -46,6 +47,47 @@ class Activity {
             activityType = .aerobic
         } else {
             activityType = .resistance
+        }
+        self.duration = duration
+        self.video = video
+        self.activityID = nil
+    }
+    
+    init?(json: [String: Any]) {
+        guard let id = json["id"] as? Int else {
+            print("key id not found")
+            return nil
+        }
+        guard let name = json["activity_name"] as? String else {
+            print("key name not found")
+            return nil
+            
+        }
+        guard let type = json["type"] as? String else {
+            print("key type not found")
+            return nil }
+        guard let indoor = json["indoor"] as? String else {
+            print("key indoor not found")
+            return nil }
+        guard let duration = json["duration"] as? Int else {
+            print("key duration not found")
+            return nil }
+        guard let video = json["video_url"] as? String else {
+            print("key video not found")
+            return nil }
+        
+        self.activityID = id
+        self.activityName = name
+        if type == "Aerobic exercise" {
+            self.activityType = .aerobic
+        } else {
+            self.activityType = .resistance
+        }
+        
+        if indoor == "True" {
+            self.indoor = true
+        } else {
+            self.indoor = false
         }
         self.duration = duration
         self.video = video
