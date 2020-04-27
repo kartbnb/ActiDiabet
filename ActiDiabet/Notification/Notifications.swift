@@ -48,6 +48,27 @@ class Notifications: NSObject, UNUserNotificationCenterDelegate {
         return trigger
     }
     
+    private func createDateTrigger(date: Date) -> UNCalendarNotificationTrigger? {
+        let dateComponents = Calendar.current.dateComponents([.year, .month,.day,.hour,.minute], from: date)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+        return trigger
+    }
+    
+    func createNotification(with date: Date) {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyyMMddHHmm"
+        let content = createContent()
+        let identifier = formatter.string(from: date)
+        guard let trigger = createDateTrigger(date: date) else { return }
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        notificationCenter.add(request) { (error) in
+            if let error = error {
+                print("Error \(error.localizedDescription)")
+            }
+        }
+        
+    }
+    
     func createNotification(with time: String) {
         let identifier = "do activity"
         let content = createContent()

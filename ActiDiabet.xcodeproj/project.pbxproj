@@ -14,6 +14,9 @@
 		321CDAAB2452F14D00ECDE39 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321CDAAA2452F14D00ECDE39 /* UIViewExtension.swift */; };
 		321CDAAE2452FBB700ECDE39 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321CDAAD2452FBB700ECDE39 /* CustomSegmentedControl.swift */; };
 		321CDAB02453012100ECDE39 /* PlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321CDAAF2453012100ECDE39 /* PlanViewController.swift */; };
+		324F8C4224540AAE0072B824 /* Favourite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324F8C4124540AAE0072B824 /* Favourite.swift */; };
+		324F8C4424541B5E0072B824 /* PlanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324F8C4324541B5D0072B824 /* PlanTableViewCell.swift */; };
+		324F8C46245427F30072B824 /* RecordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324F8C45245427F30072B824 /* RecordTests.swift */; };
 		327355442444B8EC008FC810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327355432444B8EC008FC810 /* AppDelegate.swift */; };
 		327355462444B8EC008FC810 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327355452444B8EC008FC810 /* SceneDelegate.swift */; };
 		327355482444B8EC008FC810 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327355472444B8EC008FC810 /* ViewController.swift */; };
@@ -33,6 +36,9 @@
 		327355AF24481F1E008FC810 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327355AE24481F1E008FC810 /* SettingViewController.swift */; };
 		3284A796244EBA7D0003B025 /* ActivityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284A795244EBA7D0003B025 /* ActivityCollectionViewCell.swift */; };
 		3284A798244ED49E0003B025 /* AllActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284A797244ED49E0003B025 /* AllActivityViewController.swift */; };
+		329C61F424556EE000B70A6A /* FavouriteCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C61F324556EE000B70A6A /* FavouriteCardView.swift */; };
+		329C61F62455781200B70A6A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C61F52455781200B70A6A /* MapViewController.swift */; };
+		329C61F824557EE400B70A6A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C61F724557EE400B70A6A /* Location.swift */; };
 		32FD4B8924494816002D63B1 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FD4B8824494816002D63B1 /* Notifications.swift */; };
 		32FD4B8B244AC1CE002D63B1 /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FD4B8A244AC1CE002D63B1 /* ActivityDetailViewController.swift */; };
 		32FD4B8D244B0345002D63B1 /* Intensity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FD4B8C244B0345002D63B1 /* Intensity.swift */; };
@@ -68,6 +74,9 @@
 		321CDAAA2452F14D00ECDE39 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		321CDAAD2452FBB700ECDE39 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 		321CDAAF2453012100ECDE39 /* PlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewController.swift; sourceTree = "<group>"; };
+		324F8C4124540AAE0072B824 /* Favourite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favourite.swift; sourceTree = "<group>"; };
+		324F8C4324541B5D0072B824 /* PlanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanTableViewCell.swift; sourceTree = "<group>"; };
+		324F8C45245427F30072B824 /* RecordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTests.swift; sourceTree = "<group>"; };
 		327355402444B8EC008FC810 /* ActiDiabet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActiDiabet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		327355432444B8EC008FC810 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		327355452444B8EC008FC810 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +102,9 @@
 		327355AE24481F1E008FC810 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		3284A795244EBA7D0003B025 /* ActivityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCollectionViewCell.swift; sourceTree = "<group>"; };
 		3284A797244ED49E0003B025 /* AllActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllActivityViewController.swift; sourceTree = "<group>"; };
+		329C61F324556EE000B70A6A /* FavouriteCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCardView.swift; sourceTree = "<group>"; };
+		329C61F52455781200B70A6A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		329C61F724557EE400B70A6A /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		32FD4B8824494816002D63B1 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		32FD4B8A244AC1CE002D63B1 /* ActivityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailViewController.swift; sourceTree = "<group>"; };
 		32FD4B8C244B0345002D63B1 /* Intensity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intensity.swift; sourceTree = "<group>"; };
@@ -145,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				321CDAAD2452FBB700ECDE39 /* CustomSegmentedControl.swift */,
+				324F8C4324541B5D0072B824 /* PlanTableViewCell.swift */,
 			);
 			path = Plan;
 			sourceTree = "<group>";
@@ -196,6 +209,7 @@
 			children = (
 				3273555A2444B8EE008FC810 /* ActiDiabetTests.swift */,
 				327355852445C21D008FC810 /* ZipCodeTests.swift */,
+				324F8C45245427F30072B824 /* RecordTests.swift */,
 				3273555C2444B8EE008FC810 /* Info.plist */,
 			);
 			path = ActiDiabetTests;
@@ -216,6 +230,7 @@
 				327355732444B946008FC810 /* WeatherAPI.swift */,
 				321CDAA0245028AF00ECDE39 /* DatabaseController.swift */,
 				321CDAA22452989A00ECDE39 /* MulticastDelegate.swift */,
+				324F8C4124540AAE0072B824 /* Favourite.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -246,6 +261,7 @@
 				32FD4B8A244AC1CE002D63B1 /* ActivityDetailViewController.swift */,
 				3284A797244ED49E0003B025 /* AllActivityViewController.swift */,
 				321CDAAF2453012100ECDE39 /* PlanViewController.swift */,
+				329C61F52455781200B70A6A /* MapViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -257,6 +273,7 @@
 				3273557B24459D17008FC810 /* CalendarButtonView.swift */,
 				327355832445AE41008FC810 /* EnterDetailView.swift */,
 				327355A92447386F008FC810 /* ActivityView.swift */,
+				329C61F324556EE000B70A6A /* FavouriteCardView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -276,6 +293,7 @@
 				327355AC24473B56008FC810 /* Activity.swift */,
 				32FD4B8C244B0345002D63B1 /* Intensity.swift */,
 				321CDAA72452BB0300ECDE39 /* CoredataController.swift */,
+				329C61F724557EE400B70A6A /* Location.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -554,21 +572,26 @@
 				32FD4B8924494816002D63B1 /* Notifications.swift in Sources */,
 				327355AD24473B56008FC810 /* Activity.swift in Sources */,
 				327355AF24481F1E008FC810 /* SettingViewController.swift in Sources */,
+				329C61F424556EE000B70A6A /* FavouriteCardView.swift in Sources */,
 				327355782444BDE5008FC810 /* WeatherView.swift in Sources */,
+				329C61F824557EE400B70A6A /* Location.swift in Sources */,
 				327355482444B8EC008FC810 /* ViewController.swift in Sources */,
 				3284A798244ED49E0003B025 /* AllActivityViewController.swift in Sources */,
 				321CDAAE2452FBB700ECDE39 /* CustomSegmentedControl.swift in Sources */,
 				32FD4B8D244B0345002D63B1 /* Intensity.swift in Sources */,
+				324F8C4424541B5E0072B824 /* PlanTableViewCell.swift in Sources */,
 				327355742444B946008FC810 /* WeatherAPI.swift in Sources */,
 				3273557F24459D71008FC810 /* ColorConstant.swift in Sources */,
 				327355842445AE41008FC810 /* EnterDetailView.swift in Sources */,
 				327355AA2447386F008FC810 /* ActivityView.swift in Sources */,
+				324F8C4224540AAE0072B824 /* Favourite.swift in Sources */,
 				321CDAA32452989A00ECDE39 /* MulticastDelegate.swift in Sources */,
 				327355442444B8EC008FC810 /* AppDelegate.swift in Sources */,
 				32FD4B8B244AC1CE002D63B1 /* ActivityDetailViewController.swift in Sources */,
 				321CDAA1245028AF00ECDE39 /* DatabaseController.swift in Sources */,
 				327355462444B8EC008FC810 /* SceneDelegate.swift in Sources */,
 				3284A796244EBA7D0003B025 /* ActivityCollectionViewCell.swift in Sources */,
+				329C61F62455781200B70A6A /* MapViewController.swift in Sources */,
 				321CDAB02453012100ECDE39 /* PlanViewController.swift in Sources */,
 				321CDAAB2452F14D00ECDE39 /* UIViewExtension.swift in Sources */,
 				321CDAA82452BB0300ECDE39 /* CoredataController.swift in Sources */,
@@ -582,6 +605,7 @@
 			files = (
 				327355862445C21D008FC810 /* ZipCodeTests.swift in Sources */,
 				3273555B2444B8EE008FC810 /* ActiDiabetTests.swift in Sources */,
+				324F8C46245427F30072B824 /* RecordTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

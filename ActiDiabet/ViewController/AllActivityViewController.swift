@@ -10,6 +10,8 @@ import UIKit
 
 class AllActivityViewController: UIViewController, DatabaseListener {
     
+    var searchStatus: TableStatus = .all
+    
     var activities: [Activity] = []
     private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
     private let itemsPerRow:CGFloat = 2
@@ -25,6 +27,7 @@ class AllActivityViewController: UIViewController, DatabaseListener {
         super.viewDidLoad()
         let delegate = UIApplication.shared.delegate as?  AppDelegate
         self.databaseProtocol = delegate?.databaseController
+        
         collectionView.delegate = self
         collectionView.dataSource = self
         setupSearch()
@@ -32,7 +35,8 @@ class AllActivityViewController: UIViewController, DatabaseListener {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.activities = sampleActivity
+        searchBar.searchTextField.text = ""
+        databaseProtocol?.addListener(listener: self)
         setupUI()
         //databaseProtocol?.addListener(listener: self)
     }
@@ -55,7 +59,6 @@ class AllActivityViewController: UIViewController, DatabaseListener {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "listToActivity" {
             let activity = sender as? Activity
-            print("show activity detail \(activity?.activityName)")
             let destination = segue.destination as? ActivityDetailViewController
             destination?.activity = activity
         }
@@ -64,12 +67,13 @@ class AllActivityViewController: UIViewController, DatabaseListener {
     //MARK: Database Listener
     var listenerType: ListenerType = .all
     
-    func getAllActivities(activities: [Activity]) {
+    func getActivities(activities: [Activity]) {
         self.activities = activities
-        self.collectionView.reloadData()
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
     }
-    
-    func getRecommendActivity(activities: [Activity]) {
+    func addLocation(place: OpenSpaces) {
         
     }
 }
@@ -121,10 +125,24 @@ extension AllActivityViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension AllActivityViewController: UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        // search activities
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchStatus = .all
+        databaseProtocol?.fetchAllActivities()
+        collectionView.reloadData()
+    }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchStatus = .search
+        if searchText.count == 0 {
+            databaseProtocol?.fetchAllActivities()
+        } else {
+            databaseProtocol?.searchActivity(str: searchText)
+        }
+        collectionView.reloadData()
     }
 }
 
-
+enum TableStatus {
+    case all
+    case search
+}
 

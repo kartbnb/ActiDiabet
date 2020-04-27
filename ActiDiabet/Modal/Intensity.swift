@@ -8,12 +8,24 @@
 
 import Foundation
 
-let intensityLevelString = ["beginner", "moderate", "vigorous"]
+let intensityLevelString = ["Beginner", "Moderate", "Vigorous"]
+let intensityDescrString = ["Requires some effort and you should feel an increase in your breathing but you can still hold a conversation (e.g. brisk walking, cycling).", "If you currently do no physical activity, start by doing some activity and then gradually build up. You could start by joining together short blocks of exercise, such as combining a 15 minute walk with 15 minutes of cycling to make 30 minutes of moderate exercise.", "Involves activities that make you breathe harder, puff and pant (e.g. jogging, circuit classes)."]
 
 enum IntensityLevel {
     case beginner
     case moderate
     case vigorous
+    
+    func toString() -> String {
+        switch self {
+        case .beginner:
+            return intensityLevelString[0]
+        case .moderate:
+            return intensityLevelString[1]
+        case .vigorous:
+            return intensityLevelString[2]
+        }
+    }
 }
 
 class Intensity {

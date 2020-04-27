@@ -43,11 +43,24 @@ class ActivityView: UIView {
         self.backgroundColor = UIColor.white
     }
     
+
+    
     func setActivity(activity: Activity) {
         //self.activityName.textColor = UIColor.white
         self.activity = activity
         self.activityName.text = activity.activityName
         self.timeDuration.text = "\(activity.duration)"
+        let fill = UIImage(systemName: "heart.fill")
+        
+        if activity.like {
+            likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+            likeButton.tintColor = .systemRed
+            //likeButton.imageView?.image = UIImage(named: "heart.fill")
+        } else {
+            likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
+            likeButton.tintColor = .black
+            //likeButton.imageView?.image = UIImage(named: "heart")
+        }
         // build time label
         
         
@@ -65,5 +78,11 @@ class ActivityView: UIView {
         guard let activity = activity else { return }
         homeVC?.showActivity(activity: activity)
     }
+    
+    @IBAction func likeIt(_ sender: UIButton) {
+        self.activity?.changeFavourite()
+        self.setActivity(activity: self.activity!)
+    }
+    
 
 }

@@ -66,6 +66,17 @@ class CoredataController: NSObject, NSFetchedResultsControllerDelegate, Coredata
         return records
     }
     
+    func addActivity(activity: Activity, duration: Int, date: Date) {
+        let newRecord = NSEntityDescription.insertNewObject(forEntityName: "Record", into: persistentContainer.viewContext) as! Record
+        newRecord.activity = activity.activityName
+        newRecord.duration = Int64(duration)
+        newRecord.type = activity.activityType.toString()
+        newRecord.done = false
+        newRecord.date = date
+        saveContext()
+        print("save success \(activity.activityName), duration: \(duration)")
+    }
+    
     func finishActivity(activity: Activity, duration: Int) {
         let newRecord = NSEntityDescription.insertNewObject(forEntityName: "Record", into: persistentContainer.viewContext) as! Record
         newRecord.activity = activity.activityName
@@ -95,7 +106,8 @@ class CoredataController: NSObject, NSFetchedResultsControllerDelegate, Coredata
         let dateSortDescriptor = NSSortDescriptor(key: "date", ascending: true)
         fetchRequest.sortDescriptors = [dateSortDescriptor]
         let predicate = NSPredicate(format: "date >= %@ and date <= %@", dateFrom as NSDate, dateTo as NSDate)
-        fetchRequest.predicate = predicate
+        let dontPredicate = NSPredicate(format: "done == %@", NSNumber(value: true))
+        fetchRequest.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [predicate, dontPredicate])
         recordFetchedResultController = NSFetchedResultsController<Record>(fetchRequest: fetchRequest, managedObjectContext: persistentContainer.viewContext, sectionNameKeyPath: nil, cacheName: nil)
         recordFetchedResultController?.delegate = self
         do {
@@ -110,21 +122,63 @@ class CoredataController: NSObject, NSFetchedResultsControllerDelegate, Coredata
         return records
     }
     
-//    func fetchActivityForday(date: Date) -> [Record] {
-//
-//        var calendar = Calendar.current
-//        calendar.timeZone = NSTimeZone.local
-//        let dateFrom = calendar.startOfDay(for: Date())
-//        let dateTo = calendar.date(byAdding: .day, value: 1, to: dateFrom)
-//
-//        let fetchRequest: NSFetchRequest<Record> = Record.fetchRequest()
-//        let dateSortDescriptor = NSSortDescriptor(key: "date", ascending: true)
-//        fetchRequest.sortDescriptors = [dateSortDescriptor]
-//        let predicate = NSPredicate(format: "date >= %@ and date <= %@", <#T##args: CVarArg...##CVarArg#>)
-//    }
+    func fetchTodayRecords() -> [Record] {
+        let today = Date()
+        var calendar = Calendar.current
+        calendar.timeZone = .current
+        let dateFrom = calendar.startOfDay(for: today)
+        let dateTo = calendar.date(byAdding: .day, value: 1, to: dateFrom)!
+        
+        let fetchRequest: NSFetchRequest<Record> = Record.fetchRequest()
+        let dateSortDescriptor = NSSortDescriptor(key: "date", ascending: true)
+        fetchRequest.sortDescriptors = [dateSortDescriptor]
+        let predicate = NSPredicate(format: "date >= %@ and date <= %@", dateFrom as NSDate, dateTo as NSDate)
+        let dontPredicate = NSPredicate(format: "done == %@", NSNumber(value: true))
+        fetchRequest.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [predicate, dontPredicate])
+        recordFetchedResultController = NSFetchedResultsController<Record>(fetchRequest: fetchRequest, managedObjectContext: persistentContainer.viewContext, sectionNameKeyPath: nil, cacheName: nil)
+        recordFetchedResultController?.delegate = self
+        do {
+            try recordFetchedResultController?.performFetch()
+        } catch {
+            print("Fetch request failed: \(error)")
+        }
+        var records = [Record]()
+        if recordFetchedResultController?.fetchedObjects != nil {
+            records = (recordFetchedResultController?.fetchedObjects)!
+        }
+        return records
+    }
+    
+    func fetchFuturePlan() -> [Record] {
+        let today = Date()
+        let fetchRequest: NSFetchRequest<Record> = Record.fetchRequest()
+        let dateSortDescriptor = NSSortDescriptor(key: "date", ascending: true)
+        fetchRequest.sortDescriptors = [dateSortDescriptor]
+        let predicate = NSPredicate(format: "date >= %@", today as NSDate)
+        let dontPredicate = NSPredicate(format: "done == %@", NSNumber(value: false))
+        fetchRequest.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [predicate, dontPredicate])
+        recordFetchedResultController = NSFetchedResultsController<Record>(fetchRequest: fetchRequest, managedObjectContext: persistentContainer.viewContext, sectionNameKeyPath: nil, cacheName: nil)
+        recordFetchedResultController?.delegate = self
+        do {
+            try recordFetchedResultController?.performFetch()
+        } catch {
+            print("Fetch request failed: \(error)")
+        }
+        var records = [Record]()
+        if recordFetchedResultController?.fetchedObjects != nil {
+            records = (recordFetchedResultController?.fetchedObjects)!
+        }
+        return records
+        
+    }
+    
+
 }
 
 protocol CoredataProtocol {
     func finishActivity(activity: Activity, duration: Int)
     func fetchActivityThisWeek() -> [Record]
+    func addActivity(activity: Activity, duration: Int, date: Date)
+    func fetchTodayRecords() -> [Record]
+    func fetchFuturePlan() -> [Record]
 }

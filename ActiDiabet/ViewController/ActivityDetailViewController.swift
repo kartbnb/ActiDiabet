@@ -14,6 +14,7 @@ class ActivityDetailViewController: UIViewController {
     var activity: Activity?
     
     var coredataController: CoredataProtocol?
+    private var notificationCenter: Notifications?
     
     // Views
     @IBOutlet weak var titleView: UIView!
@@ -32,11 +33,13 @@ class ActivityDetailViewController: UIViewController {
     
     // Buttons
     @IBOutlet weak var locationButton: UIButton!
+    @IBOutlet weak var likeButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let delegate = UIApplication.shared.delegate as? AppDelegate
         self.coredataController = delegate?.coredataController
+        self.notificationCenter = delegate?.notification
         guard let ac = activity else { return }
         self.setupView(id: ac.video)
         setRound()
@@ -51,6 +54,7 @@ class ActivityDetailViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
         self.navigationController?.navigationBar.isHidden = false
+        playerView.stopVideo()
     }
 
     func setupView(id: String) {
@@ -65,8 +69,24 @@ class ActivityDetailViewController: UIViewController {
                 indoorLabel.text = "Outdoor"
                 locationButton.isHidden = false
             }
+            
+            
         }
+        setlikeButton()
+        
         playerView.load(withVideoId: id)
+    }
+    
+    func setlikeButton() {
+        if let activity = self.activity {
+            if activity.like {
+                likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+                likeButton.tintColor = .systemRed
+            } else {
+                likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
+                likeButton.tintColor = .black
+            }
+        }
     }
     
     func setInputView() {
@@ -90,11 +110,54 @@ class ActivityDetailViewController: UIViewController {
     }
     
     @IBAction func completeActivity(_ sender: Any) {
+        
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        let database = delegate.databaseController as DatabaseProtocol
+        let userid = UserDefaults.standard.object(forKey: "userid") as! String
         guard let duration = Int(timeTextField.text!) else { return }
         guard let activity = activity else { return }
         coredataController?.finishActivity(activity: activity, duration: duration)
-        showAlert(message: "", title: "Do you like this activity?")
+        let alert = UIAlertController(title: "Did you like this activity?", message: "", preferredStyle: .alert)
+        let likeAction = UIAlertAction(title: "Like", style: .default) { (alertaction) in
+            database.addReview(userid: userid, activity: self.activity!, rate: 1)
+            self.navigationController?.popViewController(animated: true)
+        }
+        let dontlikeAction = UIAlertAction(title: "Dislike", style: .default) { (alertaction) in
+            database.addReview(userid: userid, activity: self.activity!, rate: -1)
+            self.navigationController?.popViewController(animated: true)
+        }
+        alert.addAction(likeAction)
+        alert.addAction(dontlikeAction)
+        self.present(alert, animated: true, completion: nil)
         
+    }
+    @IBAction func addToPlan(_ sender: Any) {
+        let alert = UIAlertController(title: "Please select a time to plan", message: "", preferredStyle: .alert)
+        alert.addTextField { (textfield) in
+            self.alertTextField = textfield
+            let datePicker = UIDatePicker()
+            datePicker.locale = Locale(identifier: "en_GB")
+            datePicker.datePickerMode = .dateAndTime
+            datePicker.addTarget(self, action: #selector(self.dateChanged(datePicker:)), for: .valueChanged)
+            textfield.inputView = datePicker
+        }
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let save = UIAlertAction(title: "Save", style: .default) { (action) in
+            guard let duration = Int(self.timeTextField.text!) else { return }
+            guard let date = self.dateForSelection else { return }
+            guard let activity = self.activity else { return }
+            self.notificationCenter?.createNotification(with: date)
+            self.coredataController?.addActivity(activity: activity, duration: duration, date: date)
+            self.navigationController?.popViewController(animated: true)
+        }
+        alert.addAction(save)
+        alert.addAction(cancel)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func changeLike(_ sender: Any) {
+        self.activity?.changeFavourite()
+        self.setlikeButton()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -116,18 +179,15 @@ class ActivityDetailViewController: UIViewController {
         view.layer.cornerRadius = 20
     }
     
-    func showAlert(message: String, title: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let likeAction = UIAlertAction(title: "like", style: .default) { (alertaction) in
-            self.navigationController?.popViewController(animated: true)
-        }
-        let dontlikeAction = UIAlertAction(title: "dislike", style: .default) { (alertaction) in
-            self.navigationController?.popViewController(animated: true)
-        }
-        alert.addAction(likeAction)
-        alert.addAction(dontlikeAction)
-        self.present(alert, animated: true, completion: nil)
-        
+    private var alertTextField: UITextField?
+    private var dateForSelection: Date?
+    
+    @objc func dateChanged(datePicker: UIDatePicker) {
+        dateForSelection = datePicker.date
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+        alertTextField?.text = dateFormatter.string(from: datePicker.date)
+        //view.endEditing(true)
     }
 }
 

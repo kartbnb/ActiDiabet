@@ -10,6 +10,8 @@ import Foundation
 
 let exercisePreferences = ["Aerobic", "Resistance"]
 
+let indoorActivity = [Activity(json: ["id":12, "activity_name": "Chair Exercise ", "type": "Resistance exercise", "duration": 3, "indoor": "True", "video_url": "rYywHxYe4U8"])!, Activity(json: ["id": 17, "activity_name": "Char Squat", "type": "Resistance exercise", "duration": 3, "indoor": "True", "video_url": "DDALnEtV1GA"])!]
+
 enum ActivityType {
     case aerobic
     case resistance
@@ -39,8 +41,9 @@ class Activity {
     let indoor: Bool
     let duration: Int
     let video: String
+    var like: Bool
     
-    init(name: String, type: String, indoor: Bool, duration: Int, video: String) {
+    init(id: Int, name: String, type: String, indoor: Bool, duration: Int, video: String) {
         self.activityName = name
         self.indoor = indoor
         if type == "Aerobic exercise" {
@@ -50,7 +53,8 @@ class Activity {
         }
         self.duration = duration
         self.video = video
-        self.activityID = nil
+        self.activityID = id
+        self.like = false
     }
     
     init?(json: [String: Any]) {
@@ -91,14 +95,21 @@ class Activity {
         }
         self.duration = duration
         self.video = video
+        self.like = false
+    }
+    
+    func changeFavourite() {
+        self.like = !self.like
+        let favourites = FavouriteController()
+        favourites.setFavourite(activity: self)
     }
 }
 
 let sampleActivity = [
-                        Activity(name: "aerobic exercise classes", type: "Aerobic exercise", indoor: true, duration: 7, video: "Zwi5IzpQJBs"),
-                        Activity(name: "cycling", type: "Aerobic exercise", indoor: false, duration: 30, video: "hznfKSDSdhE"),
-                        Activity(name: "swimming", type: "Aerobic exercise", indoor: false, duration: 30, video: "uEOvqKpf_lc"),
-                        Activity(name: "Yoga", type: "Resistance exercise", indoor: true, duration: 7, video: "NDLad2vOHkU")
+    Activity(id: 1, name: "aerobic exercise classes", type: "Aerobic exercise", indoor: true, duration: 7, video: "Zwi5IzpQJBs"),
+    Activity(id: 2, name: "cycling", type: "Aerobic exercise", indoor: false, duration: 30, video: "hznfKSDSdhE"),
+    Activity(id: 3, name: "swimming", type: "Aerobic exercise", indoor: false, duration: 30, video: "uEOvqKpf_lc"),
+    Activity(id: 4, name: "Yoga", type: "Resistance exercise", indoor: true, duration: 7, video: "NDLad2vOHkU")
                     ]
 
 

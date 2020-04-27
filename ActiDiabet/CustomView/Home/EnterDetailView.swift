@@ -63,12 +63,14 @@ class EnterIntensityView: UIView {
     
     @IBOutlet weak var intensityTextField: UITextField!
     @IBOutlet weak var finishButton: UIButton!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         intensityTextField.resignFirstResponder()
     }
     
     fileprivate func setInputView() {
+        descriptionLabel.text = ""
         self.finishButton.isEnabled = false
         let pickerView = UIPickerView()
         pickerView.delegate = self
@@ -108,6 +110,7 @@ extension EnterIntensityView: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         intensityTextField.text = intensityLevelString[row]
+        descriptionLabel.text = intensityDescrString[row]
         finishButton.isEnabled = true
     }
 }
@@ -173,9 +176,13 @@ class EnterDetailView: UIView {
     }
     
     @IBAction func saveIntensity(_ sender: Any) {
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        let db = delegate.databaseController
+        let zipcode = UserDefaults.standard.object(forKey: "zipcode") as! String
         guard let intensity = chooseIntensityView.getIntensity() else { return }
         let intensityObject = Intensity()
         intensityObject.setIntensity(intensity: intensity)
+        db.addUser(intensity: intensity.toString(), postcode: zipcode)
         UIView.animate(withDuration: 1.0, animations: {
             self.alpha = 0
         }) { (finished) in

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, CustomViewProtocol {
+class ViewController: UIViewController, CustomViewProtocol, DatabaseListener {
     
     @IBOutlet weak var firstActivityView: ActivityView!
     
@@ -19,6 +19,7 @@ class ViewController: UIViewController, CustomViewProtocol {
     @IBOutlet weak var calendarButton: CalendarButtonView!
     
     var coredataController: CoredataProtocol?
+    var databaseController: DatabaseProtocol?
     
     @IBOutlet weak var resistanceProgress: UIProgressView!
     @IBOutlet weak var aerobicProgress: UIProgressView!
@@ -26,16 +27,16 @@ class ViewController: UIViewController, CustomViewProtocol {
     @IBOutlet weak var aerobicLabel: UILabel!
     @IBOutlet weak var resistanceLabel: UILabel!
     
-    @IBOutlet weak var favouriteView: UIView!
     @IBOutlet weak var achieveView: UIView!
+    
+    var recommendActivities = [sampleActivity[0], sampleActivity[1]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         calendarButton.delegate = self
-        setupScroll()
-        
         let delegate = UIApplication.shared.delegate as? AppDelegate
         coredataController = delegate?.coredataController
+        databaseController = delegate!.databaseController
         aerobicProgress.transform = aerobicProgress.transform.scaledBy(x: 1, y: 8)
         resistanceProgress.transform = resistanceProgress.transform.scaledBy(x: 1, y: 8)
         
@@ -44,6 +45,8 @@ class ViewController: UIViewController, CustomViewProtocol {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        databaseController?.addListener(listener: self)
+        firstEnter()
         guard let records = coredataController?.fetchActivityThisWeek() else { return }
         let benchMark = self.getProgressOfWeek(records: records)
         aerobicLabel.text = "\(Int(benchMark[0] * 100))%"
@@ -59,26 +62,13 @@ class ViewController: UIViewController, CustomViewProtocol {
             resistanceProgress.setProgress(benchMark[1], animated: true)
         }
         calendarButton.getDate()
-        firstEnter()
+        //databaseController?.getOneRecommend(viewCard: favouriteCard)
     }
     
-    func setupUI() {
-        favouriteView.makeRound()
-        achieveView.makeRound()
-        
-        weatherView.getCurrentWeather()
-        self.navigationController?.navigationBar.isHidden = false
-        self.tabBarController?.tabBar.isHidden = false
-        //UserDefaults.standard.removeObject(forKey: "zipcode")
+    override func viewWillDisappear(_ animated: Bool) {
+        databaseController?.removeListener(listener: self)
     }
     
-    func setupScroll() {
-        
-        firstActivityView.setActivity(activity: sampleActivity[0])
-        secondActivityView.setActivity(activity: sampleActivity[3])
-        firstActivityView.homeVC = self
-        secondActivityView.homeVC = self
-    }
     
     func firstEnter() {
         //UserDefaults.standard.set("3162", forKey: "zipcode")
@@ -91,6 +81,36 @@ class ViewController: UIViewController, CustomViewProtocol {
             setupUI()
         }
     }
+    
+    
+    func setupUI() {
+        
+        
+        if let userid = UserDefaults.standard.object(forKey: "userid") as? String {
+            
+            print("already get userid \(userid)")
+        } else {
+            print("no userid")
+        }
+        achieveView.makeRound()
+        
+        weatherView.getCurrentWeather()
+        self.navigationController?.navigationBar.isHidden = false
+        self.tabBarController?.tabBar.isHidden = false
+        //UserDefaults.standard.removeObject(forKey: "zipcode")
+    }
+    
+    func setupScroll() {
+        DispatchQueue.main.async {
+            self.firstActivityView.setActivity(activity: self.recommendActivities[0])
+            self.secondActivityView.setActivity(activity: self.recommendActivities[1])
+        }
+        firstActivityView.homeVC = self
+        secondActivityView.homeVC = self
+        
+    }
+    
+    
     
     func goCalendar() {
         print("go calendar")
@@ -136,8 +156,25 @@ class ViewController: UIViewController, CustomViewProtocol {
         }
     }
     
+    // MARK: Database Listener
+    var listenerType: ListenerType = .recommend
+    
+    func getActivities(activities: [Activity]) {
+        if weatherString == "01d" || weatherString == "02d" || weatherString == "03d" || weatherString == "04d" {
+            self.recommendActivities = activities
+        } else {
+            self.recommendActivities = indoorActivity
+        }
+        
+        self.setupScroll()
+    }
+    
+    func addLocation(place: OpenSpaces) {
+        
+    }
     
 }
+
 
 protocol CustomViewProtocol {
     func goCalendar()

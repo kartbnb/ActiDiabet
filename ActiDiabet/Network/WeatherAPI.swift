@@ -8,12 +8,16 @@
 
 import Foundation
 import UIKit
+import MapKit
+
+var weatherString: String = ""
 
 struct Weather {
     var main: String
     var temp: Int
     var city: String
     var image: String
+    var coordinate: CLLocation
 }
 
 enum SerializationError: Error {
@@ -53,11 +57,24 @@ extension Weather {
              print("temp key miss")
             return nil
         }
+        guard let coord = json["coord"] as? [String: Any] else {
+            print("coord key miss")
+            return nil
+        }
+        guard let lat = coord["lat"] as? Double else {
+            print("lat key miss")
+            return nil
+        }
+        guard let lon = coord["lon"] as? Double else {
+            print("long key miss")
+            return nil
+        }
+        weatherString = imageCode
         self.main = weather
         self.temp = Int(temp - 273.15)
         self.city = cityName
         self.image = imageCode
-        
+        self.coordinate = CLLocation(latitude: lat, longitude: lon)
     }
 }
 
@@ -85,6 +102,38 @@ class WeatherAPI {
         } else {
             
         }
+    }
+    
+    func getCoordinate(mapView: MapViewController) {
+        let zipCode = UserDefaults.standard.object(forKey: "zipcode") as? String
+               if let zip = zipCode {
+                   let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?zip=\(zip),AU&appid=\(key)")
+                   
+                   if let url = url {
+                       URLSession.shared.dataTask(with: url) { (data, response, error) in
+                           if let data = data {
+                               let json = try? JSONSerialization.jsonObject(with: data, options: [])
+                               if let json = json {
+                                   if let dictionary = json as? [String: Any] {
+                                       let weather = Weather(json: dictionary)
+                                       print(weather)
+                                       DispatchQueue.main.async {
+                                            mapView.setMapView(center: weather!.coordinate)
+                                       }
+                                       
+                                   }
+                               }
+                           } else {
+                               print("111")
+                           }
+                       }.resume()
+                       
+                   } else {
+                       
+                   }
+               } else {
+                   
+               }
     }
     
     func performdata(data: Data, weatherView: WeatherView) {
