@@ -183,10 +183,12 @@ class EnterDetailView: UIView {
         let intensityObject = Intensity()
         intensityObject.setIntensity(intensity: intensity)
         db.addUser(intensity: intensity.toString(), postcode: zipcode)
+        
         UIView.animate(withDuration: 1.0, animations: {
             self.alpha = 0
         }) { (finished) in
             self.isHidden = finished
+            db.fetchOpenSpaces()
             self.homeVC?.setupUI()
         }
     }

@@ -84,8 +84,6 @@ class ViewController: UIViewController, CustomViewProtocol, DatabaseListener {
     
     
     func setupUI() {
-        
-        
         if let userid = UserDefaults.standard.object(forKey: "userid") as? String {
             
             print("already get userid \(userid)")
@@ -169,7 +167,7 @@ class ViewController: UIViewController, CustomViewProtocol, DatabaseListener {
         self.setupScroll()
     }
     
-    func addLocation(place: OpenSpaces) {
+    func addLocation(place: [OpenSpaces]) {
         
     }
     

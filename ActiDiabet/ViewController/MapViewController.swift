@@ -12,6 +12,7 @@ import MapKit
 class MapViewController: UIViewController, DatabaseListener {
     
     
+    
     var db: DatabaseProtocol?
     @IBOutlet weak var mapView: MKMapView!
     
@@ -65,8 +66,10 @@ class MapViewController: UIViewController, DatabaseListener {
         
     }
     
-    func addLocation(place: OpenSpaces) {
-        self.mapView.addAnnotation(place)
+    func addLocation(place: [OpenSpaces]) {
+        for pl in place {
+            self.mapView.addAnnotation(pl)
+        }
     }
 
 }

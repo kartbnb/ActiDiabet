@@ -73,7 +73,7 @@ class AllActivityViewController: UIViewController, DatabaseListener {
             self.collectionView.reloadData()
         }
     }
-    func addLocation(place: OpenSpaces) {
+    func addLocation(place: [OpenSpaces]) {
         
     }
 }

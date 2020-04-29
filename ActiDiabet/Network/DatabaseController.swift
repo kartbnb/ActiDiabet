@@ -11,14 +11,13 @@ import Foundation
 enum ListenerType {
     case all
     case recommend
-    case favourite
     case map
 }
 
 protocol DatabaseListener: AnyObject {
     var listenerType: ListenerType {get set}
     func getActivities(activities: [Activity])
-    func addLocation(place: OpenSpaces)
+    func addLocation(place: [OpenSpaces])
 }
 
 protocol DatabaseProtocol: AnyObject {
@@ -28,10 +27,9 @@ protocol DatabaseProtocol: AnyObject {
     func addReview(userid: String, activity: Activity, rate: Int)
     func searchActivity(str: String)
     func fetchAllActivities()
-    func getOneRecommend(viewCard: FavouriteCardDelegate)
 }
 
-let link = "http://ieserver-env.eba-kpxgxhpr.ap-southeast-2.elasticbeanstalk.com/" 
+let link = "http://ieserver-env.eba-kpxgxhpr.ap-southeast-2.elasticbeanstalk.com/"
 
 class DatabaseController: NSObject {
     
@@ -43,80 +41,25 @@ class DatabaseController: NSObject {
     
     var recommendActivities: [Activity]
     
+    var places: [OpenSpaces]
+    
     override init() {
         self.activities = []
         self.recommendActivities = []
+        self.places = []
         super.init()
+        self.fetchRecommendActivity()
+        
+        
     }
     
-    func getOneRecommend(viewCard: FavouriteCardDelegate) {
-        let favouriteController = FavouriteController()
-        let favourites = favouriteController.getFavourite()
-        if favourites != nil {
-            print(favourites![0])
-            let url = URL(string: link + "activity/search/byID/\(favourites![0])")
-            if let url = url {
-                URLSession.shared.dataTask(with: url) { (data, response, error) in
-                    if let error = error {
-                        print(error)
-                    }
-                    if let data = data {
-                        let json = try? JSONSerialization.jsonObject(with: data, options: [])
-                        guard json != nil else { return }
-                        guard let dictionary = json as? [String: Any] else { return }
-                        guard let jsonArray = dictionary["result"] as? [[String: Any]]else { return }
-                        let item = jsonArray[0]
-                        guard let activity = Activity(json: item) else {
-                            print("activity init failed \(item)")
-                            return
-                        }
-                        activity.like = self.favouriteController.findUserLike(activity: activity)
-                        viewCard.setActivity(activity: activity)
-                    }
-                }.resume()
-            }
-        } else {
-            viewCard.setActivity(activity: nil)
-        }
-    }
-    
-    func fetchAllActivities() {
-        let url = URL(string: link + "activity")
-        if let url = url {
-            URLSession.shared.dataTask(with: url) { (data, response, error) in
-                if let error = error {
-                    print(error)
-                }
-                if let data = data {
-                    self.performData(data)
-                }
-            }.resume()
-        }
-    }
-    
-    private func performData(_ data: Data) {
+    // MARK: performing data return jsonArray
+    private func performData(_ data: Data) -> [[String: Any]]? {
         let json = try? JSONSerialization.jsonObject(with: data, options: [])
-        guard json != nil else { return }
-        guard let dictionary = json as? [String: Any] else { return }
-        guard let jsonArray = dictionary["result"] as? [[String: Any]]else { return }
-        self.activities = []
-        for item in jsonArray {
-            guard let activity = Activity(json: item) else {
-                print("activity init failed \(item)")
-                return
-            }
-            activity.like = self.favouriteController.findUserLike(activity: activity)
-            self.activities.append(activity)
-        }
-        listeners.invoke { (listener) in
-            if listener.listenerType == .all {
-                listener.getActivities(activities: self.activities)
-            } else if listener.listenerType == .recommend {
-                listener.getActivities(activities: self.activities)
-            } else if listener.listenerType == .favourite {
-                listener.getActivities(activities: self.activities)
-            }
-        }
+        guard json != nil else { return nil }
+        guard let dictionary = json as? [String: Any] else { return nil }
+        guard let jsonArray = dictionary["result"] as? [[String: Any]]else { return nil }
+        return jsonArray
     }
     
     
@@ -134,7 +77,40 @@ class DatabaseController: NSObject {
 }
 
 extension DatabaseController: DatabaseProtocol {
-    func fetchRecommentActivity() {
+    //MARK: -Fetch all activities
+    func fetchAllActivities() {
+        let url = URL(string: link + "activity")
+        if let url = url {
+            URLSession.shared.dataTask(with: url) { (data, response, error) in
+                if let error = error {
+                    print(error)
+                }
+                if let data = data {
+                    self.activities = []
+                    if let jsonArray = self.performData(data) {
+                        for item in jsonArray {
+                            guard let activity = Activity(json: item) else {
+                                print("activity init failed \(item)")
+                                return
+                            }
+                            activity.like = self.favouriteController.findUserLike(activity: activity)
+                            self.activities.append(activity)
+                        }
+                        self.fetchOpenSpaces()
+                        self.listeners.invoke { (listener) in
+                            if listener.listenerType == .all {
+                                listener.getActivities(activities: self.activities)
+                            }
+                        }
+                    }
+                    
+                }
+            }.resume()
+        }
+    }
+    
+    //MARK: -Fetch Recommend Activities
+    func fetchRecommendActivity() {
         let url = URL(string: link + "activity/recommendation/1")
         if let url = url {
             URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -142,7 +118,24 @@ extension DatabaseController: DatabaseProtocol {
                     print(error)
                 }
                 if let data = data {
-                    self.performData(data)
+                    self.recommendActivities = []
+                    if let jsonArray = self.performData(data) {
+                        for item in jsonArray {
+                            guard let activity = Activity(json: item) else {
+                                print("activity init failed \(item)")
+                                return
+                            }
+                            activity.like = self.favouriteController.findUserLike(activity: activity)
+                            self.activities.append(activity)
+                        }
+                        self.fetchAllActivities()
+                        self.listeners.invoke { (listener) in
+                            if listener.listenerType == .recommend {
+                                listener.getActivities(activities: self.recommendActivities)
+                                
+                            }
+                        }
+                    }
                 }
             }.resume()
         }
@@ -156,43 +149,56 @@ extension DatabaseController: DatabaseProtocol {
                     print(error)
                 }
                 if let data = data {
-                    self.performData(data)
-                }
-            }.resume()
-        }
-    }
-    
-    func fetchFavouriteActivity() {
-        
-    }
-    
-    func fetchOpenSpaces() {
-        let zip = UserDefaults.standard.object(forKey: "zipcode") as! String
-        let placeUrl = URL(string: link + "activity/place/\(zip)")
-        if let url = placeUrl {
-            URLSession.shared.dataTask(with: url) { (data, response, error) in
-                if let error = error {
-                    print(error)
-                }
-                if let data = data {
-                    let json = try? JSONSerialization.jsonObject(with: data, options: [])
-                    guard json != nil else { return }
-                    guard let dictionary = json as? [String: Any] else { return }
-                    guard let jsonArray = dictionary["result"] as? [[String: Any]]else { return }
-                    jsonArray.forEach { (item) in
-                        guard let location = OpenSpaces(json: item, type: .space) else { return }
+                    self.activities = []
+                    if let jsonArray = self.performData(data) {
+                        for item in jsonArray {
+                            guard let activity = Activity(json: item) else {
+                                print("activity init failed \(item)")
+                                return
+                            }
+                            activity.like = self.favouriteController.findUserLike(activity: activity)
+                            self.activities.append(activity)
+                        }
                         self.listeners.invoke { (listener) in
-                            if listener.listenerType == .map {
-                                listener.addLocation(place: location)
-                                self.fetchPools()
+                            if listener.listenerType == .all {
+                                listener.getActivities(activities: self.activities)
                             }
                         }
-                        
                     }
                 }
             }.resume()
         }
-        
+    }
+    
+    //MARK: -Fetch All openspaces
+    func fetchOpenSpaces() {
+        let zip = UserDefaults.standard.object(forKey: "zipcode") as? String
+        if zip == nil {
+            
+        } else {
+            
+            let placeUrl = URL(string: link + "activity/place/\(zip!)")
+            print(placeUrl?.absoluteString)
+            if let url = placeUrl {
+                URLSession.shared.dataTask(with: url) { (data, response, error) in
+                    if let error = error {
+                        print(error)
+                    }
+                    if let data = data {
+                        print("open space data \(data)")
+                        let json = try? JSONSerialization.jsonObject(with: data, options: [])
+                        guard json != nil else { return }
+                        guard let dictionary = json as? [String: Any] else { return }
+                        guard let jsonArray = dictionary["result"] as? [[String: Any]]else { return }
+                        jsonArray.forEach { (item) in
+                            guard let location = OpenSpaces(json: item, type: .space) else { return }
+                            self.places.append(location)
+                            //self.fetchPools()
+                        }
+                    }
+                }.resume()
+            }
+        }
         
     }
     
@@ -211,23 +217,25 @@ extension DatabaseController: DatabaseProtocol {
                     guard let jsonArray = dictionary["result"] as? [[String: Any]]else { return }
                     jsonArray.forEach { (item) in
                         guard let location = OpenSpaces(json: item, type: .pool) else { return }
-                        self.listeners.invoke { (listener) in
-                            if listener.listenerType == .map {
-                                listener.addLocation(place: location)
-                            }
-                        }
-                        
+                        self.places.append(location)
                     }
+                    self.listeners.invoke { (listener) in
+                        if listener.listenerType == .map {
+                            listener.addLocation(place: self.places)
+                        }
+                    }
+                    
                 }
             }.resume()
         }
     }
     
-
-    
+    //MARK: -add user in database
     func addUser(intensity: String, postcode: String) {
         // postcode_intensity
         let url = URL(string: link + "adduser/\(postcode)_\(intensity)")
+        
+        
         if let url = url {
             URLSession.shared.dataTask(with: url) { (data, response, error) in
                 if let error = error {
@@ -241,6 +249,7 @@ extension DatabaseController: DatabaseProtocol {
         
     }
     
+    //MARK: -add review in database
     func addReview(userid: String, activity: Activity, rate: Int) {
         let url = URL(string: link + "\(userid)_\(activity.activityID!)_\(rate)")
         if let url = url {
@@ -255,18 +264,16 @@ extension DatabaseController: DatabaseProtocol {
         }
     }
     
-    // MARK: Database Protocol
+    // MARK: --Database Protocol
     
     func addListener(listener: DatabaseListener) {
         listeners.addDelegate(listener)
         if listener.listenerType == .all {
-            self.fetchAllActivities()
+            listener.getActivities(activities: activities)
         } else if listener.listenerType == .recommend {
-            self.fetchRecommentActivity()
-        } else if listener.listenerType == .favourite {
-            self.fetchFavouriteActivity()
+            listener.getActivities(activities: recommendActivities)
         } else if listener.listenerType == .map {
-            self.fetchOpenSpaces()
+            listener.addLocation(place: places)
         }
     }
     
