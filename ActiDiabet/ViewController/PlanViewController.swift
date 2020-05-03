@@ -10,7 +10,10 @@ import UIKit
 
 class PlanViewController: UIViewController {
     
+    ///This is the viewcontroller of plan page
+    // outlets
     @IBOutlet weak var tableView: UITableView!
+    
     
     private var records: [Record] = []
     private var index = 0
@@ -43,6 +46,8 @@ class PlanViewController: UIViewController {
         }
     }
     
+    //MARK: - Perform Records functions
+    // fetch records today/future
     func getRecords() {
         if index == 0{
             self.records = coredata!.fetchTodayRecords()
@@ -51,6 +56,7 @@ class PlanViewController: UIViewController {
         }
     }
     
+    // calculate how many sections are needed when in future view
     func getSections(records: [Record]) -> Int {
         var sections = 0
         var dateStart = Date()
@@ -64,6 +70,7 @@ class PlanViewController: UIViewController {
         return sections
     }
     
+    // generate section titles (Date of each section)
     func getSectionTitles(records: [Record]) -> [Date] {
         var titles = [Date]()
         var dateStart = Date()
@@ -77,6 +84,7 @@ class PlanViewController: UIViewController {
         return titles
     }
     
+    // get records for each section
     func getSectionRecords(records: [Record], on date: Date) -> [Record] {
         var recordinDate = [Record]()
         for record in records {
@@ -103,16 +111,16 @@ class PlanViewController: UIViewController {
 
 }
 
+//MARK: - Segment control delegate
 extension PlanViewController: CustomSegmentedControlDelegate {
-    
     func changeToIndex(index: Int) {
         self.index = index
         getRecords()
         tableView.reloadData()
     }
-    
 }
 
+//MARK: - TableViewDelegate and TableViewDataSource
 extension PlanViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         if index == 0 {

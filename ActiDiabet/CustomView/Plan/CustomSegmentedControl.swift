@@ -9,7 +9,8 @@
 import UIKit
 
 class CustomSegmentedControl: UIView {
-    
+    /// This class is build for custom segment control view
+    /// Dont ask why no comments, because i copied from tutorial
     private var buttonTitles: [String]!
     private var buttons: [UIButton] = []
     private var selectorView: UIView!

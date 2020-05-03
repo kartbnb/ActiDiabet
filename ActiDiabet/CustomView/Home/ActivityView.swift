@@ -9,7 +9,7 @@
 import UIKit
 
 class ActivityView: UIView {
-    
+    /// This view is the custom UIview which for activity
     var activity: Activity?
     
     var homeVC: CustomViewProtocol?
@@ -17,15 +17,6 @@ class ActivityView: UIView {
     @IBOutlet weak var activityName: UILabel!
     @IBOutlet weak var timeDuration: UILabel!
     @IBOutlet weak var likeButton: UIButton!
-    
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -37,34 +28,28 @@ class ActivityView: UIView {
         setupView()
     }
     
-    
+    // set corner and background color
     private func setupView() {
         self.layer.cornerRadius = 20
         self.backgroundColor = UIColor.white
     }
     
-
-    
+    // set an activity into this view
     func setActivity(activity: Activity) {
         //self.activityName.textColor = UIColor.white
         self.activity = activity
         self.activityName.text = activity.activityName
         self.timeDuration.text = "\(activity.duration)"
-        let fill = UIImage(systemName: "heart.fill")
         
         if activity.like {
             likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
             likeButton.tintColor = .systemRed
-            //likeButton.imageView?.image = UIImage(named: "heart.fill")
         } else {
             likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
             likeButton.tintColor = .black
-            //likeButton.imageView?.image = UIImage(named: "heart")
         }
         // build time label
         
-        
-
         switch activity.activityType {
         case .aerobic:
             self.backgroundColor = ColorConstant.aerobicColor
@@ -74,11 +59,13 @@ class ActivityView: UIView {
         self.layoutIfNeeded()
     }
     
+    // touch inside activity go to detail
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let activity = activity else { return }
         homeVC?.showActivity(activity: activity)
     }
     
+    // like button function
     @IBAction func likeIt(_ sender: UIButton) {
         self.activity?.changeFavourite()
         self.setActivity(activity: self.activity!)

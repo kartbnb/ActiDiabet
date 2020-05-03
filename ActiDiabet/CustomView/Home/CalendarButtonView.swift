@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 class CalendarButtonView: UIView {
-    
+    /// This is the custom view of calandar in main view controller
+    //Outlets
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
@@ -29,29 +30,23 @@ class CalendarButtonView: UIView {
     }
     
     private func setupView() {
-        
         self.layer.cornerRadius = 20.0
-        
+        //set click action
         let gesture = UITapGestureRecognizer(target: self, action: #selector(self.tapped(_sender:)))
         self.addGestureRecognizer(gesture)
     }
     
+    // get today information
     func getDate() {
         let today = Date()
         let formatting = DateFormatter()
-//        print(formatting.shortWeekdaySymbols)
-//        print(Calendar.current.component(.weekday, from: today))
         let weekday = formatting.shortWeekdaySymbols[Calendar.current.component(.weekday, from: today) - 1]
         formatting.dateFormat = "dd"
-        //print(formatting.string(from: today))
         self.dateLabel.text = formatting.string(from: today)
         self.dayLabel.text = weekday
     }
     
-    
-    
-    
-    
+    // function when tapped
     @objc func tapped(_sender: UITapGestureRecognizer) {
         print("tapped")
         delegate?.goCalendar()

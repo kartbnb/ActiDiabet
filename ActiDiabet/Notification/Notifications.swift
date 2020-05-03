@@ -11,8 +11,11 @@ import NotificationCenter
 
 class Notifications: NSObject, UNUserNotificationCenterDelegate {
 
+    /// This class is used for controlling notification
+    
     var notificationCenter: UNUserNotificationCenter = UNUserNotificationCenter.current()
     
+    // authorise notification (need called at AppDelegate)
     func authoriseNotification() {
         let options: UNAuthorizationOptions = [.alert, .sound, .badge]
         notificationCenter.requestAuthorization(options: options) { (allow, error) in
@@ -23,7 +26,8 @@ class Notifications: NSObject, UNUserNotificationCenterDelegate {
             }
         }
     }
-    
+    // MARK: - Create content
+    // create the content of notification
     private func createContent() -> UNMutableNotificationContent {
         let content = UNMutableNotificationContent()
         content.title = "Its Time to do your activity"
@@ -32,7 +36,8 @@ class Notifications: NSObject, UNUserNotificationCenterDelegate {
         content.badge = 1
         return content
     }
-    
+    // MARK: - Create Trigger
+    // create a time trigger everyday
     private func createTimeTrigger(time: String) -> UNCalendarNotificationTrigger? {
         let timeString = time.split(separator: ":")
         
@@ -48,12 +53,15 @@ class Notifications: NSObject, UNUserNotificationCenterDelegate {
         return trigger
     }
     
+    // create a Date trigger which will alert in specific date and time
     private func createDateTrigger(date: Date) -> UNCalendarNotificationTrigger? {
         let dateComponents = Calendar.current.dateComponents([.year, .month,.day,.hour,.minute], from: date)
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
         return trigger
     }
     
+    //MARK: - Main functions of create notification
+    // create a notification with speccific date
     func createNotification(with date: Date) {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyyMMddHHmm"
@@ -69,6 +77,7 @@ class Notifications: NSObject, UNUserNotificationCenterDelegate {
         
     }
     
+    // create a notification with specific time and repeat everyday
     func createNotification(with time: String) {
         let identifier = "do activity"
         let content = createContent()
@@ -84,6 +93,7 @@ class Notifications: NSObject, UNUserNotificationCenterDelegate {
         }
     }
     
+    // remove notification
     func removeNotification() {
         notificationCenter.removeDeliveredNotifications(withIdentifiers: ["do activity"])
     }

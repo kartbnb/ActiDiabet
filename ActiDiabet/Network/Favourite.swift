@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class FavouriteController {
-    
+    ///This class is used for controlling user favourites
     private var standard = UserDefaults.standard
     
     func setFavourite(activity: Activity) {

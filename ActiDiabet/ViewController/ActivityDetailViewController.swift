@@ -10,6 +10,7 @@ import UIKit
 import YoutubePlayer_in_WKWebView
 
 class ActivityDetailViewController: UIViewController {
+    ///This is the activity detail view page
     
     var activity: Activity?
     
@@ -57,6 +58,8 @@ class ActivityDetailViewController: UIViewController {
         playerView.stopVideo()
     }
 
+    // MARK: Setup View functions
+    // setup labels
     func setupView(id: String) {
         self.activityLabel.text = activity?.activityName
         timeTextField.text = "\(activity?.duration ?? 0)"
@@ -77,6 +80,7 @@ class ActivityDetailViewController: UIViewController {
         playerView.load(withVideoId: id)
     }
     
+    // set favourite button
     func setlikeButton() {
         if let activity = self.activity {
             if activity.like {
@@ -88,27 +92,30 @@ class ActivityDetailViewController: UIViewController {
             }
         }
     }
-    
+     
+    // setup inputviews for textfields
     func setInputView() {
         let timePicker = UIPickerView()
         timePicker.delegate = self
         timeTextField.inputView = timePicker
     }
 
+    // set round corner of views
     func setRound() {
         backButtonView.makeCircular()
         backButtonView.backgroundColor = UIColor.black
-        self.modifyView(view: titleView)
-        self.modifyView(view: timeView)
-        self.modifyView(view: indoorView)
-        self.modifyView(view: typeView)
+        titleView.makeRound()
+        timeView.makeRound()
+        indoorView.makeRound()
+        typeView.makeRound()
     }
     
-    
+    // MARK: Button functions
+    // Back button function
     @IBAction func backButtonFunction(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
-    
+    // Complete activity function
     @IBAction func completeActivity(_ sender: Any) {
         
         let delegate = UIApplication.shared.delegate as! AppDelegate
@@ -116,12 +123,16 @@ class ActivityDetailViewController: UIViewController {
         let userid = UserDefaults.standard.object(forKey: "userid") as! String
         guard let duration = Int(timeTextField.text!) else { return }
         guard let activity = activity else { return }
+        // save activity to coredata
         coredataController?.finishActivity(activity: activity, duration: duration)
+        // show alert
         let alert = UIAlertController(title: "Did you like this activity?", message: "", preferredStyle: .alert)
+        // like action
         let likeAction = UIAlertAction(title: "Like", style: .default) { (alertaction) in
             database.addReview(userid: userid, activity: self.activity!, rate: 1)
             self.navigationController?.popViewController(animated: true)
         }
+        // dislike action
         let dontlikeAction = UIAlertAction(title: "Dislike", style: .default) { (alertaction) in
             database.addReview(userid: userid, activity: self.activity!, rate: -1)
             self.navigationController?.popViewController(animated: true)
@@ -129,19 +140,25 @@ class ActivityDetailViewController: UIViewController {
         alert.addAction(likeAction)
         alert.addAction(dontlikeAction)
         self.present(alert, animated: true, completion: nil)
-        
     }
+    
+    // add to plan function
     @IBAction func addToPlan(_ sender: Any) {
+        // show alert
         let alert = UIAlertController(title: "Please select a time to plan", message: "", preferredStyle: .alert)
+        // add textfield to alert
         alert.addTextField { (textfield) in
             self.alertTextField = textfield
+            // set datepicker as input view of textfield
             let datePicker = UIDatePicker()
             datePicker.locale = Locale(identifier: "en_GB")
             datePicker.datePickerMode = .dateAndTime
             datePicker.addTarget(self, action: #selector(self.dateChanged(datePicker:)), for: .valueChanged)
             textfield.inputView = datePicker
         }
+        // cancel action
         let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        // save action (save to coredata)
         let save = UIAlertAction(title: "Save", style: .default) { (action) in
             guard let duration = Int(self.timeTextField.text!) else { return }
             guard let date = self.dateForSelection else { return }
@@ -154,7 +171,7 @@ class ActivityDetailViewController: UIViewController {
         alert.addAction(cancel)
         self.present(alert, animated: true, completion: nil)
     }
-    
+    // change like button of activity
     @IBAction func changeLike(_ sender: Any) {
         self.activity?.changeFavourite()
         self.setlikeButton()
@@ -175,13 +192,12 @@ class ActivityDetailViewController: UIViewController {
     }
     */
     
-    func modifyView(view: UIView) {
-        view.layer.cornerRadius = 20
-    }
-    
+    // MARK: Add plan variables and functions
+    // variables for performing add plan
     private var alertTextField: UITextField?
     private var dateForSelection: Date?
-    
+
+    // when date change, show on textfield
     @objc func dateChanged(datePicker: UIDatePicker) {
         dateForSelection = datePicker.date
         let dateFormatter = DateFormatter()
@@ -191,6 +207,7 @@ class ActivityDetailViewController: UIViewController {
     }
 }
 
+// MARK: - PickerViewDelegate, PickerViewDataSource
 extension ActivityDetailViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -209,6 +226,7 @@ extension ActivityDetailViewController: UIPickerViewDelegate, UIPickerViewDataSo
     }
 }
 
+//MARK: - ScrollView resign textfield
 class DetailScrollView: UIScrollView {
     @IBOutlet weak var timeTextField: UITextField!
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

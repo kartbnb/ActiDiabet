@@ -15,10 +15,12 @@ enum LocationType{
 }
 
 class OpenSpaces: NSObject, MKAnnotation {
+    ///This class is for geneating an Annotation for mapview. Based on openspaces data.
     var type: LocationType
     var title: String?
     var coordinate: CLLocationCoordinate2D
     
+    //  init by json
     init?(json: [String: Any], type: LocationType) {
         guard let name = json["place_name"] as? String else {
             print("no place name key")
@@ -37,6 +39,7 @@ class OpenSpaces: NSObject, MKAnnotation {
         self.type = type
     }
     
+    // configure the annotation to MKPinAnnotationView
     func configureAnnotation() -> MKPinAnnotationView {
         let annotationView = MKPinAnnotationView(annotation: self, reuseIdentifier: "AnnotationView")
         annotationView.canShowCallout = true

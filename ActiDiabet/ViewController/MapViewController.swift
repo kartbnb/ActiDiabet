@@ -11,7 +11,7 @@ import MapKit
 
 class MapViewController: UIViewController, DatabaseListener {
     
-    
+    ///This view controller is for map page
     
     var db: DatabaseProtocol?
     @IBOutlet weak var mapView: MKMapView!
@@ -36,6 +36,7 @@ class MapViewController: UIViewController, DatabaseListener {
         
     }
     
+    // setup ui
     func setMapView(center: CLLocation) {
         mapView.mapType = .standard
         mapView.delegate = self
@@ -73,8 +74,9 @@ class MapViewController: UIViewController, DatabaseListener {
     }
 
 }
-
+//MARK: - MapViewDelegate
 extension MapViewController: MKMapViewDelegate {
+    // generate custom AnnotationView
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard let annotation = annotation as? OpenSpaces else { return nil }
         return annotation.configureAnnotation()

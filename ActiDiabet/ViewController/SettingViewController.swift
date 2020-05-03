@@ -9,12 +9,11 @@
 import UIKit
 
 class SettingViewController: UIViewController {
+    ///This is the viewcontroller for setting page
     
     var notification: Notifications?
     
     @IBOutlet weak var scrollView: SettingScrollView!
-    
-    
 
     @IBOutlet weak var zipView: UIView!
     
@@ -31,27 +30,27 @@ class SettingViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    //MARK: UI functions
+    //setup UI view
     func setupUI() {
-        modifyView(view: zipView)
-        modifyView(view: saveButton)
+        zipView.makeRound()
+        saveButton.makeRound()
         setupSavedData()
     }
     
+    //setup saved data
     func setupSavedData() {
         let zip = UserDefaults.standard.value(forKey: "zipcode") as? String
         zipTextField.text = zip
         scrollView.vcdelegate = self
     }
     
-    
-    func modifyView(view: UIView) {
-        view.layer.cornerRadius = 20
-    }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
     }
 
+    // MARK: Button function
+    // save all settings
     @IBAction func saveSettings(_ sender: Any) {
         let zip = zipTextField.text
         if checkzipcode(zip: zip ?? "") {
@@ -68,6 +67,7 @@ class SettingViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    // validation of zipcode
     func checkzipcode(zip: String) -> Bool {
         if zip.count == 4 && zip.first == "3" {
             //self.zipCode = zip
@@ -96,6 +96,8 @@ class SettingViewController: UIViewController {
 
 }
 
+
+// MARK: extensions for resign textfield
 extension SettingViewController: ResignTextFieldDelegate {
     func resignAll() {
         zipTextField.resignFirstResponder()

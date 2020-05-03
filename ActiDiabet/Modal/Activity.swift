@@ -35,6 +35,9 @@ enum ActivityType {
 }
 
 class Activity {
+    
+    ///This class is used for modeling activity which get from database
+    
     let activityID: Int?
     let activityName: String
     let activityType: ActivityType
@@ -57,6 +60,7 @@ class Activity {
         self.like = false
     }
     
+    // Generate by json
     init?(json: [String: Any]) {
         guard let id = json["id"] as? Int else {
             print("key id not found")
@@ -98,6 +102,7 @@ class Activity {
         self.like = false
     }
     
+    // change favourite
     func changeFavourite() {
         self.like = !self.like
         let favourites = FavouriteController()

@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 import MapKit
 
+/// This file is for collecting current weather
+
 var weatherString: String = ""
 
 struct Weather {
@@ -80,9 +82,11 @@ extension Weather {
 
 class WeatherAPI {
     
+    // api key here
     private let key = "7fc2a15a9f888ed016b6f19867dccfa3"
     
     func getCurrentWeather(weatherView: WeatherView) {
+        // get zip code of user
         let zipCode = UserDefaults.standard.object(forKey: "zipcode") as? String
         if let zip = zipCode {
             let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?zip=\(zip),AU&appid=\(key)")
@@ -104,36 +108,29 @@ class WeatherAPI {
         }
     }
     
+    // get coordinate with zip code and show map center
     func getCoordinate(mapView: MapViewController) {
         let zipCode = UserDefaults.standard.object(forKey: "zipcode") as? String
-               if let zip = zipCode {
-                   let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?zip=\(zip),AU&appid=\(key)")
-                   
-                   if let url = url {
-                       URLSession.shared.dataTask(with: url) { (data, response, error) in
-                           if let data = data {
-                               let json = try? JSONSerialization.jsonObject(with: data, options: [])
-                               if let json = json {
-                                   if let dictionary = json as? [String: Any] {
-                                       let weather = Weather(json: dictionary)
-                                       print(weather)
-                                       DispatchQueue.main.async {
-                                            mapView.setMapView(center: weather!.coordinate)
-                                       }
-                                       
-                                   }
-                               }
-                           } else {
-                               print("111")
-                           }
-                       }.resume()
-                       
-                   } else {
-                       
-                   }
-               } else {
-                   
-               }
+        if let zip = zipCode {
+            let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?zip=\(zip),AU&appid=\(key)")
+            if let url = url {
+                URLSession.shared.dataTask(with: url) { (data, response, error) in
+                    if let data = data {
+                        let json = try? JSONSerialization.jsonObject(with: data, options: [])
+                        if let json = json {
+                            if let dictionary = json as? [String: Any] {
+                                let weather = Weather(json: dictionary)
+                                DispatchQueue.main.async {
+                                    mapView.setMapView(center: weather!.coordinate)
+                                }
+                            }
+                        }
+                    } else {
+                        print("111")
+                    }
+                }.resume()
+            }
+        }
     }
     
     func performdata(data: Data, weatherView: WeatherView) {
@@ -141,7 +138,6 @@ class WeatherAPI {
         if let json = json {
             if let dictionary = json as? [String: Any] {
                 let weather = Weather(json: dictionary)
-                print(weather)
                 DispatchQueue.main.async {
                     weatherView.setupWeather(weather: weather)
                 }

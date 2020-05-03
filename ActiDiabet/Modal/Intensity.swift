@@ -29,8 +29,12 @@ enum IntensityLevel {
 }
 
 class Intensity {
+    
+    ///This class is used for create intensity when user first come into application
+    
     var intensity: IntensityLevel?
     
+    // set time for each type of activity
     func setIntensity(intensity: IntensityLevel) {
         self.intensity = intensity
         setAeroTime()
@@ -38,6 +42,7 @@ class Intensity {
         
     }
     
+    // set aerobic activity time
     func setAeroTime() {
         switch self.intensity {
         case .beginner:
@@ -51,6 +56,7 @@ class Intensity {
         }
     }
     
+    // set resistance activity time
     func setResistanceTime() {
         switch self.intensity {
         case .beginner:

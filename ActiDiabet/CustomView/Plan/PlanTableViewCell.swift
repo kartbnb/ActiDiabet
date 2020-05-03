@@ -9,13 +9,12 @@
 import UIKit
 
 class PlanTableViewCell: UITableViewCell {
-    
+    ///This is a custom cell for table view on plan page
+    //Outlets
     @IBOutlet weak var contentViewCard: UIView!
-    
     @IBOutlet weak var activityName: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!
-    
     @IBOutlet weak var doneButton: UIButton!
     
     var record: Record?
@@ -27,17 +26,18 @@ class PlanTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
-    
+    // set a record on cell
     func setRecord(record: Record) {
+        self.record = record
+        //check if this record is a finish record
         if record.done {
             doneButton.setImage(UIImage(systemName: "checkmark.seal.fill"), for: .normal)
         } else {
             doneButton.setImage(UIImage(systemName: "checkmark.seal"), for: .normal)
         }
-        self.record = record
+        
         activityName.text = record.activity
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm"

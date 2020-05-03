@@ -11,6 +11,8 @@ import CoreData
 
 class CoredataController: NSObject, NSFetchedResultsControllerDelegate, CoredataProtocol {
 
+    ///This class is used for controlling coredata within the application
+    
     var listeners = MulticastDelegate<DatabaseListener>()
     var persistentContainer: NSPersistentContainer
     
@@ -41,31 +43,9 @@ class CoredataController: NSObject, NSFetchedResultsControllerDelegate, Coredata
         }
     }
     
-    func fetchThisWeekRecord() -> [Record] {
-        let fetchRequest: NSFetchRequest<Record> = Record.fetchRequest()
-        let nameSortDescriptor = NSSortDescriptor(key: "word", ascending: true)
-        fetchRequest.sortDescriptors = [nameSortDescriptor]
-        let predicate = NSPredicate(format: "wordBook == %@", NSNumber(value: true))
-        fetchRequest.predicate = predicate
-        recordFetchedResultController = NSFetchedResultsController<Record>(fetchRequest: fetchRequest, managedObjectContext: persistentContainer.viewContext, sectionNameKeyPath: nil, cacheName: nil)
-        
-        recordFetchedResultController?.delegate = self
-        
-        do {
-            try recordFetchedResultController?.performFetch()
-        } catch {
-            print("Fetch Request failed: \(error)")
-        }
-        
-
-        var records = [Record]()
-        if recordFetchedResultController?.fetchedObjects != nil {
-            records = (recordFetchedResultController?.fetchedObjects)!
-        }
-
-        return records
-    }
-    
+    // MARK: - Fetching Data
+   
+    // add a plan activity in to coredata
     func addActivity(activity: Activity, duration: Int, date: Date) {
         let newRecord = NSEntityDescription.insertNewObject(forEntityName: "Record", into: persistentContainer.viewContext) as! Record
         newRecord.activity = activity.activityName
@@ -77,6 +57,7 @@ class CoredataController: NSObject, NSFetchedResultsControllerDelegate, Coredata
         print("save success \(activity.activityName), duration: \(duration)")
     }
     
+     // add a completed activity into coredata
     func finishActivity(activity: Activity, duration: Int) {
         let newRecord = NSEntityDescription.insertNewObject(forEntityName: "Record", into: persistentContainer.viewContext) as! Record
         newRecord.activity = activity.activityName
@@ -89,6 +70,7 @@ class CoredataController: NSObject, NSFetchedResultsControllerDelegate, Coredata
         print("save success \(activity.activityName), duration: \(duration)")
     }
     
+    //fetch all activities done in this week
     func fetchActivityThisWeek() -> [Record] {
         
         // get first day and last day of this week
@@ -101,7 +83,7 @@ class CoredataController: NSObject, NSFetchedResultsControllerDelegate, Coredata
         let dateTo = calendar.date(byAdding: .day, value: 7 - dayOfToday, to: dateFromToday)!
         
         
-        
+        // perform fetch
         let fetchRequest: NSFetchRequest<Record> = Record.fetchRequest()
         let dateSortDescriptor = NSSortDescriptor(key: "date", ascending: true)
         fetchRequest.sortDescriptors = [dateSortDescriptor]
@@ -122,6 +104,7 @@ class CoredataController: NSObject, NSFetchedResultsControllerDelegate, Coredata
         return records
     }
     
+    // fetch activities done for today
     func fetchTodayRecords() -> [Record] {
         let today = Date()
         var calendar = Calendar.current
@@ -149,6 +132,7 @@ class CoredataController: NSObject, NSFetchedResultsControllerDelegate, Coredata
         return records
     }
     
+    // fetch plans in future
     func fetchFuturePlan() -> [Record] {
         let today = Date()
         let fetchRequest: NSFetchRequest<Record> = Record.fetchRequest()
@@ -175,6 +159,7 @@ class CoredataController: NSObject, NSFetchedResultsControllerDelegate, Coredata
 
 }
 
+// protocol for coredata
 protocol CoredataProtocol {
     func finishActivity(activity: Activity, duration: Int)
     func fetchActivityThisWeek() -> [Record]

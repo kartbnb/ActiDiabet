@@ -8,6 +8,8 @@
 
 import Foundation
 
+/// This file is using for connecting with database and fetch api related to our database
+
 enum ListenerType {
     case all
     case recommend
@@ -29,10 +31,11 @@ protocol DatabaseProtocol: AnyObject {
     func fetchAllActivities()
 }
 
+// Database URL
 let link = "http://ieserver-env.eba-kpxgxhpr.ap-southeast-2.elasticbeanstalk.com/"
 
 class DatabaseController: NSObject {
-    
+    ///Database controller using for connection with database
     var listeners = MulticastDelegate<DatabaseListener>()
     
     var favouriteController = FavouriteController()
@@ -54,6 +57,7 @@ class DatabaseController: NSObject {
     }
     
     // MARK: performing data return jsonArray
+    // perform activity data
     private func performData(_ data: Data) -> [[String: Any]]? {
         let json = try? JSONSerialization.jsonObject(with: data, options: [])
         guard json != nil else { return nil }
@@ -63,7 +67,7 @@ class DatabaseController: NSObject {
     }
     
     
-    
+    // perform user data
     private func performUserID(_ data: Data) {
         let json = try? JSONSerialization.jsonObject(with: data, options: [])
         guard json != nil else { return }
@@ -72,8 +76,6 @@ class DatabaseController: NSObject {
         print("create account success, userid: \(userid)")
         UserDefaults.standard.set(userid, forKey: "userid")
     }
-    
-
 }
 
 extension DatabaseController: DatabaseProtocol {
@@ -126,7 +128,7 @@ extension DatabaseController: DatabaseProtocol {
                                 return
                             }
                             activity.like = self.favouriteController.findUserLike(activity: activity)
-                            self.activities.append(activity)
+                            self.recommendActivities.append(activity)
                         }
                         self.fetchAllActivities()
                         self.listeners.invoke { (listener) in
@@ -141,6 +143,7 @@ extension DatabaseController: DatabaseProtocol {
         }
     }
     
+    // MARK: - search activity by string
     func searchActivity(str: String) {
         let url = URL(string: link + "activity/search/byString/\(str)")
         if let url = url {
@@ -200,34 +203,6 @@ extension DatabaseController: DatabaseProtocol {
             }
         }
         
-    }
-    
-    func fetchPools() {
-        let zip = UserDefaults.standard.object(forKey: "zipcode") as! String
-        let poolUrl = URL(string: link + "activity/pool/\(zip)")
-        if let url = poolUrl {
-            URLSession.shared.dataTask(with: url) { (data, response, error) in
-                if let error = error {
-                    print(error)
-                }
-                if let data = data {
-                    let json = try? JSONSerialization.jsonObject(with: data, options: [])
-                    guard json != nil else { return }
-                    guard let dictionary = json as? [String: Any] else { return }
-                    guard let jsonArray = dictionary["result"] as? [[String: Any]]else { return }
-                    jsonArray.forEach { (item) in
-                        guard let location = OpenSpaces(json: item, type: .pool) else { return }
-                        self.places.append(location)
-                    }
-                    self.listeners.invoke { (listener) in
-                        if listener.listenerType == .map {
-                            listener.addLocation(place: self.places)
-                        }
-                    }
-                    
-                }
-            }.resume()
-        }
     }
     
     //MARK: -add user in database

@@ -10,24 +10,29 @@ import UIKit
 
 class ViewController: UIViewController, CustomViewProtocol, DatabaseListener {
     
-    @IBOutlet weak var firstActivityView: ActivityView!
+    ///Main ViewController
     
-    @IBOutlet weak var enterDetailView: EnterDetailView!
+    // Views
+    @IBOutlet weak var firstActivityView: ActivityView!
     @IBOutlet weak var secondActivityView: ActivityView!
+    @IBOutlet weak var achieveView: UIView!
+    @IBOutlet weak var enterDetailView: EnterDetailView!
+   
     
     @IBOutlet weak var weatherView: WeatherView!
     @IBOutlet weak var calendarButton: CalendarButtonView!
     
+    // coredata controller and database controller
     var coredataController: CoredataProtocol?
     var databaseController: DatabaseProtocol?
     
+    // progress view
     @IBOutlet weak var resistanceProgress: UIProgressView!
     @IBOutlet weak var aerobicProgress: UIProgressView!
     
+    //labels related to benchmark
     @IBOutlet weak var aerobicLabel: UILabel!
     @IBOutlet weak var resistanceLabel: UILabel!
-    
-    @IBOutlet weak var achieveView: UIView!
     
     var recommendActivities = [sampleActivity[0], sampleActivity[1]]
     
@@ -44,9 +49,34 @@ class ViewController: UIViewController, CustomViewProtocol, DatabaseListener {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        //recommendActivities = [sampleActivity[0], sampleActivity[1]]
         super.viewWillAppear(animated)
-        databaseController?.addListener(listener: self)
         firstEnter()
+        //databaseController?.getOneRecommend(viewCard: favouriteCard)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        databaseController?.removeListener(listener: self)
+    }
+    
+    // MARK: Check if First enter the application
+    func firstEnter() {
+        if UserDefaults.standard.value(forKey: "zipcode") == nil {
+            // first enter show enterdetail view
+            self.navigationController?.navigationBar.isHidden = true
+            self.tabBarController?.tabBar.isHidden = true
+            enterDetailView.homeVC = self
+        } else {
+            // not first enter show main page
+            enterDetailView.isHidden = true
+            setupUI()
+        }
+    }
+    // MARK: UI functions
+    // setup UIs
+    func setupUI() {
+        weatherView.getCurrentWeather()
+        databaseController?.addListener(listener: self)
         guard let records = coredataController?.fetchActivityThisWeek() else { return }
         let benchMark = self.getProgressOfWeek(records: records)
         aerobicLabel.text = "\(Int(benchMark[0] * 100))%"
@@ -62,28 +92,6 @@ class ViewController: UIViewController, CustomViewProtocol, DatabaseListener {
             resistanceProgress.setProgress(benchMark[1], animated: true)
         }
         calendarButton.getDate()
-        //databaseController?.getOneRecommend(viewCard: favouriteCard)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        databaseController?.removeListener(listener: self)
-    }
-    
-    
-    func firstEnter() {
-        //UserDefaults.standard.set("3162", forKey: "zipcode")
-        if UserDefaults.standard.value(forKey: "zipcode") == nil {
-            self.navigationController?.navigationBar.isHidden = true
-            self.tabBarController?.tabBar.isHidden = true
-            enterDetailView.homeVC = self
-        } else {
-            enterDetailView.isHidden = true
-            setupUI()
-        }
-    }
-    
-    
-    func setupUI() {
         if let userid = UserDefaults.standard.object(forKey: "userid") as? String {
             
             print("already get userid \(userid)")
@@ -92,12 +100,13 @@ class ViewController: UIViewController, CustomViewProtocol, DatabaseListener {
         }
         achieveView.makeRound()
         
-        weatherView.getCurrentWeather()
+        
         self.navigationController?.navigationBar.isHidden = false
         self.tabBarController?.tabBar.isHidden = false
         //UserDefaults.standard.removeObject(forKey: "zipcode")
     }
     
+    //setup ScrollView
     func setupScroll() {
         DispatchQueue.main.async {
             self.firstActivityView.setActivity(activity: self.recommendActivities[0])
@@ -105,25 +114,26 @@ class ViewController: UIViewController, CustomViewProtocol, DatabaseListener {
         }
         firstActivityView.homeVC = self
         secondActivityView.homeVC = self
-        
     }
     
-    
-    
+    //Click calendar button
     func goCalendar() {
         print("go calendar")
     }
     
+    //show activity detail when click any activity
     func showActivity(activity: Activity) {
         performSegue(withIdentifier: "activityDetail", sender: activity)
     }
     
+    //MARK: show alert function
     func showAlert(message: String, title: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     
+    //MARK: progress calculator
     func getProgressOfWeek(records: [Record]) -> [Float] {
         var aerobicTime = 0
         var resistanceTime = 0
@@ -154,7 +164,7 @@ class ViewController: UIViewController, CustomViewProtocol, DatabaseListener {
         }
     }
     
-    // MARK: Database Listener
+    // MARK: - Database Listener
     var listenerType: ListenerType = .recommend
     
     func getActivities(activities: [Activity]) {

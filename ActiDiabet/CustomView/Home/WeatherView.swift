@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class WeatherView: UIView {
-    
+    ///This is the custom view of showing weather
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var weatherImage: UIImageView!
@@ -31,19 +31,22 @@ class WeatherView: UIView {
         self.layer.cornerRadius = 20.0
     }
     
+    // get current weather, should be perform when
     func getCurrentWeather() {
         cityLabel.textColor = UIColor.white
         tempLabel.textColor = UIColor.white
+        // set to loading when getting weather data
         cityLabel.text = "Loading"
         tempLabel.text = ""
         let weatherapi = WeatherAPI()
         weatherapi.getCurrentWeather(weatherView: self)
     }
-    
+    // set weather
     func setupWeather(weather: Weather?) {
         self.cityLabel.textColor = UIColor.white
         self.tempLabel.textColor = UIColor.white
         guard let weather = weather else {
+            // if no weather data, show no weather data
             self.cityLabel.text = "no weather data"
             return
         }

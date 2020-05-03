@@ -9,18 +9,22 @@
 import UIKit
 
 class AllActivityViewController: UIViewController, DatabaseListener {
+    /// This is the view controller of all activity page
     
-    var searchStatus: TableStatus = .all
+    var searchStatus: TableStatus = .all // search status, identify searching or not searching
     
     var activities: [Activity] = []
+    
+    // collection view variables
     private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
     private let itemsPerRow:CGFloat = 2
     private let reuseIdentifier = "activities"
     
+    // Outlets
     @IBOutlet weak var searchBar: UISearchBar!
-    
     @IBOutlet weak var collectionView: UICollectionView!
     
+    // database protocol
     weak var databaseProtocol: DatabaseProtocol?
     
     override func viewDidLoad() {
@@ -45,17 +49,18 @@ class AllActivityViewController: UIViewController, DatabaseListener {
         super.viewWillDisappear(animated)
         databaseProtocol?.removeListener(listener: self)
     }
+    //MARK: Setup UI function
+    func setupUI() {
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    // setup search delegate and ui
     func setupSearch() {
         searchBar.searchTextField.layer.cornerRadius = 20
         searchBar.searchTextField.layer.masksToBounds = true
         searchBar.placeholder = "Search Activity"
         searchBar.delegate = self
     }
-    
-    func setupUI() {
-        self.navigationController?.navigationBar.isHidden = false
-    }
-    
+    // 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "listToActivity" {
             let activity = sender as? Activity

@@ -36,7 +36,6 @@
 		327355AF24481F1E008FC810 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327355AE24481F1E008FC810 /* SettingViewController.swift */; };
 		3284A796244EBA7D0003B025 /* ActivityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284A795244EBA7D0003B025 /* ActivityCollectionViewCell.swift */; };
 		3284A798244ED49E0003B025 /* AllActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284A797244ED49E0003B025 /* AllActivityViewController.swift */; };
-		329C61F424556EE000B70A6A /* FavouriteCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C61F324556EE000B70A6A /* FavouriteCardView.swift */; };
 		329C61F62455781200B70A6A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C61F52455781200B70A6A /* MapViewController.swift */; };
 		329C61F824557EE400B70A6A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C61F724557EE400B70A6A /* Location.swift */; };
 		32FD4B8924494816002D63B1 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FD4B8824494816002D63B1 /* Notifications.swift */; };
@@ -102,7 +101,6 @@
 		327355AE24481F1E008FC810 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		3284A795244EBA7D0003B025 /* ActivityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCollectionViewCell.swift; sourceTree = "<group>"; };
 		3284A797244ED49E0003B025 /* AllActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllActivityViewController.swift; sourceTree = "<group>"; };
-		329C61F324556EE000B70A6A /* FavouriteCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCardView.swift; sourceTree = "<group>"; };
 		329C61F52455781200B70A6A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		329C61F724557EE400B70A6A /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		32FD4B8824494816002D63B1 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
@@ -273,7 +271,6 @@
 				3273557B24459D17008FC810 /* CalendarButtonView.swift */,
 				327355832445AE41008FC810 /* EnterDetailView.swift */,
 				327355A92447386F008FC810 /* ActivityView.swift */,
-				329C61F324556EE000B70A6A /* FavouriteCardView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -572,7 +569,6 @@
 				32FD4B8924494816002D63B1 /* Notifications.swift in Sources */,
 				327355AD24473B56008FC810 /* Activity.swift in Sources */,
 				327355AF24481F1E008FC810 /* SettingViewController.swift in Sources */,
-				329C61F424556EE000B70A6A /* FavouriteCardView.swift in Sources */,
 				327355782444BDE5008FC810 /* WeatherView.swift in Sources */,
 				329C61F824557EE400B70A6A /* Location.swift in Sources */,
 				327355482444B8EC008FC810 /* ViewController.swift in Sources */,

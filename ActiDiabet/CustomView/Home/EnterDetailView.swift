@@ -8,14 +8,16 @@
 
 import UIKit
 
+// MARK: This file is for whole process of enter user detail
+// MARK: - Welcome
 class WelcomeView: UIView {
-    
+    // Welcome view
     @IBOutlet weak var startButton: StartButtonView!
     
 }
 
 class StartButtonView: UIView {
-    
+    // This is the start button in welcome
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupView()
@@ -28,9 +30,9 @@ class StartButtonView: UIView {
         self.layer.shadowOpacity = 0.4
     }
 }
-
+// MARK: - Enter Zip code
 class EnterZipView: UIView {
-    
+    // Enter zip
     @IBOutlet weak var zipTextField: UITextField!
     
     fileprivate var zipCode: String?
@@ -38,7 +40,7 @@ class EnterZipView: UIView {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         zipTextField.resignFirstResponder()
     }
-    
+    //check if user has already input zip
     func getZipCodeSave() -> Bool {
         let zip = zipTextField.text
         if let zip = zip {
@@ -47,7 +49,7 @@ class EnterZipView: UIView {
             return false
         }
     }
-    
+    // validation of zipcode
     func checkzipcode(zip: String) -> Bool {
         if zip.count == 4 && zip.first == "3" {
             self.zipCode = zip
@@ -58,9 +60,10 @@ class EnterZipView: UIView {
     }
     
 }
-
+// MARK: - Choose intensity
 class EnterIntensityView: UIView {
-    
+    // Choose intensity
+    // Outlets
     @IBOutlet weak var intensityTextField: UITextField!
     @IBOutlet weak var finishButton: UIButton!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -94,7 +97,7 @@ class EnterIntensityView: UIView {
     }
     
 }
-
+// MARK: PickerViewDelegate, PickerViewDataSource of Intensity Picker View
 extension EnterIntensityView: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -115,15 +118,8 @@ extension EnterIntensityView: UIPickerViewDelegate, UIPickerViewDataSource {
     }
 }
 
+// MARK: - super view
 class EnterDetailView: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
     
     var homeVC: CustomViewProtocol?
     
@@ -159,6 +155,7 @@ class EnterDetailView: UIView {
         if enterZipView.getZipCodeSave() {
             UserDefaults.standard.set(enterZipView.zipCode, forKey: "zipcode")
             print("save zip successful")
+            
             UIView.animate(withDuration: 1.0, animations: {
                 // dismiss enter zip view
                 self.enterZipView.alpha = 0
@@ -185,6 +182,7 @@ class EnterDetailView: UIView {
         db.addUser(intensity: intensity.toString(), postcode: zipcode)
         
         UIView.animate(withDuration: 1.0, animations: {
+            //dismiss enter detail view
             self.alpha = 0
         }) { (finished) in
             self.isHidden = finished
