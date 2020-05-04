@@ -28,7 +28,11 @@ class PlanViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        let codeSegmented = CustomSegmentedControl(frame: CGRect(x: 0, y: 50, width: self.view.frame.width, height: 50), buttonTitle: ["Done", "To Do"])
+        // get device status bar height
+        let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+        let notch = window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
+        
+        let codeSegmented = CustomSegmentedControl(frame: CGRect(x: 0, y: 50 + notch, width: self.view.frame.width, height: 50), buttonTitle: ["Done", "To Do"])
         codeSegmented.backgroundColor = .clear
         codeSegmented.delegate = self
         
