@@ -179,9 +179,7 @@ extension DatabaseController: DatabaseProtocol {
         if zip == nil {
             
         } else {
-            
             let placeUrl = URL(string: link + "activity/place/\(zip!)")
-            print(placeUrl?.absoluteString)
             if let url = placeUrl {
                 URLSession.shared.dataTask(with: url) { (data, response, error) in
                     if let error = error {
@@ -189,6 +187,7 @@ extension DatabaseController: DatabaseProtocol {
                     }
                     if let data = data {
                         print("open space data \(data)")
+                        self.places = []
                         let json = try? JSONSerialization.jsonObject(with: data, options: [])
                         guard json != nil else { return }
                         guard let dictionary = json as? [String: Any] else { return }
