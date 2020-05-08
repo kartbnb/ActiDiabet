@@ -121,6 +121,7 @@ class ActivityDetailViewController: UIViewController {
         let delegate = UIApplication.shared.delegate as! AppDelegate
         let database = delegate.databaseController as DatabaseProtocol
         let userid = UserDefaults.standard.object(forKey: "userid") as! String
+        
         guard let duration = Int(timeTextField.text!) else { return }
         guard let activity = activity else { return }
         // save activity to coredata

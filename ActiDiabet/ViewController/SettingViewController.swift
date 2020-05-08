@@ -58,7 +58,6 @@ class SettingViewController: UIViewController {
             let delegate = UIApplication.shared.delegate as! AppDelegate
             let db = delegate.databaseController
             db.fetchOpenSpaces()
-            print("set zip code to \(zip)")
         } else {
             showAlert(message: "Please enter a valid zip code", title: "Zip Code Error")
             return

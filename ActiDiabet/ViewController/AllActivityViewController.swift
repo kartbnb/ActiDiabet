@@ -42,7 +42,6 @@ class AllActivityViewController: UIViewController, DatabaseListener {
         searchBar.searchTextField.text = ""
         databaseProtocol?.addListener(listener: self)
         setupUI()
-        //databaseProtocol?.addListener(listener: self)
     }
     
     override func viewWillDisappear(_ animated: Bool) {

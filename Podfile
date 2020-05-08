@@ -5,7 +5,7 @@ target 'ActiDiabet' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   pod 'YoutubePlayer-in-WKWebView'
-
+  pod 'Mapbox-iOS-SDK'
   # Pods for ActiDiabet
 
   target 'ActiDiabetTests' do

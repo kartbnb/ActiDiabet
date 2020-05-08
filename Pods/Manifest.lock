@@ -1,16 +1,24 @@
 PODS:
+  - Mapbox-iOS-SDK (5.9.0):
+    - MapboxMobileEvents (= 0.10.2)
+  - MapboxMobileEvents (0.10.2)
   - YoutubePlayer-in-WKWebView (0.3.4)
 
 DEPENDENCIES:
+  - Mapbox-iOS-SDK
   - YoutubePlayer-in-WKWebView
 
 SPEC REPOS:
   trunk:
+    - Mapbox-iOS-SDK
+    - MapboxMobileEvents
     - YoutubePlayer-in-WKWebView
 
 SPEC CHECKSUMS:
+  Mapbox-iOS-SDK: a5915700ec84bc1a7f8b3e746d474789e35b7956
+  MapboxMobileEvents: 2bc0ca2eedb627b73cf403258dce2b2fa98074a6
   YoutubePlayer-in-WKWebView: af2f5929fc78882d94bfdfeea999b661b78d9717
 
-PODFILE CHECKSUM: b4e11e6b74f06a9f632f9e6199c820a26feda19a
+PODFILE CHECKSUM: 902da3ac35839633747aa813dea8486678791990
 
 COCOAPODS: 1.8.4

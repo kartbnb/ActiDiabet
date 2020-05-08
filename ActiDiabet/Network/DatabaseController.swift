@@ -193,15 +193,13 @@ extension DatabaseController: DatabaseProtocol {
                         guard let dictionary = json as? [String: Any] else { return }
                         guard let jsonArray = dictionary["result"] as? [[String: Any]]else { return }
                         jsonArray.forEach { (item) in
-                            guard let location = OpenSpaces(json: item, type: .space) else { return }
+                            guard let location = OpenSpaces(json: item) else { return }
                             self.places.append(location)
-                            //self.fetchPools()
                         }
                     }
                 }.resume()
             }
         }
-        
     }
     
     //MARK: -add user in database

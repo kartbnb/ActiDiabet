@@ -8,22 +8,26 @@
 
 import UIKit
 import MapKit
+import Mapbox
 
 class MapViewController: UIViewController, DatabaseListener {
     
     ///This view controller is for map page
     
     var db: DatabaseProtocol?
-    @IBOutlet weak var mapView: MKMapView!
+    var mapView: MGLMapView?
+    var place: [OpenSpaces] = [OpenSpaces]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let delegate = UIApplication.shared.delegate as? AppDelegate
         self.db = delegate?.databaseController
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
         let weatherapi = WeatherAPI()
         db?.addListener(listener: self)
         weatherapi.getCoordinate(mapView: self)
@@ -33,17 +37,17 @@ class MapViewController: UIViewController, DatabaseListener {
     override func viewWillDisappear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
         db?.removeListener(listener: self)
-        
     }
     
     // setup ui
     func setMapView(center: CLLocation) {
-        mapView.mapType = .standard
-        mapView.delegate = self
-        let currentLocationSpan:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
-        let initailregion = MKCoordinateRegion(center: center.coordinate, span: currentLocationSpan)
-        mapView.setRegion(initailregion, animated: true)
-        
+        let url = URL(string: "mapbox://styles/mapbox/streets-v11")
+        self.mapView = MGLMapView(frame: view.bounds, styleURL: url)
+        mapView!.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        mapView!.setCenter(center.coordinate, zoomLevel: 14, animated: false)
+        mapView!.delegate = self
+        view.addSubview(mapView!)
+        self.mapView?.addAnnotations(place)
     }
     
     
@@ -68,17 +72,24 @@ class MapViewController: UIViewController, DatabaseListener {
     }
     
     func addLocation(place: [OpenSpaces]) {
-        for pl in place {
-            self.mapView.addAnnotation(pl)
-        }
+        self.place = place
     }
 
 }
 //MARK: - MapViewDelegate
-extension MapViewController: MKMapViewDelegate {
-    // generate custom AnnotationView
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        guard let annotation = annotation as? OpenSpaces else { return nil }
-        return annotation.configureAnnotation()
+extension MapViewController: MGLMapViewDelegate {
+    
+    func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
+        return true
+    }
+    
+    func mapView(_ mapView: MGLMapView, tapOnCalloutFor annotation: MGLAnnotation) {
+        let annotation = annotation as! OpenSpaces
+        annotation.showDirection()
+    }
+    
+    func mapView(_ mapView: MGLMapView, imageFor annotation: MGLAnnotation) -> MGLAnnotationImage? {
+        let annotation = annotation as! OpenSpaces
+        return annotation.imageOfAnnotation()
     }
 }

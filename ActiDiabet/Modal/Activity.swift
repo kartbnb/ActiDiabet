@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 let exercisePreferences = ["Aerobic", "Resistance"]
 
@@ -45,6 +46,7 @@ class Activity {
     let duration: Int
     let video: String
     var like: Bool
+    var img: UIImage?
     
     init(id: Int, name: String, type: String, indoor: Bool, duration: Int, video: String) {
         self.activityName = name
@@ -69,7 +71,6 @@ class Activity {
         guard let name = json["activity_name"] as? String else {
             print("key name not found")
             return nil
-            
         }
         guard let type = json["type"] as? String else {
             print("key type not found")
@@ -100,7 +101,23 @@ class Activity {
         self.duration = duration
         self.video = video
         self.like = false
+        let str = link+"activity/img/\(activityID!)"
+        let url = URL(string: str)
+        
+        if let url = url {
+            URLSession.shared.dataTask(with: url) { (data, res, err) in
+                if let err = err {
+                    print(err)
+                }
+                if let data = data {
+                    if let icon = UIImage(data: data) {
+                        self.img = icon
+                    }
+                }
+            }.resume()
+        }
     }
+
     
     // change favourite
     func changeFavourite() {

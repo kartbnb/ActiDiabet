@@ -3,41 +3,138 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		6746AB6F4D992402B59D1651512EA19E /* Mapbox-iOS-SDK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = DE661112FC7506F5A836D106198613A3 /* Build configuration list for PBXAggregateTarget "Mapbox-iOS-SDK" */;
+			buildPhases = (
+			);
+			dependencies = (
+				2ACC5AB568865CE57B479E1126489039 /* PBXTargetDependency */,
+			);
+			name = "Mapbox-iOS-SDK";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		012D2AB7758D939FC54361D1CE64A5D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		0594AFB3518E9651469A4386FE8F434B /* CLLocationManager+MMEMobileEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = F6AB1D1F7C7BA002B89429DA86B2B514 /* CLLocationManager+MMEMobileEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0AADA476F8AAF0990A522B077D4DE517 /* MMEEventLogReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BF248D2E6C715C48512D8F0BE54509 /* MMEEventLogReportViewController.m */; };
+		10017B7E54B514D0162C87671E122D30 /* MMETimerManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C2D17A0A02A4C920B8A3F0943913F4E /* MMETimerManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		127C6E73803073F9E76165AA6BB4968D /* MMEEventLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C716D558AC732C2213ACF1FB7079ED77 /* MMEEventLogger.m */; };
+		13705867D70F97303C71FF457DB2400F /* MMENSURLSessionWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = C46AEBC1D29E44750743303F65057A6E /* MMENSURLSessionWrapper.m */; };
+		184028441D9A8F9C98E844324C83DC99 /* NSUserDefaults+MMEConfiguration_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1131B26D9C0CF225A73C475004A3D022 /* NSUserDefaults+MMEConfiguration_Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		19A55323D858313A2393E84D8E47AB10 /* NSData+MMEGZIP.m in Sources */ = {isa = PBXBuildFile; fileRef = 281A3CD96C9C35E6B2E1911E02EB27C4 /* NSData+MMEGZIP.m */; };
+		19C7985600BAE10D9DC05342A2D8324C /* MMEConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD0BEFB8E7829949A09825A3281D30D /* MMEConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A79C70DD4F4CF7FEF1182E21856BE50 /* NSUserDefaults+MMEConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 37B2640A6B7327849791621C6CCE2450 /* NSUserDefaults+MMEConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BB4DE49ED35049589E9718128DE0E9E /* NSUserDefaults+MMEConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A2C93DA3CCB24934F068C3E731C694 /* NSUserDefaults+MMEConfiguration.m */; };
 		1BBC582FCEA1B2926269F3CCE3F1D923 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		4BBBDD52873061AC9A8355C11FCA5B44 /* YoutubePlayer-in-WKWebView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AB1EE9B7060F10507AB79214957DE146 /* YoutubePlayer-in-WKWebView-dummy.m */; };
+		1C1D8142CE245153354C57BDB8F04146 /* MapboxMobileEvents-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 811DC68B3A020CDA29A17D8C5DDC32F8 /* MapboxMobileEvents-dummy.m */; };
+		1DEBC4ECCFC45DDA52FDAAAF7C5D2F0B /* MapboxMobileEvents-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D2C2515FB630278D0282930871119081 /* MapboxMobileEvents-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FA4E6E17F4774422017C2865AC216E0 /* MMEDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43365310BBAA5A235373BA1EFC12E1D1 /* MMEDate.m */; };
+		22577C59734E5ED346B29CFF7B1DCA74 /* MMEMetrics.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B956D1017297EF366A261AAAEDCBFDB /* MMEMetrics.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		235381CEC72174B24BC5CB01376161FD /* MMEEventsManager_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 20F470CC8EC1F82927C297CF5F7AAE02 /* MMEEventsManager_Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2419E01993AF4074B1643CC0A1A71CBB /* MMETypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FD2235D6B95EA96F90C6296D2C9C18A /* MMETypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B59277A57C3CBE83FDCC1493F497D76 /* Pods-ActiDiabet-ActiDiabetUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 41B6524FAB862F9F325056D625A5E14E /* Pods-ActiDiabet-ActiDiabetUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32875437802E89DFE4C45EED450D7F26 /* NSString+MMEVersions.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD762C8F1025BB8ABCCCBD910C9FA89 /* NSString+MMEVersions.m */; };
+		35E55230480A2E31224F830409394A39 /* MMEAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D00095E0E67B635184C2F29D5FAD2977 /* MMEAPIClient.m */; };
+		38FA608EAEC7715C96BF01E222FBFD6E /* MMEDispatchManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 69B50011E2462FD719AF271E6F8695A3 /* MMEDispatchManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B70A9391485438386961EF97B4FBC97 /* MMECommonEventData.h in Headers */ = {isa = PBXBuildFile; fileRef = AF98B3E0A898943BA00CDDCDAF23C91D /* MMECommonEventData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DBB6E8988B38B8AF32C7F9A978B3A71 /* MMEReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D24442DF71954A764E0982534A9F823F /* MMEReachability.m */; };
+		41C9147C173744A16A6A81D29457270D /* MMECertPin.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9A83A1BC6CB6957C01014B68418051 /* MMECertPin.m */; };
+		4BBBDD52873061AC9A8355C11FCA5B44 /* YoutubePlayer-in-WKWebView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 285F94B3CA44DD8394AC19E7BC4A8868 /* YoutubePlayer-in-WKWebView-dummy.m */; };
+		4D1AB33E38AE6EB29C363CBCCD1C32DB /* CLLocation+MMEMobileEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 219D4DD4F4C1C93077476CF1C941561D /* CLLocation+MMEMobileEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F6680ED1F8E455A28F54B88EB4B1BE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		52676CD81C64DDF7E69550C1BEEA488F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		52DB405C701C59CF3E09C2F1869C11CB /* MMEMetrics.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B91A31A8CA5A35B17A09DCEAC116E20 /* MMEMetrics.m */; };
+		53534F6682224FCEB8E2166FEBE54824 /* MMECategoryLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F2F67BEE2D5B83B8EC5F7310BB134C9 /* MMECategoryLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		554FD99117F4436586F1B0F91BB9913A /* Pods-ActiDiabetTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 71278986E9E847A15582B7E603CB9C35 /* Pods-ActiDiabetTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7F47C358CEEA851D956A8A5F2DF06B6E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		803A943F40E9733AC61489FB25186CF9 /* YoutubePlayer-in-WKWebView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9148B6B8D7184C7C910A7578F8671685 /* YoutubePlayer-in-WKWebView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8EDE139802E7C7CD03412658CB28FA96 /* Pods-ActiDiabet-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B76CACFF8D060A0265A25B6CAC41C322 /* Pods-ActiDiabet-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9AD84D555FE3F3C4519344CBBAB1D565 /* WKYTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C2C92BB7DDC17915FF28A029F18130 /* WKYTPlayerView.m */; };
-		B7310ACF5F3CEC49A78409BAB2DE8684 /* Pods-ActiDiabet-ActiDiabetUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 41B6524FAB862F9F325056D625A5E14E /* Pods-ActiDiabet-ActiDiabetUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CCF11406FC25C84082E70B3DE2871690 /* WKYTPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 158814EAEF2AA7E7ACA32043557997DD /* WKYTPlayerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D334D5A0AA88F6DEE11C8667AAE43596 /* WKYTPlayerView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D45E0C906890686D770071E3F267394C /* WKYTPlayerView.bundle */; };
+		5961CA9A9B935A69C865A6DF33A99D97 /* MMECertPin.h in Headers */ = {isa = PBXBuildFile; fileRef = 019E3D023367C97AB638C9DC669DB798 /* MMECertPin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F1A6B2306E4F99287157FF0A7103546 /* MMECategoryLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 903D9141C9856AC3F72735238F6EF9B9 /* MMECategoryLoader.m */; };
+		5F341934B5EAD5B7DADE5AB0DDF76B59 /* MMEEventsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D4E33D498131D772620235F834DA4125 /* MMEEventsManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5FDA474B0CDF02C739C40A4B680505B6 /* MMEDependencyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BDF554FC86A77A26E58DB44E4B6612 /* MMEDependencyManager.m */; };
+		661BD64EC8DB0C15E884A2A80AA063E5 /* MMEAPIClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0DBEB00F68EE68146042D77EC4EF65 /* MMEAPIClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B2DC34DB636011F362A9FD82827AC32 /* MMEUINavigation.h in Headers */ = {isa = PBXBuildFile; fileRef = 470A7695B8E503C4621B1112318FA359 /* MMEUINavigation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D5517D324FCAAC49144502EA0F18DE6 /* MMEEventLogReportViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 746E5D614C887C37AF7848CA7D28B588 /* MMEEventLogReportViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E37234C4DBE23A034F81AC2C3777F4F /* MapboxMobileEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E01EB6E3824683EA5A45D5101BD00AD /* MapboxMobileEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73815F2BFC3840F77FF7EF9634BEE62C /* Pods-ActiDiabet-ActiDiabetUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E35A1BD518F6CDA5F451145936973E41 /* Pods-ActiDiabet-ActiDiabetUITests-dummy.m */; };
+		75883E6C23A995F6482CA554BDA49425 /* NSString+MMEVersions.h in Headers */ = {isa = PBXBuildFile; fileRef = 303D9248EFC400888CC51004F685C479 /* NSString+MMEVersions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75E95FFEF3D92DC5D8F3ED48DA0F05E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		78A212AC759BB1C822888E97842A6659 /* UIKit+MMEMobileEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 46E63E6F449143C9EDEF09B03B08BC00 /* UIKit+MMEMobileEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		803A943F40E9733AC61489FB25186CF9 /* YoutubePlayer-in-WKWebView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FD56808487702EDABC10512E6686780C /* YoutubePlayer-in-WKWebView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		852DB95162187AB21C0CF5FFD3D5A148 /* MMEAPIClient_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 6623E20949BFB962FA2227FC177FCAC9 /* MMEAPIClient_Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		93EA074E2B05973C840B1B7AAD559178 /* MMETimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832C2722FD1044C1B6E798DBB7645D0 /* MMETimerManager.m */; };
+		9AD84D555FE3F3C4519344CBBAB1D565 /* WKYTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A59E6E7CB7DF598DAF9AD64558F56BA0 /* WKYTPlayerView.m */; };
+		9BF1A0363A9475DFB63010ED93926FA2 /* MMEMetricsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DEB3D3D04775D2CA6107D0925050F6C /* MMEMetricsManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F0B2F2134524878FF7B2A0F08783920 /* MMEUINavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C5E9547778C9F3435FC9BCD55F0C8F /* MMEUINavigation.m */; };
+		A2F456C8B6E599B49D24E31E7EE74180 /* MMEEventsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D7FFAB971740628ED86258A35C287D33 /* MMEEventsManager.m */; };
+		A7042038829920A434D408AC8D86FECE /* CLLocation+MMEMobileEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 907DB4AC4CDFA9624651E6444CDED59B /* CLLocation+MMEMobileEvents.m */; };
+		AA8F5354A4DB231558AAA67A0A37D840 /* MMEDependencyManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C22C94BC814C558FBBCFD0F81FA3CBD /* MMEDependencyManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB9D893DC220F7E259F2E7B4DE5DD1BD /* MMELocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C61EDAC726514E9BB5DA4BD2491055F /* MMELocationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD4989333A1C8BEBB64C71A9D6C9CFB4 /* UIKit+MMEMobileEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8D85592567E4B768A1EE24AD965648 /* UIKit+MMEMobileEvents.m */; };
+		BD0308B7C7B30CBFEF02E415D00DF979 /* MMEMetricsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F5479695D5D382B34CED2C0FB8166B17 /* MMEMetricsManager.m */; };
+		BE46F220F2F6AA05A059954FD32FE7BC /* MMEDispatchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C49EF6AFFB83DB030B065312B361CC21 /* MMEDispatchManager.m */; };
+		BF0A77937EA207B3D4A15F374323E20E /* MMEEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 376E8EB4379F6F9E6B23EA34937AF536 /* MMEEvent.m */; };
+		CCF11406FC25C84082E70B3DE2871690 /* WKYTPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = E6C9465ED6788023987FDC842D82F1FE /* WKYTPlayerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDC0C06F15A126FF746336DB10375671 /* MMEEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = A16A296FD05994B6DC45F320BD815BBC /* MMEEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D1BAAB506BF22288E9EFB000BC8B853C /* Pods-ActiDiabet-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B76CACFF8D060A0265A25B6CAC41C322 /* Pods-ActiDiabet-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D334D5A0AA88F6DEE11C8667AAE43596 /* WKYTPlayerView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4499FAA3696B0239DD566D6EF9BA233A /* WKYTPlayerView.bundle */; };
+		D489F5614C15CF164D88971B6921AA2A /* MMEUniqueIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 4124403AD1C9AF4612FF11D6D4082DC1 /* MMEUniqueIdentifier.m */; };
+		D5437CC098AF89624158B5EA1D836444 /* MMEUniqueIdentifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BCB1483458EEB0CCF9F1BBB3248FEF2 /* MMEUniqueIdentifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D59E7F14400254E778330167EADC088B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		D7BB8EAB2B6562B5ACBD8A7CDD07BC9D /* Pods-ActiDiabet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B8CCEBEAAF3BC953F667722B12452E /* Pods-ActiDiabet-dummy.m */; };
+		DB4E40A0FB29B48EBE429DCFE41A56C6 /* logger.html in Resources */ = {isa = PBXBuildFile; fileRef = 185D45FC2582545CC2E97831C6C867F9 /* logger.html */; };
+		DC96C923C6A4230FAB6EFEF3E506521F /* NSData+MMEGZIP.h in Headers */ = {isa = PBXBuildFile; fileRef = E2E82262096A7FB1B86C94EAE499C323 /* NSData+MMEGZIP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DCB4F66DF47037F13222487CF0E374D2 /* MMELocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFCB80DC867446EEFAFD45AEB2C9E1B /* MMELocationManager.m */; };
+		DF58054550C36420E1D535899C7C00EC /* MMEUIApplicationWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F2C1725A3C96759C4DB1BC3A823B8F /* MMEUIApplicationWrapper.m */; };
+		E279DE5DBEBFAB72A307E4EBAAAC9F20 /* CLLocationManager+MMEMobileEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E8479ED89DF618A4DAA81A7A0A46F8 /* CLLocationManager+MMEMobileEvents.m */; };
+		E43A0141E883C218F5D4582CA74A83F3 /* MMEUIApplicationWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 23B3EF04ECD557419EF21AD8CBF719A6 /* MMEUIApplicationWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E7E001BDBE9F3125B41321539F9D3C5A /* MMEDate.h in Headers */ = {isa = PBXBuildFile; fileRef = 287926DE97BED9E650B1469D995F6EB1 /* MMEDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E99ADAAC771EAB546B4E7159758B1EDF /* Pods-ActiDiabetTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB1FD9A7AF56B06BE9A190EA0164CEE /* Pods-ActiDiabetTests-dummy.m */; };
-		F4CD80A9603F9EC87F866122CDA8E69C /* Pods-ActiDiabet-ActiDiabetUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E35A1BD518F6CDA5F451145936973E41 /* Pods-ActiDiabet-ActiDiabetUITests-dummy.m */; };
-		FC068536C2DFE4FC100880418D3B4E53 /* Pods-ActiDiabet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B8CCEBEAAF3BC953F667722B12452E /* Pods-ActiDiabet-dummy.m */; };
+		F1488DD86176CC2F065BB0AF5444C07B /* MMEConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 594F5119B68D08FCAF3389CA4BE52718 /* MMEConstants.m */; };
+		F7CC64AB3F2167A9958338254D8BB73B /* MMENSURLSessionWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C078C24893A966F2CF9AD1E557B546B /* MMENSURLSessionWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8644D3DFA2D3A8DB3CAE34191AD8E3E /* MMECommonEventData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E79886FEBFD1E936F52BB33D821548B /* MMECommonEventData.m */; };
+		FC5FBEFD7AD67E18BC18CF0F1AA8D1DB /* MMEReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = D00191FE91876BEE8ADDDC3F29096877 /* MMEReachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FFA32F2ADCE1AEFD6882EC4EE1ADB9D1 /* MMEEventLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = F31765C27FEFD03CB4221A4CB75D03C2 /* MMEEventLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2ADF2E31B93C90744C207809538A6372 /* PBXContainerItemProxy */ = {
+		3BD6BF0487316A83C9C6A0CE17368FE2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = DABE3AD6EBA3822D4F04FBC550E7158D;
 			remoteInfo = "YoutubePlayer-in-WKWebView";
 		};
-		5EC5D5F37260D695FC25285816B32449 /* PBXContainerItemProxy */ = {
+		5269FD3AD115242EA246BA86AFDDA0FE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = DABE3AD6EBA3822D4F04FBC550E7158D;
 			remoteInfo = "YoutubePlayer-in-WKWebView";
+		};
+		5C82AC8E9FFAE638C841FAA667FE8D3A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6746AB6F4D992402B59D1651512EA19E;
+			remoteInfo = "Mapbox-iOS-SDK";
+		};
+		608EE8617FFD494B9586AAEB3E556B49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F20E041B920E9DD7BA087321915E730F;
+			remoteInfo = MapboxMobileEvents;
+		};
+		79023853F16F650CDEA075F78A4D27D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F20E041B920E9DD7BA087321915E730F;
+			remoteInfo = MapboxMobileEvents;
 		};
 		9A31211C31A149567CED7D26AD1E6DE7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -46,66 +143,149 @@
 			remoteGlobalIDString = 16F6560AEF902A327DA036D8D41ADA05;
 			remoteInfo = "Pods-ActiDiabet";
 		};
+		B104E235C6DE7E80EAE4EFB82A0BA71E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F20E041B920E9DD7BA087321915E730F;
+			remoteInfo = MapboxMobileEvents;
+		};
+		D3056B0E9D20B415E4411D35D51D86C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6746AB6F4D992402B59D1651512EA19E;
+			remoteInfo = "Mapbox-iOS-SDK";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		019E3D023367C97AB638C9DC669DB798 /* MMECertPin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMECertPin.h; path = MapboxMobileEvents/MMECertPin.h; sourceTree = "<group>"; };
 		06407C849BEF43D96954267BFAA397F1 /* Pods-ActiDiabet-ActiDiabetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ActiDiabet-ActiDiabetUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		158814EAEF2AA7E7ACA32043557997DD /* WKYTPlayerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WKYTPlayerView.h; path = WKYTPlayerView/WKYTPlayerView.h; sourceTree = "<group>"; };
+		06E08CA27F34A1ADD683A8B3E30E566E /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = dynamic/Mapbox.framework; sourceTree = "<group>"; };
+		0C61EDAC726514E9BB5DA4BD2491055F /* MMELocationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMELocationManager.h; path = MapboxMobileEvents/MMELocationManager.h; sourceTree = "<group>"; };
+		1131B26D9C0CF225A73C475004A3D022 /* NSUserDefaults+MMEConfiguration_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSUserDefaults+MMEConfiguration_Private.h"; path = "MapboxMobileEvents/Categories/NSUserDefaults+MMEConfiguration_Private.h"; sourceTree = "<group>"; };
+		185D45FC2582545CC2E97831C6C867F9 /* logger.html */ = {isa = PBXFileReference; includeInIndex = 1; name = logger.html; path = MapboxMobileEvents/Resources/logger.html; sourceTree = "<group>"; };
+		1D8D85592567E4B768A1EE24AD965648 /* UIKit+MMEMobileEvents.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIKit+MMEMobileEvents.m"; path = "MapboxMobileEvents/Categories/UIKit+MMEMobileEvents.m"; sourceTree = "<group>"; };
+		1FD2235D6B95EA96F90C6296D2C9C18A /* MMETypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMETypes.h; path = MapboxMobileEvents/MMETypes.h; sourceTree = "<group>"; };
+		20F470CC8EC1F82927C297CF5F7AAE02 /* MMEEventsManager_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEEventsManager_Private.h; path = MapboxMobileEvents/MMEEventsManager_Private.h; sourceTree = "<group>"; };
+		219D4DD4F4C1C93077476CF1C941561D /* CLLocation+MMEMobileEvents.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CLLocation+MMEMobileEvents.h"; path = "MapboxMobileEvents/Categories/CLLocation+MMEMobileEvents.h"; sourceTree = "<group>"; };
+		23B3EF04ECD557419EF21AD8CBF719A6 /* MMEUIApplicationWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEUIApplicationWrapper.h; path = MapboxMobileEvents/MMEUIApplicationWrapper.h; sourceTree = "<group>"; };
 		23EE982E181CD28D6BBE3BE0FA18F63E /* Pods_ActiDiabetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ActiDiabetTests.framework; path = "Pods-ActiDiabetTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		281A3CD96C9C35E6B2E1911E02EB27C4 /* NSData+MMEGZIP.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+MMEGZIP.m"; path = "MapboxMobileEvents/Categories/NSData+MMEGZIP.m"; sourceTree = "<group>"; };
+		2832C2722FD1044C1B6E798DBB7645D0 /* MMETimerManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMETimerManager.m; path = MapboxMobileEvents/MMETimerManager.m; sourceTree = "<group>"; };
+		285F94B3CA44DD8394AC19E7BC4A8868 /* YoutubePlayer-in-WKWebView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YoutubePlayer-in-WKWebView-dummy.m"; sourceTree = "<group>"; };
+		287926DE97BED9E650B1469D995F6EB1 /* MMEDate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEDate.h; path = MapboxMobileEvents/MMEDate.h; sourceTree = "<group>"; };
+		2C7F7BA41B5AF148F116F2EC407B2078 /* YoutubePlayer-in-WKWebView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "YoutubePlayer-in-WKWebView-Info.plist"; sourceTree = "<group>"; };
+		2D8DD5BDCAC6075B90EA53DFD3B163FE /* MapboxMobileEvents-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MapboxMobileEvents-Info.plist"; sourceTree = "<group>"; };
+		2DFCB80DC867446EEFAFD45AEB2C9E1B /* MMELocationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMELocationManager.m; path = MapboxMobileEvents/MMELocationManager.m; sourceTree = "<group>"; };
+		2E01EB6E3824683EA5A45D5101BD00AD /* MapboxMobileEvents.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MapboxMobileEvents.h; path = MapboxMobileEvents/MapboxMobileEvents.h; sourceTree = "<group>"; };
 		2FCA4B4A18C28FB9A3A8EC55A198367B /* Pods-ActiDiabet-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ActiDiabet-frameworks.sh"; sourceTree = "<group>"; };
+		303D9248EFC400888CC51004F685C479 /* NSString+MMEVersions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MMEVersions.h"; path = "MapboxMobileEvents/Categories/NSString+MMEVersions.h"; sourceTree = "<group>"; };
 		31B8CCEBEAAF3BC953F667722B12452E /* Pods-ActiDiabet-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ActiDiabet-dummy.m"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3621A78A0774D1B2771CD769E3AB34D4 /* MapboxMobileEvents.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MapboxMobileEvents.modulemap; sourceTree = "<group>"; };
 		372F9E2A0B9DC147B72EC74411614FE5 /* Pods-ActiDiabet-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ActiDiabet-acknowledgements.plist"; sourceTree = "<group>"; };
+		376E8EB4379F6F9E6B23EA34937AF536 /* MMEEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEEvent.m; path = MapboxMobileEvents/MMEEvent.m; sourceTree = "<group>"; };
+		37B2640A6B7327849791621C6CCE2450 /* NSUserDefaults+MMEConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSUserDefaults+MMEConfiguration.h"; path = "MapboxMobileEvents/Categories/NSUserDefaults+MMEConfiguration.h"; sourceTree = "<group>"; };
+		3B0DBEB00F68EE68146042D77EC4EF65 /* MMEAPIClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEAPIClient.h; path = MapboxMobileEvents/MMEAPIClient.h; sourceTree = "<group>"; };
+		3BCB1483458EEB0CCF9F1BBB3248FEF2 /* MMEUniqueIdentifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEUniqueIdentifier.h; path = MapboxMobileEvents/MMEUniqueIdentifier.h; sourceTree = "<group>"; };
+		4124403AD1C9AF4612FF11D6D4082DC1 /* MMEUniqueIdentifier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEUniqueIdentifier.m; path = MapboxMobileEvents/MMEUniqueIdentifier.m; sourceTree = "<group>"; };
 		41B6524FAB862F9F325056D625A5E14E /* Pods-ActiDiabet-ActiDiabetUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ActiDiabet-ActiDiabetUITests-umbrella.h"; sourceTree = "<group>"; };
+		43365310BBAA5A235373BA1EFC12E1D1 /* MMEDate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEDate.m; path = MapboxMobileEvents/MMEDate.m; sourceTree = "<group>"; };
+		4499FAA3696B0239DD566D6EF9BA233A /* WKYTPlayerView.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = WKYTPlayerView.bundle; path = WKYTPlayerView/WKYTPlayerView.bundle; sourceTree = "<group>"; };
+		46E63E6F449143C9EDEF09B03B08BC00 /* UIKit+MMEMobileEvents.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIKit+MMEMobileEvents.h"; path = "MapboxMobileEvents/Categories/UIKit+MMEMobileEvents.h"; sourceTree = "<group>"; };
+		470A7695B8E503C4621B1112318FA359 /* MMEUINavigation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEUINavigation.h; path = MapboxMobileEvents/MMEUINavigation.h; sourceTree = "<group>"; };
 		4925F10B1C71DF14B9A773B2C136909A /* Pods-ActiDiabetTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ActiDiabetTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		49BDF554FC86A77A26E58DB44E4B6612 /* MMEDependencyManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEDependencyManager.m; path = MapboxMobileEvents/MMEDependencyManager.m; sourceTree = "<group>"; };
+		4B91A31A8CA5A35B17A09DCEAC116E20 /* MMEMetrics.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEMetrics.m; path = MapboxMobileEvents/MMEMetrics.m; sourceTree = "<group>"; };
 		54875C9FD964BCB96B93BE98E61E5A0A /* Pods-ActiDiabet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ActiDiabet.release.xcconfig"; sourceTree = "<group>"; };
 		577462BBECF5D22A9C5CF8711969A486 /* Pods_ActiDiabet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ActiDiabet.framework; path = "Pods-ActiDiabet.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		594F5119B68D08FCAF3389CA4BE52718 /* MMEConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEConstants.m; path = MapboxMobileEvents/MMEConstants.m; sourceTree = "<group>"; };
+		59BF248D2E6C715C48512D8F0BE54509 /* MMEEventLogReportViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEEventLogReportViewController.m; path = MapboxMobileEvents/MMEEventLogReportViewController.m; sourceTree = "<group>"; };
+		5C078C24893A966F2CF9AD1E557B546B /* MMENSURLSessionWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMENSURLSessionWrapper.h; path = MapboxMobileEvents/MMENSURLSessionWrapper.h; sourceTree = "<group>"; };
+		5C22C94BC814C558FBBCFD0F81FA3CBD /* MMEDependencyManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEDependencyManager.h; path = MapboxMobileEvents/MMEDependencyManager.h; sourceTree = "<group>"; };
+		5E79886FEBFD1E936F52BB33D821548B /* MMECommonEventData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMECommonEventData.m; path = MapboxMobileEvents/MMECommonEventData.m; sourceTree = "<group>"; };
 		5F9BB96729CA0C41BD4282769A142D77 /* Pods-ActiDiabet-ActiDiabetUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ActiDiabet-ActiDiabetUITests.modulemap"; sourceTree = "<group>"; };
+		6623E20949BFB962FA2227FC177FCAC9 /* MMEAPIClient_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEAPIClient_Private.h; path = MapboxMobileEvents/MMEAPIClient_Private.h; sourceTree = "<group>"; };
+		69B50011E2462FD719AF271E6F8695A3 /* MMEDispatchManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEDispatchManager.h; path = MapboxMobileEvents/MMEDispatchManager.h; sourceTree = "<group>"; };
+		6B956D1017297EF366A261AAAEDCBFDB /* MMEMetrics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEMetrics.h; path = MapboxMobileEvents/MMEMetrics.h; sourceTree = "<group>"; };
+		6BD0BEFB8E7829949A09825A3281D30D /* MMEConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEConstants.h; path = MapboxMobileEvents/MMEConstants.h; sourceTree = "<group>"; };
+		6C5740F47BF143BA87C8BBAE2CA5F1F2 /* Mapbox-iOS-SDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Mapbox-iOS-SDK.xcconfig"; sourceTree = "<group>"; };
+		6F4DB8409401641ACDC7062DB50F587F /* MapboxMobileEvents-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MapboxMobileEvents-prefix.pch"; sourceTree = "<group>"; };
 		71278986E9E847A15582B7E603CB9C35 /* Pods-ActiDiabetTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ActiDiabetTests-umbrella.h"; sourceTree = "<group>"; };
+		746E5D614C887C37AF7848CA7D28B588 /* MMEEventLogReportViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEEventLogReportViewController.h; path = MapboxMobileEvents/MMEEventLogReportViewController.h; sourceTree = "<group>"; };
+		74F2C1725A3C96759C4DB1BC3A823B8F /* MMEUIApplicationWrapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEUIApplicationWrapper.m; path = MapboxMobileEvents/MMEUIApplicationWrapper.m; sourceTree = "<group>"; };
 		763DF10851EDFA729144025A940BD15F /* Pods-ActiDiabet.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ActiDiabet.modulemap"; sourceTree = "<group>"; };
-		88C2C92BB7DDC17915FF28A029F18130 /* WKYTPlayerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WKYTPlayerView.m; path = WKYTPlayerView/WKYTPlayerView.m; sourceTree = "<group>"; };
-		9148B6B8D7184C7C910A7578F8671685 /* YoutubePlayer-in-WKWebView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YoutubePlayer-in-WKWebView-umbrella.h"; sourceTree = "<group>"; };
-		965D60F2F3EC242D5E7B46E28328D76A /* YoutubePlayer-in-WKWebView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YoutubePlayer-in-WKWebView-prefix.pch"; sourceTree = "<group>"; };
+		7CDFA2DAE745FD57264494A16D3C14B6 /* MapboxMobileEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MapboxMobileEvents.framework; path = MapboxMobileEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F2F67BEE2D5B83B8EC5F7310BB134C9 /* MMECategoryLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMECategoryLoader.h; path = MapboxMobileEvents/Categories/MMECategoryLoader.h; sourceTree = "<group>"; };
+		811DC68B3A020CDA29A17D8C5DDC32F8 /* MapboxMobileEvents-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MapboxMobileEvents-dummy.m"; sourceTree = "<group>"; };
+		89A2C93DA3CCB24934F068C3E731C694 /* NSUserDefaults+MMEConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSUserDefaults+MMEConfiguration.m"; path = "MapboxMobileEvents/Categories/NSUserDefaults+MMEConfiguration.m"; sourceTree = "<group>"; };
+		8C2D17A0A02A4C920B8A3F0943913F4E /* MMETimerManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMETimerManager.h; path = MapboxMobileEvents/MMETimerManager.h; sourceTree = "<group>"; };
+		8DEB3D3D04775D2CA6107D0925050F6C /* MMEMetricsManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEMetricsManager.h; path = MapboxMobileEvents/MMEMetricsManager.h; sourceTree = "<group>"; };
+		903D9141C9856AC3F72735238F6EF9B9 /* MMECategoryLoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMECategoryLoader.m; path = MapboxMobileEvents/Categories/MMECategoryLoader.m; sourceTree = "<group>"; };
+		907DB4AC4CDFA9624651E6444CDED59B /* CLLocation+MMEMobileEvents.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CLLocation+MMEMobileEvents.m"; path = "MapboxMobileEvents/Categories/CLLocation+MMEMobileEvents.m"; sourceTree = "<group>"; };
+		9A71961D5A7C13F389234A0C3C7FB80C /* YoutubePlayer-in-WKWebView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "YoutubePlayer-in-WKWebView.xcconfig"; sourceTree = "<group>"; };
 		9CBFF41CBC3FCEBF7DE8CF0082BAEE37 /* Pods-ActiDiabetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ActiDiabetTests.release.xcconfig"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E0CD50FC8D1B238932840E207658C90 /* Pods-ActiDiabet-ActiDiabetUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ActiDiabet-ActiDiabetUITests-Info.plist"; sourceTree = "<group>"; };
 		A0FEFDA600141541EDCA3466762E2E6B /* Pods-ActiDiabetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ActiDiabetTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A16A296FD05994B6DC45F320BD815BBC /* MMEEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEEvent.h; path = MapboxMobileEvents/MMEEvent.h; sourceTree = "<group>"; };
+		A1C5E9547778C9F3435FC9BCD55F0C8F /* MMEUINavigation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEUINavigation.m; path = MapboxMobileEvents/MMEUINavigation.m; sourceTree = "<group>"; };
 		A4BDEC7EBE08649922BEE835D42A2022 /* Pods-ActiDiabetTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ActiDiabetTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		AB1EE9B7060F10507AB79214957DE146 /* YoutubePlayer-in-WKWebView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YoutubePlayer-in-WKWebView-dummy.m"; sourceTree = "<group>"; };
+		A4E8479ED89DF618A4DAA81A7A0A46F8 /* CLLocationManager+MMEMobileEvents.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CLLocationManager+MMEMobileEvents.m"; path = "MapboxMobileEvents/Categories/CLLocationManager+MMEMobileEvents.m"; sourceTree = "<group>"; };
+		A59E6E7CB7DF598DAF9AD64558F56BA0 /* WKYTPlayerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WKYTPlayerView.m; path = WKYTPlayerView/WKYTPlayerView.m; sourceTree = "<group>"; };
 		ACE9C6EC7086718AEE2E3AADB777EC2E /* Pods_ActiDiabet_ActiDiabetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ActiDiabet_ActiDiabetUITests.framework; path = "Pods-ActiDiabet-ActiDiabetUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADD762C8F1025BB8ABCCCBD910C9FA89 /* NSString+MMEVersions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MMEVersions.m"; path = "MapboxMobileEvents/Categories/NSString+MMEVersions.m"; sourceTree = "<group>"; };
+		AF98B3E0A898943BA00CDDCDAF23C91D /* MMECommonEventData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMECommonEventData.h; path = MapboxMobileEvents/MMECommonEventData.h; sourceTree = "<group>"; };
 		B76CACFF8D060A0265A25B6CAC41C322 /* Pods-ActiDiabet-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ActiDiabet-umbrella.h"; sourceTree = "<group>"; };
 		B92EE545B2A5A820EEE33B95A584798A /* Pods-ActiDiabet-ActiDiabetUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ActiDiabet-ActiDiabetUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BE1560207F47059FE1BAABABB2B7D20E /* YoutubePlayer-in-WKWebView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "YoutubePlayer-in-WKWebView.modulemap"; sourceTree = "<group>"; };
 		BE9B704DF0F27CD77003A1DCEEC72072 /* Pods-ActiDiabet-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ActiDiabet-Info.plist"; sourceTree = "<group>"; };
-		C5D0E1D6F68A4742F5D1157B65EA5C98 /* YoutubePlayer-in-WKWebView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "YoutubePlayer-in-WKWebView-Info.plist"; sourceTree = "<group>"; };
+		BEC1A5C2623D76544AFAC5813E9158A9 /* MapboxMobileEvents.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MapboxMobileEvents.xcconfig; sourceTree = "<group>"; };
+		C46AEBC1D29E44750743303F65057A6E /* MMENSURLSessionWrapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMENSURLSessionWrapper.m; path = MapboxMobileEvents/MMENSURLSessionWrapper.m; sourceTree = "<group>"; };
+		C49EF6AFFB83DB030B065312B361CC21 /* MMEDispatchManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEDispatchManager.m; path = MapboxMobileEvents/MMEDispatchManager.m; sourceTree = "<group>"; };
+		C5E4A16CDC5E57EEEDA240346D8C5EB0 /* YoutubePlayer-in-WKWebView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YoutubePlayer-in-WKWebView-prefix.pch"; sourceTree = "<group>"; };
+		C716D558AC732C2213ACF1FB7079ED77 /* MMEEventLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEEventLogger.m; path = MapboxMobileEvents/MMEEventLogger.m; sourceTree = "<group>"; };
 		CF42BB5D77E88CD237FC4983F91AC0B4 /* Pods-ActiDiabet-ActiDiabetUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ActiDiabet-ActiDiabetUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D00EE8FB7AEDEC0FFCC62CA1B90C8010 /* YoutubePlayer-in-WKWebView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "YoutubePlayer-in-WKWebView.xcconfig"; sourceTree = "<group>"; };
-		D45E0C906890686D770071E3F267394C /* WKYTPlayerView.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = WKYTPlayerView.bundle; path = WKYTPlayerView/WKYTPlayerView.bundle; sourceTree = "<group>"; };
+		D00095E0E67B635184C2F29D5FAD2977 /* MMEAPIClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEAPIClient.m; path = MapboxMobileEvents/MMEAPIClient.m; sourceTree = "<group>"; };
+		D00191FE91876BEE8ADDDC3F29096877 /* MMEReachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEReachability.h; path = MapboxMobileEvents/Reachability/MMEReachability.h; sourceTree = "<group>"; };
+		D24442DF71954A764E0982534A9F823F /* MMEReachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEReachability.m; path = MapboxMobileEvents/Reachability/MMEReachability.m; sourceTree = "<group>"; };
+		D2C2515FB630278D0282930871119081 /* MapboxMobileEvents-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MapboxMobileEvents-umbrella.h"; sourceTree = "<group>"; };
+		D4E33D498131D772620235F834DA4125 /* MMEEventsManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEEventsManager.h; path = MapboxMobileEvents/MMEEventsManager.h; sourceTree = "<group>"; };
 		D5F44C97B01F2F7ABED6C9759344A9E5 /* Pods-ActiDiabetTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ActiDiabetTests.modulemap"; sourceTree = "<group>"; };
+		D7FFAB971740628ED86258A35C287D33 /* MMEEventsManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEEventsManager.m; path = MapboxMobileEvents/MMEEventsManager.m; sourceTree = "<group>"; };
 		D80A24CBD47D46301E045A2FD3FCB391 /* Pods-ActiDiabet-ActiDiabetUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ActiDiabet-ActiDiabetUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		D97C907DADC944628CE2D665DF7057A6 /* Pods-ActiDiabetTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ActiDiabetTests-Info.plist"; sourceTree = "<group>"; };
 		DE0FAB1DA724AB86C0E299518F5E580A /* YoutubePlayer_in_WKWebView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = YoutubePlayer_in_WKWebView.framework; path = "YoutubePlayer-in-WKWebView.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2E82262096A7FB1B86C94EAE499C323 /* NSData+MMEGZIP.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+MMEGZIP.h"; path = "MapboxMobileEvents/Categories/NSData+MMEGZIP.h"; sourceTree = "<group>"; };
 		E35A1BD518F6CDA5F451145936973E41 /* Pods-ActiDiabet-ActiDiabetUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ActiDiabet-ActiDiabetUITests-dummy.m"; sourceTree = "<group>"; };
+		E6C9465ED6788023987FDC842D82F1FE /* WKYTPlayerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WKYTPlayerView.h; path = WKYTPlayerView/WKYTPlayerView.h; sourceTree = "<group>"; };
 		E969275CFC772D47E5F8A3438CDBB351 /* Pods-ActiDiabet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ActiDiabet.debug.xcconfig"; sourceTree = "<group>"; };
 		EBB1FD9A7AF56B06BE9A190EA0164CEE /* Pods-ActiDiabetTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ActiDiabetTests-dummy.m"; sourceTree = "<group>"; };
 		EDE3CA8792C28FE68BDABDF3F737DFE4 /* Pods-ActiDiabet-ActiDiabetUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ActiDiabet-ActiDiabetUITests-frameworks.sh"; sourceTree = "<group>"; };
+		F31765C27FEFD03CB4221A4CB75D03C2 /* MMEEventLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEEventLogger.h; path = MapboxMobileEvents/MMEEventLogger.h; sourceTree = "<group>"; };
+		F5479695D5D382B34CED2C0FB8166B17 /* MMEMetricsManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEMetricsManager.m; path = MapboxMobileEvents/MMEMetricsManager.m; sourceTree = "<group>"; };
+		F6AB1D1F7C7BA002B89429DA86B2B514 /* CLLocationManager+MMEMobileEvents.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CLLocationManager+MMEMobileEvents.h"; path = "MapboxMobileEvents/Categories/CLLocationManager+MMEMobileEvents.h"; sourceTree = "<group>"; };
 		FA1395A32CB96C7119E84E3C90D4AD58 /* Pods-ActiDiabet-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ActiDiabet-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FD64B190B67BDAB0692FC8236296B99C /* YoutubePlayer-in-WKWebView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "YoutubePlayer-in-WKWebView.modulemap"; sourceTree = "<group>"; };
+		FD56808487702EDABC10512E6686780C /* YoutubePlayer-in-WKWebView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YoutubePlayer-in-WKWebView-umbrella.h"; sourceTree = "<group>"; };
+		FF9A83A1BC6CB6957C01014B68418051 /* MMECertPin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMECertPin.m; path = MapboxMobileEvents/MMECertPin.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		203AF43ED1120982B76C35C8D559B846 /* Frameworks */ = {
+		193ADCDBCB9CB3F69649A8357E352292 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				012D2AB7758D939FC54361D1CE64A5D5 /* Foundation.framework in Frameworks */,
+				D59E7F14400254E778330167EADC088B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2F759C64AB2A06BB7C1936301E95E4E6 /* Frameworks */ = {
+		23FBB9B5CD74DD9340F8510C49D0FAB9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F47C358CEEA851D956A8A5F2DF06B6E /* Foundation.framework in Frameworks */,
+				4F6680ED1F8E455A28F54B88EB4B1BE1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +294,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				52676CD81C64DDF7E69550C1BEEA488F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67D9FFC84EDB93B215BCC118FA392C5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75E95FFEF3D92DC5D8F3ED48DA0F05E7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,21 +316,111 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		27578602556D5E5C756CED211EC2EEDB /* Products */ = {
+		1723AB7748E446E1E98BB75C48D6D1FF /* Mapbox-iOS-SDK */ = {
 			isa = PBXGroup;
 			children = (
-				577462BBECF5D22A9C5CF8711969A486 /* Pods_ActiDiabet.framework */,
-				ACE9C6EC7086718AEE2E3AADB777EC2E /* Pods_ActiDiabet_ActiDiabetUITests.framework */,
-				23EE982E181CD28D6BBE3BE0FA18F63E /* Pods_ActiDiabetTests.framework */,
-				DE0FAB1DA724AB86C0E299518F5E580A /* YoutubePlayer_in_WKWebView.framework */,
+				9FB5CAFC89C25B0D1726B32FF766562C /* Frameworks */,
+				4FCF22DE9F904BD1054521321305339E /* Support Files */,
 			);
-			name = Products;
+			name = "Mapbox-iOS-SDK";
+			path = "Mapbox-iOS-SDK";
 			sourceTree = "<group>";
 		};
-		49AE3566D9DAC22AD399C49EC523D64D /* Pods */ = {
+		1DB9A0128EFDC7D8FAACF1D3365419CB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				AAAA31A5C7782BB86B3BB1EB150609ED /* YoutubePlayer-in-WKWebView */,
+				4499FAA3696B0239DD566D6EF9BA233A /* WKYTPlayerView.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2BCAE4F6A221DE2934881E77512C9693 /* YoutubePlayer-in-WKWebView */ = {
+			isa = PBXGroup;
+			children = (
+				E6C9465ED6788023987FDC842D82F1FE /* WKYTPlayerView.h */,
+				A59E6E7CB7DF598DAF9AD64558F56BA0 /* WKYTPlayerView.m */,
+				1DB9A0128EFDC7D8FAACF1D3365419CB /* Resources */,
+				6C8F81FE76C6A0032A096D60DF727874 /* Support Files */,
+			);
+			name = "YoutubePlayer-in-WKWebView";
+			path = "YoutubePlayer-in-WKWebView";
+			sourceTree = "<group>";
+		};
+		38F969C66A7043A8BEA358BD6FFFF5A0 /* MapboxMobileEvents */ = {
+			isa = PBXGroup;
+			children = (
+				219D4DD4F4C1C93077476CF1C941561D /* CLLocation+MMEMobileEvents.h */,
+				907DB4AC4CDFA9624651E6444CDED59B /* CLLocation+MMEMobileEvents.m */,
+				F6AB1D1F7C7BA002B89429DA86B2B514 /* CLLocationManager+MMEMobileEvents.h */,
+				A4E8479ED89DF618A4DAA81A7A0A46F8 /* CLLocationManager+MMEMobileEvents.m */,
+				2E01EB6E3824683EA5A45D5101BD00AD /* MapboxMobileEvents.h */,
+				3B0DBEB00F68EE68146042D77EC4EF65 /* MMEAPIClient.h */,
+				D00095E0E67B635184C2F29D5FAD2977 /* MMEAPIClient.m */,
+				6623E20949BFB962FA2227FC177FCAC9 /* MMEAPIClient_Private.h */,
+				7F2F67BEE2D5B83B8EC5F7310BB134C9 /* MMECategoryLoader.h */,
+				903D9141C9856AC3F72735238F6EF9B9 /* MMECategoryLoader.m */,
+				019E3D023367C97AB638C9DC669DB798 /* MMECertPin.h */,
+				FF9A83A1BC6CB6957C01014B68418051 /* MMECertPin.m */,
+				AF98B3E0A898943BA00CDDCDAF23C91D /* MMECommonEventData.h */,
+				5E79886FEBFD1E936F52BB33D821548B /* MMECommonEventData.m */,
+				6BD0BEFB8E7829949A09825A3281D30D /* MMEConstants.h */,
+				594F5119B68D08FCAF3389CA4BE52718 /* MMEConstants.m */,
+				287926DE97BED9E650B1469D995F6EB1 /* MMEDate.h */,
+				43365310BBAA5A235373BA1EFC12E1D1 /* MMEDate.m */,
+				5C22C94BC814C558FBBCFD0F81FA3CBD /* MMEDependencyManager.h */,
+				49BDF554FC86A77A26E58DB44E4B6612 /* MMEDependencyManager.m */,
+				69B50011E2462FD719AF271E6F8695A3 /* MMEDispatchManager.h */,
+				C49EF6AFFB83DB030B065312B361CC21 /* MMEDispatchManager.m */,
+				A16A296FD05994B6DC45F320BD815BBC /* MMEEvent.h */,
+				376E8EB4379F6F9E6B23EA34937AF536 /* MMEEvent.m */,
+				F31765C27FEFD03CB4221A4CB75D03C2 /* MMEEventLogger.h */,
+				C716D558AC732C2213ACF1FB7079ED77 /* MMEEventLogger.m */,
+				746E5D614C887C37AF7848CA7D28B588 /* MMEEventLogReportViewController.h */,
+				59BF248D2E6C715C48512D8F0BE54509 /* MMEEventLogReportViewController.m */,
+				D4E33D498131D772620235F834DA4125 /* MMEEventsManager.h */,
+				D7FFAB971740628ED86258A35C287D33 /* MMEEventsManager.m */,
+				20F470CC8EC1F82927C297CF5F7AAE02 /* MMEEventsManager_Private.h */,
+				0C61EDAC726514E9BB5DA4BD2491055F /* MMELocationManager.h */,
+				2DFCB80DC867446EEFAFD45AEB2C9E1B /* MMELocationManager.m */,
+				6B956D1017297EF366A261AAAEDCBFDB /* MMEMetrics.h */,
+				4B91A31A8CA5A35B17A09DCEAC116E20 /* MMEMetrics.m */,
+				8DEB3D3D04775D2CA6107D0925050F6C /* MMEMetricsManager.h */,
+				F5479695D5D382B34CED2C0FB8166B17 /* MMEMetricsManager.m */,
+				5C078C24893A966F2CF9AD1E557B546B /* MMENSURLSessionWrapper.h */,
+				C46AEBC1D29E44750743303F65057A6E /* MMENSURLSessionWrapper.m */,
+				D00191FE91876BEE8ADDDC3F29096877 /* MMEReachability.h */,
+				D24442DF71954A764E0982534A9F823F /* MMEReachability.m */,
+				8C2D17A0A02A4C920B8A3F0943913F4E /* MMETimerManager.h */,
+				2832C2722FD1044C1B6E798DBB7645D0 /* MMETimerManager.m */,
+				1FD2235D6B95EA96F90C6296D2C9C18A /* MMETypes.h */,
+				23B3EF04ECD557419EF21AD8CBF719A6 /* MMEUIApplicationWrapper.h */,
+				74F2C1725A3C96759C4DB1BC3A823B8F /* MMEUIApplicationWrapper.m */,
+				470A7695B8E503C4621B1112318FA359 /* MMEUINavigation.h */,
+				A1C5E9547778C9F3435FC9BCD55F0C8F /* MMEUINavigation.m */,
+				3BCB1483458EEB0CCF9F1BBB3248FEF2 /* MMEUniqueIdentifier.h */,
+				4124403AD1C9AF4612FF11D6D4082DC1 /* MMEUniqueIdentifier.m */,
+				E2E82262096A7FB1B86C94EAE499C323 /* NSData+MMEGZIP.h */,
+				281A3CD96C9C35E6B2E1911E02EB27C4 /* NSData+MMEGZIP.m */,
+				303D9248EFC400888CC51004F685C479 /* NSString+MMEVersions.h */,
+				ADD762C8F1025BB8ABCCCBD910C9FA89 /* NSString+MMEVersions.m */,
+				37B2640A6B7327849791621C6CCE2450 /* NSUserDefaults+MMEConfiguration.h */,
+				89A2C93DA3CCB24934F068C3E731C694 /* NSUserDefaults+MMEConfiguration.m */,
+				1131B26D9C0CF225A73C475004A3D022 /* NSUserDefaults+MMEConfiguration_Private.h */,
+				46E63E6F449143C9EDEF09B03B08BC00 /* UIKit+MMEMobileEvents.h */,
+				1D8D85592567E4B768A1EE24AD965648 /* UIKit+MMEMobileEvents.m */,
+				6416EB1C33D3E22A2DEBD05DAF7CB63E /* Resources */,
+				AB4CF5E6AA50E76EFB14F83F69A34894 /* Support Files */,
+			);
+			name = MapboxMobileEvents;
+			path = MapboxMobileEvents;
+			sourceTree = "<group>";
+		};
+		4E2FF8519DB54AB9538CB727E66D4791 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1723AB7748E446E1E98BB75C48D6D1FF /* Mapbox-iOS-SDK */,
+				38F969C66A7043A8BEA358BD6FFFF5A0 /* MapboxMobileEvents */,
+				2BCAE4F6A221DE2934881E77512C9693 /* YoutubePlayer-in-WKWebView */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -155,6 +433,15 @@
 				5C28755263A935ACC4AF0111E995D058 /* Pods-ActiDiabetTests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		4FCF22DE9F904BD1054521321305339E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6C5740F47BF143BA87C8BBAE2CA5F1F2 /* Mapbox-iOS-SDK.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Mapbox-iOS-SDK";
 			sourceTree = "<group>";
 		};
 		500E7390D7216B7C2BCD36DB7D2C1A5A /* Pods-ActiDiabet-ActiDiabetUITests */ = {
@@ -190,15 +477,23 @@
 			path = "Target Support Files/Pods-ActiDiabetTests";
 			sourceTree = "<group>";
 		};
-		631A4EDBD5F5F3F6E0B2E98A0CAD6E27 /* Support Files */ = {
+		6416EB1C33D3E22A2DEBD05DAF7CB63E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FD64B190B67BDAB0692FC8236296B99C /* YoutubePlayer-in-WKWebView.modulemap */,
-				D00EE8FB7AEDEC0FFCC62CA1B90C8010 /* YoutubePlayer-in-WKWebView.xcconfig */,
-				AB1EE9B7060F10507AB79214957DE146 /* YoutubePlayer-in-WKWebView-dummy.m */,
-				C5D0E1D6F68A4742F5D1157B65EA5C98 /* YoutubePlayer-in-WKWebView-Info.plist */,
-				965D60F2F3EC242D5E7B46E28328D76A /* YoutubePlayer-in-WKWebView-prefix.pch */,
-				9148B6B8D7184C7C910A7578F8671685 /* YoutubePlayer-in-WKWebView-umbrella.h */,
+				185D45FC2582545CC2E97831C6C867F9 /* logger.html */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		6C8F81FE76C6A0032A096D60DF727874 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE1560207F47059FE1BAABABB2B7D20E /* YoutubePlayer-in-WKWebView.modulemap */,
+				9A71961D5A7C13F389234A0C3C7FB80C /* YoutubePlayer-in-WKWebView.xcconfig */,
+				285F94B3CA44DD8394AC19E7BC4A8868 /* YoutubePlayer-in-WKWebView-dummy.m */,
+				2C7F7BA41B5AF148F116F2EC407B2078 /* YoutubePlayer-in-WKWebView-Info.plist */,
+				C5E4A16CDC5E57EEEDA240346D8C5EB0 /* YoutubePlayer-in-WKWebView-prefix.pch */,
+				FD56808487702EDABC10512E6686780C /* YoutubePlayer-in-WKWebView-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/YoutubePlayer-in-WKWebView";
@@ -221,24 +516,38 @@
 			path = "Target Support Files/Pods-ActiDiabet";
 			sourceTree = "<group>";
 		};
-		A0C98DE340FB510B3FC001EC726AE66E /* Resources */ = {
+		702B3FB5F911DAFAD9771A2FAE3D463C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D45E0C906890686D770071E3F267394C /* WKYTPlayerView.bundle */,
+				7CDFA2DAE745FD57264494A16D3C14B6 /* MapboxMobileEvents.framework */,
+				577462BBECF5D22A9C5CF8711969A486 /* Pods_ActiDiabet.framework */,
+				ACE9C6EC7086718AEE2E3AADB777EC2E /* Pods_ActiDiabet_ActiDiabetUITests.framework */,
+				23EE982E181CD28D6BBE3BE0FA18F63E /* Pods_ActiDiabetTests.framework */,
+				DE0FAB1DA724AB86C0E299518F5E580A /* YoutubePlayer_in_WKWebView.framework */,
 			);
-			name = Resources;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		AAAA31A5C7782BB86B3BB1EB150609ED /* YoutubePlayer-in-WKWebView */ = {
+		9FB5CAFC89C25B0D1726B32FF766562C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				158814EAEF2AA7E7ACA32043557997DD /* WKYTPlayerView.h */,
-				88C2C92BB7DDC17915FF28A029F18130 /* WKYTPlayerView.m */,
-				A0C98DE340FB510B3FC001EC726AE66E /* Resources */,
-				631A4EDBD5F5F3F6E0B2E98A0CAD6E27 /* Support Files */,
+				06E08CA27F34A1ADD683A8B3E30E566E /* Mapbox.framework */,
 			);
-			name = "YoutubePlayer-in-WKWebView";
-			path = "YoutubePlayer-in-WKWebView";
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB4CF5E6AA50E76EFB14F83F69A34894 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3621A78A0774D1B2771CD769E3AB34D4 /* MapboxMobileEvents.modulemap */,
+				BEC1A5C2623D76544AFAC5813E9158A9 /* MapboxMobileEvents.xcconfig */,
+				811DC68B3A020CDA29A17D8C5DDC32F8 /* MapboxMobileEvents-dummy.m */,
+				2D8DD5BDCAC6075B90EA53DFD3B163FE /* MapboxMobileEvents-Info.plist */,
+				6F4DB8409401641ACDC7062DB50F587F /* MapboxMobileEvents-prefix.pch */,
+				D2C2515FB630278D0282930871119081 /* MapboxMobileEvents-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MapboxMobileEvents";
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -254,8 +563,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				49AE3566D9DAC22AD399C49EC523D64D /* Pods */,
-				27578602556D5E5C756CED211EC2EEDB /* Products */,
+				4E2FF8519DB54AB9538CB727E66D4791 /* Pods */,
+				702B3FB5F911DAFAD9771A2FAE3D463C /* Products */,
 				4F629F04DCCCDCAEF89C018F253CC0E8 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -280,19 +589,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		694B112A0FE9772DD5F323466905E196 /* Headers */ = {
+		1C17FE9DC61395AA11A2A573ED7779F5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7310ACF5F3CEC49A78409BAB2DE8684 /* Pods-ActiDiabet-ActiDiabetUITests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		74CB0DE41FEA679E0E2B2DB9983BC429 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8EDE139802E7C7CD03412658CB28FA96 /* Pods-ActiDiabet-umbrella.h in Headers */,
+				D1BAAB506BF22288E9EFB000BC8B853C /* Pods-ActiDiabet-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,22 +605,72 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A82618C2877600798DECF1377C21F424 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D1AB33E38AE6EB29C363CBCCD1C32DB /* CLLocation+MMEMobileEvents.h in Headers */,
+				0594AFB3518E9651469A4386FE8F434B /* CLLocationManager+MMEMobileEvents.h in Headers */,
+				1DEBC4ECCFC45DDA52FDAAAF7C5D2F0B /* MapboxMobileEvents-umbrella.h in Headers */,
+				6E37234C4DBE23A034F81AC2C3777F4F /* MapboxMobileEvents.h in Headers */,
+				661BD64EC8DB0C15E884A2A80AA063E5 /* MMEAPIClient.h in Headers */,
+				852DB95162187AB21C0CF5FFD3D5A148 /* MMEAPIClient_Private.h in Headers */,
+				53534F6682224FCEB8E2166FEBE54824 /* MMECategoryLoader.h in Headers */,
+				5961CA9A9B935A69C865A6DF33A99D97 /* MMECertPin.h in Headers */,
+				3B70A9391485438386961EF97B4FBC97 /* MMECommonEventData.h in Headers */,
+				19C7985600BAE10D9DC05342A2D8324C /* MMEConstants.h in Headers */,
+				E7E001BDBE9F3125B41321539F9D3C5A /* MMEDate.h in Headers */,
+				AA8F5354A4DB231558AAA67A0A37D840 /* MMEDependencyManager.h in Headers */,
+				38FA608EAEC7715C96BF01E222FBFD6E /* MMEDispatchManager.h in Headers */,
+				CDC0C06F15A126FF746336DB10375671 /* MMEEvent.h in Headers */,
+				FFA32F2ADCE1AEFD6882EC4EE1ADB9D1 /* MMEEventLogger.h in Headers */,
+				6D5517D324FCAAC49144502EA0F18DE6 /* MMEEventLogReportViewController.h in Headers */,
+				5F341934B5EAD5B7DADE5AB0DDF76B59 /* MMEEventsManager.h in Headers */,
+				235381CEC72174B24BC5CB01376161FD /* MMEEventsManager_Private.h in Headers */,
+				AB9D893DC220F7E259F2E7B4DE5DD1BD /* MMELocationManager.h in Headers */,
+				22577C59734E5ED346B29CFF7B1DCA74 /* MMEMetrics.h in Headers */,
+				9BF1A0363A9475DFB63010ED93926FA2 /* MMEMetricsManager.h in Headers */,
+				F7CC64AB3F2167A9958338254D8BB73B /* MMENSURLSessionWrapper.h in Headers */,
+				FC5FBEFD7AD67E18BC18CF0F1AA8D1DB /* MMEReachability.h in Headers */,
+				10017B7E54B514D0162C87671E122D30 /* MMETimerManager.h in Headers */,
+				2419E01993AF4074B1643CC0A1A71CBB /* MMETypes.h in Headers */,
+				E43A0141E883C218F5D4582CA74A83F3 /* MMEUIApplicationWrapper.h in Headers */,
+				6B2DC34DB636011F362A9FD82827AC32 /* MMEUINavigation.h in Headers */,
+				D5437CC098AF89624158B5EA1D836444 /* MMEUniqueIdentifier.h in Headers */,
+				DC96C923C6A4230FAB6EFEF3E506521F /* NSData+MMEGZIP.h in Headers */,
+				75883E6C23A995F6482CA554BDA49425 /* NSString+MMEVersions.h in Headers */,
+				1A79C70DD4F4CF7FEF1182E21856BE50 /* NSUserDefaults+MMEConfiguration.h in Headers */,
+				184028441D9A8F9C98E844324C83DC99 /* NSUserDefaults+MMEConfiguration_Private.h in Headers */,
+				78A212AC759BB1C822888E97842A6659 /* UIKit+MMEMobileEvents.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7323C408BD37BEA0364BD7FA43959BA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B59277A57C3CBE83FDCC1493F497D76 /* Pods-ActiDiabet-ActiDiabetUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		031455A1D2ECE6F1C2C0195D5EA7BAC5 /* Pods-ActiDiabet-ActiDiabetUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0FE76D0D570C2E315485B81DE3A9A6DB /* Build configuration list for PBXNativeTarget "Pods-ActiDiabet-ActiDiabetUITests" */;
+			buildConfigurationList = 134AF05EA9FE26F15FB6811E934B9C6B /* Build configuration list for PBXNativeTarget "Pods-ActiDiabet-ActiDiabetUITests" */;
 			buildPhases = (
-				694B112A0FE9772DD5F323466905E196 /* Headers */,
-				39310228E0B083D8F4882AF3CE2A75B3 /* Sources */,
-				203AF43ED1120982B76C35C8D559B846 /* Frameworks */,
-				AF1AA5FF0812FAEDC80E019D2A652D9B /* Resources */,
+				B7323C408BD37BEA0364BD7FA43959BA /* Headers */,
+				62BA3FB5B4C9DC11182418541CA22B54 /* Sources */,
+				23FBB9B5CD74DD9340F8510C49D0FAB9 /* Frameworks */,
+				93BAE720CB8ABC59A7181B73F9D3C190 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DFAE37AF40498C5855A002D04AE6BD5E /* PBXTargetDependency */,
+				57C25A533281033262A085D32F8582B3 /* PBXTargetDependency */,
+				110B8F87045C7511B183460FDF2467D9 /* PBXTargetDependency */,
+				40BC30532F3907681CD7E2750836D00D /* PBXTargetDependency */,
 			);
 			name = "Pods-ActiDiabet-ActiDiabetUITests";
 			productName = "Pods-ActiDiabet-ActiDiabetUITests";
@@ -328,17 +679,19 @@
 		};
 		16F6560AEF902A327DA036D8D41ADA05 /* Pods-ActiDiabet */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CC70E40BA88FA74718CD544DC8143318 /* Build configuration list for PBXNativeTarget "Pods-ActiDiabet" */;
+			buildConfigurationList = 8F370222CF4D4DB70EB7F2C0A124369F /* Build configuration list for PBXNativeTarget "Pods-ActiDiabet" */;
 			buildPhases = (
-				74CB0DE41FEA679E0E2B2DB9983BC429 /* Headers */,
-				7B438D466AE7C4F0B01CDA9B8B5ED394 /* Sources */,
-				2F759C64AB2A06BB7C1936301E95E4E6 /* Frameworks */,
-				56C96E2312E9C5E6FAEFE70967551F2E /* Resources */,
+				1C17FE9DC61395AA11A2A573ED7779F5 /* Headers */,
+				CEC019062FDD4F17E7C6EECC59D12FE8 /* Sources */,
+				67D9FFC84EDB93B215BCC118FA392C5F /* Frameworks */,
+				7A6E1F5BBA5152218F279A4171614E1E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				26E37C8242A8A867052C14B9E8354BB0 /* PBXTargetDependency */,
+				08A2D477DF837E352FBC7A32DC9E2B93 /* PBXTargetDependency */,
+				A612C9EE78A7CC31966A46EBBCEE78AC /* PBXTargetDependency */,
+				C0406ACE8396F8353997A59EBA36C3B8 /* PBXTargetDependency */,
 			);
 			name = "Pods-ActiDiabet";
 			productName = "Pods-ActiDiabet";
@@ -382,6 +735,24 @@
 			productReference = DE0FAB1DA724AB86C0E299518F5E580A /* YoutubePlayer_in_WKWebView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		F20E041B920E9DD7BA087321915E730F /* MapboxMobileEvents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDB07C907CA5DE84E11225D277A8756B /* Build configuration list for PBXNativeTarget "MapboxMobileEvents" */;
+			buildPhases = (
+				A82618C2877600798DECF1377C21F424 /* Headers */,
+				4536D8E00AFACF1221626B8E034A2137 /* Sources */,
+				193ADCDBCB9CB3F69649A8357E352292 /* Frameworks */,
+				F4D4455110F6D7DD6F1D8824F80CD08F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MapboxMobileEvents;
+			productName = MapboxMobileEvents;
+			productReference = 7CDFA2DAE745FD57264494A16D3C14B6 /* MapboxMobileEvents.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -392,7 +763,7 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -400,10 +771,12 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 27578602556D5E5C756CED211EC2EEDB /* Products */;
+			productRefGroup = 702B3FB5F911DAFAD9771A2FAE3D463C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				6746AB6F4D992402B59D1651512EA19E /* Mapbox-iOS-SDK */,
+				F20E041B920E9DD7BA087321915E730F /* MapboxMobileEvents */,
 				16F6560AEF902A327DA036D8D41ADA05 /* Pods-ActiDiabet */,
 				031455A1D2ECE6F1C2C0195D5EA7BAC5 /* Pods-ActiDiabet-ActiDiabetUITests */,
 				38F492E59742066958647E46AAC640E7 /* Pods-ActiDiabetTests */,
@@ -413,7 +786,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		56C96E2312E9C5E6FAEFE70967551F2E /* Resources */ = {
+		7A6E1F5BBA5152218F279A4171614E1E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -428,7 +801,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF1AA5FF0812FAEDC80E019D2A652D9B /* Resources */ = {
+		93BAE720CB8ABC59A7181B73F9D3C190 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -439,6 +812,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4D4455110F6D7DD6F1D8824F80CD08F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB4E40A0FB29B48EBE429DCFE41A56C6 /* logger.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,19 +834,54 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		39310228E0B083D8F4882AF3CE2A75B3 /* Sources */ = {
+		4536D8E00AFACF1221626B8E034A2137 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4CD80A9603F9EC87F866122CDA8E69C /* Pods-ActiDiabet-ActiDiabetUITests-dummy.m in Sources */,
+				A7042038829920A434D408AC8D86FECE /* CLLocation+MMEMobileEvents.m in Sources */,
+				E279DE5DBEBFAB72A307E4EBAAAC9F20 /* CLLocationManager+MMEMobileEvents.m in Sources */,
+				1C1D8142CE245153354C57BDB8F04146 /* MapboxMobileEvents-dummy.m in Sources */,
+				35E55230480A2E31224F830409394A39 /* MMEAPIClient.m in Sources */,
+				5F1A6B2306E4F99287157FF0A7103546 /* MMECategoryLoader.m in Sources */,
+				41C9147C173744A16A6A81D29457270D /* MMECertPin.m in Sources */,
+				F8644D3DFA2D3A8DB3CAE34191AD8E3E /* MMECommonEventData.m in Sources */,
+				F1488DD86176CC2F065BB0AF5444C07B /* MMEConstants.m in Sources */,
+				1FA4E6E17F4774422017C2865AC216E0 /* MMEDate.m in Sources */,
+				5FDA474B0CDF02C739C40A4B680505B6 /* MMEDependencyManager.m in Sources */,
+				BE46F220F2F6AA05A059954FD32FE7BC /* MMEDispatchManager.m in Sources */,
+				BF0A77937EA207B3D4A15F374323E20E /* MMEEvent.m in Sources */,
+				127C6E73803073F9E76165AA6BB4968D /* MMEEventLogger.m in Sources */,
+				0AADA476F8AAF0990A522B077D4DE517 /* MMEEventLogReportViewController.m in Sources */,
+				A2F456C8B6E599B49D24E31E7EE74180 /* MMEEventsManager.m in Sources */,
+				DCB4F66DF47037F13222487CF0E374D2 /* MMELocationManager.m in Sources */,
+				52DB405C701C59CF3E09C2F1869C11CB /* MMEMetrics.m in Sources */,
+				BD0308B7C7B30CBFEF02E415D00DF979 /* MMEMetricsManager.m in Sources */,
+				13705867D70F97303C71FF457DB2400F /* MMENSURLSessionWrapper.m in Sources */,
+				3DBB6E8988B38B8AF32C7F9A978B3A71 /* MMEReachability.m in Sources */,
+				93EA074E2B05973C840B1B7AAD559178 /* MMETimerManager.m in Sources */,
+				DF58054550C36420E1D535899C7C00EC /* MMEUIApplicationWrapper.m in Sources */,
+				9F0B2F2134524878FF7B2A0F08783920 /* MMEUINavigation.m in Sources */,
+				D489F5614C15CF164D88971B6921AA2A /* MMEUniqueIdentifier.m in Sources */,
+				19A55323D858313A2393E84D8E47AB10 /* NSData+MMEGZIP.m in Sources */,
+				32875437802E89DFE4C45EED450D7F26 /* NSString+MMEVersions.m in Sources */,
+				1BB4DE49ED35049589E9718128DE0E9E /* NSUserDefaults+MMEConfiguration.m in Sources */,
+				AD4989333A1C8BEBB64C71A9D6C9CFB4 /* UIKit+MMEMobileEvents.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7B438D466AE7C4F0B01CDA9B8B5ED394 /* Sources */ = {
+		62BA3FB5B4C9DC11182418541CA22B54 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC068536C2DFE4FC100880418D3B4E53 /* Pods-ActiDiabet-dummy.m in Sources */,
+				73815F2BFC3840F77FF7EF9634BEE62C /* Pods-ActiDiabet-ActiDiabetUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEC019062FDD4F17E7C6EECC59D12FE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7BB8EAB2B6562B5ACBD8A7CDD07BC9D /* Pods-ActiDiabet-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,11 +897,29 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		26E37C8242A8A867052C14B9E8354BB0 /* PBXTargetDependency */ = {
+		08A2D477DF837E352FBC7A32DC9E2B93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Mapbox-iOS-SDK";
+			target = 6746AB6F4D992402B59D1651512EA19E /* Mapbox-iOS-SDK */;
+			targetProxy = D3056B0E9D20B415E4411D35D51D86C8 /* PBXContainerItemProxy */;
+		};
+		110B8F87045C7511B183460FDF2467D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MapboxMobileEvents;
+			target = F20E041B920E9DD7BA087321915E730F /* MapboxMobileEvents */;
+			targetProxy = B104E235C6DE7E80EAE4EFB82A0BA71E /* PBXContainerItemProxy */;
+		};
+		2ACC5AB568865CE57B479E1126489039 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MapboxMobileEvents;
+			target = F20E041B920E9DD7BA087321915E730F /* MapboxMobileEvents */;
+			targetProxy = 608EE8617FFD494B9586AAEB3E556B49 /* PBXContainerItemProxy */;
+		};
+		40BC30532F3907681CD7E2750836D00D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "YoutubePlayer-in-WKWebView";
 			target = DABE3AD6EBA3822D4F04FBC550E7158D /* YoutubePlayer-in-WKWebView */;
-			targetProxy = 5EC5D5F37260D695FC25285816B32449 /* PBXContainerItemProxy */;
+			targetProxy = 3BD6BF0487316A83C9C6A0CE17368FE2 /* PBXContainerItemProxy */;
 		};
 		4D9032DC67E5EB24369630D37CC6FE05 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -493,16 +927,127 @@
 			target = 16F6560AEF902A327DA036D8D41ADA05 /* Pods-ActiDiabet */;
 			targetProxy = 9A31211C31A149567CED7D26AD1E6DE7 /* PBXContainerItemProxy */;
 		};
-		DFAE37AF40498C5855A002D04AE6BD5E /* PBXTargetDependency */ = {
+		57C25A533281033262A085D32F8582B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Mapbox-iOS-SDK";
+			target = 6746AB6F4D992402B59D1651512EA19E /* Mapbox-iOS-SDK */;
+			targetProxy = 5C82AC8E9FFAE638C841FAA667FE8D3A /* PBXContainerItemProxy */;
+		};
+		A612C9EE78A7CC31966A46EBBCEE78AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MapboxMobileEvents;
+			target = F20E041B920E9DD7BA087321915E730F /* MapboxMobileEvents */;
+			targetProxy = 79023853F16F650CDEA075F78A4D27D0 /* PBXContainerItemProxy */;
+		};
+		C0406ACE8396F8353997A59EBA36C3B8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "YoutubePlayer-in-WKWebView";
 			target = DABE3AD6EBA3822D4F04FBC550E7158D /* YoutubePlayer-in-WKWebView */;
-			targetProxy = 2ADF2E31B93C90744C207809538A6372 /* PBXContainerItemProxy */;
+			targetProxy = 5269FD3AD115242EA246BA86AFDDA0FE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1951A598EFC97959D9FA4C67EFCE92BC /* Debug */ = {
+		1422B121EAEAEA11307496903FA623C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		34FD332B3AF1CA25B018569E0E0A91DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CBFF41CBC3FCEBF7DE8CF0082BAEE37 /* Pods-ActiDiabetTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ActiDiabetTests/Pods-ActiDiabetTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ActiDiabetTests/Pods-ActiDiabetTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5C8255F0F125324FC9B17A07C19EF6E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A0FEFDA600141541EDCA3466762E2E6B /* Pods-ActiDiabetTests.debug.xcconfig */;
 			buildSettings = {
@@ -519,7 +1064,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-ActiDiabetTests/Pods-ActiDiabetTests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -540,7 +1085,223 @@
 			};
 			name = Debug;
 		};
-		1BC8A36A20672C48DB3C60E9C989684B /* Debug */ = {
+		77F8E35395A0FA5218B5943E87C53502 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C5740F47BF143BA87C8BBAE2CA5F1F2 /* Mapbox-iOS-SDK.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8340F6C830CA5411B05D939D005E5ED5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B92EE545B2A5A820EEE33B95A584798A /* Pods-ActiDiabet-ActiDiabetUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ActiDiabet-ActiDiabetUITests/Pods-ActiDiabet-ActiDiabetUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ActiDiabet-ActiDiabetUITests/Pods-ActiDiabet-ActiDiabetUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		88EEF9B9AC218903480AD286138496C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E969275CFC772D47E5F8A3438CDBB351 /* Pods-ActiDiabet.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ActiDiabet/Pods-ActiDiabet-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ActiDiabet/Pods-ActiDiabet.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		98A441DE33D95BFBD05FFF5AFE652BFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEC1A5C2623D76544AFAC5813E9158A9 /* MapboxMobileEvents.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MapboxMobileEvents/MapboxMobileEvents-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MapboxMobileEvents/MapboxMobileEvents-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/MapboxMobileEvents/MapboxMobileEvents.modulemap";
+				PRODUCT_MODULE_NAME = MapboxMobileEvents;
+				PRODUCT_NAME = MapboxMobileEvents;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B83161E4F52D3800B9772F85CA1B4E2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C5740F47BF143BA87C8BBAE2CA5F1F2 /* Mapbox-iOS-SDK.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C283CCE0FDEDC41C8F0F0FB568F14500 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A71961D5A7C13F389234A0C3C7FB80C /* YoutubePlayer-in-WKWebView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YoutubePlayer-in-WKWebView/YoutubePlayer-in-WKWebView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YoutubePlayer-in-WKWebView/YoutubePlayer-in-WKWebView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/YoutubePlayer-in-WKWebView/YoutubePlayer-in-WKWebView.modulemap";
+				PRODUCT_MODULE_NAME = YoutubePlayer_in_WKWebView;
+				PRODUCT_NAME = YoutubePlayer_in_WKWebView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C388FB829F42D2C5EDBFE005872CC531 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A71961D5A7C13F389234A0C3C7FB80C /* YoutubePlayer-in-WKWebView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YoutubePlayer-in-WKWebView/YoutubePlayer-in-WKWebView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YoutubePlayer-in-WKWebView/YoutubePlayer-in-WKWebView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/YoutubePlayer-in-WKWebView/YoutubePlayer-in-WKWebView.modulemap";
+				PRODUCT_MODULE_NAME = YoutubePlayer_in_WKWebView;
+				PRODUCT_NAME = YoutubePlayer_in_WKWebView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CAA4FB2A5248FA9C7128F9A9D413998D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 06407C849BEF43D96954267BFAA397F1 /* Pods-ActiDiabet-ActiDiabetUITests.debug.xcconfig */;
 			buildSettings = {
@@ -557,7 +1318,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-ActiDiabet-ActiDiabetUITests/Pods-ActiDiabet-ActiDiabetUITests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -578,7 +1339,7 @@
 			};
 			name = Debug;
 		};
-		23DDF600DBAC83A78A8F4FE9F59622CA /* Release */ = {
+		D655A17643C4B07F6554F71A8B0A9637 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 54875C9FD964BCB96B93BE98E61E5A0A /* Pods-ActiDiabet.release.xcconfig */;
 			buildSettings = {
@@ -595,7 +1356,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-ActiDiabet/Pods-ActiDiabet-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -617,46 +1378,7 @@
 			};
 			name = Release;
 		};
-		342A09C4C7E4CD8381602B4CDDBADC73 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B92EE545B2A5A820EEE33B95A584798A /* Pods-ActiDiabet-ActiDiabetUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ActiDiabet-ActiDiabetUITests/Pods-ActiDiabet-ActiDiabetUITests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ActiDiabet-ActiDiabetUITests/Pods-ActiDiabet-ActiDiabetUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		6C61D818ACD3C2C116FED6A9C67E91B4 /* Debug */ = {
+		ED7888FA6713EABBF66D26A8003AD1CA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -707,7 +1429,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -720,158 +1442,20 @@
 			};
 			name = Debug;
 		};
-		7DC5F11AFBEAE473E8D3C24A2D11338D /* Release */ = {
+		FF1DD0B6E36A73E20DDA0E7B13BF6E68 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		889EB1FC793F4951BEA9F25A7B2C07DF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9CBFF41CBC3FCEBF7DE8CF0082BAEE37 /* Pods-ActiDiabetTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ActiDiabetTests/Pods-ActiDiabetTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ActiDiabetTests/Pods-ActiDiabetTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B62A97890D95E3B4AE21D823CAEE6CB4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E969275CFC772D47E5F8A3438CDBB351 /* Pods-ActiDiabet.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ActiDiabet/Pods-ActiDiabet-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ActiDiabet/Pods-ActiDiabet.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C283CCE0FDEDC41C8F0F0FB568F14500 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D00EE8FB7AEDEC0FFCC62CA1B90C8010 /* YoutubePlayer-in-WKWebView.xcconfig */;
+			baseConfigurationReference = BEC1A5C2623D76544AFAC5813E9158A9 /* MapboxMobileEvents.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/YoutubePlayer-in-WKWebView/YoutubePlayer-in-WKWebView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/YoutubePlayer-in-WKWebView/YoutubePlayer-in-WKWebView-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/MapboxMobileEvents/MapboxMobileEvents-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MapboxMobileEvents/MapboxMobileEvents-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -879,9 +1463,9 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/YoutubePlayer-in-WKWebView/YoutubePlayer-in-WKWebView.modulemap";
-				PRODUCT_MODULE_NAME = YoutubePlayer_in_WKWebView;
-				PRODUCT_NAME = YoutubePlayer_in_WKWebView;
+				MODULEMAP_FILE = "Target Support Files/MapboxMobileEvents/MapboxMobileEvents.modulemap";
+				PRODUCT_MODULE_NAME = MapboxMobileEvents;
+				PRODUCT_NAME = MapboxMobileEvents;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -891,42 +1475,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		C388FB829F42D2C5EDBFE005872CC531 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D00EE8FB7AEDEC0FFCC62CA1B90C8010 /* YoutubePlayer-in-WKWebView.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/YoutubePlayer-in-WKWebView/YoutubePlayer-in-WKWebView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/YoutubePlayer-in-WKWebView/YoutubePlayer-in-WKWebView-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/YoutubePlayer-in-WKWebView/YoutubePlayer-in-WKWebView.modulemap";
-				PRODUCT_MODULE_NAME = YoutubePlayer_in_WKWebView;
-				PRODUCT_NAME = YoutubePlayer_in_WKWebView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -940,11 +1488,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0FE76D0D570C2E315485B81DE3A9A6DB /* Build configuration list for PBXNativeTarget "Pods-ActiDiabet-ActiDiabetUITests" */ = {
+		134AF05EA9FE26F15FB6811E934B9C6B /* Build configuration list for PBXNativeTarget "Pods-ActiDiabet-ActiDiabetUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1BC8A36A20672C48DB3C60E9C989684B /* Debug */,
-				342A09C4C7E4CD8381602B4CDDBADC73 /* Release */,
+				CAA4FB2A5248FA9C7128F9A9D413998D /* Debug */,
+				8340F6C830CA5411B05D939D005E5ED5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -952,8 +1500,8 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6C61D818ACD3C2C116FED6A9C67E91B4 /* Debug */,
-				7DC5F11AFBEAE473E8D3C24A2D11338D /* Release */,
+				ED7888FA6713EABBF66D26A8003AD1CA /* Debug */,
+				1422B121EAEAEA11307496903FA623C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -961,17 +1509,35 @@
 		4A4D2896A09064645D347BC2FE930C5B /* Build configuration list for PBXNativeTarget "Pods-ActiDiabetTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1951A598EFC97959D9FA4C67EFCE92BC /* Debug */,
-				889EB1FC793F4951BEA9F25A7B2C07DF /* Release */,
+				5C8255F0F125324FC9B17A07C19EF6E6 /* Debug */,
+				34FD332B3AF1CA25B018569E0E0A91DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CC70E40BA88FA74718CD544DC8143318 /* Build configuration list for PBXNativeTarget "Pods-ActiDiabet" */ = {
+		8F370222CF4D4DB70EB7F2C0A124369F /* Build configuration list for PBXNativeTarget "Pods-ActiDiabet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B62A97890D95E3B4AE21D823CAEE6CB4 /* Debug */,
-				23DDF600DBAC83A78A8F4FE9F59622CA /* Release */,
+				88EEF9B9AC218903480AD286138496C4 /* Debug */,
+				D655A17643C4B07F6554F71A8B0A9637 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDB07C907CA5DE84E11225D277A8756B /* Build configuration list for PBXNativeTarget "MapboxMobileEvents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF1DD0B6E36A73E20DDA0E7B13BF6E68 /* Debug */,
+				98A441DE33D95BFBD05FFF5AFE652BFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE661112FC7506F5A836D106198613A3 /* Build configuration list for PBXAggregateTarget "Mapbox-iOS-SDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B83161E4F52D3800B9772F85CA1B4E2C /* Debug */,
+				77F8E35395A0FA5218B5943E87C53502 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

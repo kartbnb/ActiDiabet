@@ -236,6 +236,7 @@
 		327355762444BDD5008FC810 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				32AA44FC2464FD2E00237C3A /* Map */,
 				321CDAAC2452FBA000ECDE39 /* Plan */,
 				327355882445C7F4008FC810 /* All Activity */,
 				327355872445C7E5008FC810 /* Home */,
@@ -293,6 +294,13 @@
 				329C61F724557EE400B70A6A /* Location.swift */,
 			);
 			path = Modal;
+			sourceTree = "<group>";
+		};
+		32AA44FC2464FD2E00237C3A /* Map */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		32FD4B87244947FE002D63B1 /* Notification */ = {

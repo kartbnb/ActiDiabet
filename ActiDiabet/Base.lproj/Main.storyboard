@@ -833,24 +833,10 @@
                     <view key="view" contentMode="scaleToFill" id="WFX-pN-ACd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bxd-Qo-5yj">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </mapView>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="bxd-Qo-5yj" firstAttribute="leading" secondItem="6Sx-2b-n5d" secondAttribute="leading" id="Fft-0L-wDR"/>
-                            <constraint firstItem="bxd-Qo-5yj" firstAttribute="top" secondItem="6Sx-2b-n5d" secondAttribute="top" id="feu-6N-IKS"/>
-                            <constraint firstItem="6Sx-2b-n5d" firstAttribute="trailing" secondItem="bxd-Qo-5yj" secondAttribute="trailing" id="lGe-va-chq"/>
-                            <constraint firstItem="6Sx-2b-n5d" firstAttribute="bottom" secondItem="bxd-Qo-5yj" secondAttribute="bottom" id="mbB-Yx-9y6"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Sx-2b-n5d"/>
                     </view>
                     <navigationItem key="navigationItem" id="d1w-zx-Q7C"/>
-                    <connections>
-                        <outlet property="mapView" destination="bxd-Qo-5yj" id="7DD-Iu-QKc"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Be-vF-qFY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
