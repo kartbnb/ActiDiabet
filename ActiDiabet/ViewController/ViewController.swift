@@ -108,12 +108,16 @@ class ViewController: UIViewController, CustomViewProtocol, DatabaseListener {
     
     //setup ScrollView
     func setupScroll() {
-        DispatchQueue.main.async {
-            self.firstActivityView.setActivity(activity: self.recommendActivities[0])
-            self.secondActivityView.setActivity(activity: self.recommendActivities[1])
+        if self.recommendActivities.count >= 2 {
+            DispatchQueue.main.async {
+                self.firstActivityView.setActivity(activity: self.recommendActivities[0])
+                self.secondActivityView.setActivity(activity: self.recommendActivities[1])
+            }
+            firstActivityView.homeVC = self
+            secondActivityView.homeVC = self
+        } else {
+            
         }
-        firstActivityView.homeVC = self
-        secondActivityView.homeVC = self
     }
     
     //Click calendar button
@@ -168,11 +172,12 @@ class ViewController: UIViewController, CustomViewProtocol, DatabaseListener {
     var listenerType: ListenerType = .recommend
     
     func getActivities(activities: [Activity]) {
-        if weatherString == "01d" || weatherString == "02d" || weatherString == "03d" || weatherString == "04d" {
-            self.recommendActivities = activities
-        } else {
-            self.recommendActivities = indoorActivity
-        }
+//        if weatherString == "01d" || weatherString == "02d" || weatherString == "03d" || weatherString == "04d" {
+//            self.recommendActivities = activities
+//        } else {
+//            self.recommendActivities = indoorActivity
+//        }
+        self.recommendActivities = activities
         
         self.setupScroll()
     }

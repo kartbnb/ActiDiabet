@@ -17,6 +17,6 @@ extension UIView {
     
     // make uiview have round corner
     func makeRound() {
-        self.layer.cornerRadius = 20
+        self.layer.cornerRadius = 15
     }
 }

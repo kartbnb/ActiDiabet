@@ -84,7 +84,9 @@ class Activity {
         guard let video = json["video_url"] as? String else {
             print("key video not found")
             return nil }
-        
+        guard let img = json["img"] as? String else {
+            print("key img not found")
+            return nil }
         self.activityID = id
         self.activityName = name
         if type == "Aerobic exercise" {
@@ -101,7 +103,7 @@ class Activity {
         self.duration = duration
         self.video = video
         self.like = false
-        let str = link+"activity/img/\(activityID!)"
+        let str = link+"activity/img/\(Int(img) ?? 1)"
         let url = URL(string: str)
         
         if let url = url {

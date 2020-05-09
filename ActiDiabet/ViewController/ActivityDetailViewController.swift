@@ -13,7 +13,7 @@ class ActivityDetailViewController: UIViewController {
     ///This is the activity detail view page
     
     var activity: Activity?
-    
+    var likeButton: UIButton!
     var coredataController: CoredataProtocol?
     private var notificationCenter: Notifications?
     
@@ -22,9 +22,10 @@ class ActivityDetailViewController: UIViewController {
     @IBOutlet weak var timeView: UIView!
     @IBOutlet weak var indoorView: UIView!
     @IBOutlet weak var typeView: UIView!
+    @IBOutlet weak var addView: UIView!
+    @IBOutlet weak var completeView: UIView!
     
     @IBOutlet weak var playerView: WKYTPlayerView!
-    @IBOutlet weak var backButtonView: UIView!
     
     // Labels
     @IBOutlet weak var activityLabel: UILabel!
@@ -34,7 +35,6 @@ class ActivityDetailViewController: UIViewController {
     
     // Buttons
     @IBOutlet weak var locationButton: UIButton!
-    @IBOutlet weak var likeButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,12 +49,11 @@ class ActivityDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = true
-        self.navigationController?.navigationBar.isHidden = true
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
-        self.navigationController?.navigationBar.isHidden = false
         playerView.stopVideo()
     }
 
@@ -75,9 +74,16 @@ class ActivityDetailViewController: UIViewController {
             
             
         }
-        setlikeButton()
-        
+        initLikeButton()
         playerView.load(withVideoId: id)
+    }
+    
+    func initLikeButton() {
+        likeButton = UIButton(type: .custom)
+        setlikeButton()
+        likeButton.addTarget(self, action: #selector(changeLike(_:)), for: .touchUpInside)
+        let buttonItem = UIBarButtonItem(customView: likeButton)
+        self.navigationItem.rightBarButtonItem = buttonItem
     }
     
     // set favourite button
@@ -102,8 +108,8 @@ class ActivityDetailViewController: UIViewController {
 
     // set round corner of views
     func setRound() {
-        backButtonView.makeCircular()
-        backButtonView.backgroundColor = UIColor.black
+        addView.makeRound()
+        completeView.makeRound()
         titleView.makeRound()
         timeView.makeRound()
         indoorView.makeRound()
@@ -173,7 +179,7 @@ class ActivityDetailViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     // change like button of activity
-    @IBAction func changeLike(_ sender: Any) {
+    @objc func changeLike(_ sender: Any) {
         self.activity?.changeFavourite()
         self.setlikeButton()
     }
@@ -181,17 +187,6 @@ class ActivityDetailViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         timeTextField.resignFirstResponder()
     }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     // MARK: Add plan variables and functions
     // variables for performing add plan
@@ -204,7 +199,6 @@ class ActivityDetailViewController: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
         alertTextField?.text = dateFormatter.string(from: datePicker.date)
-        //view.endEditing(true)
     }
 }
 
@@ -227,10 +221,3 @@ extension ActivityDetailViewController: UIPickerViewDelegate, UIPickerViewDataSo
     }
 }
 
-//MARK: - ScrollView resign textfield
-class DetailScrollView: UIScrollView {
-    @IBOutlet weak var timeTextField: UITextField!
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        timeTextField.resignFirstResponder()
-    }
-}

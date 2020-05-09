@@ -13,6 +13,10 @@ import MapKit
 enum LocationType{
     case space
     case pool
+    case hospital
+    case cycling
+    case water
+    case bin
 }
 
 class OpenSpaces: NSObject, MGLAnnotation {
@@ -48,8 +52,18 @@ class OpenSpaces: NSObject, MGLAnnotation {
         self.coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
         if type == "Swimming_Pool" {
             self.type = .pool
-        } else {
+        } else if type == "Open_Space"{
             self.type = .space
+        } else if type == "Hospital" {
+            self.type = .hospital
+        } else {
+            if name == "Litter Bin" {
+                self.type = .bin
+            } else if name == "Bicycle Rails" {
+                self.type = .cycling
+            } else {
+                self.type = .water
+            }
         }
         self.subtitle = category
     }
@@ -73,11 +87,23 @@ class OpenSpaces: NSObject, MGLAnnotation {
     func imageOfAnnotation() -> MGLAnnotationImage {
         let park = UIImage(named: "icons8-park")!
         let pool = UIImage(named: "icons8-swimming")!
+        let bin = UIImage(named: "icons8-bin")!
+        let hospital = UIImage(named: "icons8-hospital")!
+        let bicycle = UIImage(named: "icons8-bicycle")!
+        let water = UIImage(named: "icons8-drinking")!
         switch self.type {
         case .pool:
             return MGLAnnotationImage(image: pool, reuseIdentifier: "pool")
         case .space:
             return MGLAnnotationImage(image: park, reuseIdentifier: "park")
+        case .bin:
+            return MGLAnnotationImage(image: bin, reuseIdentifier: "bin")
+        case .cycling:
+            return MGLAnnotationImage(image: bicycle, reuseIdentifier: "bicycle")
+        case .water:
+            return MGLAnnotationImage(image: water, reuseIdentifier: "water")
+        case .hospital:
+            return MGLAnnotationImage(image: hospital, reuseIdentifier: "hospital")
         }
     }
     
