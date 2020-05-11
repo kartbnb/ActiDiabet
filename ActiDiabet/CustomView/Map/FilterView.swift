@@ -9,7 +9,8 @@
 import UIKit
 
 class FilterView: UIView {
-
+    ///This class is for filter in map view
+    
     private var locationFilter: LocationType!
     private var imgView: UIImageView!
     private var titleView: UILabel!
@@ -20,6 +21,7 @@ class FilterView: UIView {
     
     private var inFilter: Bool = false
     
+    // init function
     convenience init(frame: CGRect, type: LocationType, inFilter: Bool) {
         self.init(frame: frame)
         self.locationFilter = type
@@ -35,7 +37,7 @@ class FilterView: UIView {
         setView()
         createImg()
     }
-    
+    //set basic view of this custom view
     private func setView() {
         self.layer.cornerRadius = 5
         self.layer.borderWidth = 1
@@ -43,6 +45,7 @@ class FilterView: UIView {
         self.layer.masksToBounds = true
     }
     
+    // if it is in filter, show border blue, if is not, border white
     private func setFilter() {
         if self.inFilter {
             self.layer.borderColor = UIColor.blue.cgColor
@@ -51,6 +54,7 @@ class FilterView: UIView {
         }
     }
     
+    // set the image of each filter
     private func createImg() {
         imgView = UIImageView(frame: CGRect(x: 10, y: 10, width: 30, height: 30))
         imgView.contentMode = .scaleToFill
@@ -79,6 +83,7 @@ class FilterView: UIView {
         addSubview(imgView)
     }
     
+    // touch in function, change border color when touch inside
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.inFilter = !self.inFilter
         filterDelegate?.changeFilter(type: self.locationFilter)
@@ -87,6 +92,7 @@ class FilterView: UIView {
     
 }
 
+// filter delegate, when changing filter, update map
 protocol FilterDelegate: class {
     func changeFilter(type: LocationType)
 }
