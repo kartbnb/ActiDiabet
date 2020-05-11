@@ -76,7 +76,7 @@
 		324F8C4124540AAE0072B824 /* Favourite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favourite.swift; sourceTree = "<group>"; };
 		324F8C4324541B5D0072B824 /* PlanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanTableViewCell.swift; sourceTree = "<group>"; };
 		324F8C45245427F30072B824 /* RecordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTests.swift; sourceTree = "<group>"; };
-		327355402444B8EC008FC810 /* ActiDiabet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActiDiabet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		327355402444B8EC008FC810 /* Active Boomer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Active Boomer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		327355432444B8EC008FC810 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		327355452444B8EC008FC810 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		327355472444B8EC008FC810 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -175,7 +175,7 @@
 		327355412444B8EC008FC810 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				327355402444B8EC008FC810 /* ActiDiabet.app */,
+				327355402444B8EC008FC810 /* Active Boomer.app */,
 				327355562444B8EE008FC810 /* ActiDiabetTests.xctest */,
 				327355612444B8EE008FC810 /* ActiDiabetUITests.xctest */,
 			);
@@ -353,7 +353,7 @@
 			);
 			name = ActiDiabet;
 			productName = ActiDiabet;
-			productReference = 327355402444B8EC008FC810 /* ActiDiabet.app */;
+			productReference = 327355402444B8EC008FC810 /* Active Boomer.app */;
 			productType = "com.apple.product-type.application";
 		};
 		327355552444B8EE008FC810 /* ActiDiabetTests */ = {
@@ -784,7 +784,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shibodev.ActiDiabet;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Active Boomer";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -804,7 +804,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shibodev.ActiDiabet;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Active Boomer";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
