@@ -34,7 +34,7 @@
 		327355AA2447386F008FC810 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327355A92447386F008FC810 /* ActivityView.swift */; };
 		327355AD24473B56008FC810 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327355AC24473B56008FC810 /* Activity.swift */; };
 		327355AF24481F1E008FC810 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327355AE24481F1E008FC810 /* SettingViewController.swift */; };
-		3284A796244EBA7D0003B025 /* ActivityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284A795244EBA7D0003B025 /* ActivityCollectionViewCell.swift */; };
+		3284A796244EBA7D0003B025 /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284A795244EBA7D0003B025 /* ActivityTableViewCell.swift */; };
 		3284A798244ED49E0003B025 /* AllActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284A797244ED49E0003B025 /* AllActivityViewController.swift */; };
 		329C61F62455781200B70A6A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C61F52455781200B70A6A /* MapViewController.swift */; };
 		329C61F824557EE400B70A6A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C61F724557EE400B70A6A /* Location.swift */; };
@@ -99,7 +99,7 @@
 		327355A92447386F008FC810 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		327355AC24473B56008FC810 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		327355AE24481F1E008FC810 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		3284A795244EBA7D0003B025 /* ActivityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCollectionViewCell.swift; sourceTree = "<group>"; };
+		3284A795244EBA7D0003B025 /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		3284A797244ED49E0003B025 /* AllActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllActivityViewController.swift; sourceTree = "<group>"; };
 		329C61F52455781200B70A6A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		329C61F724557EE400B70A6A /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -279,7 +279,7 @@
 		327355882445C7F4008FC810 /* All Activity */ = {
 			isa = PBXGroup;
 			children = (
-				3284A795244EBA7D0003B025 /* ActivityCollectionViewCell.swift */,
+				3284A795244EBA7D0003B025 /* ActivityTableViewCell.swift */,
 			);
 			path = "All Activity";
 			sourceTree = "<group>";
@@ -594,7 +594,7 @@
 				32FD4B8B244AC1CE002D63B1 /* ActivityDetailViewController.swift in Sources */,
 				321CDAA1245028AF00ECDE39 /* DatabaseController.swift in Sources */,
 				327355462444B8EC008FC810 /* SceneDelegate.swift in Sources */,
-				3284A796244EBA7D0003B025 /* ActivityCollectionViewCell.swift in Sources */,
+				3284A796244EBA7D0003B025 /* ActivityTableViewCell.swift in Sources */,
 				329C61F62455781200B70A6A /* MapViewController.swift in Sources */,
 				321CDAB02453012100ECDE39 /* PlanViewController.swift in Sources */,
 				321CDAAB2452F14D00ECDE39 /* UIViewExtension.swift in Sources */,

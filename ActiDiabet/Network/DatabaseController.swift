@@ -46,12 +46,15 @@ class DatabaseController: NSObject {
     
     var places: [OpenSpaces]
     
+    var searchActivities: [Activity]
+    
     override init() {
         self.activities = []
         self.recommendActivities = []
         self.places = []
+        self.searchActivities = []
         super.init()
-        self.fetchRecommendActivity()
+        self.fetchAllActivities()
         
         
     }
@@ -98,7 +101,7 @@ extension DatabaseController: DatabaseProtocol {
                             activity.like = self.favouriteController.findUserLike(activity: activity)
                             self.activities.append(activity)
                         }
-                        self.fetchOpenSpaces()
+                        self.fetchRecommendActivity()
                         self.listeners.invoke { (listener) in
                             if listener.listenerType == .all {
                                 listener.getActivities(activities: self.activities)
@@ -130,20 +133,27 @@ extension DatabaseController: DatabaseProtocol {
                                 print("activity init failed \(item)")
                                 return
                             }
-                            activity.like = self.favouriteController.findUserLike(activity: activity)
-                            self.recommendActivities.append(activity)
+                            self.recommendActivities.append(self.getActivityByID(id: activity.activityID!)!)
                         }
-                        self.fetchAllActivities()
+                        self.fetchOpenSpaces()
                         self.listeners.invoke { (listener) in
                             if listener.listenerType == .recommend {
                                 listener.getActivities(activities: self.recommendActivities)
-                                
                             }
                         }
                     }
                 }
             }.resume()
         }
+    }
+    
+    func getActivityByID(id: Int) -> Activity? {
+        for activity in activities {
+            if id == activity.activityID {
+                return activity
+            }
+        }
+        return nil
     }
     
     // MARK: - search activity by string
@@ -155,7 +165,7 @@ extension DatabaseController: DatabaseProtocol {
                     print(error)
                 }
                 if let data = data {
-                    self.activities = []
+                    self.searchActivities = []
                     if let jsonArray = self.performData(data) {
                         for item in jsonArray {
                             guard let activity = Activity(json: item) else {
@@ -163,11 +173,11 @@ extension DatabaseController: DatabaseProtocol {
                                 return
                             }
                             activity.like = self.favouriteController.findUserLike(activity: activity)
-                            self.activities.append(activity)
+                            self.searchActivities.append(activity)
                         }
                         self.listeners.invoke { (listener) in
                             if listener.listenerType == .all {
-                                listener.getActivities(activities: self.activities)
+                                listener.getActivities(activities: self.searchActivities)
                             }
                         }
                     }

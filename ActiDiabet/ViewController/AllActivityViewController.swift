@@ -22,7 +22,7 @@ class AllActivityViewController: UIViewController, DatabaseListener {
     
     // Outlets
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var tableView: UITableView!
     
     // database protocol
     weak var databaseProtocol: DatabaseProtocol?
@@ -32,8 +32,8 @@ class AllActivityViewController: UIViewController, DatabaseListener {
         let delegate = UIApplication.shared.delegate as?  AppDelegate
         self.databaseProtocol = delegate?.databaseController
         
-        collectionView.delegate = self
-        collectionView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
         setupSearch()
     }
     
@@ -74,7 +74,7 @@ class AllActivityViewController: UIViewController, DatabaseListener {
     func getActivities(activities: [Activity]) {
         self.activities = activities
         DispatchQueue.main.async {
-            self.collectionView.reloadData()
+            self.tableView.reloadData()
         }
     }
     func addLocation(place: [OpenSpaces]) {
@@ -82,49 +82,31 @@ class AllActivityViewController: UIViewController, DatabaseListener {
     }
 }
 
-extension AllActivityViewController: UICollectionViewDataSource, UICollectionViewDelegate {
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
-
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
+extension AllActivityViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("activities number \(activities.count)")
         return activities.count
     }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ActivityCollectionViewCell
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! ActivityTableViewCell
+        print("now showing \(indexPath.row)")
         cell.setActivity(activity: activities[indexPath.row])
         //cell.backgroundColor = .black
         // Configure the cell
-        cell.contentView.frame = cell.bounds
-        cell.contentView.autoresizingMask = [.flexibleTopMargin, .flexibleBottomMargin, .flexibleLeftMargin, .flexibleRightMargin, .flexibleWidth ,.flexibleHeight]
-    
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "listToActivity", sender: activities[indexPath.row])
     }
-}
-
-extension AllActivityViewController: UICollectionViewDelegateFlowLayout {
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
-        let availableWidth = view.frame.width - paddingSpace
-        let widthPerItem = availableWidth / itemsPerRow
-        return CGSize(width: widthPerItem, height: widthPerItem / 7 * 8)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return sectionInsets
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return sectionInsets.left
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 65.0
     }
 }
 
@@ -132,7 +114,7 @@ extension AllActivityViewController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchStatus = .all
         databaseProtocol?.fetchAllActivities()
-        collectionView.reloadData()
+        tableView.reloadData()
     }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchStatus = .search
@@ -141,7 +123,7 @@ extension AllActivityViewController: UISearchBarDelegate {
         } else {
             databaseProtocol?.searchActivity(str: searchText)
         }
-        collectionView.reloadData()
+        tableView.reloadData()
     }
 }
 
