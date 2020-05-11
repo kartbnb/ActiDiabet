@@ -94,7 +94,7 @@ class ActivityDetailViewController: UIViewController {
                 likeButton.tintColor = .systemRed
             } else {
                 likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
-                likeButton.tintColor = .black
+                likeButton.tintColor = .systemGray2
             }
         }
     }

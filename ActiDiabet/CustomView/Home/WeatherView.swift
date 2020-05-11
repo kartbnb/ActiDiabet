@@ -33,8 +33,8 @@ class WeatherView: UIView {
     
     // get current weather, should be perform when
     func getCurrentWeather() {
-        cityLabel.textColor = UIColor.white
-        tempLabel.textColor = UIColor.white
+        cityLabel.textColor = UIColor.black
+        tempLabel.textColor = UIColor.black
         // set to loading when getting weather data
         cityLabel.text = "Loading"
         tempLabel.text = ""
@@ -43,8 +43,8 @@ class WeatherView: UIView {
     }
     // set weather
     func setupWeather(weather: Weather?) {
-        self.cityLabel.textColor = UIColor.white
-        self.tempLabel.textColor = UIColor.white
+        self.cityLabel.textColor = UIColor.black
+        self.tempLabel.textColor = UIColor.black
         guard let weather = weather else {
             // if no weather data, show no weather data
             self.cityLabel.text = "no weather data"
