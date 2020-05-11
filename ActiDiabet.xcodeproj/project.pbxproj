@@ -345,7 +345,7 @@
 				3273553C2444B8EC008FC810 /* Sources */,
 				3273553D2444B8EC008FC810 /* Frameworks */,
 				3273553E2444B8EC008FC810 /* Resources */,
-				A4845F5AC216AC39D1C87536 /* [CP] Embed Pods Frameworks */,
+				83008469BD5316231B7E5A5E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -383,7 +383,7 @@
 				3273555D2444B8EE008FC810 /* Sources */,
 				3273555E2444B8EE008FC810 /* Frameworks */,
 				3273555F2444B8EE008FC810 /* Resources */,
-				DB92DF8DD333B3F351A6EFCC /* [CP] Embed Pods Frameworks */,
+				5D5E90825740D0A782F5194A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -466,6 +466,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5D5E90825740D0A782F5194A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ActiDiabet-ActiDiabetUITests/Pods-ActiDiabet-ActiDiabetUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ActiDiabet-ActiDiabetUITests/Pods-ActiDiabet-ActiDiabetUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ActiDiabet-ActiDiabetUITests/Pods-ActiDiabet-ActiDiabetUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6C011CE2EB18B9C90B57A121 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -488,7 +505,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A4845F5AC216AC39D1C87536 /* [CP] Embed Pods Frameworks */ = {
+		83008469BD5316231B7E5A5E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -503,23 +520,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ActiDiabet/Pods-ActiDiabet-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DB92DF8DD333B3F351A6EFCC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ActiDiabet-ActiDiabetUITests/Pods-ActiDiabet-ActiDiabetUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ActiDiabet-ActiDiabetUITests/Pods-ActiDiabet-ActiDiabetUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ActiDiabet-ActiDiabetUITests/Pods-ActiDiabet-ActiDiabetUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DDD38BBA9F565B836BCC0647 /* [CP] Check Pods Manifest.lock */ = {
