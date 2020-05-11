@@ -17,6 +17,9 @@ enum LocationType{
     case cycling
     case water
     case bin
+    case hoop
+    case picnic
+    case seat
 }
 
 class OpenSpaces: NSObject, MGLAnnotation {
@@ -61,8 +64,14 @@ class OpenSpaces: NSObject, MGLAnnotation {
                 self.type = .bin
             } else if name == "Bicycle Rails" {
                 self.type = .cycling
-            } else {
+            } else if name == "Drinking Fountain"{
                 self.type = .water
+            } else if name == "Hoop" {
+                self.type = .hoop
+            } else if name == "Picnic Setting" {
+                self.type = .picnic
+            } else {
+                self.type = .seat
             }
         }
         self.subtitle = category
@@ -104,6 +113,8 @@ class OpenSpaces: NSObject, MGLAnnotation {
             return MGLAnnotationImage(image: water, reuseIdentifier: "water")
         case .hospital:
             return MGLAnnotationImage(image: hospital, reuseIdentifier: "hospital")
+        default:
+            return MGLAnnotationImage(image: hospital, reuseIdentifier: "others")
         }
     }
     
