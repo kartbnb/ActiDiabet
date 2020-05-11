@@ -1,12 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "indoor-light@1x.png",
+      "filename" : "swimming.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "indoor-light.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

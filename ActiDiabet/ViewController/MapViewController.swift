@@ -44,7 +44,7 @@ class MapViewController: UIViewController, DatabaseListener {
         let url = URL(string: "mapbox://styles/mapbox/streets-v11")
         self.mapView = MGLMapView(frame: view.bounds, styleURL: url)
         mapView!.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        mapView!.setCenter(center.coordinate, zoomLevel: 14, animated: false)
+        mapView!.setCenter(center.coordinate, zoomLevel: 13, animated: false)
         mapView!.delegate = self
         view.addSubview(mapView!)
         self.mapView?.addAnnotations(place)

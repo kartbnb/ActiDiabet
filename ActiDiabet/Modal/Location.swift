@@ -16,10 +16,10 @@ enum LocationType{
     case hospital
     case cycling
     case water
-    case bin
     case hoop
     case picnic
     case seat
+    case bbq
 }
 
 class OpenSpaces: NSObject, MGLAnnotation {
@@ -60,8 +60,8 @@ class OpenSpaces: NSObject, MGLAnnotation {
         } else if type == "Hospital" {
             self.type = .hospital
         } else {
-            if name == "Litter Bin" {
-                self.type = .bin
+            if name == "Barbeque" {
+                self.type = .bbq
             } else if name == "Bicycle Rails" {
                 self.type = .cycling
             } else if name == "Drinking Fountain"{
@@ -94,27 +94,34 @@ class OpenSpaces: NSObject, MGLAnnotation {
 //    }
     
     func imageOfAnnotation() -> MGLAnnotationImage {
-        let park = UIImage(named: "icons8-park")!
-        let pool = UIImage(named: "icons8-swimming")!
-        let bin = UIImage(named: "icons8-bin")!
-        let hospital = UIImage(named: "icons8-hospital")!
-        let bicycle = UIImage(named: "icons8-bicycle")!
-        let water = UIImage(named: "icons8-drinking")!
+        let park = UIImage(named: "map-park")!
+        let pool = UIImage(named: "map-swimming")!
+        let seat = UIImage(named: "map-seat")!
+        let hospital = UIImage(named: "map-hospital")!
+        let bicycle = UIImage(named: "map-bike_rail")!
+        let water = UIImage(named: "map-water")!
+        let hoop = UIImage(named: "map-hoop")!
+        let picnic = UIImage(named: "map-picnic")!
+        let bbq = UIImage(named: "map-bbq")!
         switch self.type {
         case .pool:
             return MGLAnnotationImage(image: pool, reuseIdentifier: "pool")
         case .space:
             return MGLAnnotationImage(image: park, reuseIdentifier: "park")
-        case .bin:
-            return MGLAnnotationImage(image: bin, reuseIdentifier: "bin")
         case .cycling:
             return MGLAnnotationImage(image: bicycle, reuseIdentifier: "bicycle")
         case .water:
             return MGLAnnotationImage(image: water, reuseIdentifier: "water")
         case .hospital:
             return MGLAnnotationImage(image: hospital, reuseIdentifier: "hospital")
-        default:
-            return MGLAnnotationImage(image: hospital, reuseIdentifier: "others")
+        case .bbq:
+            return MGLAnnotationImage(image: bbq, reuseIdentifier: "bbq")
+        case .seat:
+            return MGLAnnotationImage(image: seat, reuseIdentifier: "seat")
+        case .hoop:
+            return MGLAnnotationImage(image: hoop, reuseIdentifier: "hoop")
+        case .picnic:
+            return MGLAnnotationImage(image: picnic, reuseIdentifier: "picnic")
         }
     }
     

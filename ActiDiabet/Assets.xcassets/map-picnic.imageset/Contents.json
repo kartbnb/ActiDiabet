@@ -1,12 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "outdoor-light@1x.png",
+      "filename" : "picnic.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "outdoor-light.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
