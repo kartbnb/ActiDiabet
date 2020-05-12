@@ -42,8 +42,14 @@ class ViewController: UIViewController, CustomViewProtocol, DatabaseListener {
         let delegate = UIApplication.shared.delegate as? AppDelegate
         coredataController = delegate?.coredataController
         databaseController = delegate!.databaseController
-        aerobicProgress.transform = aerobicProgress.transform.scaledBy(x: 1, y: 8)
-        resistanceProgress.transform = resistanceProgress.transform.scaledBy(x: 1, y: 8)
+        
+        // progress bar transformation
+        //aerobicProgress.transform = aerobicProgress.transform.scaledBy(x: 1, y: 16)
+        aerobicProgress.layer.cornerRadius = 10
+        aerobicProgress.clipsToBounds = true
+        //resistanceProgress.transform = resistanceProgress.transform.scaledBy(x: 1, y: 16)
+        resistanceProgress.layer.cornerRadius = 10
+        resistanceProgress.clipsToBounds = true
         
         // Do any additional setup after loading the view.
     }
