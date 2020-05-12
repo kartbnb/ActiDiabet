@@ -16,13 +16,16 @@ class MapViewController: UIViewController, DatabaseListener {
     
     var db: DatabaseProtocol?
     var mapView: MGLMapView?
-    var place: [OpenSpaces] = [OpenSpaces]()
+    var allPlaces: [OpenSpaces] = [OpenSpaces]()
+    
+    var filter:Set<LocationType> = [.hospital, .space, .pool]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let delegate = UIApplication.shared.delegate as? AppDelegate
         self.db = delegate?.databaseController
+        
         // Do any additional setup after loading the view.
     }
     
@@ -47,10 +50,53 @@ class MapViewController: UIViewController, DatabaseListener {
         mapView!.setCenter(center.coordinate, zoomLevel: 13, animated: false)
         mapView!.delegate = self
         view.addSubview(mapView!)
-        self.mapView?.addAnnotations(place)
+        setFilter()
+        resetAnnotation()
     }
     
+    // reset annotation when filter change
+    func resetAnnotation() {
+        
+        if let annotations = mapView?.annotations {
+            mapView?.removeAnnotations(annotations) // remove all annotations
+        }
+        mapView?.addAnnotations(self.getShowingPlaces())  // add new annotations
+    }
     
+    // set filter ui
+    func setFilter() {
+        
+        let allfilter: [LocationType] = [.bbq, .cycling, .hoop, .hospital, .picnic, .pool, .seat, .space, .water]  // all filters
+        let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+        let notch = window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0 // get status bar height
+        let filterWidth = 150  // FilterView width
+        let scrollView = UIScrollView(frame: CGRect(x: 0, y: notch + view.frame.height - 100, width: view.frame.width, height: 50)) // set scrollview use frame
+        
+        scrollView.contentSize = CGSize(width: filterWidth * 9 + 100, height: 50) // set content frame (width: 9 filter and 10px insets)
+        scrollView.contentOffset = CGPoint(x: 0, y: 0)
+        scrollView.isScrollEnabled = true
+        scrollView.showsHorizontalScrollIndicator = false
+        for i in 0...8 {
+            let infilter: Bool = filter.contains(allfilter[i])
+            // set a type of location in each filter
+            let filter = FilterView(frame: CGRect(x: 10 + i * filterWidth + i * 10, y: 0, width: filterWidth, height: 50), type: allfilter[i], inFilter: infilter)
+            filter.backgroundColor = .white
+            filter.filterDelegate = self
+            scrollView.addSubview(filter)
+        }
+        view.addSubview(scrollView)
+    }
+    
+    // get locations within this filter
+    func getShowingPlaces() -> [OpenSpaces] {
+        var showingPlaces:[OpenSpaces] = []
+        for place in allPlaces {
+            if filter.contains(place.type) {
+                showingPlaces.append(place)
+            }
+        }
+        return showingPlaces
+    }
     
 
     /*
@@ -72,7 +118,7 @@ class MapViewController: UIViewController, DatabaseListener {
     }
     
     func addLocation(place: [OpenSpaces]) {
-        self.place = place
+        self.allPlaces = place
     }
 
 }
@@ -91,5 +137,19 @@ extension MapViewController: MGLMapViewDelegate {
     func mapView(_ mapView: MGLMapView, imageFor annotation: MGLAnnotation) -> MGLAnnotationImage? {
         let annotation = annotation as! OpenSpaces
         return annotation.imageOfAnnotation()
+    }
+}
+
+//MARK: - Filter delegate
+extension MapViewController: FilterDelegate {
+    // changing filter, update map
+    func changeFilter(type: LocationType) {
+        if self.filter.contains(type) {
+            self.filter.remove(type)
+        } else {
+            self.filter.insert(type)
+        }
+        self.resetAnnotation()
+        print("current filter: \(filter)")
     }
 }
