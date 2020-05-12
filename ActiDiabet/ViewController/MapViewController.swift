@@ -69,17 +69,17 @@ class MapViewController: UIViewController, DatabaseListener {
         let allfilter: [LocationType] = [.bbq, .cycling, .hoop, .hospital, .picnic, .pool, .seat, .space, .water]  // all filters
         let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
         let notch = window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0 // get status bar height
-        
+        let filterWidth = 150  // FilterView width
         let scrollView = UIScrollView(frame: CGRect(x: 0, y: notch + view.frame.height - 100, width: view.frame.width, height: 50)) // set scrollview use frame
         
-        scrollView.contentSize = CGSize(width: 50 * 9 + 100, height: 50) // set content frame (width: 9 filter and 10px insets)
+        scrollView.contentSize = CGSize(width: filterWidth * 9 + 100, height: 50) // set content frame (width: 9 filter and 10px insets)
         scrollView.contentOffset = CGPoint(x: 0, y: 0)
         scrollView.isScrollEnabled = true
         scrollView.showsHorizontalScrollIndicator = false
         for i in 0...8 {
             let infilter: Bool = filter.contains(allfilter[i])
             // set a type of location in each filter
-            let filter = FilterView(frame: CGRect(x: 10 + i * 50 + i * 10, y: 0, width: 50, height: 50), type: allfilter[i], inFilter: infilter)
+            let filter = FilterView(frame: CGRect(x: 10 + i * filterWidth + i * 10, y: 0, width: filterWidth, height: 50), type: allfilter[i], inFilter: infilter)
             filter.backgroundColor = .white
             filter.filterDelegate = self
             scrollView.addSubview(filter)

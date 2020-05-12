@@ -37,6 +37,33 @@ class FilterView: UIView {
         setView()
         createImg()
     }
+
+    private func setTitle() {
+        titleView = UILabel(frame: CGRect(x: 50, y: 10, width: 100, height: 30))
+        switch locationFilter {
+        case .bbq:
+            titleView.text = "Barbeque"
+        case .cycling:
+            titleView.text = "Bike"
+        case .hoop:
+            titleView.text = "Hoop"
+        case .hospital:
+            titleView.text = "Hospital"
+        case .picnic:
+            titleView.text = "Picnic"
+        case .pool:
+            titleView.text = "Pool"
+        case .seat:
+            titleView.text = "Seat"
+        case .space:
+            titleView.text = "Park"
+        case .water:
+            titleView.text = "Water Fountain"
+        default:
+            titleView.text = "Water Fountain"
+        }
+    }
+
     //set basic view of this custom view
     private func setView() {
         self.layer.cornerRadius = 5
