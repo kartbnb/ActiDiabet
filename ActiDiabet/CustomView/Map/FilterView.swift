@@ -36,8 +36,10 @@ class FilterView: UIView {
     private func updateView() {
         setView()
         createImg()
+        setTitle()
     }
 
+    // set title of each filter
     private func setTitle() {
         titleView = UILabel(frame: CGRect(x: 50, y: 10, width: 100, height: 30))
         switch locationFilter {
@@ -62,6 +64,7 @@ class FilterView: UIView {
         default:
             titleView.text = "Water Fountain"
         }
+        addSubview(titleView)
     }
 
     //set basic view of this custom view
