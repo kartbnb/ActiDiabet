@@ -834,7 +834,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kpa-NM-8kg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1551.2" y="730.43478260869574"/>
+            <point key="canvasLocation" x="-1551" y="1447"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="cP1-d1-F8m">
@@ -850,7 +850,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Be-vF-qFY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="408.80000000000001" y="1200.4497751124438"/>
+            <point key="canvasLocation" x="420" y="1529"/>
         </scene>
         <!--Setting-->
         <scene sceneID="lLs-1p-M8d">
@@ -1022,7 +1022,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cgW-Bc-ApS"/>
                     </view>
-                    <navigationItem key="navigationItem" id="oqb-KO-UjN"/>
+                    <navigationItem key="navigationItem" id="oqb-KO-UjN">
+                        <barButtonItem key="rightBarButtonItem" id="LhP-Z8-Iz2"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="iCq-lm-Eur" id="PAp-z9-2pI"/>
                         <outlet property="tableView" destination="JJe-ls-WNw" id="hJA-VS-i0v"/>
@@ -1031,7 +1033,77 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yho-5E-0Uh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="61.600000000000001" y="-165.06746626686657"/>
+            <point key="canvasLocation" x="62" y="743"/>
+        </scene>
+        <!--Activity Filter View Controller-->
+        <scene sceneID="St2-x0-bQz">
+            <objects>
+                <viewController id="Qa3-ws-8q2" customClass="ActivityFilterViewController" customModule="Active_Boomer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FNj-9M-32f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kP3-6S-hdo">
+                                <rect key="frame" x="32" y="144" width="311" height="409"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7by-eu-r0h" customClass="TypeFilterView" customModule="Active_Boomer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="311" height="194.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aerobic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWr-Dy-reJ">
+                                                <rect key="frame" x="23" y="20" width="59" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="7by-eu-r0h" secondAttribute="height" multiplier="16:10" id="E9w-T4-43n"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfk-WN-ovf" customClass="TypeFilterView" customModule="Active_Boomer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="214.5" width="311" height="194.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Resistance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFl-m2-bUO">
+                                                <rect key="frame" x="21" y="21" width="84" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Browse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hC-gA-WDm">
+                                <rect key="frame" x="32" y="76" width="105" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7hC-gA-WDm" firstAttribute="leading" secondItem="bzd-yP-DGy" secondAttribute="leading" constant="32" id="1Dk-Yu-TXu"/>
+                            <constraint firstItem="kP3-6S-hdo" firstAttribute="leading" secondItem="bzd-yP-DGy" secondAttribute="leading" constant="32" id="2ei-Mq-NMH"/>
+                            <constraint firstItem="kP3-6S-hdo" firstAttribute="top" secondItem="7hC-gA-WDm" secondAttribute="bottom" constant="32" id="Bjz-Uq-tHw"/>
+                            <constraint firstItem="bzd-yP-DGy" firstAttribute="trailing" secondItem="kP3-6S-hdo" secondAttribute="trailing" constant="32" id="XIO-Dc-MDh"/>
+                            <constraint firstItem="7hC-gA-WDm" firstAttribute="top" secondItem="bzd-yP-DGy" secondAttribute="top" constant="32" id="kzu-ea-04m"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bzd-yP-DGy"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Jgq-Km-RgL"/>
+                    <connections>
+                        <outlet property="aerobicView" destination="7by-eu-r0h" id="kfa-yb-B45"/>
+                        <outlet property="resistanceView" destination="dfk-WN-ovf" id="t1A-zs-Qgp"/>
+                        <segue destination="1jr-Gj-fvy" kind="show" identifier="showAllActivity" id="kDw-pC-JB6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="373-BJ-9p6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="62" y="-165"/>
         </scene>
         <!--Home-->
         <scene sceneID="ezW-BT-wgr">
@@ -1227,7 +1299,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="1jr-Gj-fvy" kind="relationship" relationship="rootViewController" id="f8z-Dl-uvR"/>
+                        <segue destination="Qa3-ws-8q2" kind="relationship" relationship="rootViewController" id="kte-T8-49d"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BPq-UL-hOJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

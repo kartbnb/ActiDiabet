@@ -62,7 +62,7 @@ class FilterView: UIView {
         case .water:
             titleView.text = "Water Fountain"
         default:
-            titleView.text = "Water Fountain"
+            titleView.text = "Toilet"
         }
         addSubview(titleView)
     }
@@ -108,7 +108,7 @@ class FilterView: UIView {
         case .water:
             imgView.image = UIImage(named: "map-water")
         default:
-            imgView.image = UIImage(named: "map-bbq")
+            imgView.image = UIImage(named: "map-toilet")
         }
         addSubview(imgView)
     }
