@@ -20,6 +20,7 @@ enum LocationType{
     case picnic
     case seat
     case bbq
+    case toilet
 }
 
 class OpenSpaces: NSObject, MGLAnnotation {
@@ -59,7 +60,9 @@ class OpenSpaces: NSObject, MGLAnnotation {
             self.type = .space
         } else if type == "Hospital" {
             self.type = .hospital
-        } else {
+        } else if type == "Public Toilet" {
+            self.type = .toilet
+        }else {
             if name == "Barbeque" {
                 self.type = .bbq
             } else if name == "Bicycle Rails" {
@@ -103,6 +106,7 @@ class OpenSpaces: NSObject, MGLAnnotation {
         let hoop = UIImage(named: "map-hoop")!
         let picnic = UIImage(named: "map-picnic")!
         let bbq = UIImage(named: "map-bbq")!
+        let toilet = UIImage(named: "map-toilet")!
         switch self.type {
         case .pool:
             return MGLAnnotationImage(image: pool, reuseIdentifier: "pool")
@@ -122,6 +126,8 @@ class OpenSpaces: NSObject, MGLAnnotation {
             return MGLAnnotationImage(image: hoop, reuseIdentifier: "hoop")
         case .picnic:
             return MGLAnnotationImage(image: picnic, reuseIdentifier: "picnic")
+        case .toilet:
+            return MGLAnnotationImage(image: toilet, reuseIdentifier: "toilet")
         }
     }
     

@@ -11,10 +11,15 @@ import UIKit
 class AllActivityViewController: UIViewController, DatabaseListener {
     /// This is the view controller of all activity page
     
-    var searchStatus: TableStatus = .all // search status, identify searching or not searching
+    private var searchStatus: TableStatus = .all // search status, identify searching or not searching
+    private var favouriteStatus: ShowFavourite = .all // show favourite status
     
-    var activities: [Activity] = []
+    private var activities: [Activity] = []
+    private var all: [Activity] = []
+    private var searchedActivityTemp: [Activity] = []
+    private var favouriteButton: UIButton!
     
+    var type: ActivityType!
     // collection view variables
     private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
     private let itemsPerRow:CGFloat = 2
@@ -24,6 +29,7 @@ class AllActivityViewController: UIViewController, DatabaseListener {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
+    
     // database protocol
     weak var databaseProtocol: DatabaseProtocol?
     
@@ -31,9 +37,19 @@ class AllActivityViewController: UIViewController, DatabaseListener {
         super.viewDidLoad()
         let delegate = UIApplication.shared.delegate as?  AppDelegate
         self.databaseProtocol = delegate?.databaseController
-        
         tableView.delegate = self
         tableView.dataSource = self
+        self.navigationItem.title = type.toString()
+        favouriteButton = UIButton.init(type: .custom)
+        favouriteButton.setImage(UIImage(systemName: "heart"), for: .normal)
+        //add function for button
+        favouriteButton.addTarget(self, action: #selector(showFavourites), for: .touchUpInside)
+        //set frame
+        favouriteButton.frame = CGRect(x: 0, y: 0, width: 53, height: 51)
+
+        let barButton = UIBarButtonItem(customView: favouriteButton)
+        //assign button to navigationbar
+        self.navigationItem.rightBarButtonItem = barButton
         setupSearch()
     }
     
@@ -59,7 +75,7 @@ class AllActivityViewController: UIViewController, DatabaseListener {
         searchBar.placeholder = "Search Activity"
         searchBar.delegate = self
     }
-    // 
+    // Navigation segue prepare
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "listToActivity" {
             let activity = sender as? Activity
@@ -68,11 +84,62 @@ class AllActivityViewController: UIViewController, DatabaseListener {
         }
     }
     
+    private func searchActivity(str: String) -> [Activity] {
+        var searchActivities = [Activity]()
+        for activity in all {
+            if activity.activityName.contains(str) {
+                searchActivities.append(activity)
+            }
+        }
+        return searchActivities
+    }
+    
+    private func getFavouriteActivity(activities: [Activity]) -> [Activity] {
+        if self.favouriteStatus == .all {
+            return activities
+        } else {
+            var favourites = [Activity]()
+            for activity in activities {
+                if activity.like {
+                    favourites.append(activity)
+                }
+            }
+            return favourites
+        }
+    }
+    
+    //MARK: Button function
+    @objc func showFavourites(_ sender: UIButton) {
+        switch self.favouriteStatus {
+        case .all:
+            self.favouriteStatus = .favourite
+            self.favouriteButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+            tableView.reloadData()
+        case .favourite:
+            self.favouriteStatus = .all
+            self.favouriteButton.setImage(UIImage(systemName: "heart"), for: .normal)
+            tableView.reloadData()
+        }
+    }
+    
+    
+    
     //MARK: Database Listener
     var listenerType: ListenerType = .all
     
+    private func getTypeActivities(allActivities: [Activity]) -> [Activity] {
+        var typeActivity: [Activity] = []
+        for activity in allActivities {
+            if activity.activityType == type {
+                typeActivity.append(activity)
+            }
+        }
+        return typeActivity
+    }
+    
     func getActivities(activities: [Activity]) {
-        self.activities = activities
+        self.activities = self.getTypeActivities(allActivities: activities)
+        self.all = self.getTypeActivities(allActivities: activities)
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
@@ -82,16 +149,15 @@ class AllActivityViewController: UIViewController, DatabaseListener {
     }
 }
 
+// MARK: - TableView Delegate
 extension AllActivityViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("activities number \(activities.count)")
-        return activities.count
+        return self.getFavouriteActivity(activities: activities).count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! ActivityTableViewCell
-        print("now showing \(indexPath.row)")
-        cell.setActivity(activity: activities[indexPath.row])
+        cell.setActivity(activity: self.getFavouriteActivity(activities: activities)[indexPath.row])
         //cell.backgroundColor = .black
         // Configure the cell
         return cell
@@ -102,7 +168,7 @@ extension AllActivityViewController: UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "listToActivity", sender: activities[indexPath.row])
+        performSegue(withIdentifier: "listToActivity", sender: self.getFavouriteActivity(activities: activities)[indexPath.row])
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -110,18 +176,19 @@ extension AllActivityViewController: UITableViewDataSource, UITableViewDelegate 
     }
 }
 
+// MARK: -Search Bar Delegate
 extension AllActivityViewController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchStatus = .all
-        databaseProtocol?.fetchAllActivities()
+        self.activities = self.all
         tableView.reloadData()
     }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchStatus = .search
         if searchText.count == 0 {
-            databaseProtocol?.fetchAllActivities()
+            self.activities = self.all
         } else {
-            databaseProtocol?.searchActivity(str: searchText)
+            self.activities = self.searchActivity(str: searchText)
         }
         tableView.reloadData()
     }
@@ -130,5 +197,10 @@ extension AllActivityViewController: UISearchBarDelegate {
 enum TableStatus {
     case all
     case search
+}
+
+enum ShowFavourite {
+    case all
+    case favourite
 }
 
