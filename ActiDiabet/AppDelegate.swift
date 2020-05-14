@@ -14,10 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let notification = Notifications()
     let databaseController = DatabaseController()
     let coredataController = CoredataController()
+    let eventsAPI = EventsAPI()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         notification.authoriseNotification()
+        eventsAPI.performAPI()
         return true
     }
 

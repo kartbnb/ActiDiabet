@@ -61,7 +61,7 @@ class ViewController: UIViewController, CustomViewProtocol, DatabaseListener {
     
     // MARK: Check if First enter the application
     func firstEnter() {
-        if UserDefaults.standard.value(forKey: "zipcode") == nil {
+        if UserDefaults.standard.value(forKey: "userid") == nil {
             // first enter show enterdetail view
             self.navigationController?.navigationBar.isHidden = true
             self.tabBarController?.tabBar.isHidden = true
