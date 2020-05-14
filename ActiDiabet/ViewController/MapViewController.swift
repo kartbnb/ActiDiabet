@@ -30,7 +30,6 @@ class MapViewController: UIViewController, DatabaseListener {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
         let weatherapi = WeatherAPI()
         db?.addListener(listener: self)
         weatherapi.getCoordinate(mapView: self)
@@ -55,8 +54,7 @@ class MapViewController: UIViewController, DatabaseListener {
     }
     
     // reset annotation when filter change
-    func resetAnnotation() {
-        
+    private func resetAnnotation() {
         if let annotations = mapView?.annotations {
             mapView?.removeAnnotations(annotations) // remove all annotations
         }
@@ -64,13 +62,17 @@ class MapViewController: UIViewController, DatabaseListener {
     }
     
     // set filter ui
-    func setFilter() {
+    private func setFilter() {
         
         let allfilter: [LocationType] = [.bbq, .cycling, .hoop, .hospital, .picnic, .pool, .seat, .space, .water, .toilet]  // all filters
         let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
         let notch = window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0 // get status bar height
         let filterWidth = 150  // FilterView width
-        let scrollView = UIScrollView(frame: CGRect(x: 0, y: notch + view.frame.height - 100, width: view.frame.width, height: 50)) // set scrollview use frame
+        let frame = CGRect(x: 0, y: view.frame.height - 100, width: view.frame.width, height: 50)
+        print("notch", notch)
+        print("view frame height", view.frame.height)
+        print(frame)
+        let scrollView = UIScrollView(frame: frame) // set scrollview use frame
         
         scrollView.contentSize = CGSize(width: filterWidth * allfilter.count + 10 * (allfilter.count + 1), height: 50) // set content frame (width: 9 filter and 10px insets)
         scrollView.contentOffset = CGPoint(x: 0, y: 0)
@@ -88,7 +90,7 @@ class MapViewController: UIViewController, DatabaseListener {
     }
     
     // get locations within this filter
-    func getShowingPlaces() -> [OpenSpaces] {
+    private func getShowingPlaces() -> [OpenSpaces] {
         var showingPlaces:[OpenSpaces] = []
         for place in allPlaces {
             if filter.contains(place.type) {

@@ -20,6 +20,7 @@ class AllActivityViewController: UIViewController, DatabaseListener {
     private var favouriteButton: UIButton!
     
     var type: ActivityType!
+    var indoor: Bool!
     // collection view variables
     private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
     private let itemsPerRow:CGFloat = 2
@@ -39,7 +40,7 @@ class AllActivityViewController: UIViewController, DatabaseListener {
         self.databaseProtocol = delegate?.databaseController
         tableView.delegate = self
         tableView.dataSource = self
-        self.navigationItem.title = type.toString()
+        self.navigationItem.title = "Browse"
         favouriteButton = UIButton.init(type: .custom)
         favouriteButton.setImage(UIImage(systemName: "heart"), for: .normal)
         //add function for button
@@ -137,9 +138,19 @@ class AllActivityViewController: UIViewController, DatabaseListener {
         return typeActivity
     }
     
+    private func getIndoorActivities(allActivities: [Activity]) -> [Activity] {
+        var indoorActivity: [Activity] = []
+        for activity in allActivities {
+            if activity.indoor == self.indoor {
+                indoorActivity.append(activity)
+            }
+        }
+        return indoorActivity
+    }
+    
     func getActivities(activities: [Activity]) {
-        self.activities = self.getTypeActivities(allActivities: activities)
-        self.all = self.getTypeActivities(allActivities: activities)
+        self.activities = self.getIndoorActivities(allActivities: self.getTypeActivities(allActivities: activities))
+        self.all = self.getIndoorActivities(allActivities: self.getTypeActivities(allActivities: activities))
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
@@ -165,6 +176,17 @@ extension AllActivityViewController: UITableViewDataSource, UITableViewDelegate 
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Activities \(self.type.toString())"
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = UIColor.black
+        header.textLabel?.font = UIFont(name: "HelveticaNeue-Bold", size: 30)
+        header.textLabel?.text = "Activities \(self.type.toString())"
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

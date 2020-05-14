@@ -20,15 +20,15 @@ class StartButtonView: UIView {
     // This is the start button in welcome
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        setupView()
+//        setupView()
     }
     
-    func setupView() {
-        self.layer.shadowOffset = CGSize(width: 0, height: 0)
-        self.layer.cornerRadius = 20
-        self.layer.shadowRadius = 6
-        self.layer.shadowOpacity = 0.4
-    }
+//    func setupView() {
+//        self.layer.shadowOffset = CGSize(width: 0, height: 0)
+//        self.layer.cornerRadius = 20
+//        self.layer.shadowRadius = 6
+//        self.layer.shadowOpacity = 0.4
+//    }
 }
 // MARK: - Enter Zip code
 class EnterZipView: UIView {
@@ -64,57 +64,23 @@ class EnterZipView: UIView {
 class EnterIntensityView: UIView {
     // Choose intensity
     // Outlets
-    @IBOutlet weak var intensityTextField: UITextField!
-    @IBOutlet weak var finishButton: UIButton!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var buttonView: UIView!
+    @IBOutlet weak var background: UIView!
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        intensityTextField.resignFirstResponder()
-    }
-    
-    fileprivate func setInputView() {
-        descriptionLabel.text = ""
-        self.finishButton.isEnabled = false
-        let pickerView = UIPickerView()
-        pickerView.delegate = self
-        intensityTextField.inputView = pickerView
-    }
-    
-    func getIntensity() -> IntensityLevel? {
-        if let i = intensityTextField.text {
-            if i == intensityLevelString[0] {
-                return .beginner
-            } else if i == intensityLevelString[1] {
-                return .moderate
-            } else if i == intensityLevelString[2] {
-                return .vigorous
-            } else {
-                return nil
-            }
-        } else {
-            return nil
-        }
-    }
-    
-}
-// MARK: PickerViewDelegate, PickerViewDataSource of Intensity Picker View
-extension EnterIntensityView: UIPickerViewDelegate, UIPickerViewDataSource {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 3
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return intensityLevelString[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        intensityTextField.text = intensityLevelString[row]
-        descriptionLabel.text = intensityDescrString[row]
-        finishButton.isEnabled = true
+    fileprivate func setupUI() {
+        buttonView.layer.cornerRadius = 10
+        buttonView.clipsToBounds = true
+        buttonView.backgroundColor = .clear
+        let gradientLayer = CAGradientLayer()
+        // Set the size of the layer to be equal to size of the display.
+        gradientLayer.frame = background.bounds
+        // Set an array of Core Graphics colors (.cgColor) to create the gradient.
+        // This example uses a Color Literal and a UIColor from RGB values.
+        gradientLayer.colors = [ColorConstant.brightGreen.cgColor, ColorConstant.brightOrange.cgColor]
+        // Rasterize this static layer to improve app performance.
+        gradientLayer.shouldRasterize = true
+        // Apply the gradient to the backgroundGradientView.
+        background.layer.addSublayer(gradientLayer)
     }
 }
 
@@ -127,6 +93,9 @@ class EnterDetailView: UIView {
     @IBOutlet weak var enterZipView: EnterZipView!
     @IBOutlet weak var chooseIntensityView: EnterIntensityView!
     
+    @IBOutlet weak var beginner: UIButton!
+    @IBOutlet weak var med: UIButton!
+    @IBOutlet weak var vigo: UIButton!
 
     @IBAction func startUsing(_ sender: Any) {
         print("start button clicked")
@@ -163,7 +132,7 @@ class EnterDetailView: UIView {
                 self.enterZipView.isHidden = finished
                 UIView.animate(withDuration: 1.0, animations: {
                     self.chooseIntensityView.alpha = 1
-                    self.chooseIntensityView.setInputView()
+                    self.chooseIntensityView.setupUI()
                 }) 
             }
         } else {
@@ -172,14 +141,21 @@ class EnterDetailView: UIView {
         
     }
     
-    @IBAction func saveIntensity(_ sender: Any) {
+    @IBAction func saveIntensity(_ sender: UIButton) {
         let delegate = UIApplication.shared.delegate as! AppDelegate
         let db = delegate.databaseController
         let zipcode = UserDefaults.standard.object(forKey: "zipcode") as! String
-        guard let intensity = chooseIntensityView.getIntensity() else { return }
+        var intensity: IntensityLevel? = nil
+        if sender == beginner {
+            intensity = .beginner
+        } else if sender == med {
+            intensity = .moderate
+        } else if sender == vigo {
+            intensity = .vigorous
+        }
         let intensityObject = Intensity()
-        intensityObject.setIntensity(intensity: intensity)
-        db.addUser(intensity: intensity.toString(), postcode: zipcode)
+        intensityObject.setIntensity(intensity: intensity!)
+        db.addUser(intensity: intensity!.toString(), postcode: zipcode)
         
         UIView.animate(withDuration: 1.0, animations: {
             //dismiss enter detail view

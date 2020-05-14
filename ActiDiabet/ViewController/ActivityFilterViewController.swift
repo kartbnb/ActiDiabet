@@ -13,12 +13,16 @@ class ActivityFilterViewController: UIViewController, TypeChooseDelegate {
     @IBOutlet weak var aerobicView: TypeFilterView!
     @IBOutlet weak var resistanceView: TypeFilterView!
     
+    var indoor: Bool!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         aerobicView.type = .aerobic
         aerobicView.delegate = self
+        aerobicView.makeRound()
         resistanceView.type = .resistance
         resistanceView.delegate = self
+        resistanceView.makeRound()
         // Do any additional setup after loading the view.
     }
     
@@ -36,6 +40,7 @@ class ActivityFilterViewController: UIViewController, TypeChooseDelegate {
             let type = sender as? ActivityType
             let destination = segue.destination as! AllActivityViewController
             destination.type = type
+            destination.indoor = self.indoor
         }
     }
     

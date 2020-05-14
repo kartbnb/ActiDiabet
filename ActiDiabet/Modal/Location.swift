@@ -80,22 +80,6 @@ class OpenSpaces: NSObject, MGLAnnotation {
         self.subtitle = category
     }
     
-    // configure the annotation to MKPinAnnotationView
-//    func configureAnnotation() -> MGLCalloutView {
-//        let annotationView = MG
-//        annotationView.canShowCallout = true
-//        if self.type == .pool {
-//            annotationView.pinTintColor = .blue
-//        }
-//        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
-//
-//        button.setImage(UIImage(systemName: "location.north"), for: .normal)
-//        button.addTarget(self, action: #selector(showDirection(_:)), for: .touchUpInside)
-//        annotationView.rightCalloutAccessoryView = button
-//
-//        return annotationView
-//    }
-    
     func imageOfAnnotation() -> MGLAnnotationImage {
         let park = UIImage(named: "map-park")!
         let pool = UIImage(named: "map-swimming")!

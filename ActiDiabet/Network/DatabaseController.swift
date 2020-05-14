@@ -118,8 +118,7 @@ extension DatabaseController: DatabaseProtocol {
     
     //MARK: -Fetch Recommend Activities
     func fetchRecommendActivity() {
-        let userid = UserDefaults.standard.object(forKey: "userid") as! String
-        let url = URL(string: link + "activity/recommendation/\(userid)")
+        let url = URL(string: link + "activity/recommendation/1")
         if let url = url {
             URLSession.shared.dataTask(with: url) { (data, response, error) in
                 if let error = error {

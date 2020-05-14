@@ -23,8 +23,8 @@ class ViewController: UIViewController, CustomViewProtocol, DatabaseListener {
     @IBOutlet weak var calendarButton: CalendarButtonView!
     
     // coredata controller and database controller
-    var coredataController: CoredataProtocol?
-    var databaseController: DatabaseProtocol?
+    private var coredataController: CoredataProtocol?
+    private var databaseController: DatabaseProtocol?
     
     // progress view
     @IBOutlet weak var resistanceProgress: UIProgressView!
@@ -66,8 +66,8 @@ class ViewController: UIViewController, CustomViewProtocol, DatabaseListener {
     }
     
     // MARK: Check if First enter the application
-    func firstEnter() {
-        if UserDefaults.standard.value(forKey: "zipcode") == nil {
+    private func firstEnter() {
+        if UserDefaults.standard.value(forKey: "userid") == nil {
             // first enter show enterdetail view
             self.navigationController?.navigationBar.isHidden = true
             self.tabBarController?.tabBar.isHidden = true
@@ -113,7 +113,7 @@ class ViewController: UIViewController, CustomViewProtocol, DatabaseListener {
     }
     
     //setup ScrollView
-    func setupScroll() {
+    private func setupScroll() {
         if self.recommendActivities.count >= 2 {
             DispatchQueue.main.async {
                 self.firstActivityView.setActivity(activity: self.recommendActivities[0])
@@ -143,8 +143,8 @@ class ViewController: UIViewController, CustomViewProtocol, DatabaseListener {
         self.present(alert, animated: true, completion: nil)
     }
     
-    //MARK: progress calculator
-    func getProgressOfWeek(records: [Record]) -> [Float] {
+    //MARK: - progress calculator
+    private func getProgressOfWeek(records: [Record]) -> [Float] {
         var aerobicTime = 0
         var resistanceTime = 0
         for record in records {
