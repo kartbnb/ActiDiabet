@@ -25,7 +25,7 @@ class ActivityTableViewCell: UITableViewCell {
             self.favouriteButton.tintColor = .systemRed
         } else {
             self.favouriteButton.setImage(UIImage(systemName: "heart"), for: .normal)
-            self.favouriteButton.tintColor = .black
+            self.favouriteButton.tintColor = .systemGray
         }
     }
     

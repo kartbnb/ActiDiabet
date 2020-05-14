@@ -70,7 +70,7 @@ class AllActivityViewController: UIViewController, DatabaseListener {
     }
     // setup search delegate and ui
     func setupSearch() {
-        searchBar.searchTextField.layer.cornerRadius = 20
+        searchBar.searchTextField.layer.cornerRadius = 10
         searchBar.searchTextField.layer.masksToBounds = true
         searchBar.placeholder = "Search Activity"
         searchBar.delegate = self
