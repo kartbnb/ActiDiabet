@@ -26,20 +26,19 @@ class SettingViewController: UIViewController {
         let delegate = UIApplication.shared.delegate as? AppDelegate
         self.notification = delegate?.notification
         setupUI()
-        
         // Do any additional setup after loading the view.
     }
     
     //MARK: UI functions
     //setup UI view
-    func setupUI() {
+    private func setupUI() {
         zipView.makeRound()
         saveButton.makeRound()
         setupSavedData()
     }
     
     //setup saved data
-    func setupSavedData() {
+    private func setupSavedData() {
         let zip = UserDefaults.standard.value(forKey: "zipcode") as? String
         zipTextField.text = zip
         scrollView.vcdelegate = self
@@ -67,7 +66,7 @@ class SettingViewController: UIViewController {
     }
     
     // validation of zipcode
-    func checkzipcode(zip: String) -> Bool {
+    private func checkzipcode(zip: String) -> Bool {
         if zip.count == 4 && zip.first == "3" {
             //self.zipCode = zip
             return true
@@ -86,7 +85,7 @@ class SettingViewController: UIViewController {
     }
     */
     
-    func showAlert(message: String, title: String) {
+    private func showAlert(message: String, title: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
