@@ -19,8 +19,10 @@ class IndoorFilterViewController: UIViewController, IndoorChooseDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         outdoorView.delegate = self
+        outdoorView.makeRound()
         outdoorView.indoor = false
         indoorView.delegate = self
+        indoorView.makeRound()
         indoorView.indoor = true
         // Do any additional setup after loading the view.
     }
