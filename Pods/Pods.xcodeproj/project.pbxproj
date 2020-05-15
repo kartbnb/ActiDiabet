@@ -20,84 +20,84 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		0594AFB3518E9651469A4386FE8F434B /* CLLocationManager+MMEMobileEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = EF6C7544F291A23201621B6236E00100 /* CLLocationManager+MMEMobileEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0AADA476F8AAF0990A522B077D4DE517 /* MMEEventLogReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3488EF3ABB076765B4D2B7F77C428302 /* MMEEventLogReportViewController.m */; };
-		10017B7E54B514D0162C87671E122D30 /* MMETimerManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 39961E8A785BD37AABE4742A3530A609 /* MMETimerManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		127C6E73803073F9E76165AA6BB4968D /* MMEEventLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = A7ABC06617C8DE99EC363FE2C48F9EBA /* MMEEventLogger.m */; };
-		13705867D70F97303C71FF457DB2400F /* MMENSURLSessionWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBBBC0003A514B235D4DC2FBFC5D71D /* MMENSURLSessionWrapper.m */; };
-		184028441D9A8F9C98E844324C83DC99 /* NSUserDefaults+MMEConfiguration_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C24BF9B4EA65864C46EEB9BBCA7D5FD /* NSUserDefaults+MMEConfiguration_Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		19A55323D858313A2393E84D8E47AB10 /* NSData+MMEGZIP.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FE2473ADF2B3BC934B958DA35840E4 /* NSData+MMEGZIP.m */; };
-		19C7985600BAE10D9DC05342A2D8324C /* MMEConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = E9949DDB3C63DC3D259CF9D862B43779 /* MMEConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1A79C70DD4F4CF7FEF1182E21856BE50 /* NSUserDefaults+MMEConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A04FBC70C872F1C7F1D67218349CA2E /* NSUserDefaults+MMEConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1BB4DE49ED35049589E9718128DE0E9E /* NSUserDefaults+MMEConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED660BB5ED7694CE44A95893F2D12DF /* NSUserDefaults+MMEConfiguration.m */; };
+		0594AFB3518E9651469A4386FE8F434B /* CLLocationManager+MMEMobileEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = F6AB1D1F7C7BA002B89429DA86B2B514 /* CLLocationManager+MMEMobileEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0AADA476F8AAF0990A522B077D4DE517 /* MMEEventLogReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59BF248D2E6C715C48512D8F0BE54509 /* MMEEventLogReportViewController.m */; };
+		10017B7E54B514D0162C87671E122D30 /* MMETimerManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C2D17A0A02A4C920B8A3F0943913F4E /* MMETimerManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		127C6E73803073F9E76165AA6BB4968D /* MMEEventLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C716D558AC732C2213ACF1FB7079ED77 /* MMEEventLogger.m */; };
+		13705867D70F97303C71FF457DB2400F /* MMENSURLSessionWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = C46AEBC1D29E44750743303F65057A6E /* MMENSURLSessionWrapper.m */; };
+		184028441D9A8F9C98E844324C83DC99 /* NSUserDefaults+MMEConfiguration_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1131B26D9C0CF225A73C475004A3D022 /* NSUserDefaults+MMEConfiguration_Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		19A55323D858313A2393E84D8E47AB10 /* NSData+MMEGZIP.m in Sources */ = {isa = PBXBuildFile; fileRef = 281A3CD96C9C35E6B2E1911E02EB27C4 /* NSData+MMEGZIP.m */; };
+		19C7985600BAE10D9DC05342A2D8324C /* MMEConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BD0BEFB8E7829949A09825A3281D30D /* MMEConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A79C70DD4F4CF7FEF1182E21856BE50 /* NSUserDefaults+MMEConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 37B2640A6B7327849791621C6CCE2450 /* NSUserDefaults+MMEConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BB4DE49ED35049589E9718128DE0E9E /* NSUserDefaults+MMEConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A2C93DA3CCB24934F068C3E731C694 /* NSUserDefaults+MMEConfiguration.m */; };
 		1BBC582FCEA1B2926269F3CCE3F1D923 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		1C1D8142CE245153354C57BDB8F04146 /* MapboxMobileEvents-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2CD37252644D9796E8F091075ED1CC5 /* MapboxMobileEvents-dummy.m */; };
-		1DEBC4ECCFC45DDA52FDAAAF7C5D2F0B /* MapboxMobileEvents-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B5B5228E6725594FDE63794EFE58BA2D /* MapboxMobileEvents-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1FA4E6E17F4774422017C2865AC216E0 /* MMEDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 591873E1E1AF31546C357858F8085C30 /* MMEDate.m */; };
-		22577C59734E5ED346B29CFF7B1DCA74 /* MMEMetrics.h in Headers */ = {isa = PBXBuildFile; fileRef = 41FEF155690D30F5CDCD9751E67C1FE1 /* MMEMetrics.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		235381CEC72174B24BC5CB01376161FD /* MMEEventsManager_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = D746DE6417502FFF8D793DDD186C54D9 /* MMEEventsManager_Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2419E01993AF4074B1643CC0A1A71CBB /* MMETypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A3D21716F46D8B268D54369FAC66683 /* MMETypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C1D8142CE245153354C57BDB8F04146 /* MapboxMobileEvents-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 811DC68B3A020CDA29A17D8C5DDC32F8 /* MapboxMobileEvents-dummy.m */; };
+		1DEBC4ECCFC45DDA52FDAAAF7C5D2F0B /* MapboxMobileEvents-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D2C2515FB630278D0282930871119081 /* MapboxMobileEvents-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FA4E6E17F4774422017C2865AC216E0 /* MMEDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43365310BBAA5A235373BA1EFC12E1D1 /* MMEDate.m */; };
+		22577C59734E5ED346B29CFF7B1DCA74 /* MMEMetrics.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B956D1017297EF366A261AAAEDCBFDB /* MMEMetrics.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		235381CEC72174B24BC5CB01376161FD /* MMEEventsManager_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 20F470CC8EC1F82927C297CF5F7AAE02 /* MMEEventsManager_Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2419E01993AF4074B1643CC0A1A71CBB /* MMETypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FD2235D6B95EA96F90C6296D2C9C18A /* MMETypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2B59277A57C3CBE83FDCC1493F497D76 /* Pods-ActiDiabet-ActiDiabetUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 41B6524FAB862F9F325056D625A5E14E /* Pods-ActiDiabet-ActiDiabetUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		32875437802E89DFE4C45EED450D7F26 /* NSString+MMEVersions.m in Sources */ = {isa = PBXBuildFile; fileRef = 081296B62F50346CD6B1A028C5EF1E72 /* NSString+MMEVersions.m */; };
-		35E55230480A2E31224F830409394A39 /* MMEAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F2531A6E8F4ECCE9F59101B4E896A499 /* MMEAPIClient.m */; };
-		38FA608EAEC7715C96BF01E222FBFD6E /* MMEDispatchManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D814BA466C5E561127AAC8C05F50A9EB /* MMEDispatchManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3B70A9391485438386961EF97B4FBC97 /* MMECommonEventData.h in Headers */ = {isa = PBXBuildFile; fileRef = 84F93BE6A7F783F2A68A9C3AA27A2E55 /* MMECommonEventData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3DBB6E8988B38B8AF32C7F9A978B3A71 /* MMEReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E06BC46D0BAD5AA1DA9149127CF6AA /* MMEReachability.m */; };
-		41C9147C173744A16A6A81D29457270D /* MMECertPin.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3C4F9816A264FD84867A84CB72898D /* MMECertPin.m */; };
-		4BBBDD52873061AC9A8355C11FCA5B44 /* YoutubePlayer-in-WKWebView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B63265B0F8952BE25CBB5E45BF6FECF /* YoutubePlayer-in-WKWebView-dummy.m */; };
-		4D1AB33E38AE6EB29C363CBCCD1C32DB /* CLLocation+MMEMobileEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E146AE5CACE6D1EDFC76787699D9130 /* CLLocation+MMEMobileEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32875437802E89DFE4C45EED450D7F26 /* NSString+MMEVersions.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD762C8F1025BB8ABCCCBD910C9FA89 /* NSString+MMEVersions.m */; };
+		35E55230480A2E31224F830409394A39 /* MMEAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D00095E0E67B635184C2F29D5FAD2977 /* MMEAPIClient.m */; };
+		38FA608EAEC7715C96BF01E222FBFD6E /* MMEDispatchManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 69B50011E2462FD719AF271E6F8695A3 /* MMEDispatchManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B70A9391485438386961EF97B4FBC97 /* MMECommonEventData.h in Headers */ = {isa = PBXBuildFile; fileRef = AF98B3E0A898943BA00CDDCDAF23C91D /* MMECommonEventData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DBB6E8988B38B8AF32C7F9A978B3A71 /* MMEReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D24442DF71954A764E0982534A9F823F /* MMEReachability.m */; };
+		41C9147C173744A16A6A81D29457270D /* MMECertPin.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9A83A1BC6CB6957C01014B68418051 /* MMECertPin.m */; };
+		4BBBDD52873061AC9A8355C11FCA5B44 /* YoutubePlayer-in-WKWebView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 285F94B3CA44DD8394AC19E7BC4A8868 /* YoutubePlayer-in-WKWebView-dummy.m */; };
+		4D1AB33E38AE6EB29C363CBCCD1C32DB /* CLLocation+MMEMobileEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 219D4DD4F4C1C93077476CF1C941561D /* CLLocation+MMEMobileEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4F6680ED1F8E455A28F54B88EB4B1BE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		52676CD81C64DDF7E69550C1BEEA488F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		52DB405C701C59CF3E09C2F1869C11CB /* MMEMetrics.m in Sources */ = {isa = PBXBuildFile; fileRef = B7D50CD6578D0B4424E5E1924ACDBEA6 /* MMEMetrics.m */; };
-		53534F6682224FCEB8E2166FEBE54824 /* MMECategoryLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 887AFF87C0B780BE56D9292EDF4BD4FB /* MMECategoryLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52DB405C701C59CF3E09C2F1869C11CB /* MMEMetrics.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B91A31A8CA5A35B17A09DCEAC116E20 /* MMEMetrics.m */; };
+		53534F6682224FCEB8E2166FEBE54824 /* MMECategoryLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F2F67BEE2D5B83B8EC5F7310BB134C9 /* MMECategoryLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		554FD99117F4436586F1B0F91BB9913A /* Pods-ActiDiabetTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 71278986E9E847A15582B7E603CB9C35 /* Pods-ActiDiabetTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5961CA9A9B935A69C865A6DF33A99D97 /* MMECertPin.h in Headers */ = {isa = PBXBuildFile; fileRef = 6126CBD9C1B6519E2BC16F85A6C042B4 /* MMECertPin.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5F1A6B2306E4F99287157FF0A7103546 /* MMECategoryLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A18A1538CABEF1090E3F07D7ECB86A0 /* MMECategoryLoader.m */; };
-		5F341934B5EAD5B7DADE5AB0DDF76B59 /* MMEEventsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 49B0785ADA1B0349E87C67FF50FD4DF7 /* MMEEventsManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5FDA474B0CDF02C739C40A4B680505B6 /* MMEDependencyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A94856FBF728A6C0FA1BD857ED58FC /* MMEDependencyManager.m */; };
-		661BD64EC8DB0C15E884A2A80AA063E5 /* MMEAPIClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 15B817810F2621A5524B1D45784EBF64 /* MMEAPIClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6B2DC34DB636011F362A9FD82827AC32 /* MMEUINavigation.h in Headers */ = {isa = PBXBuildFile; fileRef = B61ADE95BAAD3672E27F4CABB6E150EB /* MMEUINavigation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6D5517D324FCAAC49144502EA0F18DE6 /* MMEEventLogReportViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 861EB5A7081FDDF017DD50AD286C29E3 /* MMEEventLogReportViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6E37234C4DBE23A034F81AC2C3777F4F /* MapboxMobileEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E27886251B5DC78999D0EFAF97FE535 /* MapboxMobileEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5961CA9A9B935A69C865A6DF33A99D97 /* MMECertPin.h in Headers */ = {isa = PBXBuildFile; fileRef = 019E3D023367C97AB638C9DC669DB798 /* MMECertPin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F1A6B2306E4F99287157FF0A7103546 /* MMECategoryLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 903D9141C9856AC3F72735238F6EF9B9 /* MMECategoryLoader.m */; };
+		5F341934B5EAD5B7DADE5AB0DDF76B59 /* MMEEventsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D4E33D498131D772620235F834DA4125 /* MMEEventsManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5FDA474B0CDF02C739C40A4B680505B6 /* MMEDependencyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BDF554FC86A77A26E58DB44E4B6612 /* MMEDependencyManager.m */; };
+		661BD64EC8DB0C15E884A2A80AA063E5 /* MMEAPIClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0DBEB00F68EE68146042D77EC4EF65 /* MMEAPIClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B2DC34DB636011F362A9FD82827AC32 /* MMEUINavigation.h in Headers */ = {isa = PBXBuildFile; fileRef = 470A7695B8E503C4621B1112318FA359 /* MMEUINavigation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D5517D324FCAAC49144502EA0F18DE6 /* MMEEventLogReportViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 746E5D614C887C37AF7848CA7D28B588 /* MMEEventLogReportViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E37234C4DBE23A034F81AC2C3777F4F /* MapboxMobileEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E01EB6E3824683EA5A45D5101BD00AD /* MapboxMobileEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		73815F2BFC3840F77FF7EF9634BEE62C /* Pods-ActiDiabet-ActiDiabetUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E35A1BD518F6CDA5F451145936973E41 /* Pods-ActiDiabet-ActiDiabetUITests-dummy.m */; };
-		75883E6C23A995F6482CA554BDA49425 /* NSString+MMEVersions.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE19641E90DD667772D664B69A154C7 /* NSString+MMEVersions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75883E6C23A995F6482CA554BDA49425 /* NSString+MMEVersions.h in Headers */ = {isa = PBXBuildFile; fileRef = 303D9248EFC400888CC51004F685C479 /* NSString+MMEVersions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		75E95FFEF3D92DC5D8F3ED48DA0F05E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		78A212AC759BB1C822888E97842A6659 /* UIKit+MMEMobileEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = D1BA7638DDF868F99C15A9C8CA1CCF99 /* UIKit+MMEMobileEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		803A943F40E9733AC61489FB25186CF9 /* YoutubePlayer-in-WKWebView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 913514FFD3CCBD194D17596D3ED6A49E /* YoutubePlayer-in-WKWebView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		852DB95162187AB21C0CF5FFD3D5A148 /* MMEAPIClient_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 843546B3303571597EC904A6924E95FE /* MMEAPIClient_Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		93EA074E2B05973C840B1B7AAD559178 /* MMETimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B894D05C4C2BC5B1D8E7C05A0DF602D3 /* MMETimerManager.m */; };
-		9AD84D555FE3F3C4519344CBBAB1D565 /* WKYTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D571144A42D8E899FDB259C247D5C80 /* WKYTPlayerView.m */; };
-		9BF1A0363A9475DFB63010ED93926FA2 /* MMEMetricsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 710F70DDF999AF54ABAB8CAB98591E1D /* MMEMetricsManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9F0B2F2134524878FF7B2A0F08783920 /* MMEUINavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9233F834DC934165B44DCA9DFC10583A /* MMEUINavigation.m */; };
-		A2F456C8B6E599B49D24E31E7EE74180 /* MMEEventsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68379A09DFE72AE19BB5300E9D013144 /* MMEEventsManager.m */; };
-		A7042038829920A434D408AC8D86FECE /* CLLocation+MMEMobileEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = D2923931AB03640D1E1EA71BF620DA56 /* CLLocation+MMEMobileEvents.m */; };
-		AA8F5354A4DB231558AAA67A0A37D840 /* MMEDependencyManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 10D4729647F05AD6DD6A16EE0B0A8D05 /* MMEDependencyManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AB9D893DC220F7E259F2E7B4DE5DD1BD /* MMELocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D546DA357359A5C81C99CBB80B9E9A58 /* MMELocationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AD4989333A1C8BEBB64C71A9D6C9CFB4 /* UIKit+MMEMobileEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = BD444E2E8697D5A4C662BCCD73D3055B /* UIKit+MMEMobileEvents.m */; };
-		BD0308B7C7B30CBFEF02E415D00DF979 /* MMEMetricsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA4FD601260906EB02FF3AA2ECC214C /* MMEMetricsManager.m */; };
-		BE46F220F2F6AA05A059954FD32FE7BC /* MMEDispatchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90ABCD02EA19EABD626FE6004E237A56 /* MMEDispatchManager.m */; };
-		BF0A77937EA207B3D4A15F374323E20E /* MMEEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = A14C9D915C98357AE4942B803E7A1C3A /* MMEEvent.m */; };
-		CCF11406FC25C84082E70B3DE2871690 /* WKYTPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = D2B1E4404ABE0E48E8E7DCDD1809FA74 /* WKYTPlayerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CDC0C06F15A126FF746336DB10375671 /* MMEEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = E0426D48C6EF4FF0FD42DC33191C3CB1 /* MMEEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78A212AC759BB1C822888E97842A6659 /* UIKit+MMEMobileEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 46E63E6F449143C9EDEF09B03B08BC00 /* UIKit+MMEMobileEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		803A943F40E9733AC61489FB25186CF9 /* YoutubePlayer-in-WKWebView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FD56808487702EDABC10512E6686780C /* YoutubePlayer-in-WKWebView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		852DB95162187AB21C0CF5FFD3D5A148 /* MMEAPIClient_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 6623E20949BFB962FA2227FC177FCAC9 /* MMEAPIClient_Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		93EA074E2B05973C840B1B7AAD559178 /* MMETimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832C2722FD1044C1B6E798DBB7645D0 /* MMETimerManager.m */; };
+		9AD84D555FE3F3C4519344CBBAB1D565 /* WKYTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A59E6E7CB7DF598DAF9AD64558F56BA0 /* WKYTPlayerView.m */; };
+		9BF1A0363A9475DFB63010ED93926FA2 /* MMEMetricsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DEB3D3D04775D2CA6107D0925050F6C /* MMEMetricsManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F0B2F2134524878FF7B2A0F08783920 /* MMEUINavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C5E9547778C9F3435FC9BCD55F0C8F /* MMEUINavigation.m */; };
+		A2F456C8B6E599B49D24E31E7EE74180 /* MMEEventsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D7FFAB971740628ED86258A35C287D33 /* MMEEventsManager.m */; };
+		A7042038829920A434D408AC8D86FECE /* CLLocation+MMEMobileEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 907DB4AC4CDFA9624651E6444CDED59B /* CLLocation+MMEMobileEvents.m */; };
+		AA8F5354A4DB231558AAA67A0A37D840 /* MMEDependencyManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C22C94BC814C558FBBCFD0F81FA3CBD /* MMEDependencyManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB9D893DC220F7E259F2E7B4DE5DD1BD /* MMELocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C61EDAC726514E9BB5DA4BD2491055F /* MMELocationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD4989333A1C8BEBB64C71A9D6C9CFB4 /* UIKit+MMEMobileEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8D85592567E4B768A1EE24AD965648 /* UIKit+MMEMobileEvents.m */; };
+		BD0308B7C7B30CBFEF02E415D00DF979 /* MMEMetricsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F5479695D5D382B34CED2C0FB8166B17 /* MMEMetricsManager.m */; };
+		BE46F220F2F6AA05A059954FD32FE7BC /* MMEDispatchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C49EF6AFFB83DB030B065312B361CC21 /* MMEDispatchManager.m */; };
+		BF0A77937EA207B3D4A15F374323E20E /* MMEEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 376E8EB4379F6F9E6B23EA34937AF536 /* MMEEvent.m */; };
+		CCF11406FC25C84082E70B3DE2871690 /* WKYTPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = E6C9465ED6788023987FDC842D82F1FE /* WKYTPlayerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDC0C06F15A126FF746336DB10375671 /* MMEEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = A16A296FD05994B6DC45F320BD815BBC /* MMEEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D1BAAB506BF22288E9EFB000BC8B853C /* Pods-ActiDiabet-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B76CACFF8D060A0265A25B6CAC41C322 /* Pods-ActiDiabet-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D334D5A0AA88F6DEE11C8667AAE43596 /* WKYTPlayerView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 223EBEED5744638C312697FE8DACE5EB /* WKYTPlayerView.bundle */; };
-		D489F5614C15CF164D88971B6921AA2A /* MMEUniqueIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 16F2406B9D8D31972DD2C2E7B5E91E36 /* MMEUniqueIdentifier.m */; };
-		D5437CC098AF89624158B5EA1D836444 /* MMEUniqueIdentifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 50A5C5D2F6AE1A4FCCC02B09C5435CCE /* MMEUniqueIdentifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D334D5A0AA88F6DEE11C8667AAE43596 /* WKYTPlayerView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4499FAA3696B0239DD566D6EF9BA233A /* WKYTPlayerView.bundle */; };
+		D489F5614C15CF164D88971B6921AA2A /* MMEUniqueIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 4124403AD1C9AF4612FF11D6D4082DC1 /* MMEUniqueIdentifier.m */; };
+		D5437CC098AF89624158B5EA1D836444 /* MMEUniqueIdentifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BCB1483458EEB0CCF9F1BBB3248FEF2 /* MMEUniqueIdentifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D59E7F14400254E778330167EADC088B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		D7BB8EAB2B6562B5ACBD8A7CDD07BC9D /* Pods-ActiDiabet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B8CCEBEAAF3BC953F667722B12452E /* Pods-ActiDiabet-dummy.m */; };
-		DB4E40A0FB29B48EBE429DCFE41A56C6 /* logger.html in Resources */ = {isa = PBXBuildFile; fileRef = E5A9C86F87464FE7104C13ABB9F6F562 /* logger.html */; };
-		DC96C923C6A4230FAB6EFEF3E506521F /* NSData+MMEGZIP.h in Headers */ = {isa = PBXBuildFile; fileRef = EE361D26B5539F36229F061544F58392 /* NSData+MMEGZIP.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DCB4F66DF47037F13222487CF0E374D2 /* MMELocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F114E260928194C745AA9C4BB57B478C /* MMELocationManager.m */; };
-		DF58054550C36420E1D535899C7C00EC /* MMEUIApplicationWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E839E535CF9DCB134B4881272CC34105 /* MMEUIApplicationWrapper.m */; };
-		E279DE5DBEBFAB72A307E4EBAAAC9F20 /* CLLocationManager+MMEMobileEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 496B0ABE6A805E1DA208688812184B2B /* CLLocationManager+MMEMobileEvents.m */; };
-		E43A0141E883C218F5D4582CA74A83F3 /* MMEUIApplicationWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A3C270F71B4EB093D0C423687C69ACD /* MMEUIApplicationWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E7E001BDBE9F3125B41321539F9D3C5A /* MMEDate.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F52423E446B1F52F95402BFE5D330F6 /* MMEDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB4E40A0FB29B48EBE429DCFE41A56C6 /* logger.html in Resources */ = {isa = PBXBuildFile; fileRef = 185D45FC2582545CC2E97831C6C867F9 /* logger.html */; };
+		DC96C923C6A4230FAB6EFEF3E506521F /* NSData+MMEGZIP.h in Headers */ = {isa = PBXBuildFile; fileRef = E2E82262096A7FB1B86C94EAE499C323 /* NSData+MMEGZIP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DCB4F66DF47037F13222487CF0E374D2 /* MMELocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFCB80DC867446EEFAFD45AEB2C9E1B /* MMELocationManager.m */; };
+		DF58054550C36420E1D535899C7C00EC /* MMEUIApplicationWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F2C1725A3C96759C4DB1BC3A823B8F /* MMEUIApplicationWrapper.m */; };
+		E279DE5DBEBFAB72A307E4EBAAAC9F20 /* CLLocationManager+MMEMobileEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E8479ED89DF618A4DAA81A7A0A46F8 /* CLLocationManager+MMEMobileEvents.m */; };
+		E43A0141E883C218F5D4582CA74A83F3 /* MMEUIApplicationWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 23B3EF04ECD557419EF21AD8CBF719A6 /* MMEUIApplicationWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E7E001BDBE9F3125B41321539F9D3C5A /* MMEDate.h in Headers */ = {isa = PBXBuildFile; fileRef = 287926DE97BED9E650B1469D995F6EB1 /* MMEDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E99ADAAC771EAB546B4E7159758B1EDF /* Pods-ActiDiabetTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB1FD9A7AF56B06BE9A190EA0164CEE /* Pods-ActiDiabetTests-dummy.m */; };
-		F1488DD86176CC2F065BB0AF5444C07B /* MMEConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DB41588BCBADC83D90C2BEFA604FEC /* MMEConstants.m */; };
-		F7CC64AB3F2167A9958338254D8BB73B /* MMENSURLSessionWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = A2C36053270655013EA9A9AA11AD9935 /* MMENSURLSessionWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F8644D3DFA2D3A8DB3CAE34191AD8E3E /* MMECommonEventData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D40A8C61B24E1C5A1DBFDE5C06FDD78 /* MMECommonEventData.m */; };
-		FC5FBEFD7AD67E18BC18CF0F1AA8D1DB /* MMEReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E339AAF290E13A8E5FDD4F8800D2432 /* MMEReachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FFA32F2ADCE1AEFD6882EC4EE1ADB9D1 /* MMEEventLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AE4B5DE39FF5C8B3FACDBC9260AD504 /* MMEEventLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F1488DD86176CC2F065BB0AF5444C07B /* MMEConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 594F5119B68D08FCAF3389CA4BE52718 /* MMEConstants.m */; };
+		F7CC64AB3F2167A9958338254D8BB73B /* MMENSURLSessionWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C078C24893A966F2CF9AD1E557B546B /* MMENSURLSessionWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8644D3DFA2D3A8DB3CAE34191AD8E3E /* MMECommonEventData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E79886FEBFD1E936F52BB33D821548B /* MMECommonEventData.m */; };
+		FC5FBEFD7AD67E18BC18CF0F1AA8D1DB /* MMEReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = D00191FE91876BEE8ADDDC3F29096877 /* MMEReachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FFA32F2ADCE1AEFD6882EC4EE1ADB9D1 /* MMEEventLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = F31765C27FEFD03CB4221A4CB75D03C2 /* MMEEventLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,119 +160,116 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04DB41588BCBADC83D90C2BEFA604FEC /* MMEConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEConstants.m; path = MapboxMobileEvents/MMEConstants.m; sourceTree = "<group>"; };
+		019E3D023367C97AB638C9DC669DB798 /* MMECertPin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMECertPin.h; path = MapboxMobileEvents/MMECertPin.h; sourceTree = "<group>"; };
 		06407C849BEF43D96954267BFAA397F1 /* Pods-ActiDiabet-ActiDiabetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ActiDiabet-ActiDiabetUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		081296B62F50346CD6B1A028C5EF1E72 /* NSString+MMEVersions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MMEVersions.m"; path = "MapboxMobileEvents/Categories/NSString+MMEVersions.m"; sourceTree = "<group>"; };
-		08B247E193755974F1ED84F377D61884 /* YoutubePlayer-in-WKWebView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "YoutubePlayer-in-WKWebView.debug.xcconfig"; sourceTree = "<group>"; };
-		0E146AE5CACE6D1EDFC76787699D9130 /* CLLocation+MMEMobileEvents.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CLLocation+MMEMobileEvents.h"; path = "MapboxMobileEvents/Categories/CLLocation+MMEMobileEvents.h"; sourceTree = "<group>"; };
-		0FCD79A984A79C73EBFA4DADCD3CC226 /* MapboxMobileEvents.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MapboxMobileEvents.modulemap; sourceTree = "<group>"; };
-		10D4729647F05AD6DD6A16EE0B0A8D05 /* MMEDependencyManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEDependencyManager.h; path = MapboxMobileEvents/MMEDependencyManager.h; sourceTree = "<group>"; };
-		15B817810F2621A5524B1D45784EBF64 /* MMEAPIClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEAPIClient.h; path = MapboxMobileEvents/MMEAPIClient.h; sourceTree = "<group>"; };
-		15F2DE31D7AB5A160E6AFD2FC70D9E28 /* YoutubePlayer-in-WKWebView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "YoutubePlayer-in-WKWebView.modulemap"; sourceTree = "<group>"; };
-		16F2406B9D8D31972DD2C2E7B5E91E36 /* MMEUniqueIdentifier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEUniqueIdentifier.m; path = MapboxMobileEvents/MMEUniqueIdentifier.m; sourceTree = "<group>"; };
-		1A04FBC70C872F1C7F1D67218349CA2E /* NSUserDefaults+MMEConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSUserDefaults+MMEConfiguration.h"; path = "MapboxMobileEvents/Categories/NSUserDefaults+MMEConfiguration.h"; sourceTree = "<group>"; };
-		1ED660BB5ED7694CE44A95893F2D12DF /* NSUserDefaults+MMEConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSUserDefaults+MMEConfiguration.m"; path = "MapboxMobileEvents/Categories/NSUserDefaults+MMEConfiguration.m"; sourceTree = "<group>"; };
-		1FB45299BF94D957812729E971A3722A /* MapboxMobileEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MapboxMobileEvents.debug.xcconfig; sourceTree = "<group>"; };
-		223EBEED5744638C312697FE8DACE5EB /* WKYTPlayerView.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = WKYTPlayerView.bundle; path = WKYTPlayerView/WKYTPlayerView.bundle; sourceTree = "<group>"; };
+		06E08CA27F34A1ADD683A8B3E30E566E /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = dynamic/Mapbox.framework; sourceTree = "<group>"; };
+		0C61EDAC726514E9BB5DA4BD2491055F /* MMELocationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMELocationManager.h; path = MapboxMobileEvents/MMELocationManager.h; sourceTree = "<group>"; };
+		1131B26D9C0CF225A73C475004A3D022 /* NSUserDefaults+MMEConfiguration_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSUserDefaults+MMEConfiguration_Private.h"; path = "MapboxMobileEvents/Categories/NSUserDefaults+MMEConfiguration_Private.h"; sourceTree = "<group>"; };
+		185D45FC2582545CC2E97831C6C867F9 /* logger.html */ = {isa = PBXFileReference; includeInIndex = 1; name = logger.html; path = MapboxMobileEvents/Resources/logger.html; sourceTree = "<group>"; };
+		1D8D85592567E4B768A1EE24AD965648 /* UIKit+MMEMobileEvents.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIKit+MMEMobileEvents.m"; path = "MapboxMobileEvents/Categories/UIKit+MMEMobileEvents.m"; sourceTree = "<group>"; };
+		1FD2235D6B95EA96F90C6296D2C9C18A /* MMETypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMETypes.h; path = MapboxMobileEvents/MMETypes.h; sourceTree = "<group>"; };
+		20F470CC8EC1F82927C297CF5F7AAE02 /* MMEEventsManager_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEEventsManager_Private.h; path = MapboxMobileEvents/MMEEventsManager_Private.h; sourceTree = "<group>"; };
+		219D4DD4F4C1C93077476CF1C941561D /* CLLocation+MMEMobileEvents.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CLLocation+MMEMobileEvents.h"; path = "MapboxMobileEvents/Categories/CLLocation+MMEMobileEvents.h"; sourceTree = "<group>"; };
+		23B3EF04ECD557419EF21AD8CBF719A6 /* MMEUIApplicationWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEUIApplicationWrapper.h; path = MapboxMobileEvents/MMEUIApplicationWrapper.h; sourceTree = "<group>"; };
 		23EE982E181CD28D6BBE3BE0FA18F63E /* Pods_ActiDiabetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ActiDiabetTests.framework; path = "Pods-ActiDiabetTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2AE4B5DE39FF5C8B3FACDBC9260AD504 /* MMEEventLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEEventLogger.h; path = MapboxMobileEvents/MMEEventLogger.h; sourceTree = "<group>"; };
+		281A3CD96C9C35E6B2E1911E02EB27C4 /* NSData+MMEGZIP.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+MMEGZIP.m"; path = "MapboxMobileEvents/Categories/NSData+MMEGZIP.m"; sourceTree = "<group>"; };
+		2832C2722FD1044C1B6E798DBB7645D0 /* MMETimerManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMETimerManager.m; path = MapboxMobileEvents/MMETimerManager.m; sourceTree = "<group>"; };
+		285F94B3CA44DD8394AC19E7BC4A8868 /* YoutubePlayer-in-WKWebView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YoutubePlayer-in-WKWebView-dummy.m"; sourceTree = "<group>"; };
+		287926DE97BED9E650B1469D995F6EB1 /* MMEDate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEDate.h; path = MapboxMobileEvents/MMEDate.h; sourceTree = "<group>"; };
+		2C7F7BA41B5AF148F116F2EC407B2078 /* YoutubePlayer-in-WKWebView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "YoutubePlayer-in-WKWebView-Info.plist"; sourceTree = "<group>"; };
+		2D8DD5BDCAC6075B90EA53DFD3B163FE /* MapboxMobileEvents-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MapboxMobileEvents-Info.plist"; sourceTree = "<group>"; };
+		2DFCB80DC867446EEFAFD45AEB2C9E1B /* MMELocationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMELocationManager.m; path = MapboxMobileEvents/MMELocationManager.m; sourceTree = "<group>"; };
+		2E01EB6E3824683EA5A45D5101BD00AD /* MapboxMobileEvents.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MapboxMobileEvents.h; path = MapboxMobileEvents/MapboxMobileEvents.h; sourceTree = "<group>"; };
 		2FCA4B4A18C28FB9A3A8EC55A198367B /* Pods-ActiDiabet-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ActiDiabet-frameworks.sh"; sourceTree = "<group>"; };
+		303D9248EFC400888CC51004F685C479 /* NSString+MMEVersions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MMEVersions.h"; path = "MapboxMobileEvents/Categories/NSString+MMEVersions.h"; sourceTree = "<group>"; };
 		31B8CCEBEAAF3BC953F667722B12452E /* Pods-ActiDiabet-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ActiDiabet-dummy.m"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3488EF3ABB076765B4D2B7F77C428302 /* MMEEventLogReportViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEEventLogReportViewController.m; path = MapboxMobileEvents/MMEEventLogReportViewController.m; sourceTree = "<group>"; };
+		3621A78A0774D1B2771CD769E3AB34D4 /* MapboxMobileEvents.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MapboxMobileEvents.modulemap; sourceTree = "<group>"; };
 		372F9E2A0B9DC147B72EC74411614FE5 /* Pods-ActiDiabet-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ActiDiabet-acknowledgements.plist"; sourceTree = "<group>"; };
-		39961E8A785BD37AABE4742A3530A609 /* MMETimerManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMETimerManager.h; path = MapboxMobileEvents/MMETimerManager.h; sourceTree = "<group>"; };
-		3A3C270F71B4EB093D0C423687C69ACD /* MMEUIApplicationWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEUIApplicationWrapper.h; path = MapboxMobileEvents/MMEUIApplicationWrapper.h; sourceTree = "<group>"; };
-		3B63265B0F8952BE25CBB5E45BF6FECF /* YoutubePlayer-in-WKWebView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YoutubePlayer-in-WKWebView-dummy.m"; sourceTree = "<group>"; };
-		3CA4FD601260906EB02FF3AA2ECC214C /* MMEMetricsManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEMetricsManager.m; path = MapboxMobileEvents/MMEMetricsManager.m; sourceTree = "<group>"; };
-		3E590B98E591210BB82AEFDA9C4C55B6 /* YoutubePlayer-in-WKWebView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "YoutubePlayer-in-WKWebView-Info.plist"; sourceTree = "<group>"; };
+		376E8EB4379F6F9E6B23EA34937AF536 /* MMEEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEEvent.m; path = MapboxMobileEvents/MMEEvent.m; sourceTree = "<group>"; };
+		37B2640A6B7327849791621C6CCE2450 /* NSUserDefaults+MMEConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSUserDefaults+MMEConfiguration.h"; path = "MapboxMobileEvents/Categories/NSUserDefaults+MMEConfiguration.h"; sourceTree = "<group>"; };
+		3B0DBEB00F68EE68146042D77EC4EF65 /* MMEAPIClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEAPIClient.h; path = MapboxMobileEvents/MMEAPIClient.h; sourceTree = "<group>"; };
+		3BCB1483458EEB0CCF9F1BBB3248FEF2 /* MMEUniqueIdentifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEUniqueIdentifier.h; path = MapboxMobileEvents/MMEUniqueIdentifier.h; sourceTree = "<group>"; };
+		4124403AD1C9AF4612FF11D6D4082DC1 /* MMEUniqueIdentifier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEUniqueIdentifier.m; path = MapboxMobileEvents/MMEUniqueIdentifier.m; sourceTree = "<group>"; };
 		41B6524FAB862F9F325056D625A5E14E /* Pods-ActiDiabet-ActiDiabetUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ActiDiabet-ActiDiabetUITests-umbrella.h"; sourceTree = "<group>"; };
-		41FEF155690D30F5CDCD9751E67C1FE1 /* MMEMetrics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEMetrics.h; path = MapboxMobileEvents/MMEMetrics.h; sourceTree = "<group>"; };
-		47106AE3C2BFAD950F1117A0DEC7FAE2 /* YoutubePlayer-in-WKWebView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YoutubePlayer-in-WKWebView-prefix.pch"; sourceTree = "<group>"; };
+		43365310BBAA5A235373BA1EFC12E1D1 /* MMEDate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEDate.m; path = MapboxMobileEvents/MMEDate.m; sourceTree = "<group>"; };
+		4499FAA3696B0239DD566D6EF9BA233A /* WKYTPlayerView.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = WKYTPlayerView.bundle; path = WKYTPlayerView/WKYTPlayerView.bundle; sourceTree = "<group>"; };
+		46E63E6F449143C9EDEF09B03B08BC00 /* UIKit+MMEMobileEvents.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIKit+MMEMobileEvents.h"; path = "MapboxMobileEvents/Categories/UIKit+MMEMobileEvents.h"; sourceTree = "<group>"; };
+		470A7695B8E503C4621B1112318FA359 /* MMEUINavigation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEUINavigation.h; path = MapboxMobileEvents/MMEUINavigation.h; sourceTree = "<group>"; };
 		4925F10B1C71DF14B9A773B2C136909A /* Pods-ActiDiabetTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ActiDiabetTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		496B0ABE6A805E1DA208688812184B2B /* CLLocationManager+MMEMobileEvents.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CLLocationManager+MMEMobileEvents.m"; path = "MapboxMobileEvents/Categories/CLLocationManager+MMEMobileEvents.m"; sourceTree = "<group>"; };
-		49B0785ADA1B0349E87C67FF50FD4DF7 /* MMEEventsManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEEventsManager.h; path = MapboxMobileEvents/MMEEventsManager.h; sourceTree = "<group>"; };
-		4E3C4F9816A264FD84867A84CB72898D /* MMECertPin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMECertPin.m; path = MapboxMobileEvents/MMECertPin.m; sourceTree = "<group>"; };
-		50A5C5D2F6AE1A4FCCC02B09C5435CCE /* MMEUniqueIdentifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEUniqueIdentifier.h; path = MapboxMobileEvents/MMEUniqueIdentifier.h; sourceTree = "<group>"; };
-		50FE8E3DDE3918D61263B93F4E71D730 /* YoutubePlayer-in-WKWebView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "YoutubePlayer-in-WKWebView.release.xcconfig"; sourceTree = "<group>"; };
+		49BDF554FC86A77A26E58DB44E4B6612 /* MMEDependencyManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEDependencyManager.m; path = MapboxMobileEvents/MMEDependencyManager.m; sourceTree = "<group>"; };
+		4B91A31A8CA5A35B17A09DCEAC116E20 /* MMEMetrics.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEMetrics.m; path = MapboxMobileEvents/MMEMetrics.m; sourceTree = "<group>"; };
 		54875C9FD964BCB96B93BE98E61E5A0A /* Pods-ActiDiabet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ActiDiabet.release.xcconfig"; sourceTree = "<group>"; };
-		56E49810A51246DFFB02D49E6A617DCE /* Mapbox-iOS-SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Mapbox-iOS-SDK.release.xcconfig"; sourceTree = "<group>"; };
 		577462BBECF5D22A9C5CF8711969A486 /* Pods_ActiDiabet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ActiDiabet.framework; path = "Pods-ActiDiabet.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		57FE2473ADF2B3BC934B958DA35840E4 /* NSData+MMEGZIP.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+MMEGZIP.m"; path = "MapboxMobileEvents/Categories/NSData+MMEGZIP.m"; sourceTree = "<group>"; };
-		591873E1E1AF31546C357858F8085C30 /* MMEDate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEDate.m; path = MapboxMobileEvents/MMEDate.m; sourceTree = "<group>"; };
-		5D571144A42D8E899FDB259C247D5C80 /* WKYTPlayerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WKYTPlayerView.m; path = WKYTPlayerView/WKYTPlayerView.m; sourceTree = "<group>"; };
-		5EBBBC0003A514B235D4DC2FBFC5D71D /* MMENSURLSessionWrapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMENSURLSessionWrapper.m; path = MapboxMobileEvents/MMENSURLSessionWrapper.m; sourceTree = "<group>"; };
+		594F5119B68D08FCAF3389CA4BE52718 /* MMEConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEConstants.m; path = MapboxMobileEvents/MMEConstants.m; sourceTree = "<group>"; };
+		59BF248D2E6C715C48512D8F0BE54509 /* MMEEventLogReportViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEEventLogReportViewController.m; path = MapboxMobileEvents/MMEEventLogReportViewController.m; sourceTree = "<group>"; };
+		5C078C24893A966F2CF9AD1E557B546B /* MMENSURLSessionWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMENSURLSessionWrapper.h; path = MapboxMobileEvents/MMENSURLSessionWrapper.h; sourceTree = "<group>"; };
+		5C22C94BC814C558FBBCFD0F81FA3CBD /* MMEDependencyManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEDependencyManager.h; path = MapboxMobileEvents/MMEDependencyManager.h; sourceTree = "<group>"; };
+		5E79886FEBFD1E936F52BB33D821548B /* MMECommonEventData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMECommonEventData.m; path = MapboxMobileEvents/MMECommonEventData.m; sourceTree = "<group>"; };
 		5F9BB96729CA0C41BD4282769A142D77 /* Pods-ActiDiabet-ActiDiabetUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ActiDiabet-ActiDiabetUITests.modulemap"; sourceTree = "<group>"; };
-		6126CBD9C1B6519E2BC16F85A6C042B4 /* MMECertPin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMECertPin.h; path = MapboxMobileEvents/MMECertPin.h; sourceTree = "<group>"; };
-		68379A09DFE72AE19BB5300E9D013144 /* MMEEventsManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEEventsManager.m; path = MapboxMobileEvents/MMEEventsManager.m; sourceTree = "<group>"; };
-		6A18A1538CABEF1090E3F07D7ECB86A0 /* MMECategoryLoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMECategoryLoader.m; path = MapboxMobileEvents/Categories/MMECategoryLoader.m; sourceTree = "<group>"; };
-		710F70DDF999AF54ABAB8CAB98591E1D /* MMEMetricsManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEMetricsManager.h; path = MapboxMobileEvents/MMEMetricsManager.h; sourceTree = "<group>"; };
+		6623E20949BFB962FA2227FC177FCAC9 /* MMEAPIClient_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEAPIClient_Private.h; path = MapboxMobileEvents/MMEAPIClient_Private.h; sourceTree = "<group>"; };
+		69B50011E2462FD719AF271E6F8695A3 /* MMEDispatchManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEDispatchManager.h; path = MapboxMobileEvents/MMEDispatchManager.h; sourceTree = "<group>"; };
+		6B956D1017297EF366A261AAAEDCBFDB /* MMEMetrics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEMetrics.h; path = MapboxMobileEvents/MMEMetrics.h; sourceTree = "<group>"; };
+		6BD0BEFB8E7829949A09825A3281D30D /* MMEConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEConstants.h; path = MapboxMobileEvents/MMEConstants.h; sourceTree = "<group>"; };
+		6C5740F47BF143BA87C8BBAE2CA5F1F2 /* Mapbox-iOS-SDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Mapbox-iOS-SDK.xcconfig"; sourceTree = "<group>"; };
+		6F4DB8409401641ACDC7062DB50F587F /* MapboxMobileEvents-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MapboxMobileEvents-prefix.pch"; sourceTree = "<group>"; };
 		71278986E9E847A15582B7E603CB9C35 /* Pods-ActiDiabetTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ActiDiabetTests-umbrella.h"; sourceTree = "<group>"; };
+		746E5D614C887C37AF7848CA7D28B588 /* MMEEventLogReportViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEEventLogReportViewController.h; path = MapboxMobileEvents/MMEEventLogReportViewController.h; sourceTree = "<group>"; };
+		74F2C1725A3C96759C4DB1BC3A823B8F /* MMEUIApplicationWrapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEUIApplicationWrapper.m; path = MapboxMobileEvents/MMEUIApplicationWrapper.m; sourceTree = "<group>"; };
 		763DF10851EDFA729144025A940BD15F /* Pods-ActiDiabet.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ActiDiabet.modulemap"; sourceTree = "<group>"; };
 		7CDFA2DAE745FD57264494A16D3C14B6 /* MapboxMobileEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MapboxMobileEvents.framework; path = MapboxMobileEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E27886251B5DC78999D0EFAF97FE535 /* MapboxMobileEvents.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MapboxMobileEvents.h; path = MapboxMobileEvents/MapboxMobileEvents.h; sourceTree = "<group>"; };
-		7F52423E446B1F52F95402BFE5D330F6 /* MMEDate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEDate.h; path = MapboxMobileEvents/MMEDate.h; sourceTree = "<group>"; };
-		843546B3303571597EC904A6924E95FE /* MMEAPIClient_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEAPIClient_Private.h; path = MapboxMobileEvents/MMEAPIClient_Private.h; sourceTree = "<group>"; };
-		84F93BE6A7F783F2A68A9C3AA27A2E55 /* MMECommonEventData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMECommonEventData.h; path = MapboxMobileEvents/MMECommonEventData.h; sourceTree = "<group>"; };
-		861EB5A7081FDDF017DD50AD286C29E3 /* MMEEventLogReportViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEEventLogReportViewController.h; path = MapboxMobileEvents/MMEEventLogReportViewController.h; sourceTree = "<group>"; };
-		887AFF87C0B780BE56D9292EDF4BD4FB /* MMECategoryLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMECategoryLoader.h; path = MapboxMobileEvents/Categories/MMECategoryLoader.h; sourceTree = "<group>"; };
-		8A3D21716F46D8B268D54369FAC66683 /* MMETypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMETypes.h; path = MapboxMobileEvents/MMETypes.h; sourceTree = "<group>"; };
-		8C24BF9B4EA65864C46EEB9BBCA7D5FD /* NSUserDefaults+MMEConfiguration_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSUserDefaults+MMEConfiguration_Private.h"; path = "MapboxMobileEvents/Categories/NSUserDefaults+MMEConfiguration_Private.h"; sourceTree = "<group>"; };
-		8D40A8C61B24E1C5A1DBFDE5C06FDD78 /* MMECommonEventData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMECommonEventData.m; path = MapboxMobileEvents/MMECommonEventData.m; sourceTree = "<group>"; };
-		8E339AAF290E13A8E5FDD4F8800D2432 /* MMEReachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEReachability.h; path = MapboxMobileEvents/Reachability/MMEReachability.h; sourceTree = "<group>"; };
-		90ABCD02EA19EABD626FE6004E237A56 /* MMEDispatchManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEDispatchManager.m; path = MapboxMobileEvents/MMEDispatchManager.m; sourceTree = "<group>"; };
-		913514FFD3CCBD194D17596D3ED6A49E /* YoutubePlayer-in-WKWebView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YoutubePlayer-in-WKWebView-umbrella.h"; sourceTree = "<group>"; };
-		9233F834DC934165B44DCA9DFC10583A /* MMEUINavigation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEUINavigation.m; path = MapboxMobileEvents/MMEUINavigation.m; sourceTree = "<group>"; };
-		9732D75B6CF28F5F988F2B84251FBC34 /* MapboxMobileEvents-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MapboxMobileEvents-prefix.pch"; sourceTree = "<group>"; };
-		9AF479E0C34F65654813669110A89E1D /* Mapbox-iOS-SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Mapbox-iOS-SDK.debug.xcconfig"; sourceTree = "<group>"; };
+		7F2F67BEE2D5B83B8EC5F7310BB134C9 /* MMECategoryLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMECategoryLoader.h; path = MapboxMobileEvents/Categories/MMECategoryLoader.h; sourceTree = "<group>"; };
+		811DC68B3A020CDA29A17D8C5DDC32F8 /* MapboxMobileEvents-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MapboxMobileEvents-dummy.m"; sourceTree = "<group>"; };
+		89A2C93DA3CCB24934F068C3E731C694 /* NSUserDefaults+MMEConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSUserDefaults+MMEConfiguration.m"; path = "MapboxMobileEvents/Categories/NSUserDefaults+MMEConfiguration.m"; sourceTree = "<group>"; };
+		8C2D17A0A02A4C920B8A3F0943913F4E /* MMETimerManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMETimerManager.h; path = MapboxMobileEvents/MMETimerManager.h; sourceTree = "<group>"; };
+		8DEB3D3D04775D2CA6107D0925050F6C /* MMEMetricsManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEMetricsManager.h; path = MapboxMobileEvents/MMEMetricsManager.h; sourceTree = "<group>"; };
+		903D9141C9856AC3F72735238F6EF9B9 /* MMECategoryLoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMECategoryLoader.m; path = MapboxMobileEvents/Categories/MMECategoryLoader.m; sourceTree = "<group>"; };
+		907DB4AC4CDFA9624651E6444CDED59B /* CLLocation+MMEMobileEvents.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CLLocation+MMEMobileEvents.m"; path = "MapboxMobileEvents/Categories/CLLocation+MMEMobileEvents.m"; sourceTree = "<group>"; };
+		9A71961D5A7C13F389234A0C3C7FB80C /* YoutubePlayer-in-WKWebView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "YoutubePlayer-in-WKWebView.xcconfig"; sourceTree = "<group>"; };
 		9CBFF41CBC3FCEBF7DE8CF0082BAEE37 /* Pods-ActiDiabetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ActiDiabetTests.release.xcconfig"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E0CD50FC8D1B238932840E207658C90 /* Pods-ActiDiabet-ActiDiabetUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ActiDiabet-ActiDiabetUITests-Info.plist"; sourceTree = "<group>"; };
 		A0FEFDA600141541EDCA3466762E2E6B /* Pods-ActiDiabetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ActiDiabetTests.debug.xcconfig"; sourceTree = "<group>"; };
-		A14C9D915C98357AE4942B803E7A1C3A /* MMEEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEEvent.m; path = MapboxMobileEvents/MMEEvent.m; sourceTree = "<group>"; };
-		A2C36053270655013EA9A9AA11AD9935 /* MMENSURLSessionWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMENSURLSessionWrapper.h; path = MapboxMobileEvents/MMENSURLSessionWrapper.h; sourceTree = "<group>"; };
+		A16A296FD05994B6DC45F320BD815BBC /* MMEEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEEvent.h; path = MapboxMobileEvents/MMEEvent.h; sourceTree = "<group>"; };
+		A1C5E9547778C9F3435FC9BCD55F0C8F /* MMEUINavigation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEUINavigation.m; path = MapboxMobileEvents/MMEUINavigation.m; sourceTree = "<group>"; };
 		A4BDEC7EBE08649922BEE835D42A2022 /* Pods-ActiDiabetTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ActiDiabetTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		A7ABC06617C8DE99EC363FE2C48F9EBA /* MMEEventLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEEventLogger.m; path = MapboxMobileEvents/MMEEventLogger.m; sourceTree = "<group>"; };
+		A4E8479ED89DF618A4DAA81A7A0A46F8 /* CLLocationManager+MMEMobileEvents.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CLLocationManager+MMEMobileEvents.m"; path = "MapboxMobileEvents/Categories/CLLocationManager+MMEMobileEvents.m"; sourceTree = "<group>"; };
+		A59E6E7CB7DF598DAF9AD64558F56BA0 /* WKYTPlayerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WKYTPlayerView.m; path = WKYTPlayerView/WKYTPlayerView.m; sourceTree = "<group>"; };
 		ACE9C6EC7086718AEE2E3AADB777EC2E /* Pods_ActiDiabet_ActiDiabetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ActiDiabet_ActiDiabetUITests.framework; path = "Pods-ActiDiabet-ActiDiabetUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4E06BC46D0BAD5AA1DA9149127CF6AA /* MMEReachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEReachability.m; path = MapboxMobileEvents/Reachability/MMEReachability.m; sourceTree = "<group>"; };
-		B5B5228E6725594FDE63794EFE58BA2D /* MapboxMobileEvents-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MapboxMobileEvents-umbrella.h"; sourceTree = "<group>"; };
-		B61ADE95BAAD3672E27F4CABB6E150EB /* MMEUINavigation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEUINavigation.h; path = MapboxMobileEvents/MMEUINavigation.h; sourceTree = "<group>"; };
-		B6A94856FBF728A6C0FA1BD857ED58FC /* MMEDependencyManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEDependencyManager.m; path = MapboxMobileEvents/MMEDependencyManager.m; sourceTree = "<group>"; };
+		ADD762C8F1025BB8ABCCCBD910C9FA89 /* NSString+MMEVersions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MMEVersions.m"; path = "MapboxMobileEvents/Categories/NSString+MMEVersions.m"; sourceTree = "<group>"; };
+		AF98B3E0A898943BA00CDDCDAF23C91D /* MMECommonEventData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMECommonEventData.h; path = MapboxMobileEvents/MMECommonEventData.h; sourceTree = "<group>"; };
 		B76CACFF8D060A0265A25B6CAC41C322 /* Pods-ActiDiabet-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ActiDiabet-umbrella.h"; sourceTree = "<group>"; };
-		B7D50CD6578D0B4424E5E1924ACDBEA6 /* MMEMetrics.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEMetrics.m; path = MapboxMobileEvents/MMEMetrics.m; sourceTree = "<group>"; };
-		B894D05C4C2BC5B1D8E7C05A0DF602D3 /* MMETimerManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMETimerManager.m; path = MapboxMobileEvents/MMETimerManager.m; sourceTree = "<group>"; };
 		B92EE545B2A5A820EEE33B95A584798A /* Pods-ActiDiabet-ActiDiabetUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ActiDiabet-ActiDiabetUITests.release.xcconfig"; sourceTree = "<group>"; };
-		BD444E2E8697D5A4C662BCCD73D3055B /* UIKit+MMEMobileEvents.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIKit+MMEMobileEvents.m"; path = "MapboxMobileEvents/Categories/UIKit+MMEMobileEvents.m"; sourceTree = "<group>"; };
+		BE1560207F47059FE1BAABABB2B7D20E /* YoutubePlayer-in-WKWebView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "YoutubePlayer-in-WKWebView.modulemap"; sourceTree = "<group>"; };
 		BE9B704DF0F27CD77003A1DCEEC72072 /* Pods-ActiDiabet-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ActiDiabet-Info.plist"; sourceTree = "<group>"; };
-		CDE19641E90DD667772D664B69A154C7 /* NSString+MMEVersions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MMEVersions.h"; path = "MapboxMobileEvents/Categories/NSString+MMEVersions.h"; sourceTree = "<group>"; };
+		BEC1A5C2623D76544AFAC5813E9158A9 /* MapboxMobileEvents.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MapboxMobileEvents.xcconfig; sourceTree = "<group>"; };
+		C46AEBC1D29E44750743303F65057A6E /* MMENSURLSessionWrapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMENSURLSessionWrapper.m; path = MapboxMobileEvents/MMENSURLSessionWrapper.m; sourceTree = "<group>"; };
+		C49EF6AFFB83DB030B065312B361CC21 /* MMEDispatchManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEDispatchManager.m; path = MapboxMobileEvents/MMEDispatchManager.m; sourceTree = "<group>"; };
+		C5E4A16CDC5E57EEEDA240346D8C5EB0 /* YoutubePlayer-in-WKWebView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YoutubePlayer-in-WKWebView-prefix.pch"; sourceTree = "<group>"; };
+		C716D558AC732C2213ACF1FB7079ED77 /* MMEEventLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEEventLogger.m; path = MapboxMobileEvents/MMEEventLogger.m; sourceTree = "<group>"; };
 		CF42BB5D77E88CD237FC4983F91AC0B4 /* Pods-ActiDiabet-ActiDiabetUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ActiDiabet-ActiDiabetUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D1BA7638DDF868F99C15A9C8CA1CCF99 /* UIKit+MMEMobileEvents.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIKit+MMEMobileEvents.h"; path = "MapboxMobileEvents/Categories/UIKit+MMEMobileEvents.h"; sourceTree = "<group>"; };
-		D2923931AB03640D1E1EA71BF620DA56 /* CLLocation+MMEMobileEvents.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CLLocation+MMEMobileEvents.m"; path = "MapboxMobileEvents/Categories/CLLocation+MMEMobileEvents.m"; sourceTree = "<group>"; };
-		D2B1E4404ABE0E48E8E7DCDD1809FA74 /* WKYTPlayerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WKYTPlayerView.h; path = WKYTPlayerView/WKYTPlayerView.h; sourceTree = "<group>"; };
-		D2CD37252644D9796E8F091075ED1CC5 /* MapboxMobileEvents-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MapboxMobileEvents-dummy.m"; sourceTree = "<group>"; };
-		D4B1C336786D506E11605014C037704B /* MapboxMobileEvents-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MapboxMobileEvents-Info.plist"; sourceTree = "<group>"; };
-		D546DA357359A5C81C99CBB80B9E9A58 /* MMELocationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMELocationManager.h; path = MapboxMobileEvents/MMELocationManager.h; sourceTree = "<group>"; };
+		D00095E0E67B635184C2F29D5FAD2977 /* MMEAPIClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEAPIClient.m; path = MapboxMobileEvents/MMEAPIClient.m; sourceTree = "<group>"; };
+		D00191FE91876BEE8ADDDC3F29096877 /* MMEReachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEReachability.h; path = MapboxMobileEvents/Reachability/MMEReachability.h; sourceTree = "<group>"; };
+		D24442DF71954A764E0982534A9F823F /* MMEReachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEReachability.m; path = MapboxMobileEvents/Reachability/MMEReachability.m; sourceTree = "<group>"; };
+		D2C2515FB630278D0282930871119081 /* MapboxMobileEvents-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MapboxMobileEvents-umbrella.h"; sourceTree = "<group>"; };
+		D4E33D498131D772620235F834DA4125 /* MMEEventsManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEEventsManager.h; path = MapboxMobileEvents/MMEEventsManager.h; sourceTree = "<group>"; };
 		D5F44C97B01F2F7ABED6C9759344A9E5 /* Pods-ActiDiabetTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ActiDiabetTests.modulemap"; sourceTree = "<group>"; };
-		D746DE6417502FFF8D793DDD186C54D9 /* MMEEventsManager_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEEventsManager_Private.h; path = MapboxMobileEvents/MMEEventsManager_Private.h; sourceTree = "<group>"; };
+		D7FFAB971740628ED86258A35C287D33 /* MMEEventsManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEEventsManager.m; path = MapboxMobileEvents/MMEEventsManager.m; sourceTree = "<group>"; };
 		D80A24CBD47D46301E045A2FD3FCB391 /* Pods-ActiDiabet-ActiDiabetUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ActiDiabet-ActiDiabetUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		D814BA466C5E561127AAC8C05F50A9EB /* MMEDispatchManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEDispatchManager.h; path = MapboxMobileEvents/MMEDispatchManager.h; sourceTree = "<group>"; };
 		D97C907DADC944628CE2D665DF7057A6 /* Pods-ActiDiabetTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ActiDiabetTests-Info.plist"; sourceTree = "<group>"; };
 		DE0FAB1DA724AB86C0E299518F5E580A /* YoutubePlayer_in_WKWebView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = YoutubePlayer_in_WKWebView.framework; path = "YoutubePlayer-in-WKWebView.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E0426D48C6EF4FF0FD42DC33191C3CB1 /* MMEEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEEvent.h; path = MapboxMobileEvents/MMEEvent.h; sourceTree = "<group>"; };
-		E1EB605560205C48F2B4C37E0B41A99E /* MapboxMobileEvents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MapboxMobileEvents.release.xcconfig; sourceTree = "<group>"; };
+		E2E82262096A7FB1B86C94EAE499C323 /* NSData+MMEGZIP.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+MMEGZIP.h"; path = "MapboxMobileEvents/Categories/NSData+MMEGZIP.h"; sourceTree = "<group>"; };
 		E35A1BD518F6CDA5F451145936973E41 /* Pods-ActiDiabet-ActiDiabetUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ActiDiabet-ActiDiabetUITests-dummy.m"; sourceTree = "<group>"; };
-		E5A9C86F87464FE7104C13ABB9F6F562 /* logger.html */ = {isa = PBXFileReference; includeInIndex = 1; name = logger.html; path = MapboxMobileEvents/Resources/logger.html; sourceTree = "<group>"; };
-		E839E535CF9DCB134B4881272CC34105 /* MMEUIApplicationWrapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEUIApplicationWrapper.m; path = MapboxMobileEvents/MMEUIApplicationWrapper.m; sourceTree = "<group>"; };
+		E6C9465ED6788023987FDC842D82F1FE /* WKYTPlayerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WKYTPlayerView.h; path = WKYTPlayerView/WKYTPlayerView.h; sourceTree = "<group>"; };
 		E969275CFC772D47E5F8A3438CDBB351 /* Pods-ActiDiabet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ActiDiabet.debug.xcconfig"; sourceTree = "<group>"; };
-		E9949DDB3C63DC3D259CF9D862B43779 /* MMEConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEConstants.h; path = MapboxMobileEvents/MMEConstants.h; sourceTree = "<group>"; };
 		EBB1FD9A7AF56B06BE9A190EA0164CEE /* Pods-ActiDiabetTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ActiDiabetTests-dummy.m"; sourceTree = "<group>"; };
-		ECFC99CEA6CCD3934433C2A75EC69FD1 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = dynamic/Mapbox.framework; sourceTree = "<group>"; };
 		EDE3CA8792C28FE68BDABDF3F737DFE4 /* Pods-ActiDiabet-ActiDiabetUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ActiDiabet-ActiDiabetUITests-frameworks.sh"; sourceTree = "<group>"; };
-		EE361D26B5539F36229F061544F58392 /* NSData+MMEGZIP.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+MMEGZIP.h"; path = "MapboxMobileEvents/Categories/NSData+MMEGZIP.h"; sourceTree = "<group>"; };
-		EF6C7544F291A23201621B6236E00100 /* CLLocationManager+MMEMobileEvents.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CLLocationManager+MMEMobileEvents.h"; path = "MapboxMobileEvents/Categories/CLLocationManager+MMEMobileEvents.h"; sourceTree = "<group>"; };
-		F114E260928194C745AA9C4BB57B478C /* MMELocationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMELocationManager.m; path = MapboxMobileEvents/MMELocationManager.m; sourceTree = "<group>"; };
-		F2531A6E8F4ECCE9F59101B4E896A499 /* MMEAPIClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEAPIClient.m; path = MapboxMobileEvents/MMEAPIClient.m; sourceTree = "<group>"; };
+		F31765C27FEFD03CB4221A4CB75D03C2 /* MMEEventLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMEEventLogger.h; path = MapboxMobileEvents/MMEEventLogger.h; sourceTree = "<group>"; };
+		F5479695D5D382B34CED2C0FB8166B17 /* MMEMetricsManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMEMetricsManager.m; path = MapboxMobileEvents/MMEMetricsManager.m; sourceTree = "<group>"; };
+		F6AB1D1F7C7BA002B89429DA86B2B514 /* CLLocationManager+MMEMobileEvents.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CLLocationManager+MMEMobileEvents.h"; path = "MapboxMobileEvents/Categories/CLLocationManager+MMEMobileEvents.h"; sourceTree = "<group>"; };
 		FA1395A32CB96C7119E84E3C90D4AD58 /* Pods-ActiDiabet-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ActiDiabet-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FD56808487702EDABC10512E6686780C /* YoutubePlayer-in-WKWebView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YoutubePlayer-in-WKWebView-umbrella.h"; sourceTree = "<group>"; };
+		FF9A83A1BC6CB6957C01014B68418051 /* MMECertPin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMECertPin.m; path = MapboxMobileEvents/MMECertPin.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,67 +316,111 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		047DAEB602678F84CD86208E969AA58B /* YoutubePlayer-in-WKWebView */ = {
+		1723AB7748E446E1E98BB75C48D6D1FF /* Mapbox-iOS-SDK */ = {
 			isa = PBXGroup;
 			children = (
-				D2B1E4404ABE0E48E8E7DCDD1809FA74 /* WKYTPlayerView.h */,
-				5D571144A42D8E899FDB259C247D5C80 /* WKYTPlayerView.m */,
-				6D095C6AD432C84974CB600D7673597A /* Resources */,
-				9428608FECBA898617B081F5DDC76BE6 /* Support Files */,
-			);
-			name = "YoutubePlayer-in-WKWebView";
-			path = "YoutubePlayer-in-WKWebView";
-			sourceTree = "<group>";
-		};
-		0BF9E3C627837CC5FE1D1F2FBFFEB151 /* Mapbox-iOS-SDK */ = {
-			isa = PBXGroup;
-			children = (
-				596924452F9948DCE29E598AA7DAD40D /* Frameworks */,
-				176FE4BAAC37DC732455C21D08458905 /* Support Files */,
+				9FB5CAFC89C25B0D1726B32FF766562C /* Frameworks */,
+				4FCF22DE9F904BD1054521321305339E /* Support Files */,
 			);
 			name = "Mapbox-iOS-SDK";
 			path = "Mapbox-iOS-SDK";
 			sourceTree = "<group>";
 		};
-		176FE4BAAC37DC732455C21D08458905 /* Support Files */ = {
+		1DB9A0128EFDC7D8FAACF1D3365419CB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				9AF479E0C34F65654813669110A89E1D /* Mapbox-iOS-SDK.debug.xcconfig */,
-				56E49810A51246DFFB02D49E6A617DCE /* Mapbox-iOS-SDK.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Mapbox-iOS-SDK";
-			sourceTree = "<group>";
-		};
-		27E349E41F8BCD4A4EBEC7784E95FD01 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				E5A9C86F87464FE7104C13ABB9F6F562 /* logger.html */,
+				4499FAA3696B0239DD566D6EF9BA233A /* WKYTPlayerView.bundle */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		2CC86BBEBD425A129878A2B1BFB02737 /* Support Files */ = {
+		2BCAE4F6A221DE2934881E77512C9693 /* YoutubePlayer-in-WKWebView */ = {
 			isa = PBXGroup;
 			children = (
-				0FCD79A984A79C73EBFA4DADCD3CC226 /* MapboxMobileEvents.modulemap */,
-				D2CD37252644D9796E8F091075ED1CC5 /* MapboxMobileEvents-dummy.m */,
-				D4B1C336786D506E11605014C037704B /* MapboxMobileEvents-Info.plist */,
-				9732D75B6CF28F5F988F2B84251FBC34 /* MapboxMobileEvents-prefix.pch */,
-				B5B5228E6725594FDE63794EFE58BA2D /* MapboxMobileEvents-umbrella.h */,
-				1FB45299BF94D957812729E971A3722A /* MapboxMobileEvents.debug.xcconfig */,
-				E1EB605560205C48F2B4C37E0B41A99E /* MapboxMobileEvents.release.xcconfig */,
+				E6C9465ED6788023987FDC842D82F1FE /* WKYTPlayerView.h */,
+				A59E6E7CB7DF598DAF9AD64558F56BA0 /* WKYTPlayerView.m */,
+				1DB9A0128EFDC7D8FAACF1D3365419CB /* Resources */,
+				6C8F81FE76C6A0032A096D60DF727874 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/MapboxMobileEvents";
+			name = "YoutubePlayer-in-WKWebView";
+			path = "YoutubePlayer-in-WKWebView";
+			sourceTree = "<group>";
+		};
+		38F969C66A7043A8BEA358BD6FFFF5A0 /* MapboxMobileEvents */ = {
+			isa = PBXGroup;
+			children = (
+				219D4DD4F4C1C93077476CF1C941561D /* CLLocation+MMEMobileEvents.h */,
+				907DB4AC4CDFA9624651E6444CDED59B /* CLLocation+MMEMobileEvents.m */,
+				F6AB1D1F7C7BA002B89429DA86B2B514 /* CLLocationManager+MMEMobileEvents.h */,
+				A4E8479ED89DF618A4DAA81A7A0A46F8 /* CLLocationManager+MMEMobileEvents.m */,
+				2E01EB6E3824683EA5A45D5101BD00AD /* MapboxMobileEvents.h */,
+				3B0DBEB00F68EE68146042D77EC4EF65 /* MMEAPIClient.h */,
+				D00095E0E67B635184C2F29D5FAD2977 /* MMEAPIClient.m */,
+				6623E20949BFB962FA2227FC177FCAC9 /* MMEAPIClient_Private.h */,
+				7F2F67BEE2D5B83B8EC5F7310BB134C9 /* MMECategoryLoader.h */,
+				903D9141C9856AC3F72735238F6EF9B9 /* MMECategoryLoader.m */,
+				019E3D023367C97AB638C9DC669DB798 /* MMECertPin.h */,
+				FF9A83A1BC6CB6957C01014B68418051 /* MMECertPin.m */,
+				AF98B3E0A898943BA00CDDCDAF23C91D /* MMECommonEventData.h */,
+				5E79886FEBFD1E936F52BB33D821548B /* MMECommonEventData.m */,
+				6BD0BEFB8E7829949A09825A3281D30D /* MMEConstants.h */,
+				594F5119B68D08FCAF3389CA4BE52718 /* MMEConstants.m */,
+				287926DE97BED9E650B1469D995F6EB1 /* MMEDate.h */,
+				43365310BBAA5A235373BA1EFC12E1D1 /* MMEDate.m */,
+				5C22C94BC814C558FBBCFD0F81FA3CBD /* MMEDependencyManager.h */,
+				49BDF554FC86A77A26E58DB44E4B6612 /* MMEDependencyManager.m */,
+				69B50011E2462FD719AF271E6F8695A3 /* MMEDispatchManager.h */,
+				C49EF6AFFB83DB030B065312B361CC21 /* MMEDispatchManager.m */,
+				A16A296FD05994B6DC45F320BD815BBC /* MMEEvent.h */,
+				376E8EB4379F6F9E6B23EA34937AF536 /* MMEEvent.m */,
+				F31765C27FEFD03CB4221A4CB75D03C2 /* MMEEventLogger.h */,
+				C716D558AC732C2213ACF1FB7079ED77 /* MMEEventLogger.m */,
+				746E5D614C887C37AF7848CA7D28B588 /* MMEEventLogReportViewController.h */,
+				59BF248D2E6C715C48512D8F0BE54509 /* MMEEventLogReportViewController.m */,
+				D4E33D498131D772620235F834DA4125 /* MMEEventsManager.h */,
+				D7FFAB971740628ED86258A35C287D33 /* MMEEventsManager.m */,
+				20F470CC8EC1F82927C297CF5F7AAE02 /* MMEEventsManager_Private.h */,
+				0C61EDAC726514E9BB5DA4BD2491055F /* MMELocationManager.h */,
+				2DFCB80DC867446EEFAFD45AEB2C9E1B /* MMELocationManager.m */,
+				6B956D1017297EF366A261AAAEDCBFDB /* MMEMetrics.h */,
+				4B91A31A8CA5A35B17A09DCEAC116E20 /* MMEMetrics.m */,
+				8DEB3D3D04775D2CA6107D0925050F6C /* MMEMetricsManager.h */,
+				F5479695D5D382B34CED2C0FB8166B17 /* MMEMetricsManager.m */,
+				5C078C24893A966F2CF9AD1E557B546B /* MMENSURLSessionWrapper.h */,
+				C46AEBC1D29E44750743303F65057A6E /* MMENSURLSessionWrapper.m */,
+				D00191FE91876BEE8ADDDC3F29096877 /* MMEReachability.h */,
+				D24442DF71954A764E0982534A9F823F /* MMEReachability.m */,
+				8C2D17A0A02A4C920B8A3F0943913F4E /* MMETimerManager.h */,
+				2832C2722FD1044C1B6E798DBB7645D0 /* MMETimerManager.m */,
+				1FD2235D6B95EA96F90C6296D2C9C18A /* MMETypes.h */,
+				23B3EF04ECD557419EF21AD8CBF719A6 /* MMEUIApplicationWrapper.h */,
+				74F2C1725A3C96759C4DB1BC3A823B8F /* MMEUIApplicationWrapper.m */,
+				470A7695B8E503C4621B1112318FA359 /* MMEUINavigation.h */,
+				A1C5E9547778C9F3435FC9BCD55F0C8F /* MMEUINavigation.m */,
+				3BCB1483458EEB0CCF9F1BBB3248FEF2 /* MMEUniqueIdentifier.h */,
+				4124403AD1C9AF4612FF11D6D4082DC1 /* MMEUniqueIdentifier.m */,
+				E2E82262096A7FB1B86C94EAE499C323 /* NSData+MMEGZIP.h */,
+				281A3CD96C9C35E6B2E1911E02EB27C4 /* NSData+MMEGZIP.m */,
+				303D9248EFC400888CC51004F685C479 /* NSString+MMEVersions.h */,
+				ADD762C8F1025BB8ABCCCBD910C9FA89 /* NSString+MMEVersions.m */,
+				37B2640A6B7327849791621C6CCE2450 /* NSUserDefaults+MMEConfiguration.h */,
+				89A2C93DA3CCB24934F068C3E731C694 /* NSUserDefaults+MMEConfiguration.m */,
+				1131B26D9C0CF225A73C475004A3D022 /* NSUserDefaults+MMEConfiguration_Private.h */,
+				46E63E6F449143C9EDEF09B03B08BC00 /* UIKit+MMEMobileEvents.h */,
+				1D8D85592567E4B768A1EE24AD965648 /* UIKit+MMEMobileEvents.m */,
+				6416EB1C33D3E22A2DEBD05DAF7CB63E /* Resources */,
+				AB4CF5E6AA50E76EFB14F83F69A34894 /* Support Files */,
+			);
+			name = MapboxMobileEvents;
+			path = MapboxMobileEvents;
 			sourceTree = "<group>";
 		};
 		4E2FF8519DB54AB9538CB727E66D4791 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0BF9E3C627837CC5FE1D1F2FBFFEB151 /* Mapbox-iOS-SDK */,
-				A8E037F351D64D87F8CF49F5EDD8F9DA /* MapboxMobileEvents */,
-				047DAEB602678F84CD86208E969AA58B /* YoutubePlayer-in-WKWebView */,
+				1723AB7748E446E1E98BB75C48D6D1FF /* Mapbox-iOS-SDK */,
+				38F969C66A7043A8BEA358BD6FFFF5A0 /* MapboxMobileEvents */,
+				2BCAE4F6A221DE2934881E77512C9693 /* YoutubePlayer-in-WKWebView */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -392,6 +433,15 @@
 				5C28755263A935ACC4AF0111E995D058 /* Pods-ActiDiabetTests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		4FCF22DE9F904BD1054521321305339E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6C5740F47BF143BA87C8BBAE2CA5F1F2 /* Mapbox-iOS-SDK.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Mapbox-iOS-SDK";
 			sourceTree = "<group>";
 		};
 		500E7390D7216B7C2BCD36DB7D2C1A5A /* Pods-ActiDiabet-ActiDiabetUITests */ = {
@@ -411,14 +461,6 @@
 			path = "Target Support Files/Pods-ActiDiabet-ActiDiabetUITests";
 			sourceTree = "<group>";
 		};
-		596924452F9948DCE29E598AA7DAD40D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				ECFC99CEA6CCD3934433C2A75EC69FD1 /* Mapbox.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		5C28755263A935ACC4AF0111E995D058 /* Pods-ActiDiabetTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -435,12 +477,26 @@
 			path = "Target Support Files/Pods-ActiDiabetTests";
 			sourceTree = "<group>";
 		};
-		6D095C6AD432C84974CB600D7673597A /* Resources */ = {
+		6416EB1C33D3E22A2DEBD05DAF7CB63E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				223EBEED5744638C312697FE8DACE5EB /* WKYTPlayerView.bundle */,
+				185D45FC2582545CC2E97831C6C867F9 /* logger.html */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		6C8F81FE76C6A0032A096D60DF727874 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE1560207F47059FE1BAABABB2B7D20E /* YoutubePlayer-in-WKWebView.modulemap */,
+				9A71961D5A7C13F389234A0C3C7FB80C /* YoutubePlayer-in-WKWebView.xcconfig */,
+				285F94B3CA44DD8394AC19E7BC4A8868 /* YoutubePlayer-in-WKWebView-dummy.m */,
+				2C7F7BA41B5AF148F116F2EC407B2078 /* YoutubePlayer-in-WKWebView-Info.plist */,
+				C5E4A16CDC5E57EEEDA240346D8C5EB0 /* YoutubePlayer-in-WKWebView-prefix.pch */,
+				FD56808487702EDABC10512E6686780C /* YoutubePlayer-in-WKWebView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/YoutubePlayer-in-WKWebView";
 			sourceTree = "<group>";
 		};
 		6F6A10CC75E5E4D64B1CED3DC9296479 /* Pods-ActiDiabet */ = {
@@ -472,88 +528,26 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9428608FECBA898617B081F5DDC76BE6 /* Support Files */ = {
+		9FB5CAFC89C25B0D1726B32FF766562C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				15F2DE31D7AB5A160E6AFD2FC70D9E28 /* YoutubePlayer-in-WKWebView.modulemap */,
-				3B63265B0F8952BE25CBB5E45BF6FECF /* YoutubePlayer-in-WKWebView-dummy.m */,
-				3E590B98E591210BB82AEFDA9C4C55B6 /* YoutubePlayer-in-WKWebView-Info.plist */,
-				47106AE3C2BFAD950F1117A0DEC7FAE2 /* YoutubePlayer-in-WKWebView-prefix.pch */,
-				913514FFD3CCBD194D17596D3ED6A49E /* YoutubePlayer-in-WKWebView-umbrella.h */,
-				08B247E193755974F1ED84F377D61884 /* YoutubePlayer-in-WKWebView.debug.xcconfig */,
-				50FE8E3DDE3918D61263B93F4E71D730 /* YoutubePlayer-in-WKWebView.release.xcconfig */,
+				06E08CA27F34A1ADD683A8B3E30E566E /* Mapbox.framework */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/YoutubePlayer-in-WKWebView";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A8E037F351D64D87F8CF49F5EDD8F9DA /* MapboxMobileEvents */ = {
+		AB4CF5E6AA50E76EFB14F83F69A34894 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				0E146AE5CACE6D1EDFC76787699D9130 /* CLLocation+MMEMobileEvents.h */,
-				D2923931AB03640D1E1EA71BF620DA56 /* CLLocation+MMEMobileEvents.m */,
-				EF6C7544F291A23201621B6236E00100 /* CLLocationManager+MMEMobileEvents.h */,
-				496B0ABE6A805E1DA208688812184B2B /* CLLocationManager+MMEMobileEvents.m */,
-				7E27886251B5DC78999D0EFAF97FE535 /* MapboxMobileEvents.h */,
-				15B817810F2621A5524B1D45784EBF64 /* MMEAPIClient.h */,
-				F2531A6E8F4ECCE9F59101B4E896A499 /* MMEAPIClient.m */,
-				843546B3303571597EC904A6924E95FE /* MMEAPIClient_Private.h */,
-				887AFF87C0B780BE56D9292EDF4BD4FB /* MMECategoryLoader.h */,
-				6A18A1538CABEF1090E3F07D7ECB86A0 /* MMECategoryLoader.m */,
-				6126CBD9C1B6519E2BC16F85A6C042B4 /* MMECertPin.h */,
-				4E3C4F9816A264FD84867A84CB72898D /* MMECertPin.m */,
-				84F93BE6A7F783F2A68A9C3AA27A2E55 /* MMECommonEventData.h */,
-				8D40A8C61B24E1C5A1DBFDE5C06FDD78 /* MMECommonEventData.m */,
-				E9949DDB3C63DC3D259CF9D862B43779 /* MMEConstants.h */,
-				04DB41588BCBADC83D90C2BEFA604FEC /* MMEConstants.m */,
-				7F52423E446B1F52F95402BFE5D330F6 /* MMEDate.h */,
-				591873E1E1AF31546C357858F8085C30 /* MMEDate.m */,
-				10D4729647F05AD6DD6A16EE0B0A8D05 /* MMEDependencyManager.h */,
-				B6A94856FBF728A6C0FA1BD857ED58FC /* MMEDependencyManager.m */,
-				D814BA466C5E561127AAC8C05F50A9EB /* MMEDispatchManager.h */,
-				90ABCD02EA19EABD626FE6004E237A56 /* MMEDispatchManager.m */,
-				E0426D48C6EF4FF0FD42DC33191C3CB1 /* MMEEvent.h */,
-				A14C9D915C98357AE4942B803E7A1C3A /* MMEEvent.m */,
-				2AE4B5DE39FF5C8B3FACDBC9260AD504 /* MMEEventLogger.h */,
-				A7ABC06617C8DE99EC363FE2C48F9EBA /* MMEEventLogger.m */,
-				861EB5A7081FDDF017DD50AD286C29E3 /* MMEEventLogReportViewController.h */,
-				3488EF3ABB076765B4D2B7F77C428302 /* MMEEventLogReportViewController.m */,
-				49B0785ADA1B0349E87C67FF50FD4DF7 /* MMEEventsManager.h */,
-				68379A09DFE72AE19BB5300E9D013144 /* MMEEventsManager.m */,
-				D746DE6417502FFF8D793DDD186C54D9 /* MMEEventsManager_Private.h */,
-				D546DA357359A5C81C99CBB80B9E9A58 /* MMELocationManager.h */,
-				F114E260928194C745AA9C4BB57B478C /* MMELocationManager.m */,
-				41FEF155690D30F5CDCD9751E67C1FE1 /* MMEMetrics.h */,
-				B7D50CD6578D0B4424E5E1924ACDBEA6 /* MMEMetrics.m */,
-				710F70DDF999AF54ABAB8CAB98591E1D /* MMEMetricsManager.h */,
-				3CA4FD601260906EB02FF3AA2ECC214C /* MMEMetricsManager.m */,
-				A2C36053270655013EA9A9AA11AD9935 /* MMENSURLSessionWrapper.h */,
-				5EBBBC0003A514B235D4DC2FBFC5D71D /* MMENSURLSessionWrapper.m */,
-				8E339AAF290E13A8E5FDD4F8800D2432 /* MMEReachability.h */,
-				B4E06BC46D0BAD5AA1DA9149127CF6AA /* MMEReachability.m */,
-				39961E8A785BD37AABE4742A3530A609 /* MMETimerManager.h */,
-				B894D05C4C2BC5B1D8E7C05A0DF602D3 /* MMETimerManager.m */,
-				8A3D21716F46D8B268D54369FAC66683 /* MMETypes.h */,
-				3A3C270F71B4EB093D0C423687C69ACD /* MMEUIApplicationWrapper.h */,
-				E839E535CF9DCB134B4881272CC34105 /* MMEUIApplicationWrapper.m */,
-				B61ADE95BAAD3672E27F4CABB6E150EB /* MMEUINavigation.h */,
-				9233F834DC934165B44DCA9DFC10583A /* MMEUINavigation.m */,
-				50A5C5D2F6AE1A4FCCC02B09C5435CCE /* MMEUniqueIdentifier.h */,
-				16F2406B9D8D31972DD2C2E7B5E91E36 /* MMEUniqueIdentifier.m */,
-				EE361D26B5539F36229F061544F58392 /* NSData+MMEGZIP.h */,
-				57FE2473ADF2B3BC934B958DA35840E4 /* NSData+MMEGZIP.m */,
-				CDE19641E90DD667772D664B69A154C7 /* NSString+MMEVersions.h */,
-				081296B62F50346CD6B1A028C5EF1E72 /* NSString+MMEVersions.m */,
-				1A04FBC70C872F1C7F1D67218349CA2E /* NSUserDefaults+MMEConfiguration.h */,
-				1ED660BB5ED7694CE44A95893F2D12DF /* NSUserDefaults+MMEConfiguration.m */,
-				8C24BF9B4EA65864C46EEB9BBCA7D5FD /* NSUserDefaults+MMEConfiguration_Private.h */,
-				D1BA7638DDF868F99C15A9C8CA1CCF99 /* UIKit+MMEMobileEvents.h */,
-				BD444E2E8697D5A4C662BCCD73D3055B /* UIKit+MMEMobileEvents.m */,
-				27E349E41F8BCD4A4EBEC7784E95FD01 /* Resources */,
-				2CC86BBEBD425A129878A2B1BFB02737 /* Support Files */,
+				3621A78A0774D1B2771CD769E3AB34D4 /* MapboxMobileEvents.modulemap */,
+				BEC1A5C2623D76544AFAC5813E9158A9 /* MapboxMobileEvents.xcconfig */,
+				811DC68B3A020CDA29A17D8C5DDC32F8 /* MapboxMobileEvents-dummy.m */,
+				2D8DD5BDCAC6075B90EA53DFD3B163FE /* MapboxMobileEvents-Info.plist */,
+				6F4DB8409401641ACDC7062DB50F587F /* MapboxMobileEvents-prefix.pch */,
+				D2C2515FB630278D0282930871119081 /* MapboxMobileEvents-umbrella.h */,
 			);
-			name = MapboxMobileEvents;
-			path = MapboxMobileEvents;
+			name = "Support Files";
+			path = "../Target Support Files/MapboxMobileEvents";
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -1014,41 +1008,6 @@
 			};
 			name = Release;
 		};
-		1E0693244CFBC122A3A9D33965096A2D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 08B247E193755974F1ED84F377D61884 /* YoutubePlayer-in-WKWebView.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/YoutubePlayer-in-WKWebView/YoutubePlayer-in-WKWebView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/YoutubePlayer-in-WKWebView/YoutubePlayer-in-WKWebView-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/YoutubePlayer-in-WKWebView/YoutubePlayer-in-WKWebView.modulemap";
-				PRODUCT_MODULE_NAME = YoutubePlayer_in_WKWebView;
-				PRODUCT_NAME = YoutubePlayer_in_WKWebView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		34FD332B3AF1CA25B018569E0E0A91DE /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9CBFF41CBC3FCEBF7DE8CF0082BAEE37 /* Pods-ActiDiabetTests.release.xcconfig */;
@@ -1088,40 +1047,6 @@
 			};
 			name = Release;
 		};
-		4550700699BE16A87090969B946E60F7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1FB45299BF94D957812729E971A3722A /* MapboxMobileEvents.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/MapboxMobileEvents/MapboxMobileEvents-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MapboxMobileEvents/MapboxMobileEvents-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/MapboxMobileEvents/MapboxMobileEvents.modulemap";
-				PRODUCT_MODULE_NAME = MapboxMobileEvents;
-				PRODUCT_NAME = MapboxMobileEvents;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		5C8255F0F125324FC9B17A07C19EF6E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A0FEFDA600141541EDCA3466762E2E6B /* Pods-ActiDiabetTests.debug.xcconfig */;
@@ -1160,9 +1085,9 @@
 			};
 			name = Debug;
 		};
-		7346D9C302B87B1557BDA7CB01513E6F /* Debug */ = {
+		77F8E35395A0FA5218B5943E87C53502 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9AF479E0C34F65654813669110A89E1D /* Mapbox-iOS-SDK.debug.xcconfig */;
+			baseConfigurationReference = 6C5740F47BF143BA87C8BBAE2CA5F1F2 /* Mapbox-iOS-SDK.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1173,8 +1098,9 @@
 				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
 		8340F6C830CA5411B05D939D005E5ED5 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1253,9 +1179,44 @@
 			};
 			name = Debug;
 		};
-		B13A6132779C011CC56EFD1BC2949ECD /* Release */ = {
+		98A441DE33D95BFBD05FFF5AFE652BFF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 56E49810A51246DFFB02D49E6A617DCE /* Mapbox-iOS-SDK.release.xcconfig */;
+			baseConfigurationReference = BEC1A5C2623D76544AFAC5813E9158A9 /* MapboxMobileEvents.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MapboxMobileEvents/MapboxMobileEvents-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MapboxMobileEvents/MapboxMobileEvents-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/MapboxMobileEvents/MapboxMobileEvents.modulemap";
+				PRODUCT_MODULE_NAME = MapboxMobileEvents;
+				PRODUCT_NAME = MapboxMobileEvents;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B83161E4F52D3800B9772F85CA1B4E2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C5740F47BF143BA87C8BBAE2CA5F1F2 /* Mapbox-iOS-SDK.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1266,7 +1227,77 @@
 				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C283CCE0FDEDC41C8F0F0FB568F14500 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A71961D5A7C13F389234A0C3C7FB80C /* YoutubePlayer-in-WKWebView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YoutubePlayer-in-WKWebView/YoutubePlayer-in-WKWebView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YoutubePlayer-in-WKWebView/YoutubePlayer-in-WKWebView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/YoutubePlayer-in-WKWebView/YoutubePlayer-in-WKWebView.modulemap";
+				PRODUCT_MODULE_NAME = YoutubePlayer_in_WKWebView;
+				PRODUCT_NAME = YoutubePlayer_in_WKWebView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C388FB829F42D2C5EDBFE005872CC531 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A71961D5A7C13F389234A0C3C7FB80C /* YoutubePlayer-in-WKWebView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YoutubePlayer-in-WKWebView/YoutubePlayer-in-WKWebView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YoutubePlayer-in-WKWebView/YoutubePlayer-in-WKWebView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/YoutubePlayer-in-WKWebView/YoutubePlayer-in-WKWebView.modulemap";
+				PRODUCT_MODULE_NAME = YoutubePlayer_in_WKWebView;
+				PRODUCT_NAME = YoutubePlayer_in_WKWebView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -1307,42 +1338,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		CDA7B62BED0C588EE94EFC0D7445369C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 50FE8E3DDE3918D61263B93F4E71D730 /* YoutubePlayer-in-WKWebView.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/YoutubePlayer-in-WKWebView/YoutubePlayer-in-WKWebView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/YoutubePlayer-in-WKWebView/YoutubePlayer-in-WKWebView-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/YoutubePlayer-in-WKWebView/YoutubePlayer-in-WKWebView.modulemap";
-				PRODUCT_MODULE_NAME = YoutubePlayer_in_WKWebView;
-				PRODUCT_NAME = YoutubePlayer_in_WKWebView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		D655A17643C4B07F6554F71A8B0A9637 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1447,9 +1442,9 @@
 			};
 			name = Debug;
 		};
-		FD3F97F1BC7F64249E64913BBBFDBCC2 /* Release */ = {
+		FF1DD0B6E36A73E20DDA0E7B13BF6E68 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1EB605560205C48F2B4C37E0B41A99E /* MapboxMobileEvents.release.xcconfig */;
+			baseConfigurationReference = BEC1A5C2623D76544AFAC5813E9158A9 /* MapboxMobileEvents.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1476,11 +1471,10 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -1488,8 +1482,8 @@
 		047221B88B466188D7B28CF17DB79C8D /* Build configuration list for PBXNativeTarget "YoutubePlayer-in-WKWebView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1E0693244CFBC122A3A9D33965096A2D /* Debug */,
-				CDA7B62BED0C588EE94EFC0D7445369C /* Release */,
+				C283CCE0FDEDC41C8F0F0FB568F14500 /* Debug */,
+				C388FB829F42D2C5EDBFE005872CC531 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1533,8 +1527,8 @@
 		DDB07C907CA5DE84E11225D277A8756B /* Build configuration list for PBXNativeTarget "MapboxMobileEvents" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4550700699BE16A87090969B946E60F7 /* Debug */,
-				FD3F97F1BC7F64249E64913BBBFDBCC2 /* Release */,
+				FF1DD0B6E36A73E20DDA0E7B13BF6E68 /* Debug */,
+				98A441DE33D95BFBD05FFF5AFE652BFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1542,8 +1536,8 @@
 		DE661112FC7506F5A836D106198613A3 /* Build configuration list for PBXAggregateTarget "Mapbox-iOS-SDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7346D9C302B87B1557BDA7CB01513E6F /* Debug */,
-				B13A6132779C011CC56EFD1BC2949ECD /* Release */,
+				B83161E4F52D3800B9772F85CA1B4E2C /* Debug */,
+				77F8E35395A0FA5218B5943E87C53502 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
