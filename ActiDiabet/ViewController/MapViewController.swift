@@ -18,7 +18,8 @@ class MapViewController: UIViewController, DatabaseListener {
     var mapView: MGLMapView?
     var allPlaces: [OpenSpaces] = [OpenSpaces]()
     
-    var filter:Set<LocationType> = [.hospital, .space, .pool]
+    // Default
+    var filter:Set<LocationType> = [.hospital, .space]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,30 +64,47 @@ class MapViewController: UIViewController, DatabaseListener {
     
     // set filter ui
     private func setFilter() {
-        
-        let allfilter: [LocationType] = [.bbq, .cycling, .hoop, .hospital, .picnic, .pool, .seat, .space, .water, .toilet]  // all filters
+        let upperFilter: [LocationType] = [.hospital, .space, .toilet, .water, .hoop] // upper filters
+        let lowerFilter: [LocationType] = [.seat, .bbq, .picnic, .pool, .cycling]  // lower filters
         let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
         let notch = window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0 // get status bar height
-        let filterWidth = 150  // FilterView width
-        let frame = CGRect(x: 0, y: view.frame.height - 100, width: view.frame.width, height: 50)
-        print("notch", notch)
-        print("view frame height", view.frame.height)
-        print(frame)
-        let scrollView = UIScrollView(frame: frame) // set scrollview use frame
+        let filterWidth = 100  // FilterView width
         
-        scrollView.contentSize = CGSize(width: filterWidth * allfilter.count + 10 * (allfilter.count + 1), height: 50) // set content frame (width: 9 filter and 10px insets)
-        scrollView.contentOffset = CGPoint(x: 0, y: 0)
-        scrollView.isScrollEnabled = true
-        scrollView.showsHorizontalScrollIndicator = false
-        for i in 0..<allfilter.count {
-            let infilter: Bool = filter.contains(allfilter[i])
+        let lowerFrame = CGRect(x: 0, y: view.frame.height - 100, width: view.frame.width, height: 50)
+        let upperFrame = CGRect(x: 0, y: notch + 60, width: view.frame.width, height: 50)
+        
+        let upperScroll = UIScrollView(frame: upperFrame)
+        upperScroll.contentSize = CGSize(width: filterWidth * upperFilter.count + 10 * (upperFilter.count + 1), height: 50)
+        upperScroll.contentOffset = CGPoint(x: 0, y: 0)
+        upperScroll.isScrollEnabled = true
+        upperScroll.showsHorizontalScrollIndicator = false
+        for i in 0..<upperFilter.count {
+            let infilter: Bool = filter.contains(upperFilter[i])
             // set a type of location in each filter
-            let filter = FilterView(frame: CGRect(x: 10 + i * filterWidth + i * 10, y: 0, width: filterWidth, height: 50), type: allfilter[i], inFilter: infilter)
+            let filter = FilterView(frame: CGRect(x: 10 + i * filterWidth + i * 10, y: 0, width: filterWidth, height: 50), type: upperFilter[i], inFilter: infilter)
             filter.backgroundColor = .white
+            filter.layer.opacity = 0.8
             filter.filterDelegate = self
-            scrollView.addSubview(filter)
+            upperScroll.addSubview(filter)
         }
-        view.addSubview(scrollView)
+        
+        
+        let lowerScroll = UIScrollView(frame: lowerFrame) // set scrollview use frame
+        lowerScroll.contentSize = CGSize(width: filterWidth * lowerFilter.count + 10 * (lowerFilter.count + 1), height: 50) // set content frame (width: 9 filter and 10px insets)
+        lowerScroll.contentOffset = CGPoint(x: 0, y: 0)
+        lowerScroll.isScrollEnabled = true
+        lowerScroll.showsHorizontalScrollIndicator = false
+        for i in 0..<lowerFilter.count {
+            let infilter: Bool = filter.contains(lowerFilter[i])
+            // set a type of location in each filter
+            let filter = FilterView(frame: CGRect(x: 10 + i * filterWidth + i * 10, y: 0, width: filterWidth, height: 50), type: lowerFilter[i], inFilter: infilter)
+            filter.backgroundColor = .white
+            filter.layer.opacity = 0.8
+            filter.filterDelegate = self
+            lowerScroll.addSubview(filter)
+        }
+        view.addSubview(upperScroll)
+        view.addSubview(lowerScroll)
     }
     
     // get locations within this filter

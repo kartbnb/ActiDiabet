@@ -41,12 +41,12 @@ class FilterView: UIView {
 
     // set title of each filter
     private func setTitle() {
-        titleView = UILabel(frame: CGRect(x: 50, y: 10, width: 100, height: 30))
+        titleView = UILabel(frame: CGRect(x: 50, y: 10, width: self.frame.width - 50, height: 30))
         switch locationFilter {
         case .bbq:
-            titleView.text = "Barbeque"
+            titleView.text = "BBQ"
         case .cycling:
-            titleView.text = "Bike"
+            titleView.text = "Rail"
         case .hoop:
             titleView.text = "Hoop"
         case .hospital:
@@ -60,7 +60,7 @@ class FilterView: UIView {
         case .space:
             titleView.text = "Park"
         case .water:
-            titleView.text = "Water Fountain"
+            titleView.text = "Water"
         default:
             titleView.text = "Toilet"
         }
