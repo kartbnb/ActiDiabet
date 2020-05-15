@@ -200,6 +200,17 @@ class ActivityDetailViewController: UIViewController {
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
         alertTextField?.text = dateFormatter.string(from: datePicker.date)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if self.activity?.activityName == "Cycling" {
+            let destination = segue.destination as! MapViewController
+            destination.filter.insert(.cycling)
+        }
+        if self.activity?.activityName == "Swimming" {
+            let destination = segue.destination as! MapViewController
+            destination.filter.insert(.pool)
+        }
+    }
 }
 
 // MARK: - PickerViewDelegate, PickerViewDataSource

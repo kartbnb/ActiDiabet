@@ -15,31 +15,30 @@ class EventsAPI: NSObject {
     var apiData: Data?
     
     func performAPI() {
-        let session = URLSession(configuration: .default, delegate: self, delegateQueue: nil)
-        var dataTask: URLSessionDataTask?
-        if let url = URL(string: "https://api.eventfinda.com.au/v/events.json?rows=2"){
-            session.dataTask(with: url) { (data, response, error) in
-                print(data)
+        let loginString = String(format: "%@:%@", username, password)
+        let loginData = loginString.data(using: String.Encoding.utf8)!
+        let base64LoginString = loginData.base64EncodedString()
+
+        // create the request
+        let url = URL(string: "https://api.eventfinda.com.au/v2/events.json")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let response = response {
                 print(response)
-                print(error)
-            }.resume()
-        }
-    }
-    
-    private func createCredential() -> URLCredential {
-        let credential = URLCredential(user: username, password: password, persistence: URLCredential.Persistence.forSession)
-        return credential
+            }
+            if let error = error {
+                print(error.localizedDescription)
+            }
+            if let data = data {
+                let json = try? JSONSerialization.jsonObject(with: data, options: [])
+                if let json = json {
+                    print(json)
+                }
+            }
+        }.resume()
+        
     }
 }
 
-extension EventsAPI: URLSessionDelegate {
-    func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
-        print("did receive challenge")
-        let newCredential = URLCredential(
-            user: username,
-            password: password,
-            persistence: .forSession)
-        print("using credential")
-        completionHandler(.useCredential, newCredential)
-    }
-}
