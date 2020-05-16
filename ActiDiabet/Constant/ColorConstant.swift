@@ -17,6 +17,6 @@ class ColorConstant {
     static let aerobicColor      =  UIColor.init(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
     static let resistanceColor   =  UIColor.init(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
     static let weatherColor      =  UIColor.init(red: 229.0/255.0, green: 229.0/255.0, blue: 234.0/255.0, alpha: 1.0)
-    static let brightOrange = UIColor.init(red: 254.0/255.0, green: 168.0/255.0, blue: 88.0/255.0, alpha: 0.7)
-    static let brightGreen = UIColor.init(red: 240.0/255.0, green: 183.0/255.0, blue: 164.0/255.0, alpha: 0.5)
+    static let brightOrange = UIColor.init(red: 254.0/255.0, green: 168.0/255.0, blue: 88.0/255.0, alpha: 0.8)
+    static let brightGreen = UIColor.init(red: 214.0/255.0, green: 232.0/255.0, blue: 172.0/255.0, alpha: 1.0)
 }

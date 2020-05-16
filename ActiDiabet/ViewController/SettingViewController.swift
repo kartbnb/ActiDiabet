@@ -58,7 +58,7 @@ class SettingViewController: UIViewController {
             let db = delegate.databaseController
             db.fetchOpenSpaces()
         } else {
-            showAlert(message: "Please enter a valid postcode", title: "Postcode Error")
+            showAlert(message: "Please enter a valid zip code", title: "Zip Code Error")
             return
         }
         
