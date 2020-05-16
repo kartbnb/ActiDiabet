@@ -44,7 +44,12 @@ class MapViewController: UIViewController, DatabaseListener {
     
     // setup ui
     func setMapView(center: CLLocation) {
-        let url = URL(string: "mapbox://styles/mapbox/streets-v11")
+        var url: URL?
+        if self.isInDaytime(date: Date()) {
+            url = URL(string: "mapbox://styles/mapbox/light-v10")
+        } else {
+            url = URL(string: "mapbox://styles/mapbox/dark-v10")
+        }
         self.mapView = MGLMapView(frame: view.bounds, styleURL: url)
         mapView!.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         mapView!.setCenter(center.coordinate, zoomLevel: 13, animated: false)
@@ -52,6 +57,19 @@ class MapViewController: UIViewController, DatabaseListener {
         view.addSubview(mapView!)
         setFilter()
         resetAnnotation()
+    }
+    
+    func isInDaytime(date: Date) -> Bool {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm"
+        let time = formatter.string(from: date)
+        let hour = Int(String(time.split(separator: ":").first!))!
+        if hour >= 20 || hour <= 5 {
+            return false
+        } else {
+            return true
+        }
+        
     }
     
     // reset annotation when filter change

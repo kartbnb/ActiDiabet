@@ -1290,6 +1290,7 @@
                     <connections>
                         <outlet property="aerobicView" destination="7by-eu-r0h" id="kfa-yb-B45"/>
                         <outlet property="resistanceView" destination="dfk-WN-ovf" id="t1A-zs-Qgp"/>
+                        <outlet property="titleLabel" destination="7hC-gA-WDm" id="Kje-v6-1I4"/>
                         <segue destination="1jr-Gj-fvy" kind="show" identifier="showAllActivity" id="kDw-pC-JB6"/>
                     </connections>
                 </viewController>
@@ -1510,8 +1511,8 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p57-nq-p5k">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jk7-BL-zVL">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   What's On" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jk7-BL-zVL">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="42"/>
                                     <nil key="textColor"/>
@@ -1519,7 +1520,7 @@
                                 </label>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="event" rowHeight="150" id="eGI-0b-ZkR" customClass="EventTableViewCell" customModule="Active_Boomer" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="128" width="375" height="150"/>
+                                        <rect key="frame" x="0.0" y="108" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eGI-0b-ZkR" id="EMo-M9-fNY">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
@@ -1541,16 +1542,17 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tjd-Y1-OlK">
-                                                                    <rect key="frame" x="172.5" y="38.5" width="142.5" height="65.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <rect key="frame" x="172.5" y="38.5" width="142.5" height="54.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                     <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2B2-yV-rce">
-                                                                    <rect key="frame" x="162.5" y="108" width="162.5" height="20"/>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2B2-yV-rce">
+                                                                    <rect key="frame" x="172.5" y="93" width="152.5" height="35"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="20" id="awV-cQ-4vf"/>
+                                                                        <constraint firstAttribute="height" constant="35" id="awV-cQ-4vf"/>
                                                                     </constraints>
+                                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                                                     <state key="normal" title="Learn more &gt;"/>
                                                                 </button>
                                                             </subviews>
@@ -1565,11 +1567,11 @@
                                                                 <constraint firstAttribute="trailing" secondItem="GFV-JD-IWa" secondAttribute="trailing" constant="10" id="ZZ0-Oo-ipw"/>
                                                                 <constraint firstAttribute="trailing" secondItem="2B2-yV-rce" secondAttribute="trailing" id="dfw-XM-THV"/>
                                                                 <constraint firstItem="eAX-eq-nhs" firstAttribute="leading" secondItem="Clw-yt-52W" secondAttribute="leading" id="exk-Na-e1O"/>
-                                                                <constraint firstItem="2B2-yV-rce" firstAttribute="leading" secondItem="eAX-eq-nhs" secondAttribute="trailing" id="gmE-9b-ZFW"/>
+                                                                <constraint firstItem="2B2-yV-rce" firstAttribute="leading" secondItem="eAX-eq-nhs" secondAttribute="trailing" constant="10" id="gmE-9b-ZFW"/>
                                                                 <constraint firstAttribute="bottom" secondItem="2B2-yV-rce" secondAttribute="bottom" id="inU-Lr-bzw"/>
                                                                 <constraint firstAttribute="bottom" secondItem="eAX-eq-nhs" secondAttribute="bottom" id="kEU-q3-wnH"/>
                                                                 <constraint firstItem="Tjd-Y1-OlK" firstAttribute="top" secondItem="GFV-JD-IWa" secondAttribute="bottom" constant="8" id="uV4-Gy-R2t"/>
-                                                                <constraint firstItem="2B2-yV-rce" firstAttribute="top" secondItem="Tjd-Y1-OlK" secondAttribute="bottom" constant="4" id="vOy-L5-dT6"/>
+                                                                <constraint firstItem="2B2-yV-rce" firstAttribute="top" secondItem="Tjd-Y1-OlK" secondAttribute="bottom" id="vOy-L5-dT6"/>
                                                             </constraints>
                                                         </view>
                                                     </subviews>

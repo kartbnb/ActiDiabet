@@ -13,6 +13,8 @@ class ActivityFilterViewController: UIViewController, TypeChooseDelegate {
     @IBOutlet weak var aerobicView: TypeFilterView!
     @IBOutlet weak var resistanceView: TypeFilterView!
     
+    @IBOutlet weak var titleLabel: UILabel!
+    
     var indoor: Bool!
     
     override func viewDidLoad() {
@@ -23,6 +25,11 @@ class ActivityFilterViewController: UIViewController, TypeChooseDelegate {
         resistanceView.type = .resistance
         resistanceView.delegate = self
         resistanceView.makeRound()
+        if indoor {
+            self.titleLabel.text = "Indoor Activities by Type"
+        } else {
+            self.titleLabel.text = "Outdoor Activities by Type"
+        }
         // Do any additional setup after loading the view.
     }
     
