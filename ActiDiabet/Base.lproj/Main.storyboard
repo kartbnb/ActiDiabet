@@ -473,6 +473,10 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ue9-tR-KWM" customClass="EnterZipView" customModule="Active_Boomer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                         <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="93e-8L-1oz">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pmk-nO-NxP" customClass="StartButtonView" customModule="Active_Boomer" customModuleProvider="target">
                                                 <rect key="frame" x="37.5" y="402" width="300" height="50"/>
                                                 <subviews>
@@ -538,15 +542,21 @@
                                             <constraint firstItem="d3U-Il-NJc" firstAttribute="centerX" secondItem="ue9-tR-KWM" secondAttribute="centerX" id="CRl-tM-ONo"/>
                                             <constraint firstItem="2Hc-eX-dFY" firstAttribute="top" secondItem="oZh-6u-5HT" secondAttribute="bottom" constant="30" id="GZm-5f-bob"/>
                                             <constraint firstAttribute="trailing" secondItem="d3U-Il-NJc" secondAttribute="trailing" constant="30" id="IVa-ES-xhk"/>
+                                            <constraint firstItem="93e-8L-1oz" firstAttribute="top" secondItem="ue9-tR-KWM" secondAttribute="top" id="IZj-YJ-4RR"/>
+                                            <constraint firstAttribute="trailing" secondItem="93e-8L-1oz" secondAttribute="trailing" id="Xic-Pp-c4g"/>
                                             <constraint firstItem="d3U-Il-NJc" firstAttribute="top" secondItem="ue9-tR-KWM" secondAttribute="top" constant="100" id="ZY0-Da-Cnj"/>
                                             <constraint firstItem="d3U-Il-NJc" firstAttribute="leading" secondItem="ue9-tR-KWM" secondAttribute="leading" constant="30" id="aEw-Tg-Iff"/>
+                                            <constraint firstAttribute="bottom" secondItem="93e-8L-1oz" secondAttribute="bottom" id="d4M-xf-Mpf"/>
                                             <constraint firstItem="pmk-nO-NxP" firstAttribute="top" secondItem="7R5-KA-Exy" secondAttribute="bottom" constant="70" id="eSZ-Pe-bHY"/>
                                             <constraint firstItem="7R5-KA-Exy" firstAttribute="centerX" secondItem="ue9-tR-KWM" secondAttribute="centerX" id="eVG-vy-Z18"/>
                                             <constraint firstItem="7R5-KA-Exy" firstAttribute="top" secondItem="2Hc-eX-dFY" secondAttribute="bottom" constant="8" id="ev6-Ig-TEB"/>
                                             <constraint firstItem="oZh-6u-5HT" firstAttribute="top" secondItem="d3U-Il-NJc" secondAttribute="bottom" constant="10" id="oFL-Oh-WZO"/>
                                             <constraint firstItem="2Hc-eX-dFY" firstAttribute="centerX" secondItem="ue9-tR-KWM" secondAttribute="centerX" id="qsc-DD-RrH"/>
+                                            <constraint firstItem="93e-8L-1oz" firstAttribute="leading" secondItem="ue9-tR-KWM" secondAttribute="leading" id="w68-vT-myK"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="background" destination="93e-8L-1oz" id="dKV-EU-Jdh"/>
+                                            <outlet property="buttonView" destination="pmk-nO-NxP" id="qmk-2o-PTI"/>
                                             <outlet property="zipTextField" destination="2Hc-eX-dFY" id="BAG-8e-JHn"/>
                                         </connections>
                                     </view>
@@ -1744,7 +1754,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="TAS-GU-Myu"/>
+        <segue reference="AzT-rz-g4N"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="appimage" width="415" height="356"/>
