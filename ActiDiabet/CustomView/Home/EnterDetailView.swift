@@ -35,11 +35,31 @@ class EnterZipView: UIView {
     // Enter zip
     @IBOutlet weak var zipTextField: UITextField!
     
+    @IBOutlet weak var background: UIView!
+    @IBOutlet weak var buttonView: UIView!
+    
     fileprivate var zipCode: String?
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         zipTextField.resignFirstResponder()
     }
+    
+    fileprivate func setupUI() {
+        buttonView.layer.cornerRadius = 10
+        buttonView.clipsToBounds = true
+        buttonView.backgroundColor = .clear
+        let gradientLayer = CAGradientLayer()
+        // Set the size of the layer to be equal to size of the display.
+        gradientLayer.frame = background.bounds
+        // Set an array of Core Graphics colors (.cgColor) to create the gradient.
+        // This example uses a Color Literal and a UIColor from RGB values.
+        gradientLayer.colors = [ColorConstant.brightGreen.cgColor, ColorConstant.brightOrange.cgColor]
+        // Rasterize this static layer to improve app performance.
+        gradientLayer.shouldRasterize = true
+        // Apply the gradient to the backgroundGradientView.
+        background.layer.addSublayer(gradientLayer)
+    }
+    
     //check if user has already input zip
     func getZipCodeSave() -> Bool {
         let zip = zipTextField.text
@@ -113,6 +133,7 @@ class EnterDetailView: UIView {
             // show enter zip view
             UIView.animate(withDuration: 1.0) {
                 self.enterZipView.alpha = 1
+                self.enterZipView.setupUI()
             }
         }
         
