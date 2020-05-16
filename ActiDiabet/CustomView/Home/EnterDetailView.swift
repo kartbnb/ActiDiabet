@@ -136,7 +136,7 @@ class EnterDetailView: UIView {
                 }) 
             }
         } else {
-            homeVC!.showAlert(message: "Please enter a valid zip code", title: "Zip Code Error")
+            homeVC!.showAlert(message: "Please enter a valid postcode", title: "Postcode Error")
         }
         
     }
