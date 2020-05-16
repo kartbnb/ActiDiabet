@@ -135,12 +135,12 @@ class ActivityDetailViewController: UIViewController {
         // show alert
         let alert = UIAlertController(title: "Did you like this activity?", message: "", preferredStyle: .alert)
         // like action
-        let likeAction = UIAlertAction(title: "Like", style: .default) { (alertaction) in
+        let likeAction = UIAlertAction(title: "I did", style: .default) { (alertaction) in
             database.addReview(userid: userid, activity: self.activity!, rate: 1)
             self.navigationController?.popViewController(animated: true)
         }
         // dislike action
-        let dontlikeAction = UIAlertAction(title: "Dislike", style: .default) { (alertaction) in
+        let dontlikeAction = UIAlertAction(title: "Not sure", style: .default) { (alertaction) in
             database.addReview(userid: userid, activity: self.activity!, rate: -1)
             self.navigationController?.popViewController(animated: true)
         }

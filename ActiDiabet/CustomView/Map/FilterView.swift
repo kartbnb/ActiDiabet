@@ -78,7 +78,7 @@ class FilterView: UIView {
     // if it is in filter, show border blue, if is not, border white
     private func setFilter() {
         if self.inFilter {
-            self.layer.borderColor = UIColor.blue.cgColor
+            self.layer.borderColor = UIColor.gray.cgColor
         } else {
             self.layer.borderColor = UIColor.white.cgColor
         }

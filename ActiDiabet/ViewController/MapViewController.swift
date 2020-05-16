@@ -44,7 +44,7 @@ class MapViewController: UIViewController, DatabaseListener {
     
     // setup ui
     func setMapView(center: CLLocation) {
-        let url = URL(string: "mapbox://styles/mapbox/streets-v11")
+        let url = URL(string: "mapbox://styles/mapbox/light-v10")
         self.mapView = MGLMapView(frame: view.bounds, styleURL: url)
         mapView!.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         mapView!.setCenter(center.coordinate, zoomLevel: 13, animated: false)
