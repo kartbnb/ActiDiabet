@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GameKit
 
 class ViewController: UIViewController, CustomViewProtocol, DatabaseListener {
     
@@ -116,8 +117,8 @@ class ViewController: UIViewController, CustomViewProtocol, DatabaseListener {
     private func setupScroll() {
         if self.recommendActivities.count >= 2 {
             DispatchQueue.main.async {
-                self.firstActivityView.setActivity(activity: self.recommendActivities[0])
-                self.secondActivityView.setActivity(activity: self.recommendActivities[1])
+                self.firstActivityView.setActivity(activity: self.randomActivity(type: .resistance))
+                self.secondActivityView.setActivity(activity: self.randomActivity(type: .aerobic))
             }
             firstActivityView.homeVC = self
             secondActivityView.homeVC = self
@@ -164,6 +165,17 @@ class ViewController: UIViewController, CustomViewProtocol, DatabaseListener {
             let resistancePercent: Float = Float(resistanceTime) / Float(resistanceGoal)
             return [aerobicPercent, resistancePercent]
         }
+    }
+    
+    private func randomActivity(type: ActivityType) -> Activity {
+        var activities:[Activity] = []
+        for activity in recommendActivities {
+            if activity.activityType == type {
+                activities.append(activity)
+            }
+        }
+        let random = GKRandomSource.sharedRandom().nextInt(upperBound: activities.count)
+        return activities[random]
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

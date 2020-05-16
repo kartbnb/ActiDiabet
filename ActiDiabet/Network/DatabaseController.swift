@@ -198,7 +198,6 @@ extension DatabaseController: DatabaseProtocol {
                         print(error)
                     }
                     if let data = data {
-                        print("open space data \(data)")
                         self.places = []
                         let json = try? JSONSerialization.jsonObject(with: data, options: [])
                         guard json != nil else { return }

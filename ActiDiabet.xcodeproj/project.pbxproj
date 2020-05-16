@@ -39,6 +39,8 @@
 		3284A798244ED49E0003B025 /* AllActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284A797244ED49E0003B025 /* AllActivityViewController.swift */; };
 		329C61F62455781200B70A6A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C61F52455781200B70A6A /* MapViewController.swift */; };
 		329C61F824557EE400B70A6A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329C61F724557EE400B70A6A /* Location.swift */; };
+		32AE0147246FD9F2000DF520 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AE0146246FD9F2000DF520 /* EventTableViewCell.swift */; };
+		32AE0149246FDB89000DF520 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AE0148246FDB89000DF520 /* EventViewController.swift */; };
 		32FD2556246C27FB004A9B2A /* ActivityFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FD2555246C27FB004A9B2A /* ActivityFilterViewController.swift */; };
 		32FD2558246D6A51004A9B2A /* IndoorFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FD2557246D6A51004A9B2A /* IndoorFilterViewController.swift */; };
 		32FD255C246D7536004A9B2A /* EventsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FD255B246D7536004A9B2A /* EventsAPI.swift */; };
@@ -108,6 +110,8 @@
 		3284A797244ED49E0003B025 /* AllActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllActivityViewController.swift; sourceTree = "<group>"; };
 		329C61F52455781200B70A6A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		329C61F724557EE400B70A6A /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		32AE0146246FD9F2000DF520 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		32AE0148246FDB89000DF520 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		32FD2555246C27FB004A9B2A /* ActivityFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityFilterViewController.swift; sourceTree = "<group>"; };
 		32FD2557246D6A51004A9B2A /* IndoorFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndoorFilterViewController.swift; sourceTree = "<group>"; };
 		32FD255B246D7536004A9B2A /* EventsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsAPI.swift; sourceTree = "<group>"; };
@@ -245,6 +249,7 @@
 		327355762444BDD5008FC810 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				32AE0145246FD9D9000DF520 /* Events */,
 				32AA44FC2464FD2E00237C3A /* Map */,
 				321CDAAC2452FBA000ECDE39 /* Plan */,
 				327355882445C7F4008FC810 /* All Activity */,
@@ -272,6 +277,7 @@
 				329C61F52455781200B70A6A /* MapViewController.swift */,
 				32FD2555246C27FB004A9B2A /* ActivityFilterViewController.swift */,
 				32FD2557246D6A51004A9B2A /* IndoorFilterViewController.swift */,
+				32AE0148246FDB89000DF520 /* EventViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -313,6 +319,14 @@
 				32836ACD24693928001B54CA /* FilterView.swift */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		32AE0145246FD9D9000DF520 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				32AE0146246FD9F2000DF520 /* EventTableViewCell.swift */,
+			);
+			path = Events;
 			sourceTree = "<group>";
 		};
 		32FD4B87244947FE002D63B1 /* Notification */ = {
@@ -608,7 +622,9 @@
 				32FD4B8B244AC1CE002D63B1 /* ActivityDetailViewController.swift in Sources */,
 				321CDAA1245028AF00ECDE39 /* DatabaseController.swift in Sources */,
 				327355462444B8EC008FC810 /* SceneDelegate.swift in Sources */,
+				32AE0149246FDB89000DF520 /* EventViewController.swift in Sources */,
 				3284A796244EBA7D0003B025 /* ActivityTableViewCell.swift in Sources */,
+				32AE0147246FD9F2000DF520 /* EventTableViewCell.swift in Sources */,
 				329C61F62455781200B70A6A /* MapViewController.swift in Sources */,
 				321CDAB02453012100ECDE39 /* PlanViewController.swift in Sources */,
 				321CDAAB2452F14D00ECDE39 /* UIViewExtension.swift in Sources */,
