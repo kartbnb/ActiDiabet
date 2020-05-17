@@ -681,11 +681,6 @@
                             <constraint firstItem="0g6-qP-UEp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="tW8-jl-tyW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="0g6-qP-UEp"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="glG-K7-1rv"/>
                     <connections>

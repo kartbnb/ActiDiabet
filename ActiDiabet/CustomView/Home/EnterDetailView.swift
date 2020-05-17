@@ -63,6 +63,7 @@ class EnterZipView: UIView {
     //check if user has already input zip
     func getZipCodeSave() -> Bool {
         let zip = zipTextField.text
+        zipTextField.resignFirstResponder()
         if let zip = zip {
             return self.checkzipcode(zip: zip)
         } else {

@@ -41,6 +41,7 @@ class PlanViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        index = 0
         if index == 0 {
             self.records = coredata!.fetchTodayRecords()
             tableView.reloadData()
