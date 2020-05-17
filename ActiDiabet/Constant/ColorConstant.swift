@@ -19,4 +19,6 @@ class ColorConstant {
     static let weatherColor      =  UIColor.init(red: 229.0/255.0, green: 229.0/255.0, blue: 234.0/255.0, alpha: 1.0)
     static let brightOrange = UIColor.init(red: 254.0/255.0, green: 168.0/255.0, blue: 88.0/255.0, alpha: 0.8)
     static let brightGreen = UIColor.init(red: 214.0/255.0, green: 232.0/255.0, blue: 172.0/255.0, alpha: 1.0)
+    
+    // Green #8DCD58, Orange: #F7AD42,  Red: #DB3E4A, Yellow: #F3EEAF
 }

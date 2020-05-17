@@ -202,11 +202,11 @@ class ActivityDetailViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if self.activity?.activityName == "Cycling" {
+        if self.activity?.activityID == 4 {
             let destination = segue.destination as! MapViewController
             destination.filter.insert(.cycling)
         }
-        if self.activity?.activityName == "Swimming" {
+        if self.activity?.activityID == 5 || self.activity?.activityID == 6 {
             let destination = segue.destination as! MapViewController
             destination.filter.insert(.pool)
         }
