@@ -186,7 +186,7 @@ extension AllActivityViewController: UITableViewDataSource, UITableViewDelegate 
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.textColor = UIColor.black
         header.textLabel?.font = UIFont(name: "HelveticaNeue-Bold", size: 30)
-        header.textLabel?.text = "Activities \(self.type.toString())"
+        header.textLabel?.text = "\(self.type.toString()) Activities"
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
