@@ -179,7 +179,7 @@ extension AllActivityViewController: UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Activities \(self.type.toString())"
+        return "\(self.type.toString()) Activities"
     }
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
