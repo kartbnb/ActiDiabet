@@ -70,7 +70,7 @@ class FilterView: UIView {
     //set basic view of this custom view
     private func setView() {
         self.layer.cornerRadius = 5
-        self.layer.borderWidth = 1
+        self.layer.borderWidth = 4
         setFilter()
         self.layer.masksToBounds = true
     }

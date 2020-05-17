@@ -113,6 +113,10 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbq-09-Phh">
                                                         <rect key="frame" x="133" y="18" width="20.5" height="22"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="22" id="7BN-l0-hF1"/>
+                                                            <constraint firstAttribute="width" constant="20.5" id="T7j-n1-efp"/>
+                                                        </constraints>
                                                         <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" image="heart" catalog="system">
                                                             <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -123,6 +127,10 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ov2-kl-SAW" userLabel="Activity Button">
                                                         <rect key="frame" x="16" y="18" width="17.5" height="20.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="17.5" id="10S-ce-hLu"/>
+                                                            <constraint firstAttribute="height" constant="20.5" id="4qc-ui-p8V"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <color key="tintColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" image="flame.fill" catalog="system">
@@ -130,8 +138,8 @@
                                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="semibold"/>
                                                         </state>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ActivityName" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9LS-35-QLQ">
-                                                        <rect key="frame" x="36.5" y="16" width="119.5" height="23"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ActivityName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9LS-35-QLQ">
+                                                        <rect key="frame" x="36.5" y="16" width="94.5" height="23"/>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                                         <color key="textColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -169,6 +177,7 @@
                                                     <constraint firstItem="Ov2-kl-SAW" firstAttribute="leading" secondItem="lgb-7x-ewR" secondAttribute="leading" constant="16" id="Y5y-gf-pG5"/>
                                                     <constraint firstItem="9LS-35-QLQ" firstAttribute="leading" secondItem="Ov2-kl-SAW" secondAttribute="trailing" constant="3" id="Y99-Wb-mMr"/>
                                                     <constraint firstItem="N8F-JS-ABx" firstAttribute="centerX" secondItem="lgb-7x-ewR" secondAttribute="centerX" id="a7m-8D-etI"/>
+                                                    <constraint firstItem="mbq-09-Phh" firstAttribute="leading" secondItem="9LS-35-QLQ" secondAttribute="trailing" constant="2" id="qG4-Wt-hKO"/>
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="activityName" destination="9LS-35-QLQ" id="ZY2-aX-R4j"/>
@@ -181,6 +190,10 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTV-pW-NTN">
                                                         <rect key="frame" x="133" y="16" width="20.5" height="22"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="22" id="Fpn-9y-dkL"/>
+                                                            <constraint firstAttribute="width" constant="20.5" id="sRC-wr-qSe"/>
+                                                        </constraints>
                                                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         <state key="normal" image="heart.fill" catalog="system"/>
                                                         <connections>
@@ -206,6 +219,10 @@
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKc-Dq-O4v" userLabel="Activity Button">
                                                         <rect key="frame" x="16" y="18" width="17.5" height="20.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="17.5" id="E2Z-Up-jz2"/>
+                                                            <constraint firstAttribute="height" constant="20.5" id="lf3-pY-XSd"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" image="flame.fill" catalog="system">
@@ -213,8 +230,8 @@
                                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="semibold"/>
                                                         </state>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ActivityName" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cN6-PG-RC4">
-                                                        <rect key="frame" x="36.5" y="16" width="119.5" height="23"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="ActivityName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cN6-PG-RC4">
+                                                        <rect key="frame" x="36.5" y="16" width="94.5" height="23"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                                         <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -229,6 +246,7 @@
                                                     <constraint firstItem="cN6-PG-RC4" firstAttribute="top" secondItem="BGo-am-brP" secondAttribute="top" constant="16" id="d1X-Da-Ul1"/>
                                                     <constraint firstItem="cN6-PG-RC4" firstAttribute="leading" secondItem="dKc-Dq-O4v" secondAttribute="trailing" constant="3" id="kJH-RZ-rA2"/>
                                                     <constraint firstAttribute="width" secondItem="BGo-am-brP" secondAttribute="height" multiplier="160:100" id="lPV-eM-gCp"/>
+                                                    <constraint firstItem="tTV-pW-NTN" firstAttribute="leading" secondItem="cN6-PG-RC4" secondAttribute="trailing" constant="2" id="nLL-5c-LMm"/>
                                                     <constraint firstItem="dKc-Dq-O4v" firstAttribute="top" secondItem="BGo-am-brP" secondAttribute="top" constant="18" id="oas-T1-pmU"/>
                                                     <constraint firstAttribute="bottom" secondItem="Ne7-xg-M1p" secondAttribute="bottom" constant="20" id="reR-5M-n20"/>
                                                 </constraints>
@@ -478,7 +496,7 @@
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pmk-nO-NxP" customClass="StartButtonView" customModule="Active_Boomer" customModuleProvider="target">
-                                                <rect key="frame" x="37.5" y="430.5" width="300" height="65"/>
+                                                <rect key="frame" x="37.5" y="474" width="300" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vK7-iT-WE3">
                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
@@ -505,7 +523,7 @@
                                                 </constraints>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Hc-eX-dFY">
-                                                <rect key="frame" x="37.5" y="248.5" width="300" height="34"/>
+                                                <rect key="frame" x="37.5" y="262" width="300" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="300" id="omi-J2-pyO"/>
                                                 </constraints>
@@ -519,7 +537,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your postcode, or we can help you explore beautiful open spaces nearby" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZh-6u-5HT" userLabel="postcode_desc">
-                                                <rect key="frame" x="37.5" y="153" width="300" height="75.5"/>
+                                                <rect key="frame" x="37.5" y="153" width="300" height="79"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="300" id="q3t-GX-FCO"/>
                                                 </constraints>
@@ -528,7 +546,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Note: this app is currently only available for postcodes within Greater Melbourne Area!)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7R5-KA-Exy">
-                                                <rect key="frame" x="37.5" y="290.5" width="300" height="100"/>
+                                                <rect key="frame" x="37.5" y="304" width="300" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="vO3-yb-wMy"/>
                                                 </constraints>
@@ -663,6 +681,11 @@
                             <constraint firstItem="0g6-qP-UEp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="tW8-jl-tyW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="0g6-qP-UEp"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="glG-K7-1rv"/>
                     <connections>
@@ -682,7 +705,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="kgq-4J-VcM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1551" y="-271"/>
+            <point key="canvasLocation" x="-1551.2" y="-271.21439280359823"/>
         </scene>
         <!--Activity Detail View Controller-->
         <scene sceneID="Ww0-40-quc">

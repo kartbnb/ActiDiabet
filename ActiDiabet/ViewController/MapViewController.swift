@@ -84,8 +84,8 @@ class MapViewController: UIViewController, DatabaseListener {
         let showingFilters = self.showingFilters(locations: allPlaces) // get filters which need to be shown
         let filters = self.findShowingFilters(filter: showingFilters)
 
-        let upperFilter = filters["upper"] // upper filters
-        let lowerFilter = filters["lower"]  // lower filters
+        let upperFilter = filters["upper"]! // upper filters
+        let lowerFilter = filters["lower"]!  // lower filters
         let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
         let notch = window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0 // get status bar height
         let filterWidth = 100  // FilterView width
@@ -127,10 +127,10 @@ class MapViewController: UIViewController, DatabaseListener {
         view.addSubview(lowerScroll)
     }
 
-    private func showingFilters(locations: [Location]) -> Set<LocationType> {
+    private func showingFilters(locations: [OpenSpaces]) -> Set<LocationType> {
         var type:Set<LocationType> = []
         for location in locations {
-            if type.contains(location.type) {
+            if !type.contains(location.type) {
                 type.insert(location.type)
             }
         }
@@ -138,17 +138,14 @@ class MapViewController: UIViewController, DatabaseListener {
     }
 
     private func findShowingFilters(filter: Set<LocationType>) -> [String:[LocationType]] {
-        let filterArray = Array(filter)
-        let upperFilter: Set<LocationType> = [.bbq, .picnic, .pool, .cycling, .space, .hoop]
-        let lowerFilter: Set<LocationType> = [.hospital, .water, .seat, .toilet,]
-        var result: [String: [LocationType]] = ["upper": [], "lower": []]
-        for filter in filterArray {
-            if upperFilter.contains(filter) {
-                result["upper"].append(filter)
-            } else if lowerFilter.contains(filter) {
-                result["lower"].append(filter)
-            }
-        }
+//        let filterArray = Array(filter)
+//        let upperFilter: Set<LocationType> = [.bbq, .picnic, .pool, .cycling, .space, .hoop]
+        let result: [String: [LocationType]] = ["upper": [.bbq, .picnic, .pool, .cycling, .space, .hoop], "lower": [.hospital, .water, .seat, .toilet]]
+//        for filter in filterArray {
+//            if upperFilter.contains(filter) {
+//                result["upper"]!.append(filter)
+//            }
+//        }
         return result
     }
     
