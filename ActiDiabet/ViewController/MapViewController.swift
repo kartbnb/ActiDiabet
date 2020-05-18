@@ -140,7 +140,7 @@ class MapViewController: UIViewController, DatabaseListener {
     private func findShowingFilters(filter: Set<LocationType>) -> [String:[LocationType]] {
 //        let filterArray = Array(filter)
 //        let upperFilter: Set<LocationType> = [.bbq, .picnic, .pool, .cycling, .space, .hoop]
-        let result: [String: [LocationType]] = ["upper": [.bbq, .picnic, .pool, .cycling, .space, .hoop], "lower": [.hospital, .water, .seat, .toilet]]
+        let result: [String: [LocationType]] = ["upper": [.space, .bbq, .picnic, .pool, .cycling, .hoop], "lower": [.hospital, .water, .seat, .toilet]]
 //        for filter in filterArray {
 //            if upperFilter.contains(filter) {
 //                result["upper"]!.append(filter)
