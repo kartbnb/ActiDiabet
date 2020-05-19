@@ -1568,11 +1568,11 @@
             </objects>
             <point key="canvasLocation" x="950" y="-1951"/>
         </scene>
-        <!--Activities-->
+        <!--Browse-->
         <scene sceneID="UXk-Le-MLh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="blf-xp-dSP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Activities" image="flag.fill" catalog="system" id="6Re-dm-yBh"/>
+                    <tabBarItem key="tabBarItem" title="Browse" image="square.grid.2x2.fill" catalog="system" id="6Re-dm-yBh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tcu-YW-J4r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1698,7 +1698,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Mm8-ti-j5H"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Events" image="rosette" catalog="system" id="e9i-Uc-K1i"/>
+                    <tabBarItem key="tabBarItem" title="Events" image="star.fill" catalog="system" id="e9i-Uc-K1i"/>
                     <connections>
                         <outlet property="tableView" destination="p57-nq-p5k" id="cp0-Xd-vUd"/>
                     </connections>
@@ -1829,11 +1829,11 @@
             </objects>
             <point key="canvasLocation" x="62" y="-271"/>
         </scene>
-        <!--Setting-->
+        <!--Settings-->
         <scene sceneID="RQO-2u-l1w">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="T1u-0V-s17" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Setting" image="doc.plaintext" catalog="system" id="RMu-zz-Eld"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="slider.horizontal.3" catalog="system" id="RMu-zz-Eld"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qbL-b7-3jO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1850,7 +1850,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="TAS-GU-Myu"/>
+        <segue reference="AzT-rz-g4N"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="appimage" width="1500" height="1500"/>
@@ -1859,14 +1859,14 @@
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="cloud.rain.fill" catalog="system" width="128" height="125"/>
         <image name="cloud.sun.fill" catalog="system" width="128" height="88"/>
-        <image name="doc.plaintext" catalog="system" width="115" height="128"/>
-        <image name="flag.fill" catalog="system" width="128" height="121"/>
         <image name="flame.fill" catalog="system" width="109" height="128"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="location.fill" catalog="system" width="128" height="115"/>
-        <image name="rosette" catalog="system" width="100" height="128"/>
+        <image name="slider.horizontal.3" catalog="system" width="128" height="100"/>
+        <image name="square.grid.2x2.fill" catalog="system" width="128" height="114"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <image name="timer" catalog="system" width="128" height="121"/>
     </resources>
 </document>
