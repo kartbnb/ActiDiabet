@@ -13,11 +13,17 @@ class SettingViewController: UIViewController {
     
     var notification: Notifications?
     
+    let intensityTitles = ["3 hours/week", "4 hours/week", "5 hours/week"]
+    
     @IBOutlet weak var scrollView: SettingScrollView!
 
     @IBOutlet weak var zipView: UIView!
+    @IBOutlet weak var intensityView: UIView!
     
     @IBOutlet weak var zipTextField: UITextField!
+    @IBOutlet weak var intensityTextField: UITextField!
+    
+    var intensity: IntensityLevel?
     
     @IBOutlet weak var saveButton: UIButton!
     
@@ -26,6 +32,7 @@ class SettingViewController: UIViewController {
         let delegate = UIApplication.shared.delegate as? AppDelegate
         self.notification = delegate?.notification
         setupUI()
+        setInputView()
         // Do any additional setup after loading the view.
     }
     
@@ -35,13 +42,36 @@ class SettingViewController: UIViewController {
         zipView.makeRound()
         saveButton.makeRound()
         setupSavedData()
+        
     }
     
     //setup saved data
     private func setupSavedData() {
         let zip = UserDefaults.standard.value(forKey: "zipcode") as? String
+        let resistance = UserDefaults.standard.integer(forKey: "Resistance")
         zipTextField.text = zip
+        switch resistance {
+        case 20:
+            intensityTextField.text = intensityTitles[0]
+            self.intensity = .beginner
+        case 40:
+            intensityTextField.text = intensityTitles[1]
+            self.intensity = .moderate
+        case 60:
+            intensityTextField.text = intensityTitles[2]
+            self.intensity = .vigorous
+        default:
+            intensityTextField.text = "Error"
+            self.intensity = nil
+        }
         scrollView.vcdelegate = self
+    }
+    
+    private func setInputView() {
+        let pickerView = UIPickerView()
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        intensityTextField.inputView = pickerView
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -61,8 +91,11 @@ class SettingViewController: UIViewController {
             showAlert(message: "Please enter a valid zip code", title: "Zip Code Error")
             return
         }
-        
-        self.navigationController?.popViewController(animated: true)
+        let intensityController = Intensity()
+        guard let i = self.intensity else { return }
+        intensityController.setIntensity(intensity: i)
+        intensityController.setResistanceTime()
+        intensityController.setAeroTime()
     }
     
     // validation of zipcode
@@ -74,16 +107,6 @@ class SettingViewController: UIViewController {
             return false
         }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     private func showAlert(message: String, title: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -99,7 +122,41 @@ class SettingViewController: UIViewController {
 extension SettingViewController: ResignTextFieldDelegate {
     func resignAll() {
         zipTextField.resignFirstResponder()
+        intensityTextField.resignFirstResponder()
     }
+}
+
+extension SettingViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 3
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
+        return intensityTitles[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.intensityTextField.text = intensityTitles[row]
+        switch row {
+        case 0:
+            intensity = .beginner
+        case 1:
+            intensity = .moderate
+        case 2:
+            intensity = .vigorous
+        default:
+            intensity = nil
+        }
+    }
+    
+    
+    
+    
 }
 
 protocol ResignTextFieldDelegate {
@@ -114,3 +171,5 @@ class SettingScrollView: UIScrollView {
         vcdelegate?.resignAll()
     }
 }
+
+
