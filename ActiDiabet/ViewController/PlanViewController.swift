@@ -165,7 +165,7 @@ extension PlanViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if index == 0{
-            return "Today's training"
+            return "Today's achievements"
         } else {
             let titles = self.getSectionTitles(records: records)
             let formatter = DateFormatter()

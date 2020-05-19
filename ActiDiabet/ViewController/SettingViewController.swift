@@ -40,6 +40,7 @@ class SettingViewController: UIViewController {
     //setup UI view
     private func setupUI() {
         zipView.makeRound()
+        intensityView.makeRound()
         saveButton.makeRound()
         setupSavedData()
         
@@ -88,7 +89,7 @@ class SettingViewController: UIViewController {
             let db = delegate.databaseController
             db.fetchOpenSpaces()
         } else {
-            showAlert(message: "Please enter a valid zip code", title: "Zip Code Error")
+            showAlert(message: "Please enter a valid postcode", title: "Postode Error")
             return
         }
         let intensityController = Intensity()
