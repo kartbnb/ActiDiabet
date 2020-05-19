@@ -17,13 +17,19 @@ class MapViewController: UIViewController, DatabaseListener {
     var db: DatabaseProtocol?
     var mapView: MGLMapView?
     var allPlaces: [OpenSpaces] = [OpenSpaces]()
+    var locationManager: CLLocationManager?
     
     // Default
     var filter:Set<LocationType> = [.hospital, .space]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.locationManager = CLLocationManager()
+        self.locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+        self.locationManager?.requestAlwaysAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+            self.locationManager?.startUpdatingLocation()
+        }
         let delegate = UIApplication.shared.delegate as? AppDelegate
         self.db = delegate?.databaseController
         
@@ -53,6 +59,7 @@ class MapViewController: UIViewController, DatabaseListener {
         self.mapView = MGLMapView(frame: view.bounds, styleURL: url)
         mapView!.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         mapView!.setCenter(center.coordinate, zoomLevel: 13, animated: false)
+        mapView?.showsUserLocation = true
         mapView!.delegate = self
         view.addSubview(mapView!)
         setFilter()
@@ -126,6 +133,11 @@ class MapViewController: UIViewController, DatabaseListener {
         view.addSubview(upperScroll)
         view.addSubview(lowerScroll)
     }
+    
+    private func getUserLocation() {
+        let locationManager = CLLocationManager()
+        
+    }
 
     private func showingFilters(locations: [OpenSpaces]) -> Set<LocationType> {
         var type:Set<LocationType> = []
@@ -140,7 +152,7 @@ class MapViewController: UIViewController, DatabaseListener {
     private func findShowingFilters(filter: Set<LocationType>) -> [String:[LocationType]] {
 //        let filterArray = Array(filter)
 //        let upperFilter: Set<LocationType> = [.bbq, .picnic, .pool, .cycling, .space, .hoop]
-        let result: [String: [LocationType]] = ["upper": [.space, .bbq, .picnic, .pool, .cycling, .hoop], "lower": [.hospital, .water, .seat, .toilet]]
+        let result: [String: [LocationType]] = ["upper": [.hospital, .water, .seat, .toilet], "lower": [.space, .bbq, .picnic, .pool, .cycling, .hoop]]
 //        for filter in filterArray {
 //            if upperFilter.contains(filter) {
 //                result["upper"]!.append(filter)
@@ -213,5 +225,12 @@ extension MapViewController: FilterDelegate {
         }
         self.resetAnnotation()
         print("current filter: \(filter)")
+    }
+}
+
+extension MapViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let locValue = locationManager?.location!.coordinate
+        let userLocation = MGLPointAnnotation()
     }
 }
