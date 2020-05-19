@@ -156,6 +156,17 @@ class CoredataController: NSObject, NSFetchedResultsControllerDelegate, Coredata
         
     }
     
+    // delete a record
+    func deletePlan(record: Record) {
+        persistentContainer.viewContext.delete(record)
+        if record.done == false {
+            let delegate = UIApplication.shared.delegate as! AppDelegate
+            let notification = delegate.notification
+            notification.removeNotification(with: record.date!)
+        }
+        self.saveContext()
+    }
+    
 
 }
 
@@ -166,4 +177,6 @@ protocol CoredataProtocol {
     func addActivity(activity: Activity, duration: Int, date: Date)
     func fetchTodayRecords() -> [Record]
     func fetchFuturePlan() -> [Record]
+    func deletePlan(record: Record)
+    
 }

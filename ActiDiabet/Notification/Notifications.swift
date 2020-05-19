@@ -94,8 +94,11 @@ class Notifications: NSObject, UNUserNotificationCenterDelegate {
     }
     
     // remove notification
-    func removeNotification() {
-        notificationCenter.removeDeliveredNotifications(withIdentifiers: ["do activity"])
+    func removeNotification(with date: Date) {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyyMMddHHmm"
+        let identifier = formatter.string(from: date)
+        notificationCenter.removeDeliveredNotifications(withIdentifiers: [identifier])
     }
     
     

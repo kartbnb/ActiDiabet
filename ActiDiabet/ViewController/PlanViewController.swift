@@ -66,6 +66,7 @@ class PlanViewController: UIViewController {
         var sections = 0
         var dateStart = Date()
         for record in records {
+            print(record.activity)
             let newDateStart = Calendar.current.startOfDay(for: record.date!)
             if dateStart != newDateStart {
                 sections += 1
@@ -103,6 +104,22 @@ class PlanViewController: UIViewController {
         return recordinDate
     }
     
+    private func getRecord(section: Int, row: Int) -> Record {
+        let titles = self.getSectionTitles(records: self.records)
+        let title = titles[section]
+        let recordsInSection = self.getSectionRecords(records: self.records, on: title)
+        let record = recordsInSection[row]
+        return record
+    }
+    
+    private func getIndexOfRecord(record: Record) -> Int? {
+        for i in 0..<records.count {
+            if records[i] == record {
+                return i
+            }
+        }
+        return nil
+    }
 
     /*
     // MARK: - Navigation
@@ -175,5 +192,26 @@ extension PlanViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            if self.index == 1 {
+                let record = self.getRecord(section: indexPath.section, row: indexPath.row)
+                guard let recordIndex = self.getIndexOfRecord(record: record) else { return }
+                coredata?.deletePlan(record: record)
+                self.records.remove(at: recordIndex)
+                tableView.reloadData()
+            } else {
+                let record = records[indexPath.row]
+                coredata?.deletePlan(record: record)
+                self.records.remove(at: indexPath.row)
+                tableView.reloadData()
+            }
+        }
     }
 }
