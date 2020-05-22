@@ -35,7 +35,8 @@ class ViewController: UIViewController, CustomViewProtocol, DatabaseListener {
     @IBOutlet weak var aerobicLabel: UILabel!
     @IBOutlet weak var resistanceLabel: UILabel!
     
-    var recommendActivities = [sampleActivity[0], sampleActivity[1]]
+    var recommendActivities = [Activity]()
+    var indicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,12 +44,8 @@ class ViewController: UIViewController, CustomViewProtocol, DatabaseListener {
         let delegate = UIApplication.shared.delegate as? AppDelegate
         coredataController = delegate?.coredataController
         databaseController = delegate!.databaseController
-        
-        // progress bar transformation
-        //aerobicProgress.transform = aerobicProgress.transform.scaledBy(x: 1, y: 16)
         aerobicProgress.layer.cornerRadius = 10
         aerobicProgress.clipsToBounds = true
-        //resistanceProgress.transform = resistanceProgress.transform.scaledBy(x: 1, y: 16)
         resistanceProgress.layer.cornerRadius = 10
         resistanceProgress.clipsToBounds = true
         
@@ -56,10 +53,8 @@ class ViewController: UIViewController, CustomViewProtocol, DatabaseListener {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //recommendActivities = [sampleActivity[0], sampleActivity[1]]
         super.viewWillAppear(animated)
         firstEnter()
-        //databaseController?.getOneRecommend(viewCard: favouriteCard)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -76,12 +71,15 @@ class ViewController: UIViewController, CustomViewProtocol, DatabaseListener {
         } else {
             // not first enter show main page
             enterDetailView.isHidden = true
+            setIndicator()
             setupUI()
         }
     }
     // MARK: UI functions
     // setup UIs
     func setupUI() {
+        self.navigationController?.navigationBar.isHidden = false
+        self.tabBarController?.tabBar.isHidden = false
         weatherView.getCurrentWeather()
         databaseController?.addListener(listener: self)
         guard let records = coredataController?.fetchActivityThisWeek() else { return }
@@ -107,10 +105,16 @@ class ViewController: UIViewController, CustomViewProtocol, DatabaseListener {
         }
         achieveView.makeRound()
         
-        
-        self.navigationController?.navigationBar.isHidden = false
-        self.tabBarController?.tabBar.isHidden = false
-        //UserDefaults.standard.removeObject(forKey: "zipcode")
+    }
+    
+    func setIndicator() {
+        indicator = UIActivityIndicatorView(frame: self.view.frame)
+        indicator.backgroundColor = .white
+        indicator.style = .large
+        indicator.center = view.center
+        indicator.hidesWhenStopped = true
+        self.view.addSubview(indicator)
+        indicator.startAnimating()
     }
     
     //setup ScrollView
@@ -122,6 +126,9 @@ class ViewController: UIViewController, CustomViewProtocol, DatabaseListener {
             }
             firstActivityView.homeVC = self
             secondActivityView.homeVC = self
+            DispatchQueue.main.async {
+                self.indicator.stopAnimating()
+            }
         } else {
             
         }
@@ -190,13 +197,7 @@ class ViewController: UIViewController, CustomViewProtocol, DatabaseListener {
     var listenerType: ListenerType = .recommend
     
     func getActivities(activities: [Activity]) {
-//        if weatherString == "01d" || weatherString == "02d" || weatherString == "03d" || weatherString == "04d" {
-//            self.recommendActivities = activities
-//        } else {
-//            self.recommendActivities = indoorActivity
-//        }
         self.recommendActivities = activities
-        
         self.setupScroll()
     }
     
@@ -212,6 +213,7 @@ protocol CustomViewProtocol {
     func setupUI()
     func showAlert(message: String, title: String)
     func showActivity(activity: Activity)
+    func setIndicator()
 }
 
 

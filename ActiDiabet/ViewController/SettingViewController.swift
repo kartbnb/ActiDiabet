@@ -31,9 +31,20 @@ class SettingViewController: UIViewController {
         super.viewDidLoad()
         let delegate = UIApplication.shared.delegate as? AppDelegate
         self.notification = delegate?.notification
+        self.view.backgroundColor = UIColor.secondarySystemBackground
         setupUI()
         setInputView()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.navigationBar.isHidden = false
     }
     
     //MARK: UI functions

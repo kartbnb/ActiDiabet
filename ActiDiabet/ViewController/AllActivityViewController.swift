@@ -40,7 +40,16 @@ class AllActivityViewController: UIViewController, DatabaseListener {
         self.databaseProtocol = delegate?.databaseController
         tableView.delegate = self
         tableView.dataSource = self
-        self.navigationItem.title = "Browse"
+        switch indoor {
+        case true:
+            self.navigationItem.title = "Indoor"
+        case false:
+            self.navigationItem.title = "Outdoor"
+        case .none:
+            self.navigationItem.title = "Browse"
+        case .some(_):
+            self.navigationItem.title = "Browse"
+        }
         favouriteButton = UIButton.init(type: .custom)
         favouriteButton.setImage(UIImage(systemName: "heart"), for: .normal)
         //add function for button

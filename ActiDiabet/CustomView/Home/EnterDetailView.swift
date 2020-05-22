@@ -182,10 +182,13 @@ class EnterDetailView: UIView {
         UIView.animate(withDuration: 1.0, animations: {
             //dismiss enter detail view
             self.alpha = 0
+            self.homeVC?.setIndicator()
         }) { (finished) in
             self.isHidden = finished
             db.fetchOpenSpaces()
+            
             self.homeVC?.setupUI()
+            
         }
     }
     

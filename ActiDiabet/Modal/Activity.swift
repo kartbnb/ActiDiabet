@@ -47,20 +47,21 @@ class Activity {
     let video: String
     var like: Bool
     var img: UIImage?
+    let short: String
     
-    init(id: Int, name: String, type: String, indoor: Bool, duration: Int, video: String) {
-        self.activityName = name
-        self.indoor = indoor
-        if type == "Aerobic exercise" {
-            activityType = .aerobic
-        } else {
-            activityType = .resistance
-        }
-        self.duration = duration
-        self.video = video
-        self.activityID = id
-        self.like = false
-    }
+//    init(id: Int, name: String, type: String, indoor: Bool, duration: Int, video: String) {
+//        self.activityName = name
+//        self.indoor = indoor
+//        if type == "Aerobic exercise" {
+//            activityType = .aerobic
+//        } else {
+//            activityType = .resistance
+//        }
+//        self.duration = duration
+//        self.video = video
+//        self.activityID = id
+//        self.like = false
+//    }
     
     // Generate by json
     init?(json: [String: Any]) {
@@ -87,6 +88,10 @@ class Activity {
         guard let img = json["img"] as? String else {
             print("key img not found")
             return nil }
+        guard let shortName = json["short_name"] as? String else {
+            print("short_name key not found")
+            return nil
+        }
         self.activityID = id
         self.activityName = name
         if type == "Aerobic exercise" {
@@ -103,6 +108,7 @@ class Activity {
         self.duration = duration
         self.video = video
         self.like = false
+        self.short = shortName
         let str = link+"activity/img/\(Int(img) ?? 1)"
         let url = URL(string: str)
         
@@ -129,12 +135,6 @@ class Activity {
     }
 }
 
-let sampleActivity = [
-    Activity(id: 1, name: "aerobic exercise classes", type: "Aerobic exercise", indoor: true, duration: 7, video: "Zwi5IzpQJBs"),
-    Activity(id: 2, name: "cycling", type: "Aerobic exercise", indoor: false, duration: 30, video: "hznfKSDSdhE"),
-    Activity(id: 3, name: "swimming", type: "Aerobic exercise", indoor: false, duration: 30, video: "uEOvqKpf_lc"),
-    Activity(id: 4, name: "Yoga", type: "Resistance exercise", indoor: true, duration: 7, video: "NDLad2vOHkU")
-                    ]
 
 
 

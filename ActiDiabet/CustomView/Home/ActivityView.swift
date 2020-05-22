@@ -38,7 +38,7 @@ class ActivityView: UIView {
     func setActivity(activity: Activity) {
         //self.activityName.textColor = UIColor.white
         self.activity = activity
-        self.activityName.text = activity.activityName
+        self.activityName.text = activity.short
         self.timeDuration.text = "\(activity.duration)"
         
         if activity.like {
