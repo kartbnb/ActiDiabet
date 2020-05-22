@@ -49,7 +49,7 @@ class MapViewController: UIViewController, DatabaseListener {
     }
     
     // setup ui
-    func setMapView(center: CLLocation) {
+    func setMapView(center: CLLocation?) {
         var url: URL?
         if self.isInDaytime(date: Date()) {
             url = URL(string: "mapbox://styles/mapbox/light-v10")
@@ -58,7 +58,13 @@ class MapViewController: UIViewController, DatabaseListener {
         }
         self.mapView = MGLMapView(frame: view.bounds, styleURL: url)
         mapView!.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        mapView!.setCenter(center.coordinate, zoomLevel: 13, animated: false)
+        if let center = center {
+            mapView!.setCenter(center.coordinate, zoomLevel: 13, animated: false)
+        } else {
+            self.showAlert(message: "Cannot find suburb with your postcode", title: "Error")
+            mapView!.setCenter(CLLocationCoordinate2D(latitude: -37.840935, longitude: 144.946457), zoomLevel: 13, animated: false)
+        }
+        
         mapView?.showsUserLocation = true
         mapView!.delegate = self
         view.addSubview(mapView!)
@@ -170,6 +176,13 @@ class MapViewController: UIViewController, DatabaseListener {
             }
         }
         return showingPlaces
+    }
+    
+    //MARK: show alert function
+    func showAlert(message: String, title: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
 
