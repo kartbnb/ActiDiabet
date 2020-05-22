@@ -22,7 +22,7 @@ class ActivityTableViewCell: UITableViewCell {
         self.iconImage.image = activity.img
         if activity.like {
             self.favouriteButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
-            self.favouriteButton.tintColor = .systemRed
+            self.favouriteButton.tintColor = .systemPink
         } else {
             self.favouriteButton.setImage(UIImage(systemName: "heart"), for: .normal)
             self.favouriteButton.tintColor = .systemGray

@@ -82,7 +82,7 @@ class AllActivityViewController: UIViewController, DatabaseListener {
     func setupSearch() {
         searchBar.searchTextField.layer.cornerRadius = 10
         searchBar.searchTextField.layer.masksToBounds = true
-        searchBar.placeholder = "Search Activity"
+        searchBar.placeholder = "Search"
         searchBar.delegate = self
     }
     // Navigation segue prepare

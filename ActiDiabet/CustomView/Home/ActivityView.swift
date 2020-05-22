@@ -43,7 +43,7 @@ class ActivityView: UIView {
         
         if activity.like {
             likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
-            likeButton.tintColor = .systemRed
+            likeButton.tintColor = .systemPink
         } else {
             likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
             likeButton.tintColor = .systemGray2

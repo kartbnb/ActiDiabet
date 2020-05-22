@@ -91,7 +91,7 @@ class ActivityDetailViewController: UIViewController {
         if let activity = self.activity {
             if activity.like {
                 likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
-                likeButton.tintColor = .systemRed
+                likeButton.tintColor = .systemPink
             } else {
                 likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
                 likeButton.tintColor = .systemGray2
@@ -135,7 +135,7 @@ class ActivityDetailViewController: UIViewController {
         // show alert
         let alert = UIAlertController(title: "Did you like this activity?", message: "", preferredStyle: .alert)
         // like action
-        let likeAction = UIAlertAction(title: "I did", style: .default) { (alertaction) in
+        let likeAction = UIAlertAction(title: "Yes I did!", style: .default) { (alertaction) in
             database.addReview(userid: userid, activity: self.activity!, rate: 1)
             self.navigationController?.popViewController(animated: true)
         }
@@ -152,7 +152,7 @@ class ActivityDetailViewController: UIViewController {
     // add to plan function
     @IBAction func addToPlan(_ sender: Any) {
         // show alert
-        let alert = UIAlertController(title: "Please select a time to plan", message: "", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Please select a time for reminder", message: "", preferredStyle: .alert)
         // add textfield to alert
         alert.addTextField { (textfield) in
             self.alertTextField = textfield
