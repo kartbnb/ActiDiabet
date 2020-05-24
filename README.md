@@ -17,12 +17,12 @@ The home view provides two recommended activities for the day (along with date/w
 In addition to the recommendations provided to them in the home view, user can also go directly to the browse view to search for particular exercises that interest them.
 <br>
 <br>
-**First level fitler**
+First level fitler
 <br>
 <img src="filter1.png" width="400">
 <br>
 <br>
-**Second level fitler**
+Second level fitler
 <br>
 <img src="filter_2.png" width="400">
 
