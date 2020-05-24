@@ -1,7 +1,5 @@
 # Just a Quick UI Tour
 Active Boomers - a simple but lovely iOS workout app designed for seniors (or beginners!)
-
-<img src="DEE280F1-5527-4170-A058-0C5168985828_1_201_a.jpeg" width="800">
 <br>
 <br>
 
@@ -9,21 +7,21 @@ Active Boomers - a simple but lovely iOS workout app designed for seniors (or be
 The purpose of the app is very simple and straight forward: helping seniors stay physically active. Let’s get started with the home view.
 The home view provides two recommended activities for the day (along with date/weather info at the top) as well as a dashboard that tracks your weekly achievements.
 
-<img src="home_view.png" width="400">
+<img src="DEE280F1-5527-4170-A058-0C5168985828_1_201_a.jpeg" width="800">
 <br>
 <br>
 
 ## 2. Browse View
 In addition to the recommendations provided to them in the home view, user can also go directly to the browse view to search for particular exercises that interest them.
 <br>
-<img src="browse.JPG" width="700">
+<img src="browse.JPG" width="500">
 <br>
 
 
 <br>
 Here’s the full list.  Clicking on the heart button at the top right corner of the screen, user will be able to filter the full list and see only their favourites.
 
-<img src="browse_list.JPG" width="700">
+<img src="browse_list.JPG" width="500">
 <br>
 <br>
 
@@ -37,7 +35,7 @@ For each activity, user will be given a suggested duration of the workout, but t
 
 After hitting the Done button, a quick survey pops out, asking for their feedback, which will further help the app improve its recommendation system (powered by the collaborative filtering algorithm).
 
-<img src="get_started.PNG" width="800">
+<img src="get_started.JPG" width="500">
 <br>
 
 
