@@ -663,11 +663,6 @@
                                     <constraint firstAttribute="trailing" secondItem="VNI-fx-Z3b" secondAttribute="trailing" id="mYg-TU-U14"/>
                                     <constraint firstAttribute="bottom" secondItem="VNI-fx-Z3b" secondAttribute="bottom" id="tHR-pz-dOa"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="VNI-fx-Z3b"/>
-                                    </mask>
-                                </variation>
                                 <connections>
                                     <outlet property="beginner" destination="7AO-vd-Zba" id="8bX-at-MFd"/>
                                     <outlet property="chooseIntensityView" destination="SMK-7S-JM9" id="1Hx-lQ-k1E"/>
