@@ -21,7 +21,7 @@ In addition to the recommendations provided to them in the home view, user can a
 
 <br>
 Here’s the full list.  Clicking on the heart button at the top right corner of the screen, user will be able to filter the full list and see only their favourites.
-<img src="browse_list.JPG" width="500">
+<img src="browse_list.JPG" width="490">
 <br>
 <br>
 
