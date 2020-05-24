@@ -55,6 +55,7 @@ We have also implemented day/night mode, providing different feels on different 
 <img src="65F1E7FE-0D40-4882-A424-B639CD351530_1_201_a.jpeg" width="800">
 
 Also, if you click on one of these icons, you will be able to see a popup for more info about that particular location/facility. And if you go ahead and click on the popup, you will be directed to Apple Maps and be able to use their navigation functions directly.
+
 <br>
 <br>
 
