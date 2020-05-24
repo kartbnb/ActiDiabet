@@ -14,13 +14,13 @@ The home view provides two recommended activities for the day (along with date/w
 ## 2. Browse View
 In addition to the recommendations provided to them in the home view, user can also go directly to the browse view to search for particular exercises that interest them.
 <br>
+<br>
 <img src="browse.JPG" width="500">
 <br>
 
 
 <br>
 Here’s the full list.  Clicking on the heart button at the top right corner of the screen, user will be able to filter the full list and see only their favourites.
-
 <img src="browse_list.JPG" width="500">
 <br>
 <br>
