@@ -1,4 +1,4 @@
-# Just a Quick UI tour
+# Just a Quick UI Tour
 Active Boomers - a simple but lovely iOS workout app designed for seniors (or beginners!)
 
 <img src="DEE280F1-5527-4170-A058-0C5168985828_1_201_a.jpeg" width="800">
