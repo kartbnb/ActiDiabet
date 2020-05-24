@@ -1,4 +1,4 @@
-# A Quick UI tour for Active Boomers
+# A Quick UI tour of Active Boomers
 A simple but lovely iOS workout app designed for seniors (or beginners!)
 
 
