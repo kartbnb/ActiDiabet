@@ -30,16 +30,19 @@ When user has made up their mind and decided which activity to they want to do, 
 <img src="activity_main.png" width="400">
 
 
-Now, they can either add this activity to the calendar/reminder by clicking on the Add to Plan button and do it at a later time, 
+Now, they can either add this activity to the calendar/reminder by clicking on the Add to Plan button and do it at a later time.
 
 <img src="activity_plan_view.png" width="400">
 
-or even better, do it straight away and track their weekly achievements. 
-
-<img src="survey_view.png" width="400">
+Or they can just do it straight away and track their weekly achievements.
 
 For each activity, user will be given a suggested duration of the workout, but they also have the option to adjust it according to their needs.
+
+<img src="custom_duration.png" width="400">
+
 After hitting the Done button, a quick survey pops out, asking for their feedback, which will further help the app improve its recommendation system (powered by the collaborative filtering algorithm).
+
+<img src="survey_view.png" width="400">
 
 ## 4. Plan View / Settings View
 Now, in the below plan view, user will be able to see the activities they have done and the ones they planning on doing. 
