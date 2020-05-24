@@ -16,9 +16,12 @@ In addition to the recommendations provided to them in the home view, user can a
 <img src="filter1.png" width="400">
 <img src="filter_2.png" width="400">
 
-Here’s the full list. Clicking on the heart button at the top right corner of the screen, user will be able to filter the full list and see only their favourites.
+Here’s the full list. 
 
 <img src="browse_list.png" width="400">
+
+Clicking on the heart button at the top right corner of the screen, user will be able to filter the full list and see only their favourites.
+
 <img src="fav_list.png" width="400">
 
 ## 3. Activity View
@@ -38,17 +41,20 @@ or even better, do it straight away and track their weekly achievements.
 For each activity, user will be given a suggested duration of the workout, but they also have the option to adjust it according to their needs.
 After hitting the Done button, a quick survey pops out, asking for their feedback, which will further help the app improve its recommendation system (powered by the collaborative filtering algorithm).
 
-Also, in the below plan view, user will be able to see the activities they have done and the ones they planning on doing. Meanwhile, user can easily edit and change their workout plan according to their needs.
+## 4. Plan View / Settings View
+Now, in the below plan view, user will be able to see the activities they have done and the ones they planning on doing. 
 
 <img src="plan_view.png" width="400">
 
-<img src="settings_view.png" width="400">
+Meanwhile, user can easily edit and change their workout plan according to their needs.
+
+<img src="settings.png" width="400">
 
 
 
 
 
-## 4. Map View
+## 5. Map View
 When an activity is categorised as an outdoor one, there’s a map available for them to explore the area. They will be able to find out all the public open spaces (parks) as well as other essential facilities nearby (eg. hospitals, toilets, seats, water fountains, bike rails, etc.)
 We have also implemented day/night mode, providing different feels on different time of the day.
 
@@ -56,7 +62,7 @@ We have also implemented day/night mode, providing different feels on different 
 
 Also, if you click on one of these icons, you will be able to see a popup for more info about that particular location/facility. And if you go ahead and click on the popup, you will be directed to Apple Maps and be able to use their navigation functions directly.
 
-## 5. Event View
+## 6. Event View
 Finally, this lovely app also has an event wall featuring all the fun stuff going on in the area. Oh hey, what a lovely workout app, am I right?(shameless shelf promotion) Now, why don’t you just go ahead and download this app and enjoy it? Cheers to the healthier and happier lifestyle!
 
 <img src="A4513DF0-F164-4A24-B528-6055A4514EFB.jpeg" width="800">
