@@ -118,14 +118,20 @@ extension DatabaseController: DatabaseProtocol {
     
     //MARK: -Fetch Recommend Activities
     func fetchRecommendActivity() {
-        let url = URL(string: link + "activity")
+        self.recommendActivities = []
+        fetchAerobicRec()
+        fetchOpenSpaces()
+    }
+    
+    private func fetchAerobicRec() {
+        let url = URL(string: link + "activity/recommender/aerobic/1")
         if let url = url {
             URLSession.shared.dataTask(with: url) { (data, response, error) in
                 if let error = error {
                     print(error)
                 }
                 if let data = data {
-                    self.recommendActivities = []
+                    
                     if let jsonArray = self.performData(data) {
                         for item in jsonArray {
                             guard let activity = Activity(json: item) else {
@@ -134,7 +140,35 @@ extension DatabaseController: DatabaseProtocol {
                             }
                             self.recommendActivities.append(self.getActivityByID(id: activity.activityID!)!)
                         }
-                        self.fetchOpenSpaces()
+                        self.fetchResistanceRec()
+//                        self.listeners.invoke { (listener) in
+//                            if listener.listenerType == .recommend {
+//                                listener.getActivities(activities: self.recommendActivities)
+//                            }
+//                        }
+                    }
+                }
+            }.resume()
+        }
+    }
+    
+    private func fetchResistanceRec() {
+        let url = URL(string: link + "activity/recommender/resistance/1")
+        if let url = url {
+            URLSession.shared.dataTask(with: url) { (data, response, error) in
+                if let error = error {
+                    print(error)
+                }
+                if let data = data {
+//                    self.recommendActivities = []
+                    if let jsonArray = self.performData(data) {
+                        for item in jsonArray {
+                            guard let activity = Activity(json: item) else {
+                                print("activity init failed \(item)")
+                                return
+                            }
+                            self.recommendActivities.append(self.getActivityByID(id: activity.activityID!)!)
+                        }
                         self.listeners.invoke { (listener) in
                             if listener.listenerType == .recommend {
                                 listener.getActivities(activities: self.recommendActivities)

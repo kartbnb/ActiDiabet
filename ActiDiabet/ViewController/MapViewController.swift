@@ -62,7 +62,7 @@ class MapViewController: UIViewController, DatabaseListener {
             mapView!.setCenter(center.coordinate, zoomLevel: 13, animated: false)
         } else {
             self.showAlert(message: "Cannot find suburb with your postcode", title: "Error")
-            mapView!.setCenter(CLLocationCoordinate2D(latitude: -37.840935, longitude: 144.946457), zoomLevel: 13, animated: false)
+            mapView!.setCenter(CLLocationCoordinate2D(latitude: -37.840935, longitude: 144.946457), zoomLevel: 10, animated: false)
         }
         
         mapView?.showsUserLocation = true

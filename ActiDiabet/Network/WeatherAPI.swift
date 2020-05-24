@@ -119,15 +119,14 @@ class WeatherAPI {
                         let json = try? JSONSerialization.jsonObject(with: data, options: [])
                         if let json = json {
                             if let dictionary = json as? [String: Any] {
-                                if let weather = Weather(json: dictionary) {
-                                    DispatchQueue.main.async {
-                                        mapView.setMapView(center: weather.coordinate)
-                                    }
+                                let weather = Weather(json: dictionary)
+                                DispatchQueue.main.async {
+                                    mapView.setMapView(center: weather?.coordinate)
                                 }
                             }
                         }
                     } else {
-                        print("111")
+                        print("no data for weather")
                     }
                 }.resume()
             }
