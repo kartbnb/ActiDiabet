@@ -16,60 +16,39 @@ The home view provides two recommended activities for the day (along with date/w
 ## 2. Browse View
 In addition to the recommendations provided to them in the home view, user can also go directly to the browse view to search for particular exercises that interest them.
 <br>
+<img src="browse.JPG" width="700">
 <br>
-First level fitler
-<br>
-<img src="filter1.png" width="400">
-<br>
-<br>
-Second level fitler
-<br>
-<img src="filter_2.png" width="400">
+
 
 <br>
-Here’s the full list. 
+Here’s the full list.  Clicking on the heart button at the top right corner of the screen, user will be able to filter the full list and see only their favourites.
 
-<img src="browse_list.png" width="400">
-
-Clicking on the heart button at the top right corner of the screen, user will be able to filter the full list and see only their favourites.
-
-<img src="fav_list.png" width="400">
+<img src="browse_list.JPG" width="700">
 <br>
 <br>
 
 ## 3. Activity View
-When user has made up their mind and decided which activity to they want to do, they simply click on that button, and here comes this activity view.
-
-<img src="activity_main.png" width="400">
+Once user has decided which activity to they want to do, they simply click on that button, and here comes this activity view.
 
 <br>
-Now, they can either add this activity to the calendar/reminder by clicking on the Add to Plan button and do it at a later time.
-<br>
-<br>
-<img src="activity_plan_view.png" width="400">
-
-Or they can just do it straight away and track their weekly achievements.
+Now, they can either add this activity to the calendar/reminder by clicking on the Add to Plan button and do it at a later time, or they can just do it straight away and track their weekly achievements.
 
 For each activity, user will be given a suggested duration of the workout, but they also have the option to adjust it according to their needs.
 
-<img src="custom_duration.png" width="400">
-
-<br>
-
 After hitting the Done button, a quick survey pops out, asking for their feedback, which will further help the app improve its recommendation system (powered by the collaborative filtering algorithm).
 
-<img src="survey_view.png" width="400">
+<img src="get_started.PNG" width="800">
 <br>
+
+
+
 <br>
 
 ## 4. Plan View / Settings View
-Now, in the below plan view, user will be able to see the activities they have done and the ones they planning on doing. 
+Remeber, user has the option to schedule a workout. In the below plan view, user will be able to see the activities they have done and the ones they planning on doing. 
+<br>
+<img src="plan_view.PNG" width="500">
 
-<img src="plan_view.png" width="400">
-
-Meanwhile, user can easily edit and change their workout plan according to their needs.
-
-<img src="settings.png" width="400">
 <br>
 <br>
 
