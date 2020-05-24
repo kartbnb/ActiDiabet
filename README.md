@@ -6,7 +6,7 @@ A simple but lovely iOS workout app designed for seniors (or beginners!)
 The purpose of the app is very simple and straight forward: helping seniors stay physically active. Let’s get started with the home view.
 The home view provides two recommended activities for the day (along with date/weather info at the top) as well as a dashboard that tracks your weekly achievements.
 
-<img src="C0062260-E8F5-4E31-9336-A51600F3BE4F_1_201_a.jpeg" width="600">
+<img src="F2DC90EB-36A0-49F0-AED6-7A781E30BF12_1_201_a.jpeg" width="600">
 
 
 ## 2. Browse View
@@ -34,14 +34,13 @@ After hitting the Done button, a quick survey pops out, asking for their feedbac
 <img src="8E0EEF73-A5E0-47D6-BF41-1DAB9A6C0679_1_201_a.jpeg" width="500">
 
 
-Also, in the below plan view, user will be able to see the activities they have done and the ones they planning on doing.
+Also, in the below plan view, user will be able to see the activities they have done and the ones they planning on doing. Meanwhile, user can easily edit and change their workout plan according to their needs.
 
 <img src="DA279576-4D49-45CE-BEDA-09576D0CD35D_1_201_a.jpeg" width="500">
 
 
-As shown above and below, user can easily edit and change their workout plan according to their needs.
 
-<img src="4F5C219F-4A35-4610-B862-C8CFA7AF2D91_1_201_a.jpeg" width="500">
+
 
 ## 4. Map View
 When an activity is categorised as an outdoor one, there’s a map available for them to explore the area. They will be able to find out all the public open spaces (parks) as well as other essential facilities nearby (eg. hospitals, toilets, seats, water fountains, bike rails, etc.)
