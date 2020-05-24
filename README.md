@@ -45,6 +45,7 @@ When user has made up their mind and decided which activity to they want to do, 
 <br>
 Now, they can either add this activity to the calendar/reminder by clicking on the Add to Plan button and do it at a later time.
 <br>
+<br>
 <img src="activity_plan_view.png" width="400">
 
 Or they can just do it straight away and track their weekly achievements.
