@@ -139,11 +139,6 @@ class MapViewController: UIViewController, DatabaseListener {
         view.addSubview(upperScroll)
         view.addSubview(lowerScroll)
     }
-    
-    private func getUserLocation() {
-        let locationManager = CLLocationManager()
-        
-    }
 
     private func showingFilters(locations: [OpenSpaces]) -> Set<LocationType> {
         var type:Set<LocationType> = []
