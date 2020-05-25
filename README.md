@@ -24,7 +24,7 @@ In addition to the recommendations provided to them in the home view, user can a
 Here’s a full list of resistance activities.  Clicking on the heart button at the top right corner of the screen, user will be able to filter the full list and see only their favourites.
 <br><br>
 
-<img src="browse_aero.jpeg" width="600">
+<img src="list_nobackground.jpeg" width="600">
 <br>
 <br>
 <br>
