@@ -16,7 +16,7 @@ The home view provides two recommended activities for the day (along with date/w
 In addition to the recommendations provided to them in the home view, user can also go directly to the browse view to search for particular exercises that interest them.
 <br>
 <br>
-<img src="browse.JPG" width="595">
+<img src="browse_filter.JPG" width="600">
 <br>
 
 
@@ -35,13 +35,13 @@ Now, they can either add this activity to the calendar/reminder by clicking on t
 
 For each activity, user will be given a suggested duration of the workout, but they also have the option to adjust it according to their needs.
 
-<img src="get_started.JPG" width="600">
+<img src="activity1.JPG" width="600">
 
 <br>
 After hitting the Done button, a quick survey pops out, asking for their feedback, which will further help the app improve its recommendation system (powered by the collaborative filtering algorithm).
 <br>
 <br>
-<img src="get_started_1.JPG" width="610">
+<img src="activity2.JPG" width="600">
 
 <br>
 <br>
@@ -49,7 +49,7 @@ After hitting the Done button, a quick survey pops out, asking for their feedbac
 ## 4. Plan View
 Remeber that user has the option to schedule a workout. Now, if you go to the below plan view, you will be able to see the activities that you have done and the ones you planning on doing. You can also edit/change those plans as needed.
 <br>
-<img src="plan_view.PNG" width="600">
+<img src="plan.JPG" width="600">
 
 <br>
 <br>
