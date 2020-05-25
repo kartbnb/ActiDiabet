@@ -70,12 +70,6 @@ Finally, this lovely app also has an event wall featuring all the fun stuff goin
 <br>
 
 <img src="event_view.jpeg" width="700">
-<br>
-<br>
-Oh hey, what a lovely workout app, am I right? 
-<br>
-<br>
-<img src="home_view.jpeg" width="700">
 
 <br>
 <br>
@@ -83,7 +77,7 @@ Oh hey, what a lovely workout app, am I right?
 
 
 # Try it now!!
-Now, why don’t you just go ahead and download this app and enjoy it? Cheers to the healthier and happier lifestyle!
+Oh hey, what a lovely workout app, am I right?  Now, why don’t you just go ahead and download this app and enjoy it? Cheers to the healthier and happier lifestyle!
 #### [via Appetize](https://appetize.io/app/3ja8m52e3c1fma55b3kyyfk3t8)
 #### [via TestFlight](https://testflight.apple.com/join/Ep5H6EsO)
 #### [visit GitHub](https://github.com/kartbnb/ActiDiabet)
