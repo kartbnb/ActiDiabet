@@ -33,15 +33,9 @@ Here’s a full list of resistance activities.  Clicking on the heart button at 
 Once user has decided which activity to they want to do, they simply click on that button, and here comes this activity view.
 Now, they can either add this activity to the calendar/reminder by clicking on the Add to Plan button and do it at a later time, or they can just do it straight away and track their weekly achievements.
 
-For each activity, user will be given a suggested duration of the workout, but they also have the option to adjust it according to their needs.
+For each activity, user will be given a suggested duration of the workout, but they also have the option to adjust it according to their needs. After hitting the Done button, a quick survey pops out, asking for their feedback, which will further help the app improve its recommendation system (powered by the collaborative filtering algorithm).
 
 <img src="activity_hike.jpeg" width="600">
-
-<br>
-After hitting the Done button, a quick survey pops out, asking for their feedback, which will further help the app improve its recommendation system (powered by the collaborative filtering algorithm).
-<br>
-<br>
-<img src="hike_review.jpeg" width="600">
 
 <br>
 <br>
