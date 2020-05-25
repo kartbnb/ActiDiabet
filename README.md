@@ -1,4 +1,4 @@
-# active_boomers_demo
+# Just a Quick UI Tour
 UI demo of the iOS health app Active Boomers - a simple but lovely iOS workout helper designed for seniors (or beginners!)
 <br>
 <br>
@@ -7,7 +7,7 @@ UI demo of the iOS health app Active Boomers - a simple but lovely iOS workout h
 The purpose of the app is very simple and straight forward: helping seniors stay physically active. Let’s get started with the home view.
 The home view provides two recommended activities for the day (along with date/weather info at the top) as well as a dashboard that tracks your weekly achievements.
 
-<img src="home_view.jpeg" width="700">
+<img src="home.png" width="600">
 <br>
 <br>
 <br>
@@ -66,14 +66,24 @@ Also, if you click on one of these icons, you will be able to see a popup for mo
 <br>
 
 ## 6. Event View
-Finally, this lovely app also has an event wall featuring all the fun stuff going on in the area. Oh hey, what a lovely workout app, am I right? Now, why don’t you just go ahead and download this app and enjoy it? Cheers to the healthier and happier lifestyle!
+Finally, this lovely app also has an event wall featuring all the fun stuff going on in the area. 
+<br>
 
 <img src="event_view.jpeg" width="700">
+<br>
+<br>
+Oh hey, what a lovely workout app, am I right? 
+<br>
+<br>
+<img src="home_view.jpeg" width="700">
 
 <br>
 <br>
+<br>
+
 
 # Try it now!!
+Now, why don’t you just go ahead and download this app and enjoy it? Cheers to the healthier and happier lifestyle!
 #### [via Appetize](https://appetize.io/app/3ja8m52e3c1fma55b3kyyfk3t8)
 #### [via TestFlight](https://testflight.apple.com/join/Ep5H6EsO)
 #### [visit GitHub](https://github.com/kartbnb/ActiDiabet)
