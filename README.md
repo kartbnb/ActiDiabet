@@ -72,7 +72,7 @@ Finally, this lovely app also has an event wall featuring all the fun stuff goin
 <br>
 <br>
 
-# Try it!!
+# Try it. Now!!
 #### [via Appetize](https://appetize.io/app/3ja8m52e3c1fma55b3kyyfk3t8)
 #### [via TestFlight](https://testflight.apple.com/join/Ep5H6EsO)
 #### [visit GitHub](https://github.com/kartbnb/ActiDiabet)
