@@ -65,7 +65,7 @@ Also, if you click on one of these icons, you will be able to see a popup for mo
 <br>
 
 ## 6. Event View
-Finally, this lovely app also has an event wall featuring all the fun stuff going on in the area. Oh hey, what a lovely workout app, am I right?(shameless shelf promotion) Now, why don’t you just go ahead and download this app and enjoy it? Cheers to the healthier and happier lifestyle!
+Finally, this lovely app also has an event wall featuring all the fun stuff going on in the area. Oh hey, what a lovely workout app, am I right? Now, why don’t you just go ahead and download this app and enjoy it? Cheers to the healthier and happier lifestyle!
 
 <img src="event_view.jpeg" width="700">
 
