@@ -16,7 +16,7 @@ The home view provides two recommended activities for the day (along with date/w
 In addition to the recommendations provided to them in the home view, user can also go directly to the browse view to search for particular exercises that interest them.
 <br>
 <br>
-<img src="browse_filter.JPG" width="600">
+<img src="browse_indoor.jpeg" width="600">
 <br>
 
 
