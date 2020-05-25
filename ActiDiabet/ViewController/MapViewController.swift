@@ -26,7 +26,7 @@ class MapViewController: UIViewController, DatabaseListener {
         super.viewDidLoad()
         self.locationManager = CLLocationManager()
         self.locationManager?.desiredAccuracy = kCLLocationAccuracyBest
-        self.locationManager?.requestAlwaysAuthorization()
+        self.locationManager?.requestAlwaysAuthorization()  // get authorize of tracking user location
         if CLLocationManager.locationServicesEnabled() {
             self.locationManager?.startUpdatingLocation()
         }
@@ -236,9 +236,3 @@ extension MapViewController: FilterDelegate {
     }
 }
 
-extension MapViewController: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let locValue = locationManager?.location!.coordinate
-        let userLocation = MGLPointAnnotation()
-    }
-}

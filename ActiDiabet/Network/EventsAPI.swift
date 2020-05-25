@@ -59,8 +59,8 @@ class EventsAPI: NSObject, EventsProtocol {
         // create the request
         let url = URL(string: "https://api.eventfinda.com.au/v2/events.json")!
         var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
+        request.httpMethod = "POST" // http method POST
+        request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization") // change http header for authorise
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let data = data {
                 let json = try? JSONSerialization.jsonObject(with: data, options: [])

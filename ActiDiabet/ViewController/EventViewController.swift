@@ -14,7 +14,7 @@ protocol EventDelegate {
 
 class EventViewController: UIViewController, EventDelegate {
     
-    
+    /// This class is the view controller of Event
     
     @IBOutlet weak var tableView: UITableView!
     var events: [Event] = []
@@ -75,12 +75,13 @@ extension EventViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        // set event height 200
         return 200
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) as? EventTableViewCell {
-            cell.openURL()
+            cell.openURL() // open url
         }
     }
     

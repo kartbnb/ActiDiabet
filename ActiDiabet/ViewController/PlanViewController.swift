@@ -22,10 +22,8 @@ class PlanViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let delegate = UIApplication.shared.delegate as? AppDelegate
         coredata = delegate?.coredataController
-        
         tableView.delegate = self
         tableView.dataSource = self
         // get device status bar height
@@ -104,6 +102,7 @@ class PlanViewController: UIViewController {
         return recordinDate
     }
     
+    // get the specific record in section
     private func getRecord(section: Int, row: Int) -> Record {
         let titles = self.getSectionTitles(records: self.records)
         let title = titles[section]
@@ -112,6 +111,7 @@ class PlanViewController: UIViewController {
         return record
     }
     
+    // get the index of record which can remove from array
     private func getIndexOfRecord(record: Record) -> Int? {
         for i in 0..<records.count {
             if records[i] == record {

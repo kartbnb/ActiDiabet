@@ -26,7 +26,6 @@ class EventTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
     
@@ -39,6 +38,7 @@ class EventTableViewCell: UITableViewCell {
         self.setImage(url: event.image)
     }
     
+    // set UI of cell
     private func setBackground() {
         self.backGroundView.layer.cornerRadius = 20
         self.shadowLayerView.layer.cornerRadius = 20
@@ -65,6 +65,7 @@ class EventTableViewCell: UITableViewCell {
     }
     
     func openURL() {
+        // open the url of event
         if let url = URL(string: self.url!) {
             UIApplication.shared.open(url)
         }

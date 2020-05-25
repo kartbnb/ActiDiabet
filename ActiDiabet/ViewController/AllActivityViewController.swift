@@ -104,6 +104,7 @@ class AllActivityViewController: UIViewController, DatabaseListener {
         return searchActivities
     }
     
+    // get the favourite activity
     private func getFavouriteActivity(activities: [Activity]) -> [Activity] {
         if self.favouriteStatus == .all {
             return activities
@@ -137,6 +138,7 @@ class AllActivityViewController: UIViewController, DatabaseListener {
     //MARK: Database Listener
     var listenerType: ListenerType = .all
     
+    // get activities in specific type
     private func getTypeActivities(allActivities: [Activity]) -> [Activity] {
         var typeActivity: [Activity] = []
         for activity in allActivities {
@@ -147,6 +149,7 @@ class AllActivityViewController: UIViewController, DatabaseListener {
         return typeActivity
     }
     
+    // get activities in specific indoor
     private func getIndoorActivities(allActivities: [Activity]) -> [Activity] {
         var indoorActivity: [Activity] = []
         for activity in allActivities {
@@ -156,6 +159,7 @@ class AllActivityViewController: UIViewController, DatabaseListener {
         }
         return indoorActivity
     }
+    
     
     func getActivities(activities: [Activity]) {
         self.activities = self.getIndoorActivities(allActivities: self.getTypeActivities(allActivities: activities))
