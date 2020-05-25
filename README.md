@@ -49,7 +49,7 @@ After hitting the Done button, a quick survey pops out, asking for their feedbac
 ## 4. Plan View
 Remeber that user has the option to schedule a workout. Now, if you go to the below plan view, you will be able to see the activities that you have done and the ones you planning on doing. You can also edit/change those plans as needed.
 <br>
-<img src="plan.JPG" width="600">
+<img src="plan.jpeg" width="600">
 
 <br>
 <br>
