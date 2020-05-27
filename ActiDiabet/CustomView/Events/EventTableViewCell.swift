@@ -8,10 +8,31 @@
 
 import UIKit
 
+class IndicatorTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        // Configure the view for the selected state
+    }
+    
+    func startAnimating() {
+        indicator.startAnimating()
+    }
+    
+}
+
 class EventTableViewCell: UITableViewCell {
     
     @IBOutlet weak var shadowLayerView: UIView!
     
+    @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var backGroundView: UIView!
     @IBOutlet weak var picture: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -33,6 +54,7 @@ class EventTableViewCell: UITableViewCell {
         self.setBackground()
         self.titleLabel.text = event.eventName
         self.descLabel.text = event.eventDescription
+        self.timeLabel.text = event.date
         self.url = event.url
         self.picture.contentMode = .scaleAspectFill
         self.setImage(url: event.image)
@@ -70,5 +92,4 @@ class EventTableViewCell: UITableViewCell {
             UIApplication.shared.open(url)
         }
     }
-
 }
