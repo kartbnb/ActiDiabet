@@ -76,7 +76,6 @@ Finally, this lovely app also has an event wall featuring all the fun stuff goin
 <br>
 
 
-# Try it now!!
-Now, why don’t you just go ahead and download this app and enjoy it? Cheers to the healthier and happier lifestyle!
-#### [via TestFlight](https://testflight.apple.com/join/Ep5H6EsO) 
+# JSON API
+
 #### [visit GitHub](https://github.com/kartbnb/IEserver)
